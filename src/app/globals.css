@@ -1,26 +1,308 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* ========================================
+     TYPOGRAFIE TOKENS
+     ======================================== */
+
+  --font-display: var(--font-cormorant), Georgia, serif;
+  --font-body: var(--font-manrope), system-ui, -apple-system, sans-serif;
+  --font-chinese: var(--font-noto-serif-sc), serif;
+
+  /* ========================================
+     BAI KANG TCM
+     Definitive Brand Color System
+     ======================================== */
+
+  /* ----------------------------------------
+     FOREST GREEN
+     Hoofdkleur van Bai Kang
+     ---------------------------------------- */
+
+  --color-forest: #46563D;
+  --color-forest-dark: #263728;
+  --color-forest-deep: #1E2D21;
+  --color-forest-soft: #6F7E70;
+
+  /* ----------------------------------------
+     IVORY & CREAM
+     Lichte hoofdachtergronden
+     ---------------------------------------- */
+
+  --color-ivory: #F5F2E9;
+  --color-ivory-warm: #EDE5D8;
+
+  --color-cream: #EDE5D8;
+
+  /* ----------------------------------------
+     CHAMPAGNE
+     Lichte secundaire oppervlakken
+     ---------------------------------------- */
+
+  --color-champagne: #E8DCCB;
+  --color-champagne-dark: #D4BFA1;
+
+  /* ----------------------------------------
+     GOLD
+     Luxe accentkleur
+     ---------------------------------------- */
+
+  --color-gold: #B2926B;
+  --color-gold-antique: #9F8150;
+  --color-gold-light: #C7A875;
+  --color-gold-dark: #80663D;
+
+  /* ----------------------------------------
+     EARTH & WOOD
+     Natuurlijke ondersteunende kleuren
+     ---------------------------------------- */
+
+  --color-wood: #6B5235;
+  --color-wood-dark: #443621;
+  --color-earth: #8B6F4E;
+
+  /* ----------------------------------------
+     TYPOGRAPHY
+     Tekst op lichte achtergronden
+     ---------------------------------------- */
+
+  --color-text: #29271F;
+  --color-text-soft: #5E5A4F;
+  --color-text-muted: #817A6D;
+
+  /* ----------------------------------------
+     TYPOGRAPHY
+     Tekst op donkere achtergronden
+     ---------------------------------------- */
+
+  --color-text-light: #F5F2E9;
+  --color-text-light-soft: #D4CDBF;
+
+  /* ----------------------------------------
+     BORDERS
+     ---------------------------------------- */
+
+  --color-border-light: rgba(70, 86, 61, 0.15);
+  --color-border-dark: rgba(245, 242, 233, 0.16);
+  --color-border-gold: rgba(178, 146, 107, 0.55);
+
+  /* ----------------------------------------
+     SURFACES
+     ---------------------------------------- */
+
+  --color-surface-light: #F5F2E9;
+  --color-surface-cream: #EDE5D8;
+  --color-surface-champagne: #E8DCCB;
+
+  --color-surface-dark: #46563D;
+  --color-surface-deep: #263728;
+
+  /* ----------------------------------------
+     INTERACTIVE
+     ---------------------------------------- */
+
+  --color-primary: #46563D;
+  --color-primary-hover: #263728;
+
+  --color-accent: #B2926B;
+  --color-accent-hover: #9F8150;
+
+  /* ----------------------------------------
+     FOCUS
+     ---------------------------------------- */
+
+  --color-focus: #B2926B;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* ========================================
+   BASE & TYPOGRAFIE
+   ======================================== */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-ivory);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-feature-settings:
+    "cv02",
+    "cv03",
+    "cv04",
+    "cv11";
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+
+/* Subtiel verfijnd label boven titels */
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* ========================================
+   FOREST GRADIENTS
+   ======================================== */
+
+/*
+ * Diepe gradient voor hero/header/footer.
+ * Sluit aan op het donkere deel van het logo.
+ */
+.bg-gradient-forest {
+  background: linear-gradient(
+    135deg,
+    var(--color-forest-deep) 0%,
+    var(--color-forest) 100%
+  );
+}
+
+/*
+ * Zachte verticale overgang binnen
+ * groene secties.
+ */
+.bg-gradient-forest-soft {
+  background: linear-gradient(
+    180deg,
+    var(--color-forest) 0%,
+    var(--color-forest-dark) 100%
+  );
+}
+
+/*
+ * Lichte ivory gradient.
+ */
+.bg-gradient-ivory {
+  background: linear-gradient(
+    180deg,
+    var(--color-ivory) 0%,
+    var(--color-ivory-warm) 100%
+  );
+}
+
+/*
+ * Champagne gradient.
+ */
+.bg-gradient-champagne {
+  background: linear-gradient(
+    180deg,
+    var(--color-champagne) 0%,
+    var(--color-champagne-dark) 100%
+  );
+}
+
+/* ========================================
+   LUXURY GOLD GRADIENT
+   ======================================== */
+
+.bg-gradient-gold {
+  background: linear-gradient(
+    135deg,
+    var(--color-gold-antique) 0%,
+    var(--color-gold) 50%,
+    var(--color-gold-light) 100%
+  );
+}
+
+/* ========================================
+   TEXTURE OVERLAYS
+   ======================================== */
+
+/*
+ * Gebruik deze pseudo-elementen boven een
+ * achtergrond om later de subtiele
+ * ledertextuur toe te voegen.
+ *
+ * De texture-bestanden kunnen bijvoorbeeld
+ * worden geplaatst in:
+ *
+ * /public/textures/
+ *   leather-green.webp
+ *   leather-ivory.webp
+ *   leather-champagne.webp
+ */
+
+/* Groene ledertextuur */
+.bg-leather-green {
+  position: relative;
+  background-color: var(--color-forest);
+  background-image:
+    linear-gradient(
+      rgba(38, 55, 40, 0.15),
+      rgba(38, 55, 40, 0.15)
+    ),
+    url("/textures/leather-green.webp");
+  background-size: cover, 600px 600px;
+  background-repeat: no-repeat, repeat;
+}
+
+/* Lichte ledertextuur */
+.bg-leather-ivory {
+  position: relative;
+  background-color: var(--color-ivory);
+  background-image:
+    linear-gradient(
+      rgba(245, 242, 233, 0.78),
+      rgba(245, 242, 233, 0.78)
+    ),
+    url("/textures/leather-ivory.webp");
+  background-size: cover, 600px 600px;
+  background-repeat: no-repeat, repeat;
+}
+
+/* Champagne ledertextuur */
+.bg-leather-champagne {
+  position: relative;
+  background-color: var(--color-champagne);
+  background-image:
+    linear-gradient(
+      rgba(232, 220, 203, 0.78),
+      rgba(232, 220, 203, 0.78)
+    ),
+    url("/textures/leather-champagne.webp");
+  background-size: cover, 600px 600px;
+  background-repeat: no-repeat, repeat;
+}
+
+/* ========================================
+   DECORATIVE GOLD ELEMENTS
+   ======================================== */
+
+.divider-gold {
+  width: 4rem;
+  height: 1px;
+  background-color: var(--color-gold-antique);
+}
+
+.border-gold {
+  border-color: var(--color-border-gold);
+}
+
+/* ========================================
+   FOCUS STATES
+   ======================================== */
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+/* ========================================
+   SELECTION
+   ======================================== */
+
+::selection {
+  background-color: var(--color-forest);
+  color: var(--color-text-light);
 }
