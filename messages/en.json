@@ -9,6 +9,10 @@
     "blog": "Blog",
     "contact": "Contact"
   },
+  "HomePage": {
+    "title": "Bai Kang",
+    "tagline": "Laser Acupuncture & Natural Health"
+  },
   "Common": {
     "bookAppointment": "Book appointment",
     "readMore": "Read more"
