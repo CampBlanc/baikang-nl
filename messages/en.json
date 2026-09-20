@@ -1,0 +1,16 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "services": "Services",
+    "laserAcupuncture": "Laser Acupuncture",
+    "about": "About me",
+    "faq": "FAQ",
+    "pricing": "Pricing",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "Common": {
+    "bookAppointment": "Book appointment",
+    "readMore": "Read more"
+  }
+}

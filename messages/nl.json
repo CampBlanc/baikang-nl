@@ -1,0 +1,16 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "services": "Diensten",
+    "laserAcupuncture": "Laseracupunctuur",
+    "about": "Over mij",
+    "faq": "Vragen",
+    "pricing": "Prijzen",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "Common": {
+    "bookAppointment": "Afspraak maken",
+    "readMore": "Lees meer"
+  }
+}
