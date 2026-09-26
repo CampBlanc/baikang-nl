@@ -4,7 +4,6 @@
   /* ========================================
      TYPOGRAFIE TOKENS
      ======================================== */
-
   --font-display: var(--font-cormorant), Georgia, serif;
   --font-body: var(--font-manrope), system-ui, -apple-system, sans-serif;
   --font-chinese: var(--font-noto-serif-sc), serif;
@@ -15,73 +14,57 @@
      ======================================== */
 
   /* ----------------------------------------
-     FOREST GREEN
-     Hoofdkleur van Bai Kang
+     FOREST GREEN (Merkkleur)
      ---------------------------------------- */
-
   --color-forest: #46563D;
   --color-forest-dark: #263728;
   --color-forest-deep: #1E2D21;
   --color-forest-soft: #6F7E70;
 
   /* ----------------------------------------
-     IVORY & CREAM
-     Lichte hoofdachtergronden
+     IVORY & CREAM (Achtergronden)
      ---------------------------------------- */
-
   --color-ivory: #F5F2E9;
   --color-ivory-warm: #EDE5D8;
-
   --color-cream: #EDE5D8;
 
   /* ----------------------------------------
-     CHAMPAGNE
-     Lichte secundaire oppervlakken
+     CHAMPAGNE (Secundaire vlakken)
      ---------------------------------------- */
-
   --color-champagne: #E8DCCB;
   --color-champagne-dark: #D4BFA1;
 
   /* ----------------------------------------
-     GOLD
-     Luxe accentkleur
+     GOLD (Luxe accenten)
      ---------------------------------------- */
-
   --color-gold: #B2926B;
   --color-gold-antique: #9F8150;
   --color-gold-light: #C7A875;
   --color-gold-dark: #80663D;
 
   /* ----------------------------------------
-     EARTH & WOOD
-     Natuurlijke ondersteunende kleuren
+     EARTH & WOOD (Natuurlijke ondersteuning)
      ---------------------------------------- */
-
   --color-wood: #6B5235;
   --color-wood-dark: #443621;
   --color-earth: #8B6F4E;
 
   /* ----------------------------------------
-     TYPOGRAPHY
-     Tekst op lichte achtergronden
+     TYPOGRAPHY (Lichte achtergrond)
      ---------------------------------------- */
-
   --color-text: #29271F;
   --color-text-soft: #5E5A4F;
   --color-text-muted: #817A6D;
 
   /* ----------------------------------------
-     TYPOGRAPHY
-     Tekst op donkere achtergronden
+     TYPOGRAPHY (Donkere achtergrond)
      ---------------------------------------- */
-
   --color-text-light: #F5F2E9;
   --color-text-light-soft: #D4CDBF;
 
   /* ----------------------------------------
      BORDERS
      ---------------------------------------- */
-
   --color-border-light: rgba(70, 86, 61, 0.15);
   --color-border-dark: rgba(245, 242, 233, 0.16);
   --color-border-gold: rgba(178, 146, 107, 0.55);
@@ -89,37 +72,40 @@
   /* ----------------------------------------
      SURFACES
      ---------------------------------------- */
-
   --color-surface-light: #F5F2E9;
   --color-surface-cream: #EDE5D8;
   --color-surface-champagne: #E8DCCB;
-
   --color-surface-dark: #46563D;
   --color-surface-deep: #263728;
 
   /* ----------------------------------------
      INTERACTIVE
      ---------------------------------------- */
-
   --color-primary: #46563D;
   --color-primary-hover: #263728;
-
   --color-accent: #B2926B;
   --color-accent-hover: #9F8150;
 
   /* ----------------------------------------
      FOCUS
      ---------------------------------------- */
-
   --color-focus: #B2926B;
 }
 
 /* ========================================
-   BASE & TYPOGRAFIE
+   BASE & TYPOGRAFIE SCHAAL
    ======================================== */
 
 html {
   scroll-behavior: smooth;
+  /* Verhoogt de algehele schaal harmonieus over de hele site */
+  font-size: 17px;
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 18px;
+  }
 }
 
 body {
@@ -146,9 +132,9 @@ h4 {
 /* Subtiel verfijnd label boven titels */
 .eyebrow {
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 
@@ -156,10 +142,7 @@ h4 {
    FOREST GRADIENTS
    ======================================== */
 
-/*
- * Diepe gradient voor hero/header/footer.
- * Sluit aan op het donkere deel van het logo.
- */
+/* Diepe gradient voor hero, header en footer */
 .bg-gradient-forest {
   background: linear-gradient(
     135deg,
@@ -168,10 +151,7 @@ h4 {
   );
 }
 
-/*
- * Zachte verticale overgang binnen
- * groene secties.
- */
+/* Zachte verticale overgang binnen groene secties */
 .bg-gradient-forest-soft {
   background: linear-gradient(
     180deg,
@@ -180,9 +160,7 @@ h4 {
   );
 }
 
-/*
- * Lichte ivory gradient.
- */
+/* Lichte ivoor gradient */
 .bg-gradient-ivory {
   background: linear-gradient(
     180deg,
@@ -191,9 +169,7 @@ h4 {
   );
 }
 
-/*
- * Champagne gradient.
- */
+/* Champagne gradient */
 .bg-gradient-champagne {
   background: linear-gradient(
     180deg,
@@ -218,20 +194,6 @@ h4 {
 /* ========================================
    TEXTURE OVERLAYS
    ======================================== */
-
-/*
- * Gebruik deze pseudo-elementen boven een
- * achtergrond om later de subtiele
- * ledertextuur toe te voegen.
- *
- * De texture-bestanden kunnen bijvoorbeeld
- * worden geplaatst in:
- *
- * /public/textures/
- *   leather-green.webp
- *   leather-ivory.webp
- *   leather-champagne.webp
- */
 
 /* Groene ledertextuur */
 .bg-leather-green {
@@ -276,7 +238,7 @@ h4 {
 }
 
 /* ========================================
-   DECORATIVE GOLD ELEMENTS
+   DECORATIEVE ELEMENTEN
    ======================================== */
 
 .divider-gold {
@@ -290,17 +252,13 @@ h4 {
 }
 
 /* ========================================
-   FOCUS STATES
+   FOCUS & SELECTIE
    ======================================== */
 
 :focus-visible {
   outline: 2px solid var(--color-focus);
   outline-offset: 3px;
 }
-
-/* ========================================
-   SELECTION
-   ======================================== */
 
 ::selection {
   background-color: var(--color-forest);

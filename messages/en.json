@@ -12,7 +12,8 @@
   "HomePage": {
     "badge": "Traditional Chinese Medicine",
     "heroTitle": "Balance from within",
-    "heroText": "Classical acupuncture and modern laser therapy for natural, lasting vitality."
+    "quoteText": "Where there is pain, there is no free flow. Where there is free flow, there is no pain.",
+    "heroText": "Classical acupuncture and modern laser therapy for natural and powerful recovery."
   },
   "Story": {
     "acupuncture": {
@@ -29,6 +30,14 @@
       "button": "Learn about laser therapy",
       "alt": "Modern laser therapy session"
     }
+  },
+  "Philosophy": {
+    "characters": "痛则不通，不通则痛",
+    "pinyin": "TÒNG ZÉ BÙ TŌNG, BÙ TŌNG ZÉ TÒNG",
+    "line1": "Where there is pain, there is no free flow.",
+    "line2": "Where there is free flow, there is no pain.",
+    "explanation": "In Traditional Chinese Medicine, discomfort and illness arise when Qi (vital energy) and blood become stagnant. Acupuncture gently resolves these blockages to restore harmony.",
+    "button": "Explore our philosophy"
   },
   "Common": {
     "bookAppointment": "Book appointment",

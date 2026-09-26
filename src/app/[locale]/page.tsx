@@ -5,14 +5,14 @@ import StorySection from '@/components/StorySection';
 
 export default function HomePage() {
   const tHome = useTranslations('HomePage');
-  const tStory = useTranslations('Story');
   const tCommon = useTranslations('Common');
+  const tStory = useTranslations('Story');
 
   return (
     <main>
-      {/* 1. Hero Sectie met achtergrondfoto */}
-      <section className="relative flex min-h-[90vh] w-full items-center justify-center overflow-hidden px-6 py-24 text-center">
-        {/* Achtergrondafbeelding */}
+      {/* 1. Hero Sectie met de kaart strakker naar rechts */}
+      <section className="relative flex min-h-[92vh] w-full items-center overflow-hidden py-16 lg:py-24">
+        {/* Achtergrondfoto (schaal, theekop en naalden links) */}
         <div className="absolute inset-0 -z-10">
           <Image
             src="/images/hero-homepage.png"
@@ -22,37 +22,75 @@ export default function HomePage() {
             className="object-cover object-center"
             sizes="100vw"
           />
-          {/* Subtiel donker/groen verloop voor tekstcontrast */}
-          <div className="absolute inset-0 bg-forest-deep/40 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/60 via-transparent to-black/20" />
+          {/* Zeer subtiele overlay voor diepte en tekstleesbaarheid */}
+          <div className="absolute inset-0 bg-forest-dark/15 mix-blend-multiply" />
         </div>
 
-        {/* Contentkaart in het midden */}
-        <div className="mx-auto max-w-3xl rounded-2xl border border-border-light bg-ivory/90 p-8 shadow-2xl backdrop-blur-md sm:p-14">
-          <span className="mb-2 block font-chinese text-2xl text-gold">白康</span>
-          <p className="eyebrow mb-3 text-gold-antique">{tHome('badge')}</p>
-          <h1 className="font-display text-4xl leading-tight text-forest-deep sm:text-6xl">
-            {tHome('heroTitle')}
-          </h1>
-          <div className="divider-gold mx-auto my-6" />
-          <p className="font-body text-base leading-relaxed text-text-soft sm:text-lg">
-            {tHome('heroText')}
-          </p>
+        {/* Positiecontainer: max-w verruimd naar 1600px en kleine rechtermarge voor maximale ruimte links */}
+        <div className="mx-auto flex w-full max-w-[1600px] justify-end px-6 sm:px-10 lg:pr-8 xl:pr-12">
+          
+          {/* De Kaart: max-w-[650px], rechte hoeken en translate-x voor een extra zetje naar rechts */}
+          <div className="flex w-full max-w-[650px] flex-col rounded-none border border-border-light/60 bg-ivory/80 p-9 text-center shadow-2xl backdrop-blur-md sm:p-14 lg:p-16 lg:translate-x-6 xl:translate-x-10">
+            
+            {/* 1. Bovenkant: Merk & Hoofdtitel */}
+            <div className="space-y-4">
+              <span className="font-chinese text-2xl sm:text-3xl tracking-widest text-gold block">
+                白康
+              </span>
+              <p className="eyebrow text-gold-dark text-xs sm:text-sm">
+                {tHome('badge')}
+              </p>
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.25rem] leading-[1.15] text-forest-deep">
+                {tHome('heroTitle')}
+              </h1>
+            </div>
 
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link
-              href="/contact"
-              className="w-full rounded-full bg-forest px-8 py-3.5 text-xs font-semibold uppercase tracking-widest text-text-light shadow-md transition-all hover:bg-forest-dark sm:w-auto"
-            >
-              {tCommon('bookAppointment')}
-            </Link>
-            <Link
-              href="/diensten"
-              className="w-full rounded-full border border-forest/30 px-8 py-3.5 text-xs font-semibold uppercase tracking-widest text-forest-deep transition-all hover:bg-forest/5 sm:w-auto"
-            >
-              {tStory('acupuncture.button')}
-            </Link>
+            {/* Dunne scheidingslijn met royale marge */}
+            <div className="my-8 h-px w-full bg-border-light/60" />
+
+            {/* 2. Midden: Chinese spreuk, Pinyin, Yin-Yang en vertaling */}
+            <div className="space-y-4">
+              <span className="font-chinese text-2xl sm:text-3xl text-forest-deep tracking-wider block">
+                痛则不通，不通则痛
+              </span>
+              <p className="font-body text-[0.7rem] sm:text-xs font-semibold uppercase tracking-[0.25em] text-earth">
+                TÒNG ZÉ BÙ TŌNG, BÙ TŌNG ZÉ TÒNG
+              </p>
+
+              {/* Yin-Yang ornament met gouden lijntjes */}
+              <div className="flex items-center justify-center gap-3 py-1.5">
+                <span className="h-px w-10 bg-gold-antique/40" />
+                <span className="font-chinese text-gold-antique text-sm">☯</span>
+                <span className="h-px w-10 bg-gold-antique/40" />
+              </div>
+
+              {/* De vertaalde spreuk in schreeflettertype */}
+              <p className="font-display italic text-base sm:text-lg text-forest-deep leading-relaxed max-w-lg mx-auto">
+                “{tHome('quoteText')}”
+              </p>
+            </div>
+
+            {/* Dunne scheidingslijn met royale marge */}
+            <div className="my-8 h-px w-full bg-border-light/60" />
+
+            {/* 3. Onderkant: Korte toelichting en strakke knop */}
+            <div>
+              <p className="font-body text-xs sm:text-sm leading-relaxed text-text-soft max-w-lg mx-auto mb-9">
+                {tHome('heroText')}
+              </p>
+
+              <div className="flex justify-center">
+                <Link
+                  href="/contact"
+                  className="inline-block rounded-none bg-forest px-10 py-4 font-body text-xs font-semibold uppercase tracking-widest text-text-light shadow-md transition-all hover:bg-forest-dark hover:shadow-lg"
+                >
+                  {tCommon('bookAppointment')}
+                </Link>
+              </div>
+            </div>
+
           </div>
+
         </div>
       </section>
 

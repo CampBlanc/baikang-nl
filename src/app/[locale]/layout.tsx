@@ -48,16 +48,17 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html
-      lang={locale}
-      className={`${cormorant.variable} ${manrope.variable} ${notoSerifSC.variable}`}
-    >
-      <body className="antialiased min-h-screen flex flex-col">
-        <NextIntlClientProvider messages={messages}>
-          <Header />
-          <main className="flex-1">{children}</main>
-        </NextIntlClientProvider>
-      </body>
-    </html>
-  );
+  <html
+    lang={locale}
+    className={`${cormorant.variable} ${manrope.variable} ${notoSerifSC.variable}`}
+    data-scroll-behavior="smooth"
+  >
+    <body className="antialiased min-h-screen flex flex-col">
+      <NextIntlClientProvider messages={messages}>
+        <Header />
+        <main className="flex-1">{children}</main>
+      </NextIntlClientProvider>
+    </body>
+  </html>
+);
 }

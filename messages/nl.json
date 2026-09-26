@@ -12,6 +12,7 @@
   "HomePage": {
     "badge": "Traditionele Chinese Geneeskunde",
     "heroTitle": "In balans van binnenuit",
+    "quoteText": "Waar pijn is, is geen doorstroming. Waar doorstroming is, is geen pijn.",
     "heroText": "Klassieke acupunctuur en moderne lasertherapie voor een natuurlijk en krachtig herstel."
   },
   "Story": {
@@ -29,6 +30,14 @@
       "button": "Lees meer over laseracupunctuur",
       "alt": "Moderne lasertherapie behandeling"
     }
+  },
+  "Philosophy": {
+    "characters": "痛则不通，不通则痛",
+    "pinyin": "TÒNG ZÉ BÙ TŌNG, BÙ TŌNG ZÉ TÒNG",
+    "line1": "Waar pijn is, is geen doorstroming.",
+    "line2": "Waar doorstroming is, is geen pijn.",
+    "explanation": "In de Traditionele Chinese Geneeskunde ontstaat klacht of pijn wanneer Qi (levensenergie) en bloed stagneren. Acupunctuur heft deze blokkades op en herstelt de natuurlijke balans.",
+    "button": "Ontdek onze visie"
   },
   "Common": {
     "bookAppointment": "Afspraak maken",
