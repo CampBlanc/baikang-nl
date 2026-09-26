@@ -10,8 +10,25 @@
     "contact": "Contact"
   },
   "HomePage": {
-    "title": "Bai Kang",
-    "tagline": "Laseracupunctuur & Natuurlijke Gezondheid"
+    "badge": "Traditionele Chinese Geneeskunde",
+    "heroTitle": "In balans van binnenuit",
+    "heroText": "Klassieke acupunctuur en moderne lasertherapie voor een natuurlijk en krachtig herstel."
+  },
+  "Story": {
+    "acupuncture": {
+      "eyebrow": "ACUPUNCTUUR",
+      "title": "Balans begint bij persoonlijke aandacht",
+      "description": "Ieder lichaam vertelt een eigen verhaal. Vanuit de principes van TCM diagnosticeren we niet alleen het symptoom, maar herstellen we de onderliggende energiestroom.",
+      "button": "Ontdek de werkwijze",
+      "alt": "Acupunctuur behandeling in rustige praktijkruimte"
+    },
+    "laser": {
+      "eyebrow": "LASERACUPUNCTUUR",
+      "title": "Moderne technologie, eeuwenoude wijsheid",
+      "description": "Pijnloos, uiterst gericht en effectief. Zeer geschikt voor het direct doorbreken van nicotineverslaving en meridianenbalans zonder naalden.",
+      "button": "Lees meer over laseracupunctuur",
+      "alt": "Moderne lasertherapie behandeling"
+    }
   },
   "Common": {
     "bookAppointment": "Afspraak maken",

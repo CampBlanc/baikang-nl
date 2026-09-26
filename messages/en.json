@@ -10,8 +10,25 @@
     "contact": "Contact"
   },
   "HomePage": {
-    "title": "Bai Kang",
-    "tagline": "Laser Acupuncture & Natural Health"
+    "badge": "Traditional Chinese Medicine",
+    "heroTitle": "Balance from within",
+    "heroText": "Classical acupuncture and modern laser therapy for natural, lasting vitality."
+  },
+  "Story": {
+    "acupuncture": {
+      "eyebrow": "ACUPUNCTURE",
+      "title": "Balance begins with personalized care",
+      "description": "Every body tells its own story. Grounded in traditional Chinese medicine, we address the root cause of imbalance, not just the symptoms.",
+      "button": "Explore our approach",
+      "alt": "Acupuncture treatment in peaceful clinic room"
+    },
+    "laser": {
+      "eyebrow": "LASER ACUPUNCTURE",
+      "title": "Modern innovation, ancient wisdom",
+      "description": "Needle-free, precise and gentle. Highly effective for breaking nicotine addiction and restoring energetic flow.",
+      "button": "Learn about laser therapy",
+      "alt": "Modern laser therapy session"
+    }
   },
   "Common": {
     "bookAppointment": "Book appointment",
