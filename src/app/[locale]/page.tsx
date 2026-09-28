@@ -10,9 +10,9 @@ export default function HomePage() {
 
   return (
     <main>
-      {/* 1. Hero Sectie met de kaart strakker naar rechts */}
+      {/* 1. Hero Sectie met de bijgewerkte tekststructuur op de kaart */}
       <section className="relative flex min-h-[92vh] w-full items-center overflow-hidden py-16 lg:py-24">
-        {/* Achtergrondfoto (schaal, theekop en naalden links) */}
+        {/* Achtergrondafbeelding */}
         <div className="absolute inset-0 -z-10">
           <Image
             src="/images/hero-homepage.png"
@@ -22,18 +22,17 @@ export default function HomePage() {
             className="object-cover object-center"
             sizes="100vw"
           />
-          {/* Zeer subtiele overlay voor diepte en tekstleesbaarheid */}
           <div className="absolute inset-0 bg-forest-dark/15 mix-blend-multiply" />
         </div>
 
-        {/* Positiecontainer: max-w verruimd naar 1600px en kleine rechtermarge voor maximale ruimte links */}
+        {/* Positiecontainer: rechts in het warme licht */}
         <div className="mx-auto flex w-full max-w-[1600px] justify-end px-6 sm:px-10 lg:pr-8 xl:pr-12">
           
-          {/* De Kaart: max-w-[650px], rechte hoeken en translate-x voor een extra zetje naar rechts */}
+          {/* De Kaart */}
           <div className="flex w-full max-w-[650px] flex-col rounded-none border border-border-light/60 bg-ivory/80 p-9 text-center shadow-2xl backdrop-blur-md sm:p-14 lg:p-16 lg:translate-x-6 xl:translate-x-10">
             
-            {/* 1. Bovenkant: Merk & Hoofdtitel */}
-            <div className="space-y-4">
+            {/* 1. 白康 / Subtitel / Hoofdtitel / Vraagstelling */}
+            <div className="space-y-3">
               <span className="font-chinese text-2xl sm:text-3xl tracking-widest text-gold block">
                 白康
               </span>
@@ -43,39 +42,42 @@ export default function HomePage() {
               <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.25rem] leading-[1.15] text-forest-deep">
                 {tHome('heroTitle')}
               </h1>
+              <p className="font-display italic text-lg sm:text-xl text-forest-deep/85 pt-1">
+                {tHome('heroSubtitle')}
+              </p>
             </div>
 
-            {/* Dunne scheidingslijn met royale marge */}
-            <div className="my-8 h-px w-full bg-border-light/60" />
+            {/* Dunne scheidingslijn */}
+            <div className="my-7 h-px w-full bg-border-light/60" />
 
-            {/* 2. Midden: Chinese spreuk, Pinyin, Yin-Yang en vertaling */}
-            <div className="space-y-4">
+            {/* 2. Chinese wijsheid, Pinyin, Yin-Yang en vertaling */}
+            <div className="space-y-3">
               <span className="font-chinese text-2xl sm:text-3xl text-forest-deep tracking-wider block">
                 痛则不通，不通则痛
               </span>
               <p className="font-body text-[0.7rem] sm:text-xs font-semibold uppercase tracking-[0.25em] text-earth">
-                TÒNG ZÉ BÙ TŌNG, BÙ TŌNG ZÉ TÒNG
+                Tòng zé bù tōng, bù tōng zé tòng
               </p>
 
               {/* Yin-Yang ornament met gouden lijntjes */}
-              <div className="flex items-center justify-center gap-3 py-1.5">
+              <div className="flex items-center justify-center gap-3 py-1">
                 <span className="h-px w-10 bg-gold-antique/40" />
                 <span className="font-chinese text-gold-antique text-sm">☯</span>
                 <span className="h-px w-10 bg-gold-antique/40" />
               </div>
 
-              {/* De vertaalde spreuk in schreeflettertype */}
+              {/* Aangepaste vertaling */}
               <p className="font-display italic text-base sm:text-lg text-forest-deep leading-relaxed max-w-lg mx-auto">
                 “{tHome('quoteText')}”
               </p>
             </div>
 
-            {/* Dunne scheidingslijn met royale marge */}
-            <div className="my-8 h-px w-full bg-border-light/60" />
+            {/* Dunne scheidingslijn */}
+            <div className="my-7 h-px w-full bg-border-light/60" />
 
-            {/* 3. Onderkant: Korte toelichting en strakke knop */}
+            {/* 3. Toelichting en actieknop */}
             <div>
-              <p className="font-body text-xs sm:text-sm leading-relaxed text-text-soft max-w-lg mx-auto mb-9">
+              <p className="font-body text-xs sm:text-sm leading-relaxed text-text-soft max-w-lg mx-auto mb-8">
                 {tHome('heroText')}
               </p>
 
