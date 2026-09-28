@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import RecognitionSection from '@/components/RecognitionSection';
+import HelpSection from '@/components/HelpSection';
 
 export default function HomePage() {
   const tHome = useTranslations('HomePage');
@@ -10,7 +11,7 @@ export default function HomePage() {
 
   return (
     <main>
-      {/* 1. HERO SECTIE (Bestaand, onaangetast) */}
+      {/* 1. HERO SECTIE */}
       <section className="relative flex min-h-[95vh] w-full items-center overflow-hidden py-16">
         <div className="absolute inset-0 -z-10">
           <Image
@@ -73,8 +74,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. HERKENNING (Nieuw blok) */}
+      {/* 2. HERKENNING */}
       <RecognitionSection />
+
+      {/* 3. WAARMEE KAN IK HELPEN? (Nieuw blok) */}
+      <HelpSection />
     </main>
   );
 }

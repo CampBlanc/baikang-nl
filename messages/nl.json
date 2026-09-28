@@ -33,6 +33,37 @@
     "paragraph4": "Waar komt de verstoring vandaan? En wat heeft jouw lichaam nodig om weer in balans te komen?",
     "cta": "Bekijk waarmee ik kan helpen"
   },
+  "Help": {
+    "eyebrow": "WAARMEE KAN IK HELPEN?",
+    "title": "Een behandeling begint bij begrijpen waar je lichaam tegenaan loopt.",
+    "intro": "Acupunctuur wordt binnen mijn praktijk ingezet bij uiteenlopende klachten en hulpvragen. Iedere behandeling wordt afgestemd op de persoon en de situatie.",
+    "categories": {
+      "pain": {
+        "title": "Pijn & spanning",
+        "description": "Rug-, nek- en schouderklachten, spier- en gewrichtspijn, hoofdpijn en andere vormen van lichamelijke spanning."
+      },
+      "stress": {
+        "title": "Stress & slaap",
+        "description": "Een lichaam dat voortdurend \"aan\" staat, moeite met ontspannen, onrust of problemen met slapen."
+      },
+      "energy": {
+        "title": "Energie & herstel",
+        "description": "Vermoeidheid, weinig energie of het gevoel dat je lichaam moeite heeft om te herstellen."
+      },
+      "digestion": {
+        "title": "Maag & darmen",
+        "description": "Klachten rondom de spijsvertering, zoals een opgeblazen gevoel, buikklachten of een onrustige spijsvertering."
+      },
+      "gender": {
+        "title": "Vrouw & man",
+        "description": "Klachten rondom menstruatie, overgang en andere lichamelijke veranderingen."
+      },
+      "smoking": {
+        "title": "Stoppen met roken & vapen",
+        "description": "Gerichte laseracupunctuur en ooracupunctuur als ondersteuning bij het doorbreken van de gewoonte en het omgaan met trek."
+      }
+    }
+  },
   "Story": {
     "acupuncture": {
       "eyebrow": "ACUPUNCTUUR",

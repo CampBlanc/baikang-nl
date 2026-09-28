@@ -12,15 +12,15 @@
   "HomePage": {
     "badge": "Traditional Chinese Medicine",
     "heroTitle": "Balance from within",
-    "heroSubtitle": "Pain, tension, or a recurring complaint?",
-    "quoteText": "Where there is pain, the flow is disrupted. Where the flow is blocked, pain arises.",
-    "heroText": "Classical acupuncture and modern laser therapy for natural and powerful recovery."
+    "heroSubtitle": "Pain, tension, or a recurring symptom?",
+    "quoteText": "Where there is pain, the flow is disrupted. Where the flow is obstructed, pain arises.",
+    "heroText": "Classical acupuncture and modern laser therapy for natural, lasting vitality."
   },
   "Philosophy": {
     "characters": "痛则不通，不通则痛",
     "pinyin": "TÒNG ZÉ BÙ TŌNG, BÙ TŌNG ZÉ TÒNG",
-    "line1": "Where there is pain, the flow is disrupted.",
-    "line2": "Where the flow is blocked, pain arises.",
+    "line1": "Where there is pain, there is no free flow.",
+    "line2": "Where there is free flow, there is no pain.",
     "explanation": "In Traditional Chinese Medicine, discomfort and illness arise when Qi (vital energy) and blood become stagnant. Acupuncture gently resolves these blockages to restore harmony.",
     "button": "Explore our philosophy"
   },
@@ -32,6 +32,37 @@
     "paragraph3": "In Traditional Chinese Medicine, we do not only look at the symptom itself, but at the whole picture.",
     "paragraph4": "Where does the imbalance come from? And what does your body need to restore its natural equilibrium?",
     "cta": "See how I can help"
+  },
+  "Help": {
+    "eyebrow": "HOW CAN I HELP?",
+    "title": "Treatment begins with understanding what your body is facing.",
+    "intro": "Acupuncture is used in my practice for a wide variety of symptoms and concerns. Every treatment is tailored to the individual and the situation.",
+    "categories": {
+      "pain": {
+        "title": "Pain & tension",
+        "description": "Back, neck, and shoulder complaints, muscle and joint pain, headaches, and other forms of physical tension."
+      },
+      "stress": {
+        "title": "Stress & sleep",
+        "description": "A body that is constantly \"on\", difficulty relaxing, restlessness, or trouble sleeping."
+      },
+      "energy": {
+        "title": "Energy & recovery",
+        "description": "Fatigue, low energy, or the feeling that your body struggles to recover."
+      },
+      "digestion": {
+        "title": "Stomach & digestion",
+        "description": "Digestive issues, such as bloating, abdominal discomfort, or an unsettled digestive system."
+      },
+      "gender": {
+        "title": "Women & men",
+        "description": "Symptoms related to menstruation, menopause, and other physical changes."
+      },
+      "smoking": {
+        "title": "Quitting smoking & vaping",
+        "description": "Targeted laser acupuncture and auricular acupuncture to support breaking the habit and managing cravings."
+      }
+    }
   },
   "Story": {
     "acupuncture": {
