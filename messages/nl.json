@@ -16,6 +16,23 @@
     "quoteText": "Waar pijn is, is de doorstroming verstoord. Waar de doorstroming wordt belemmerd, ontstaat pijn.",
     "heroText": "Klassieke acupunctuur en moderne lasertherapie voor een natuurlijk en krachtig herstel."
   },
+  "Philosophy": {
+    "characters": "痛则不通，不通则痛",
+    "pinyin": "TÒNG ZÉ BÙ TŌNG, BÙ TŌNG ZÉ TÒNG",
+    "line1": "Waar pijn is, is de doorstroming verstoord.",
+    "line2": "Waar de doorstroming wordt belemmerd, ontstaat pijn.",
+    "explanation": "In de Traditionele Chinese Geneeskunde ontstaat klacht of pijn wanneer Qi (levensenergie) en bloed stagneren. Acupunctuur heft deze blokkades op en herstelt de natuurlijke balans.",
+    "button": "Ontdek onze visie"
+  },
+  "Recognition": {
+    "eyebrow": "WAAR JE LICHAAM OM VRAAGT",
+    "title": "Klachten zijn niet altijd op zichzelf staand.",
+    "paragraph1": "Soms weet je precies waar je last van hebt. Soms voel je vooral dat je lichaam niet meer doet wat het zou moeten doen.",
+    "paragraph2": "Pijn die blijft terugkomen. Een lichaam dat voortdurend gespannen aanvoelt. Slecht slapen, weinig energie of klachten waarvoor je al van alles hebt geprobeerd.",
+    "paragraph3": "Binnen de Traditionele Chinese Geneeskunde kijken we niet alleen naar de klacht zelf, maar ook naar het geheel.",
+    "paragraph4": "Waar komt de verstoring vandaan? En wat heeft jouw lichaam nodig om weer in balans te komen?",
+    "cta": "Bekijk waarmee ik kan helpen"
+  },
   "Story": {
     "acupuncture": {
       "eyebrow": "ACUPUNCTUUR",
@@ -31,14 +48,6 @@
       "button": "Lees meer over laseracupunctuur",
       "alt": "Moderne lasertherapie behandeling"
     }
-  },
-  "Philosophy": {
-    "characters": "痛则不通，不通则痛",
-    "pinyin": "TÒNG ZÉ BÙ TŌNG, BÙ TŌNG ZÉ TÒNG",
-    "line1": "Waar pijn is, is geen doorstroming.",
-    "line2": "Waar doorstroming is, is geen pijn.",
-    "explanation": "In de Traditionele Chinese Geneeskunde ontstaat klacht of pijn wanneer Qi (levensenergie) en bloed stagneren. Acupunctuur heft deze blokkades op en herstelt de natuurlijke balans.",
-    "button": "Ontdek onze visie"
   },
   "Common": {
     "bookAppointment": "Afspraak maken",

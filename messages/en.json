@@ -16,6 +16,23 @@
     "quoteText": "Where there is pain, the flow is disrupted. Where the flow is blocked, pain arises.",
     "heroText": "Classical acupuncture and modern laser therapy for natural and powerful recovery."
   },
+  "Philosophy": {
+    "characters": "痛则不通，不通则痛",
+    "pinyin": "TÒNG ZÉ BÙ TŌNG, BÙ TŌNG ZÉ TÒNG",
+    "line1": "Where there is pain, the flow is disrupted.",
+    "line2": "Where the flow is blocked, pain arises.",
+    "explanation": "In Traditional Chinese Medicine, discomfort and illness arise when Qi (vital energy) and blood become stagnant. Acupuncture gently resolves these blockages to restore harmony.",
+    "button": "Explore our philosophy"
+  },
+  "Recognition": {
+    "eyebrow": "WHAT YOUR BODY IS ASKING FOR",
+    "title": "Symptoms rarely exist in isolation.",
+    "paragraph1": "Sometimes you know exactly what is bothering you. Sometimes you just feel that your body is no longer functioning as it should.",
+    "paragraph2": "Pain that keeps returning. A body that feels perpetually tense. Poor sleep, low energy, or persistent symptoms for which you have already tried everything.",
+    "paragraph3": "In Traditional Chinese Medicine, we do not only look at the symptom itself, but at the whole picture.",
+    "paragraph4": "Where does the imbalance come from? And what does your body need to restore its natural equilibrium?",
+    "cta": "See how I can help"
+  },
   "Story": {
     "acupuncture": {
       "eyebrow": "ACUPUNCTURE",
@@ -31,14 +48,6 @@
       "button": "Learn about laser therapy",
       "alt": "Modern laser therapy session"
     }
-  },
-  "Philosophy": {
-    "characters": "痛则不通，不通则痛",
-    "pinyin": "TÒNG ZÉ BÙ TŌNG, BÙ TŌNG ZÉ TÒNG",
-    "line1": "Where there is pain, there is no free flow.",
-    "line2": "Where there is free flow, there is no pain.",
-    "explanation": "In Traditional Chinese Medicine, discomfort and illness arise when Qi (vital energy) and blood become stagnant. Acupuncture gently resolves these blockages to restore harmony.",
-    "button": "Explore our philosophy"
   },
   "Common": {
     "bookAppointment": "Book appointment",
