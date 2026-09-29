@@ -64,6 +64,13 @@
       }
     }
   },
+  "LaserAcupuncture": {
+    "eyebrow": "NAALDVRIJE ACUPUNCTUUR",
+    "title": "Acupunctuur hoeft niet altijd met naalden.",
+    "paragraph1": "Naast klassieke acupunctuur werk ik met laseracupunctuur, waarbij acupunctuurpunten met licht worden gestimuleerd zonder de huid te doorboren.",
+    "paragraph2": "Dit kan een prettige mogelijkheid zijn voor mensen die liever geen naalden gebruiken of gevoelig zijn voor een behandeling met naalden.",
+    "cta": "Ontdek laseracupunctuur"
+  },
   "Story": {
     "acupuncture": {
       "eyebrow": "ACUPUNCTUUR",

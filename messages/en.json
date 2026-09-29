@@ -64,6 +64,13 @@
       }
     }
   },
+  "LaserAcupuncture": {
+    "eyebrow": "NEEDLE-FREE ACUPUNCTURE",
+    "title": "Acupuncture doesn't always require needles.",
+    "paragraph1": "In addition to classical acupuncture, I work with laser acupuncture, where acupuncture points are stimulated with light without piercing the skin.",
+    "paragraph2": "This can be a pleasant option for people who prefer not to use needles or are sensitive to a treatment with needles.",
+    "cta": "Discover laser acupuncture"
+  },
   "Story": {
     "acupuncture": {
       "eyebrow": "ACUPUNCTURE",
