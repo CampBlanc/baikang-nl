@@ -3,6 +3,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import { Cormorant_Garamond, Manrope, Noto_Serif_SC } from 'next/font/google';
 import '../globals.css';
 
@@ -24,7 +25,7 @@ const notoSerifSC = Noto_Serif_SC({
   variable: '--font-noto-serif-sc',
   display: 'swap',
   weight: ['400', '500', '600'],
-  preload: false, // Voorkomt subset-fouten bij Chinese tekens
+  preload: false,
 });
 
 export function generateStaticParams() {
@@ -48,17 +49,18 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-  <html
-    lang={locale}
-    className={`${cormorant.variable} ${manrope.variable} ${notoSerifSC.variable}`}
-    data-scroll-behavior="smooth"
-  >
-    <body className="antialiased min-h-screen flex flex-col">
-      <NextIntlClientProvider messages={messages}>
-        <Header />
-        <main className="flex-1">{children}</main>
-      </NextIntlClientProvider>
-    </body>
-  </html>
-);
+    <html
+      lang={locale}
+      className={`${cormorant.variable} ${manrope.variable} ${notoSerifSC.variable}`}
+      data-scroll-behavior="smooth"
+    >
+      <body className="antialiased min-h-screen flex flex-col bg-ivory text-text">
+        <NextIntlClientProvider messages={messages}>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </NextIntlClientProvider>
+      </body>
+    </html>
+  );
 }

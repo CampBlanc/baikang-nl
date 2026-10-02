@@ -9,12 +9,68 @@
     "blog": "Blog",
     "contact": "Contact"
   },
+  "Common": {
+    "bookAppointment": "Afspraak maken",
+    "readMore": "Lees meer",
+    "contactUs": "Neem contact op"
+  },
   "HomePage": {
     "badge": "Traditionele Chinese Geneeskunde",
     "heroTitle": "In balans van binnenuit",
     "heroSubtitle": "Pijn, spanning of een klacht die blijft terugkomen?",
     "quoteText": "Waar pijn is, is de doorstroming verstoord. Waar de doorstroming wordt belemmerd, ontstaat pijn.",
     "heroText": "Klassieke acupunctuur en moderne lasertherapie voor een natuurlijk en krachtig herstel."
+  },
+  "Home": {
+    "Hero": {
+      "badge": "Traditionele Chinese Geneeskunde",
+      "title": "Pijn, spanning, vermoeidheid of slecht slapen?",
+      "intro": "Klachten die je dagelijks bezighouden verdienen aandacht. Bij Bai Kang kijken we naar je specifieke klacht én naar je lichaam en leefstijl als geheel.",
+      "ctaHelp": "Bekijk waarmee ik help",
+      "ctaAppointment": "Afspraak maken"
+    },
+    "Issues": {
+      "badge": "Waar je lichaam om vraagt",
+      "title": "Waar loop je nu tegenaan?",
+      "intro": "Of het nu gaat om pijn, spanning, vermoeidheid, slaapproblemen of een andere terugkerende klacht: ontdek wat Bai Kang voor je kan betekenen.",
+      "catPain": "Pijn & Spanning",
+      "catPainDesc": "Rug-, nek- en schouderklachten, spier- en gewrichtspijn, hoofdpijn en fysieke spanning.",
+      "catStress": "Stress & Slaap",
+      "catStressDesc": "Onrust in je hoofd, overprikkeling, moeilijk kunnen ontspannen en doorslaapproblemen.",
+      "catEnergy": "Energie & Herstel",
+      "catEnergyDesc": "Vermoeidheid, weinig veerkracht en het gevoel niet goed op te laden.",
+      "catDigestion": "Maag & Darmklachten",
+      "catDigestionDesc": "Een opgeblazen gevoel, darmkrampen en andere verstoringen in de spijsvertering.",
+      "catGender": "Mannen- & Vrouwenklachten",
+      "catGenderDesc": "Klachten rondom cyclus, overgang, hormonale disbalans en vitaliteit.",
+      "catSmoking": "Stoppen met roken & vapen",
+      "catSmokingDesc": "Laseracupunctuur en ooracupunctuur ter ondersteuning bij ontwenning.",
+      "cta": "Bekijk alle klachten"
+    },
+    "Positioning": {
+      "title": "Verder kijken dan alleen het symptoom.",
+      "intro": "Geen mens is hetzelfde. Daarom begint goede zorg met luisteren, aandacht en het hele plaatje bekijken.",
+      "cta": "Meer over mijn aanpak"
+    },
+    "About": {
+      "badge": "Achter Bai Kang",
+      "title": "Persoonlijke aandacht begint bij luisteren.",
+      "subtitle": "Patrick Witkamp · Acupuncturist",
+      "intro": "Mijn doel is verder te kijken dan alleen het symptoom. Door westerse nuchterheid te combineren met oosterse wijsheid, help ik je lichaam weer in balans te komen.",
+      "cta": "Lees mijn verhaal"
+    },
+    "Practice": {
+      "badge": "De praktijk in Tilburg",
+      "title": "Een rustige plek voor persoonlijke aandacht.",
+      "intro": "Bai Kang is gevestigd in Tilburg. Een rustige praktijk waar ruimte is voor jouw verhaal en een behandeling op maat.",
+      "ctaRoute": "Route naar Bai Kang",
+      "ctaAppointment": "Afspraak maken"
+    },
+    "FinalCTA": {
+      "title": "Je hoeft niet direct precies te weten wat er is.",
+      "intro": "Een eerste afspraak begint met luisteren.",
+      "cta": "Afspraak maken"
+    }
   },
   "Philosophy": {
     "characters": "痛则不通，不通则痛",
@@ -33,43 +89,44 @@
     "paragraph4": "Waar komt de verstoring vandaan? En wat heeft jouw lichaam nodig om weer in balans te komen?",
     "cta": "Bekijk waarmee ik kan helpen"
   },
+  "TreatmentMethod": {
+    "eyebrow": "PERSOONLIJKE AANDACHT & WERKWIJZE",
+    "title": "Verder kijken dan de klacht.",
+    "paragraph1": "Geen enkel lichaam is gelijk, en dezelfde klacht kan bij twee verschillende personen een heel andere achtergrond hebben. Daarom nemen we tijdens het intakegesprek ruim de tijd voor jouw verhaal.",
+    "paragraph2": "We kijken niet alleen naar de acute plek waar je last van hebt, maar ook naar je energie, nachtrust, emotionele balans en leefstijl. Zo ontstaat een helder beeld van waar de doorstroming stagneert.",
+    "paragraph3": "Vanuit deze diagnose stellen we een persoonlijk behandelplan op, gericht op duurzaam herstel en het terugvinden van je natuurlijke evenwicht.",
+    "cta": "Meer over mijn aanpak"
+  },
   "Help": {
     "eyebrow": "WAARMEE KAN IK HELPEN?",
-    "title": "Een behandeling begint bij begrijpen waar je lichaam tegenaan loopt.",
-    "intro": "Acupunctuur wordt binnen mijn praktijk ingezet bij uiteenlopende klachten en hulpvragen. Iedere behandeling wordt afgestemd op de persoon en de situatie.",
+    "title": "Waarvoor kun je bij Bái Kāng terecht?",
+    "intro": "Acupunctuur kan worden ingezet bij uiteenlopende klachten. Elke behandeling wordt afgestemd op de persoon en de situatie.",
     "categories": {
       "pain": {
         "title": "Pijn & spanning",
-        "description": "Rug-, nek- en schouderklachten, spier- en gewrichtspijn, hoofdpijn en andere vormen van lichamelijke spanning."
+        "description": "Rug-, nek- en schouderklachten, spier- en gewrichtspijn, hoofdpijn en andere vormen van fysieke spanning."
       },
       "stress": {
         "title": "Stress & slaap",
-        "description": "Een lichaam dat voortdurend \"aan\" staat, moeite met ontspannen, onrust of problemen met slapen."
+        "description": "Een lichaam dat voortdurend 'aan' staat, moeite met ontspannen, onrust of doorslaapproblemen."
       },
       "energy": {
         "title": "Energie & herstel",
-        "description": "Vermoeidheid, weinig energie of het gevoel dat je lichaam moeite heeft om te herstellen."
+        "description": "Vermoeidheid, weinig veerkracht of het gevoel niet goed op te laden."
       },
       "digestion": {
         "title": "Maag & darmen",
-        "description": "Klachten rondom de spijsvertering, zoals een opgeblazen gevoel, buikklachten of een onrustige spijsvertering."
+        "description": "Spijsverteringsklachten, zoals een opgeblazen gevoel, darmkrampen of een onrustige buik."
       },
       "gender": {
         "title": "Vrouw & man",
-        "description": "Klachten rondom menstruatie, overgang en andere lichamelijke veranderingen."
+        "description": "Klachten rondom cyclus, overgang, hormonale balans en vitaliteit."
       },
       "smoking": {
         "title": "Stoppen met roken & vapen",
-        "description": "Gerichte laseracupunctuur en ooracupunctuur als ondersteuning bij het doorbreken van de gewoonte en het omgaan met trek."
+        "description": "Gerichte laseracupunctuur en ooracupunctuur ter ondersteuning bij ontwenning en drang."
       }
     }
-  },
-  "LaserAcupuncture": {
-    "eyebrow": "NAALDVRIJE ACUPUNCTUUR",
-    "title": "Acupunctuur hoeft niet altijd met naalden.",
-    "paragraph1": "Naast klassieke acupunctuur werk ik met laseracupunctuur, waarbij acupunctuurpunten met licht worden gestimuleerd zonder de huid te doorboren.",
-    "paragraph2": "Dit kan een prettige mogelijkheid zijn voor mensen die liever geen naalden gebruiken of gevoelig zijn voor een behandeling met naalden.",
-    "cta": "Ontdek laseracupunctuur"
   },
   "Story": {
     "acupuncture": {
@@ -87,8 +144,27 @@
       "alt": "Moderne lasertherapie behandeling"
     }
   },
-  "Common": {
-    "bookAppointment": "Afspraak maken",
-    "readMore": "Lees meer"
+  "LaserAcupuncture": {
+    "eyebrow": "LICHT & BALANS",
+    "title": "Moderne lasertherapie zonder naalden",
+    "paragraph1": "Laseracupunctuur combineert de eeuwenoude kennis van meridianen met geavanceerde low-level lasertechnologie (LLLT). Dit maakt de behandeling volkomen pijnloos en uiterst zacht.",
+    "paragraph2": "Bijzonder effectief bij het doorbreken van nicotineafhankelijkheid, het verzachten van acute spier- en gewrichtspijn en voor iedereen die gevoelig is voor traditionele naalden.",
+    "cta": "Ontdek laseracupunctuur"
+  },
+  "Footer": {
+    "tagline": "Traditionele Chinese Geneeskunde & Acupunctuur in Tilburg.",
+    "navigationTitle": "Navigatie",
+    "contactTitle": "Praktijk",
+    "address": "Tilburg, Nederland",
+    "email": "info@baikang.nl",
+    "registrationsTitle": "Registraties",
+    "kvkLabel": "KvK",
+    "vatLabel": "BTW",
+    "agbProviderLabel": "AGB zorgverlener",
+    "agbPracticeLabel": "AGB praktijk",
+    "complaintsText": "Ik val als CAT-therapeut onder GAT-Wkkgz klachtrecht en GAT-tuchtrecht bij de Geschilleninstantie Alternatieve Therapeuten (GAT). Voor meer informatie over mijn klachtenregeling zie:",
+    "rights": "Alle rechten voorbehouden.",
+    "privacy": "Privacybeleid",
+    "terms": "Algemene voorwaarden"
   }
 }

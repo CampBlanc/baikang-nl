@@ -9,18 +9,74 @@
     "blog": "Blog",
     "contact": "Contact"
   },
+  "Common": {
+    "bookAppointment": "Book appointment",
+    "readMore": "Read more",
+    "contactUs": "Contact us"
+  },
   "HomePage": {
     "badge": "Traditional Chinese Medicine",
     "heroTitle": "Balance from within",
-    "heroSubtitle": "Pain, tension, or a recurring symptom?",
-    "quoteText": "Where there is pain, the flow is disrupted. Where the flow is obstructed, pain arises.",
-    "heroText": "Classical acupuncture and modern laser therapy for natural, lasting vitality."
+    "heroSubtitle": "Pain, tension, or a recurring complaint?",
+    "quoteText": "Where there is pain, the flow is disrupted. Where the flow is blocked, pain arises.",
+    "heroText": "Classical acupuncture and modern laser therapy for natural and powerful recovery."
+  },
+  "Home": {
+    "Hero": {
+      "badge": "Traditional Chinese Medicine",
+      "title": "Pain, tension, fatigue, or poor sleep?",
+      "intro": "Symptoms that occupy your daily life deserve attention. At Bai Kang, we look at your specific needs as well as your body and lifestyle as a whole.",
+      "ctaHelp": "See how I can help",
+      "ctaAppointment": "Book appointment"
+    },
+    "Issues": {
+      "badge": "What your body is asking for",
+      "title": "What are you currently struggling with?",
+      "intro": "Whether it's pain, tension, fatigue, sleep problems, or another recurring complaint: discover how Bai Kang can support you.",
+      "catPain": "Pain & Tension",
+      "catPainDesc": "Back, neck, and shoulder complaints, muscle and joint pain, headaches, and physical tension.",
+      "catStress": "Stress & Sleep",
+      "catStressDesc": "Mental restlessness, sensory overload, difficulty relaxing, and sleep issues.",
+      "catEnergy": "Energy & Recovery",
+      "catEnergyDesc": "Fatigue, low resilience, and difficulty recharging your body.",
+      "catDigestion": "Stomach & Digestion",
+      "catDigestionDesc": "Bloating, abdominal cramps, and other digestive discomforts.",
+      "catGender": "Women & Men",
+      "catGenderDesc": "Symptoms related to menstruation, menopause, hormonal balance, and vitality.",
+      "catSmoking": "Quitting Smoking & Vaping",
+      "catSmokingDesc": "Laser acupuncture and auricular acupuncture to support breaking the addiction.",
+      "cta": "View all complaints"
+    },
+    "Positioning": {
+      "title": "Looking beyond the symptom.",
+      "intro": "No two people are the same. That is why good care begins with listening, attention, and looking at the whole picture.",
+      "cta": "More about my approach"
+    },
+    "About": {
+      "badge": "Behind Bai Kang",
+      "title": "Personal attention starts with listening.",
+      "subtitle": "Patrick Witkamp · Acupuncturist",
+      "intro": "My goal is to look beyond just the symptom. By combining Western groundedness with Eastern wisdom, I help bring your body back into balance.",
+      "cta": "Read my story"
+    },
+    "Practice": {
+      "badge": "The clinic in Tilburg",
+      "title": "A peaceful place for personal attention.",
+      "intro": "Bai Kang is located in Tilburg. A quiet clinic where there is space for your story and a tailored treatment.",
+      "ctaRoute": "Directions to Bai Kang",
+      "ctaAppointment": "Book appointment"
+    },
+    "FinalCTA": {
+      "title": "You don't need to know exactly what is wrong right away.",
+      "intro": "A first appointment begins with listening.",
+      "cta": "Book appointment"
+    }
   },
   "Philosophy": {
     "characters": "痛则不通，不通则痛",
     "pinyin": "TÒNG ZÉ BÙ TŌNG, BÙ TŌNG ZÉ TÒNG",
-    "line1": "Where there is pain, there is no free flow.",
-    "line2": "Where there is free flow, there is no pain.",
+    "line1": "Where there is pain, the flow is disrupted.",
+    "line2": "Where the flow is blocked, pain arises.",
     "explanation": "In Traditional Chinese Medicine, discomfort and illness arise when Qi (vital energy) and blood become stagnant. Acupuncture gently resolves these blockages to restore harmony.",
     "button": "Explore our philosophy"
   },
@@ -33,9 +89,17 @@
     "paragraph4": "Where does the imbalance come from? And what does your body need to restore its natural equilibrium?",
     "cta": "See how I can help"
   },
+  "TreatmentMethod": {
+    "eyebrow": "PERSONAL ATTENTION & APPROACH",
+    "title": "Looking beyond the complaint.",
+    "paragraph1": "No two bodies are identical, and the exact same symptom can stem from a very different background in different people. That is why during the initial appointment we take ample time to understand your full story.",
+    "paragraph2": "We do not merely look at the acute discomfort you experience today, but also at your energy levels, sleep patterns, emotional balance, and lifestyle. This creates a clear picture of where circulation is obstructed.",
+    "paragraph3": "From this in-depth diagnosis, a tailored treatment plan is created — focused on lasting recovery and rediscovering your natural equilibrium.",
+    "cta": "Learn more about the approach"
+  },
   "Help": {
     "eyebrow": "HOW CAN I HELP?",
-    "title": "Treatment begins with understanding what your body is facing.",
+    "title": "What can you consult Bái Kāng for?",
     "intro": "Acupuncture is used in my practice for a wide variety of symptoms and concerns. Every treatment is tailored to the individual and the situation.",
     "categories": {
       "pain": {
@@ -44,7 +108,7 @@
       },
       "stress": {
         "title": "Stress & sleep",
-        "description": "A body that is constantly \"on\", difficulty relaxing, restlessness, or trouble sleeping."
+        "description": "A body that is constantly 'on', difficulty relaxing, restlessness, or trouble sleeping."
       },
       "energy": {
         "title": "Energy & recovery",
@@ -64,13 +128,6 @@
       }
     }
   },
-  "LaserAcupuncture": {
-    "eyebrow": "NEEDLE-FREE ACUPUNCTURE",
-    "title": "Acupuncture doesn't always require needles.",
-    "paragraph1": "In addition to classical acupuncture, I work with laser acupuncture, where acupuncture points are stimulated with light without piercing the skin.",
-    "paragraph2": "This can be a pleasant option for people who prefer not to use needles or are sensitive to a treatment with needles.",
-    "cta": "Discover laser acupuncture"
-  },
   "Story": {
     "acupuncture": {
       "eyebrow": "ACUPUNCTURE",
@@ -87,8 +144,27 @@
       "alt": "Modern laser therapy session"
     }
   },
-  "Common": {
-    "bookAppointment": "Book appointment",
-    "readMore": "Read more"
+  "LaserAcupuncture": {
+    "eyebrow": "LIGHT & HARMONY",
+    "title": "Modern laser therapy without needles",
+    "paragraph1": "Laser acupuncture unites ancient meridian wisdom with advanced low-level laser technology (LLLT). This renders treatments completely painless and remarkably gentle.",
+    "paragraph2": "Especially effective for overcoming nicotine addiction, soothing acute muscle and joint discomfort, and for anyone sensitive to traditional needles.",
+    "cta": "Discover laser acupuncture"
+  },
+  "Footer": {
+    "tagline": "Traditional Chinese Medicine & Acupuncture in Tilburg.",
+    "navigationTitle": "Navigation",
+    "contactTitle": "Clinic",
+    "address": "Tilburg, Netherlands",
+    "email": "info@baikang.nl",
+    "registrationsTitle": "Registrations",
+    "kvkLabel": "KvK (Chamber of Commerce)",
+    "vatLabel": "VAT",
+    "agbProviderLabel": "AGB healthcare provider",
+    "agbPracticeLabel": "AGB clinic code",
+    "complaintsText": "As a CAT therapist, I fall under GAT-Wkkgz complaint law and GAT disciplinary law at the Geschilleninstantie Alternatieve Therapeuten (GAT). For more information about my complaints procedure, visit:",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions"
   }
 }

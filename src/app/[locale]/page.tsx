@@ -1,97 +1,140 @@
-import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import RecognitionSection from '@/components/RecognitionSection';
-import HelpSection from '@/components/HelpSection';
-import LaserAcupunctureSection from '@/components/LaserAcupunctureSection';
+import AtmosphericImage from '@/components/AtmosphericImage';
 
 export default function HomePage() {
-  const tHome = useTranslations('HomePage');
-  const tPhilosophy = useTranslations('Philosophy');
-  const tCommon = useTranslations('Common');
+  const t = useTranslations('Home');
 
   return (
-    <main>
-      {/* 1. HERO SECTIE */}
-      <section className="relative flex min-h-[92vh] w-full items-center overflow-hidden py-16">
-        <div className="absolute inset-0 -z-10">
-          <Image
-            src="/images/hero-homepage.png"
-            alt="Bai Kang TCM Praktijk met acupunctuurnaalden en kruidenthee"
-            fill
-            priority
-            className="object-cover object-center"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-forest-dark/15 mix-blend-multiply" />
+    <main className="bg-ivory selection:bg-gold-antique/30">
+      
+      {/* 1. HERO — Compact, redactioneel en direct op de hulpvraag */}
+      <section className="flex flex-col items-center justify-center px-6 pt-16 pb-14 sm:pt-20 sm:pb-16 lg:pt-24 lg:pb-18 max-w-4xl mx-auto text-center">
+        <p className="eyebrow text-gold-dark mb-4 tracking-widest uppercase">
+          {t('Hero.badge')}
+        </p>
+        <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.75rem] leading-[1.12] text-forest-deep mb-5 max-w-3xl">
+          {t('Hero.title')}
+        </h1>
+        <p className="font-body text-base sm:text-lg text-text-soft leading-relaxed max-w-xl mx-auto mb-8">
+          {t('Hero.intro')}
+        </p>
+        <div className="flex flex-col sm:flex-row gap-3.5 items-center justify-center w-full sm:w-auto">
+          <Link
+            href="/klachten"
+            className="w-full sm:w-auto rounded-none border border-forest-deep px-7 py-3.5 font-body text-xs font-semibold uppercase tracking-widest text-forest-deep transition-all hover:bg-forest-deep/5"
+          >
+            {t('Hero.ctaHelp')} →
+          </Link>
+          <Link
+            href="/contact"
+            className="w-full sm:w-auto rounded-none bg-forest-deep px-7 py-3.5 font-body text-xs font-semibold uppercase tracking-widest text-text-light shadow-md transition-all hover:bg-forest-dark hover:shadow-lg"
+          >
+            {t('Hero.ctaAppointment')}
+          </Link>
         </div>
+      </section>
 
-        <div className="mx-auto flex w-full max-w-[1600px] justify-end px-6 sm:px-10 lg:pr-8 xl:pr-12">
-          <div className="flex w-full max-w-[650px] flex-col rounded-none border border-border-light/60 bg-ivory/80 p-9 text-center shadow-2xl backdrop-blur-md sm:p-14 lg:p-16 lg:translate-x-6 xl:translate-x-10">
-            <div className="space-y-3">
-              <span className="font-chinese text-2xl sm:text-3xl tracking-widest text-gold block">
-                白康
-              </span>
-              <p className="eyebrow text-gold-dark text-xs sm:text-sm">
-                {tHome('badge')}
-              </p>
-              <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.25rem] leading-[1.15] text-forest-deep">
-                {tHome('heroTitle')}
-              </h1>
-              <p className="font-display italic text-lg sm:text-xl text-forest-deep/85 pt-1">
-                {tHome('heroSubtitle')}
-              </p>
-            </div>
+      {/* 2. WAARMEE KAN IK HELPEN? */}
+      <section className="bg-surface-cream border-t border-border-light/40 px-6 py-24 lg:px-16">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-16 max-w-3xl">
+            <p className="eyebrow text-gold-dark mb-4">{t('Issues.badge')}</p>
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-forest-deep mb-6">
+              {t('Issues.title')}
+            </h2>
+            <p className="font-body text-base sm:text-lg text-text-soft leading-relaxed">
+              {t('Issues.intro')}
+            </p>
+          </div>
 
-            <div className="my-7 h-px w-full bg-border-light/60" />
-
-            <div className="space-y-3">
-              <span className="font-chinese text-2xl sm:text-3xl text-forest-deep tracking-wider block">
-                {tPhilosophy('characters')}
-              </span>
-              <p className="font-body text-[0.7rem] sm:text-xs font-semibold uppercase tracking-[0.25em] text-earth">
-                {tPhilosophy('pinyin')}
-              </p>
-
-              <div className="flex items-center justify-center gap-3 py-1">
-                <span className="h-px w-10 bg-gold-antique/40" />
-                <span className="font-chinese text-gold-antique text-sm">☯</span>
-                <span className="h-px w-10 bg-gold-antique/40" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-12 mb-16">
+            {['Pain', 'Stress', 'Energy', 'Digestion', 'Gender', 'Smoking'].map((cat) => (
+              <div key={cat} className="border-t border-border-light/60 pt-6">
+                <h3 className="font-display text-2xl text-forest-deep mb-3">
+                  {t(`Issues.cat${cat}`)}
+                </h3>
+                <p className="font-body text-text-soft leading-relaxed">
+                  {t(`Issues.cat${cat}Desc`)}
+                </p>
               </div>
+            ))}
+          </div>
 
-              <p className="font-display italic text-base sm:text-lg text-forest-deep leading-relaxed max-w-lg mx-auto">
-                “{tHome('quoteText')}”
-              </p>
+          <Link
+            href="/klachten"
+            className="group inline-flex items-center gap-3 font-body text-xs sm:text-sm font-semibold uppercase tracking-widest text-forest-deep hover:text-gold-antique transition-colors"
+          >
+            <span className="border-b border-forest-deep/25 pb-1 group-hover:border-gold-antique transition-colors">
+              {t('Issues.cta')}
+            </span>
+            <span className="transition-transform group-hover:translate-x-1.5" aria-hidden="true">→</span>
+          </Link>
+        </div>
+      </section>
+
+      {/* 3. OVER PATRICK — Editorial portret via AtmosphericImage */}
+      <section className="bg-ivory border-t border-border-light/40 px-6 py-24 lg:px-16 overflow-hidden">
+        <div className="mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          
+          <div className="order-2 lg:order-1 relative w-full max-w-md mx-auto">
+            <AtmosphericImage
+              src="/images/patrick-portret.png" 
+              alt="Patrick Witkamp - Acupuncturist bij Bai Kang"
+              aspectRatio="4/5"
+              variant="editorial-portrait"
+              priority={true}
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </div>
+
+          <div className="order-1 lg:order-2 space-y-6">
+            <p className="eyebrow text-gold-dark">{t('About.badge')}</p>
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-forest-deep leading-tight">
+              {t('About.title')}
+            </h2>
+            <p className="font-body text-sm font-semibold uppercase tracking-widest text-gold-antique">
+              {t('About.subtitle')}
+            </p>
+            <p className="font-body text-base sm:text-lg text-text-soft leading-relaxed max-w-lg">
+              {t('About.intro')}
+            </p>
+            <div className="pt-4">
+              <Link
+                href="/over-patrick"
+                className="group inline-flex items-center gap-3 font-body text-xs sm:text-sm font-semibold uppercase tracking-widest text-forest-deep hover:text-gold-antique transition-colors"
+              >
+                <span className="border-b border-forest-deep/25 pb-1 group-hover:border-gold-antique transition-colors">
+                  {t('About.cta')}
+                </span>
+                <span className="transition-transform group-hover:translate-x-1.5" aria-hidden="true">→</span>
+              </Link>
             </div>
+          </div>
 
-            <div className="my-7 h-px w-full bg-border-light/60" />
+        </div>
+      </section>
 
-            <div>
-              <p className="font-body text-xs sm:text-sm leading-relaxed text-text-soft max-w-lg mx-auto mb-8">
-                {tHome('heroText')}
-              </p>
-
-              <div className="flex justify-center">
-                <Link
-                  href="/contact"
-                  className="inline-block rounded-none bg-forest px-10 py-4 font-body text-xs font-semibold uppercase tracking-widest text-text-light shadow-md transition-all hover:bg-forest-dark hover:shadow-lg"
-                >
-                  {tCommon('bookAppointment')}
-                </Link>
-              </div>
-            </div>
+      {/* 4. EINDBANNER — Sluit direct aan op de donkere footer */}
+      <section className="bg-forest-deep px-6 pt-24 pb-16 lg:pt-32 lg:pb-20 text-center border-t-4 border-gold-antique">
+        <div className="mx-auto max-w-3xl space-y-6">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-ivory leading-tight">
+            {t('FinalCTA.title')}
+          </h2>
+          <p className="font-body text-lg sm:text-xl text-ivory/80 italic mb-8">
+            &ldquo;{t('FinalCTA.intro')}&rdquo;
+          </p>
+          <div className="pt-2">
+            <Link
+              href="/contact"
+              className="inline-block rounded-none bg-gold-antique px-10 py-4 font-body text-xs font-semibold uppercase tracking-widest text-forest-deep transition-all hover:bg-ivory hover:shadow-lg"
+            >
+              {t('FinalCTA.cta')} →
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* 2. HERKENNING */}
-      <RecognitionSection />
-
-      {/* 3. WAARMEE KAN IK HELPEN? */}
-      <HelpSection />
-
-      {/* 4. LASERACUPUNCTUUR (Nieuw split blok) */}
-      <LaserAcupunctureSection />
     </main>
   );
 }
