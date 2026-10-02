@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link, usePathname, useRouter } from '@/i18n/navigation';
 
@@ -19,13 +20,27 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border-light bg-ivory/90 backdrop-blur-md">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        {/* Logo / Merknaam */}
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3.5 sm:py-4">
+        
+        {/* Logo / Merknaam met Yin-Yang beeldmerk */}
         <Link 
           href="/" 
-          className="text-2xl font-bold tracking-tight text-forest-deep transition-colors hover:text-forest"
+          className="group flex items-center gap-3 transition-opacity hover:opacity-95"
+          aria-label="Bai Kang Home"
         >
-          Bai Kang
+          <div className="relative h-10 w-10 sm:h-11 sm:w-11 shrink-0 overflow-hidden rounded-full border border-gold-antique/30 shadow-sm transition-transform duration-300 group-hover:scale-105">
+            <Image
+              src="/images/Bai-Kang-Yin-Yang.png"
+              alt="Bai Kang Yin Yang Logo"
+              fill
+              sizes="44px"
+              priority
+              className="object-cover"
+            />
+          </div>
+          <span className="font-display text-2xl font-bold tracking-tight text-forest-deep transition-colors group-hover:text-forest">
+            Bai Kang
+          </span>
         </Link>
 
         {/* Desktop Navigatie */}
