@@ -70,10 +70,12 @@ function PrivacyPolicyDutch() {
               1. Wie is verantwoordelijk voor uw gegevens?
             </h2>
             <p>
-              Bái Kāng TCM, gevestigd te Tilburg, is de verwerkingsverantwoordelijke voor de verwerking van persoonsgegevens zoals weergegeven in deze privacyverklaring.
+              Bái Kāng TCM is een handelsnaam van <strong>Witkamp Wellness</strong>, gevestigd te Tilburg en ingeschreven bij de Kamer van Koophandel onder nummer 89643771. Witkamp Wellness is de officiële verwerkingsverantwoordelijke voor de verwerking van persoonsgegevens zoals weergegeven in deze privacyverklaring.
             </p>
             <div className="bg-surface-cream/70 border border-border-light/60 p-6 space-y-1 text-sm text-forest-deep">
-              <p className="font-semibold text-base text-forest-deep mb-2">Bái Kāng TCM</p>
+              <p className="font-semibold text-base text-forest-deep mb-2">
+                Bái Kāng TCM | Witkamp Wellness
+              </p>
               <p>Patrick Witkamp</p>
               <p>Weteringlaan 150</p>
               <p>5032 XV Tilburg</p>
@@ -85,6 +87,7 @@ function PrivacyPolicyDutch() {
               </p>
               <p>Telefoon: 06-83498042</p>
               <p>KvK-nummer: 89643771</p>
+              <p>BTW-nummer: NL004749930B58</p>
             </div>
           </section>
 
@@ -314,10 +317,12 @@ function PrivacyPolicyEnglish() {
               1. Who is responsible for your data?
             </h2>
             <p>
-              Bái Kāng TCM, located in Tilburg, is the data controller responsible for the processing of personal data as described in this privacy policy.
+              Bái Kāng TCM is a trade name of <strong>Witkamp Wellness</strong>, located in Tilburg and registered with the Dutch Chamber of Commerce (KvK) under number 89643771. Witkamp Wellness is the official data controller responsible for the processing of personal data as described in this privacy policy.
             </p>
             <div className="bg-surface-cream/70 border border-border-light/60 p-6 space-y-1 text-sm text-forest-deep">
-              <p className="font-semibold text-base text-forest-deep mb-2">Bái Kāng TCM</p>
+              <p className="font-semibold text-base text-forest-deep mb-2">
+                Bái Kāng TCM | Witkamp Wellness
+              </p>
               <p>Patrick Witkamp</p>
               <p>Weteringlaan 150</p>
               <p>5032 XV Tilburg</p>
@@ -330,6 +335,7 @@ function PrivacyPolicyEnglish() {
               </p>
               <p>Phone: +31 (0)6-83498042</p>
               <p>Chamber of Commerce (KvK): 89643771</p>
+              <p>VAT ID: NL004749930B58</p>
             </div>
           </section>
 

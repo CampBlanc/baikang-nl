@@ -1,10 +1,15 @@
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 
 export default function Footer() {
   const t = useTranslations('Footer');
   const tNav = useTranslations('Navigation');
+  const locale = useLocale();
+
+  const tradeNameText = locale === 'en' 
+    ? 'Trade name of Witkamp Wellness' 
+    : 'Handelsnaam van Witkamp Wellness';
 
   return (
     <footer className="bg-forest-deep border-t border-gold-antique/20 text-text-light-soft">
@@ -22,7 +27,7 @@ export default function Footer() {
               Bai Kang TCM
             </span>
             <p className="font-body text-xs font-semibold uppercase tracking-widest text-gold-antique">
-              Witkamp Wellness
+              {tradeNameText}
             </p>
             <p className="font-body text-sm text-text-light-soft/80 max-w-sm leading-relaxed">
               {t('tagline')}
@@ -70,7 +75,7 @@ export default function Footer() {
             </p>
             <div className="font-body text-sm space-y-2 text-text-light-soft/80">
               <p className="font-medium text-ivory leading-snug">
-                Bai Kang TCM | Witkamp Wellness
+                Bai Kang TCM
               </p>
               <p className="text-text-light-soft/90">Patrick Witkamp</p>
               <p>{t('address')}</p>
@@ -107,27 +112,26 @@ export default function Footer() {
 
         {/* MIDDEN: SCHILDJES & GAT-WKKGZ KLACHTENREGELING */}
         <div className="py-8 border-b border-white/10 flex flex-col md:flex-row items-start md:items-center gap-6 lg:gap-8">
-          {/* Schildjes */}
-<div className="flex items-center gap-4 shrink-0">
-  <div className="relative h-16 w-16 sm:h-20 sm:w-20">
-    <Image
-      src="/images/CATvirtueelschild.png"
-      alt="CAT-therapeut schild"
-      fill
-      sizes="80px"
-      className="object-contain"
-    />
-  </div>
-  <div className="relative h-16 w-16 sm:h-20 sm:w-20">
-    <Image
-      src="/images/GATVirtueelschild.png"
-      alt="GAT Geschilleninstantie schild"
-      fill
-      sizes="80px"
-      className="object-contain"
-    />
-  </div>
-</div>
+          <div className="flex items-center gap-4 shrink-0">
+            <div className="relative h-16 w-16 sm:h-20 sm:w-20">
+              <Image
+                src="/images/CATvirtueelschild.png"
+                alt="CAT-therapeut schild"
+                fill
+                sizes="80px"
+                className="object-contain"
+              />
+            </div>
+            <div className="relative h-16 w-16 sm:h-20 sm:w-20">
+              <Image
+                src="/images/GATVirtueelschild.png"
+                alt="GAT Geschilleninstantie schild"
+                fill
+                sizes="80px"
+                className="object-contain"
+              />
+            </div>
+          </div>
 
           <div className="font-body text-xs leading-relaxed text-text-light-soft/75 max-w-4xl">
             <p>
@@ -146,7 +150,9 @@ export default function Footer() {
 
         {/* ONDERSTE BALK: COPYRIGHT & JURIDISCH */}
         <div className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 font-body text-xs text-text-light-soft/60">
-          <p>© {new Date().getFullYear()} Bai Kang TCM | Witkamp Wellness. {t('rights')}</p>
+          <p>
+            © {new Date().getFullYear()} Bai Kang TCM · {tradeNameText}. {t('rights')}
+          </p>
           <div className="flex gap-6">
             <Link href="/privacy" className="hover:text-gold-antique transition-colors">
               {t('privacy')}
