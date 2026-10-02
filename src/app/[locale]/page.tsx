@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import AtmosphericImage from '@/components/AtmosphericImage';
+import BambooWatermark from '@/components/BambooWatermark';
 
 export default function HomePage() {
   const t = useTranslations('Home');
@@ -8,36 +9,50 @@ export default function HomePage() {
   return (
     <main className="bg-ivory selection:bg-gold-antique/30">
       
-      {/* 1. HERO — Compact, redactioneel en direct op de hulpvraag */}
-      <section className="flex flex-col items-center justify-center px-6 pt-16 pb-14 sm:pt-20 sm:pb-16 lg:pt-24 lg:pb-18 max-w-4xl mx-auto text-center">
-        <p className="eyebrow text-gold-dark mb-4 tracking-widest uppercase">
-          {t('Hero.badge')}
-        </p>
-        <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.75rem] leading-[1.12] text-forest-deep mb-5 max-w-3xl">
-          {t('Hero.title')}
-        </h1>
-        <p className="font-body text-base sm:text-lg text-text-soft leading-relaxed max-w-xl mx-auto mb-8">
-          {t('Hero.intro')}
-        </p>
-        <div className="flex flex-col sm:flex-row gap-3.5 items-center justify-center w-full sm:w-auto">
-          <Link
-            href="/klachten"
-            className="w-full sm:w-auto rounded-none border border-forest-deep px-7 py-3.5 font-body text-xs font-semibold uppercase tracking-widest text-forest-deep transition-all hover:bg-forest-deep/5"
-          >
-            {t('Hero.ctaHelp')} →
-          </Link>
-          <Link
-            href="/contact"
-            className="w-full sm:w-auto rounded-none bg-forest-deep px-7 py-3.5 font-body text-xs font-semibold uppercase tracking-widest text-text-light shadow-md transition-all hover:bg-forest-dark hover:shadow-lg"
-          >
-            {t('Hero.ctaAppointment')}
-          </Link>
+      {/* 1. HERO — Compact, redactioneel met zacht watermerk rechtsboven */}
+      <section className="relative overflow-hidden w-full border-b border-border-light/30">
+        <BambooWatermark 
+          position="top-right" 
+          opacity="opacity-[0.035]" 
+          className="translate-x-16 -translate-y-12"
+        />
+
+        <div className="relative z-10 flex flex-col items-center justify-center px-6 pt-16 pb-14 sm:pt-20 sm:pb-16 lg:pt-24 lg:pb-18 max-w-4xl mx-auto text-center">
+          <p className="eyebrow text-gold-dark mb-4 tracking-widest uppercase">
+            {t('Hero.badge')}
+          </p>
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.75rem] leading-[1.12] text-forest-deep mb-5 max-w-3xl">
+            {t('Hero.title')}
+          </h1>
+          <p className="font-body text-base sm:text-lg text-text-soft leading-relaxed max-w-xl mx-auto mb-8">
+            {t('Hero.intro')}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3.5 items-center justify-center w-full sm:w-auto">
+            <Link
+              href="/klachten"
+              className="w-full sm:w-auto rounded-none border border-forest-deep px-7 py-3.5 font-body text-xs font-semibold uppercase tracking-widest text-forest-deep transition-all hover:bg-forest-deep/5"
+            >
+              {t('Hero.ctaHelp')} →
+            </Link>
+            <Link
+              href="/contact"
+              className="w-full sm:w-auto rounded-none bg-forest-deep px-7 py-3.5 font-body text-xs font-semibold uppercase tracking-widest text-text-light shadow-md transition-all hover:bg-forest-dark hover:shadow-lg"
+            >
+              {t('Hero.ctaAppointment')}
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* 2. WAARMEE KAN IK HELPEN? */}
-      <section className="bg-surface-cream border-t border-border-light/40 px-6 py-24 lg:px-16">
-        <div className="mx-auto max-w-7xl">
+      {/* 2. WAARMEE KAN IK HELPEN? — Watermerk linksonder voor visuele tegenhanger */}
+      <section className="relative overflow-hidden bg-surface-cream border-t border-border-light/40 px-6 py-24 lg:px-16">
+        <BambooWatermark 
+          position="bottom-left" 
+          opacity="opacity-[0.03]" 
+          className="-translate-x-12 translate-y-16 scale-90"
+        />
+
+        <div className="relative z-10 mx-auto max-w-7xl">
           <div className="mb-16 max-w-3xl">
             <p className="eyebrow text-gold-dark mb-4">{t('Issues.badge')}</p>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-forest-deep mb-6">
@@ -73,10 +88,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. OVER PATRICK — Editorial portret via AtmosphericImage */}
-      <section className="bg-ivory border-t border-border-light/40 px-6 py-24 lg:px-16 overflow-hidden">
-        <div className="mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          
+      {/* 3. OVER PATRICK — Watermerk rechtsboven als balans met het portret links */}
+      <section className="relative overflow-hidden bg-ivory border-t border-border-light/40 px-6 py-24 lg:px-16">
+        <BambooWatermark 
+          position="top-right" 
+          opacity="opacity-[0.035]" 
+          className="translate-x-16 -translate-y-8"
+        />
+
+        <div className="relative z-10 mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1 relative w-full max-w-md mx-auto">
             <AtmosphericImage
               src="/images/patrick-portret.png" 
@@ -111,13 +131,18 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-
         </div>
       </section>
 
-      {/* 4. EINDBANNER — Sluit direct aan op de donkere footer */}
-      <section className="bg-forest-deep px-6 pt-24 pb-16 lg:pt-32 lg:pb-20 text-center border-t-4 border-gold-antique">
-        <div className="mx-auto max-w-3xl space-y-6">
+      {/* 4. EINDBANNER — Watermerk in antiek goud op diepgroen */}
+      <section className="relative overflow-hidden bg-forest-deep px-6 pt-24 pb-16 lg:pt-32 lg:pb-20 text-center border-t-4 border-gold-antique">
+        <BambooWatermark 
+          position="bottom-right" 
+          opacity="opacity-[0.06]" 
+          className="text-gold-antique translate-x-12 translate-y-12"
+        />
+
+        <div className="relative z-10 mx-auto max-w-3xl space-y-6">
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-ivory leading-tight">
             {t('FinalCTA.title')}
           </h2>
