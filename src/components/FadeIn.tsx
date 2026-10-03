@@ -2,15 +2,17 @@
 
 import { useEffect, useRef, useState, ReactNode } from 'react';
 
-interface FadeInProps {
+export interface FadeInProps {
   children: ReactNode;
-  delay?: number; // Vertraging in milliseconden (bijv. 150 of 300)
+  delay?: number;
+  direction?: 'up' | 'none';
   className?: string;
 }
 
 export default function FadeIn({
   children,
   delay = 0,
+  direction = 'up',
   className = '',
 }: FadeInProps) {
   const [isVisible, setIsVisible] = useState(false);
@@ -18,17 +20,15 @@ export default function FadeIn({
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            observer.unobserve(entry.target);
-          }
-        });
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
       },
       {
-        threshold: 0.15, // Start als 15% van het blok in beeld komt
-        rootMargin: '0px 0px -40px 0px',
+        threshold: 0.1,
+        rootMargin: '0px 0px -30px 0px',
       }
     );
 
@@ -37,24 +37,27 @@ export default function FadeIn({
       observer.observe(current);
     }
 
-    return () => {
-      if (current) observer.unobserve(current);
-    };
+    return () => observer.disconnect();
   }, []);
+
+  const translateClass =
+    direction === 'up'
+      ? isVisible
+        ? 'translate-y-0'
+        : 'translate-y-5'
+      : '';
 
   return (
     <div
       ref={domRef}
       style={{
-        transitionDuration: '900ms',
+        transitionDuration: '950ms',
         transitionDelay: `${delay}ms`,
         transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
       }}
-      className={`transition-all ${
-        isVisible
-          ? 'opacity-100 translate-y-0'
-          : 'opacity-0 translate-y-6'
-      } ${className}`}
+      className={`transition-all motion-reduce:transition-none motion-reduce:transform-none ${
+        isVisible ? 'opacity-100' : 'opacity-0'
+      } ${translateClass} ${className}`}
     >
       {children}
     </div>
