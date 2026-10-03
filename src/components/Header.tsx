@@ -31,7 +31,7 @@ export default function Header() {
         { label: isNl ? 'Energie & herstel' : 'Energy & recovery', href: '/klachten#energie' },
         { label: isNl ? 'Maag & darmen' : 'Stomach & digestion', href: '/klachten#maag-darmen' },
         { label: isNl ? 'Vrouw & man' : 'Women & men', href: '/klachten#vrouw-man' },
-        { label: isNl ? 'Stoppen met roken & vapen' : 'Quitting smoking & vaping', href: '/klachten#stoppen-roken' },
+        { label: isNl ? 'Stoppen met roken & vapen' : 'Quitting smoking & vaping', href: 'https://rookvrij.nu' },
       ],
     },
     {
@@ -41,7 +41,7 @@ export default function Header() {
       children: [
         { label: isNl ? 'Wat is acupunctuur?' : 'What is acupuncture?', href: '/acupunctuur' },
         { label: isNl ? 'Traditionele Chinese Geneeskunde' : 'Traditional Chinese Medicine', href: '/acupunctuur#tcm' },
-        { label: isNl ? 'Laseracupunctuur' : 'Laser acupuncture', href: '/laseracupunctuur' },
+        { label: isNl ? 'Laseracupunctuur' : 'Laser acupuncture', href: '/acupunctuur#laseracupunctuur' },
       ],
     },
     {
@@ -97,8 +97,9 @@ export default function Header() {
             >
               <Link
                 href={item.href}
+                onClick={() => setActiveDropdown(null)}
                 className={`flex items-center gap-1.5 py-2 text-sm font-medium transition-colors hover:text-forest-deep ${
-                  pathname.startsWith(item.href) ? 'text-forest-deep font-semibold' : 'text-text-soft'
+                  pathname === item.href ? 'text-forest-deep font-semibold' : 'text-text-soft'
                 }`}
               >
                 <span>{item.label}</span>
@@ -111,16 +112,35 @@ export default function Header() {
 
               {/* Dropdown Menu */}
               {item.children && activeDropdown === item.id && (
-                <div className="absolute left-0 top-full min-w-[240px] border border-border-light bg-ivory py-2 shadow-lg z-50">
-                  {item.children.map((sub) => (
-                    <Link
-                      key={sub.href}
-                      href={sub.href}
-                      className="block px-5 py-2.5 text-xs font-medium text-text-soft hover:bg-surface-cream hover:text-forest-deep transition-colors"
-                    >
-                      {sub.label}
-                    </Link>
-                  ))}
+                <div className="absolute left-0 top-full min-w-[250px] border border-border-light bg-ivory py-2 shadow-lg z-50">
+                  {item.children.map((sub) => {
+                    const isExternal = sub.href.startsWith('http');
+                    if (isExternal) {
+                      return (
+                        <a
+                          key={sub.href}
+                          href={sub.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => setActiveDropdown(null)}
+                          className="flex items-center justify-between px-5 py-2.5 text-xs font-medium text-text-soft hover:bg-surface-cream hover:text-forest-deep transition-colors"
+                        >
+                          <span>{sub.label}</span>
+                          <span className="text-[10px] text-gold-antique" aria-hidden="true">↗</span>
+                        </a>
+                      );
+                    }
+                    return (
+                      <Link
+                        key={sub.href}
+                        href={sub.href}
+                        onClick={() => setActiveDropdown(null)}
+                        className="block px-5 py-2.5 text-xs font-medium text-text-soft hover:bg-surface-cream hover:text-forest-deep transition-colors"
+                      >
+                        {sub.label}
+                      </Link>
+                    );
+                  })}
                 </div>
               )}
             </div>
@@ -207,16 +227,34 @@ export default function Header() {
                 </Link>
                 {item.children && (
                   <div className="ml-3 flex flex-col border-l border-border-light pl-3 mt-1 gap-2">
-                    {item.children.map((sub) => (
-                      <Link
-                        key={sub.href}
-                        href={sub.href}
-                        onClick={() => setMobileMenuOpen(false)}
-                        className="text-xs text-text-soft py-1 hover:text-forest-deep"
-                      >
-                        {sub.label}
-                      </Link>
-                    ))}
+                    {item.children.map((sub) => {
+                      const isExternal = sub.href.startsWith('http');
+                      if (isExternal) {
+                        return (
+                          <a
+                            key={sub.href}
+                            href={sub.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="flex items-center justify-between text-xs text-text-soft py-1 hover:text-forest-deep"
+                          >
+                            <span>{sub.label}</span>
+                            <span className="text-[10px] text-gold-antique" aria-hidden="true">↗</span>
+                          </a>
+                        );
+                      }
+                      return (
+                        <Link
+                          key={sub.href}
+                          href={sub.href}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="text-xs text-text-soft py-1 hover:text-forest-deep"
+                        >
+                          {sub.label}
+                        </Link>
+                      );
+                    })}
                   </div>
                 )}
               </div>

@@ -1,16 +1,36 @@
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import AtmosphericBamboo from '@/components/AtmosphericBamboo';
 import FadeIn from '@/components/FadeIn';
 
-export const metadata = {
-  title: 'Wat is Acupunctuur? | Traditionele Chinese Geneeskunde Tilburg | Bai Kang',
-  description: 'Ontdek hoe acupunctuur werkt vanuit zowel Traditionele Chinese Geneeskunde als moderne fysiologie. Persoonlijke diagnostiek, rustige behandelingen en laseracupunctuur in Tilburg.',
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  try {
+    const t = await getTranslations({ locale, namespace: 'Acupuncture' });
+    return {
+      title: t('metaTitle'),
+      description: t('metaDescription'),
+    };
+  } catch {
+    return {
+      title: 'Wat is Acupunctuur? | Traditionele Chinese Geneeskunde Tilburg | Bai Kang',
+      description:
+        'Ontdek hoe acupunctuur werkt vanuit zowel Traditionele Chinese Geneeskunde als moderne fysiologie. Persoonlijke diagnostiek, rustige behandelingen en laseracupunctuur in Tilburg.',
+    };
+  }
+}
 
 export default function AcupuncturePage() {
+  const t = useTranslations('Acupuncture');
+
   return (
-    <main className="bg-ivory text-text selection:bg-gold-antique/30 overflow-hidden">
+    <main className="bg-ivory text-text selection:bg-gold-antique/30 overflow-x-clip">
       
       {/* ========================================================
           1. HERO — Rustig binnenkomen met getrapte fades
@@ -25,19 +45,19 @@ export default function AcupuncturePage() {
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <FadeIn delay={0}>
             <p className="eyebrow text-gold-dark mb-4">
-              Acupunctuur & Traditionele Chinese Geneeskunde
+              {t('heroEyebrow')}
             </p>
           </FadeIn>
 
           <FadeIn delay={150}>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-forest-deep leading-[1.15] mb-6">
-              Waar kan acupunctuur bij helpen?
+              {t('heroTitle')}
             </h1>
           </FadeIn>
 
           <FadeIn delay={300}>
             <p className="font-body text-base sm:text-lg text-text-soft leading-relaxed max-w-2xl mx-auto mb-10">
-              Acupunctuur wordt al duizenden jaren toegepast binnen de Traditionele Chinese Geneeskunde. Bij Bai Kang kijken we niet alleen naar de specifieke klacht, maar naar jouw situatie als één samenhangend geheel.
+              {t('heroIntro')}
             </p>
           </FadeIn>
           
@@ -47,13 +67,13 @@ export default function AcupuncturePage() {
                 href="/klachten"
                 className="w-full sm:w-auto rounded-none border border-forest-deep px-8 py-3.5 font-body text-xs font-semibold uppercase tracking-widest text-forest-deep hover:bg-forest-deep/5 transition-all"
               >
-                Bekijk klachten & indicaties
+                {t('btnComplaints')}
               </Link>
               <Link
                 href="/contact"
                 className="w-full sm:w-auto rounded-none bg-forest-deep px-8 py-3.5 font-body text-xs font-semibold uppercase tracking-widest text-text-light shadow-sm hover:bg-forest-dark transition-all"
               >
-                Afspraak maken
+                {t('btnAppointment')}
               </Link>
             </div>
           </FadeIn>
@@ -69,24 +89,18 @@ export default function AcupuncturePage() {
             
             <div className="lg:col-span-7 space-y-6">
               <FadeIn delay={0}>
-                <p className="eyebrow text-gold-dark">Aandacht voor het geheel</p>
+                <p className="eyebrow text-gold-dark">{t('holisticEyebrow')}</p>
                 <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.6rem] text-forest-deep leading-tight mt-2">
-                  Acupunctuur is meer dan een naald op een punt.
+                  {t('holisticTitle')}
                 </h2>
                 <div className="w-16 h-px bg-gold-antique/60 my-6" aria-hidden="true" />
               </FadeIn>
               
               <FadeIn delay={150}>
                 <div className="space-y-4 font-body text-base sm:text-lg text-text-soft leading-relaxed">
-                  <p>
-                    Een klacht ontstaat zelden op zichzelf. Pijn, spanning, vermoeidheid of slaapproblemen beïnvloeden hoe je je dagelijks voelt en reageert. Binnen de Traditionele Chinese Geneeskunde kijken we daarom verder dan alleen de plek waar het ongemak zich toont.
-                  </p>
-                  <p>
-                    Hoe voelt je lichaam? Hoe slaap je? Hoe is je energieniveau door de dag heen? En hoe verhouden verschillende fysieke signalen zich tot elkaar?
-                  </p>
-                  <p>
-                    Tijdens een behandeling gebruik ik deze antwoorden om een persoonlijk behandelbeeld te vormen en de keuze van de acupunctuurpunten exact daarop af te stemmen.
-                  </p>
+                  <p>{t('holisticP1')}</p>
+                  <p>{t('holisticP2')}</p>
+                  <p>{t('holisticP3')}</p>
                 </div>
               </FadeIn>
             </div>
@@ -97,7 +111,7 @@ export default function AcupuncturePage() {
                   <div className="relative w-full h-full overflow-hidden">
                     <Image
                       src="/images/10-De naald als detail.png"
-                      alt="Detail van fijne acupunctuurnaalden op een steen"
+                      alt={t('needleAlt')}
                       fill
                       sizes="(max-width: 1024px) 100vw, 45vw"
                       className="object-cover object-center transition-transform duration-700 hover:scale-105"
@@ -113,7 +127,6 @@ export default function AcupuncturePage() {
 
       {/* ========================================================
           3. VISUEEL INTERMEZZO — Moderne fysiologie & De Visual
-             Hier linkt subitem 2 (Traditionele Chinese Geneeskunde) naartoe
           ======================================================== */}
       <section 
         id="tcm" 
@@ -121,12 +134,12 @@ export default function AcupuncturePage() {
       >
         <div className="mx-auto max-w-5xl text-center">
           <FadeIn delay={0}>
-            <p className="eyebrow text-gold-dark mb-3">Twee perspectieven</p>
+            <p className="eyebrow text-gold-dark mb-3">{t('modernEyebrow')}</p>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-forest-deep mb-6">
-              Een behandeling die het lichaam prikkelt.
+              {t('modernTitle')}
             </h2>
             <p className="font-body text-base sm:text-lg text-text-soft leading-relaxed max-w-3xl mx-auto mb-16">
-              Vanuit de moderne fysiologie onderzoekt men hoe acupunctuur het zenuwstelsel, de pijnverwerking en lokale weefselreacties stimuleert. Binnen TCM verklaren we dit vanuit het herstellen van de vrije stroom van Qi en natuurlijk evenwicht. Beide visies vullen elkaar prachtig aan.
+              {t('modernIntro')}
             </p>
           </FadeIn>
 
@@ -135,7 +148,7 @@ export default function AcupuncturePage() {
             <div className="relative w-full aspect-[16/9] max-w-4xl mx-auto border border-border-light shadow-md bg-ivory overflow-hidden mb-16">
               <Image
                 src="/images/lichaam-patronen-balans.png"
-                alt="Visualisatie van Lichaam, Patronen en Balans binnen Bai Kang TCM"
+                alt={t('visualAlt')}
                 fill
                 sizes="(max-width: 1200px) 100vw, 1000px"
                 className="object-cover object-center"
@@ -146,24 +159,24 @@ export default function AcupuncturePage() {
           {/* Drie fasen onder de visual */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left border-t border-gold-antique/30 pt-12">
             <FadeIn delay={0}>
-              <p className="eyebrow text-gold-dark mb-2">01. Prikkeling</p>
-              <h3 className="font-display text-xl text-forest-deep mb-2">Gerichte stimulatie</h3>
+              <p className="eyebrow text-gold-dark mb-2">{t('phase1Eyebrow')}</p>
+              <h3 className="font-display text-xl text-forest-deep mb-2">{t('phase1Title')}</h3>
               <p className="font-body text-sm text-text-soft leading-relaxed">
-                Zeer dunne, steriele naalden geven een subtiele prikkel op nauwkeurig gekozen punten, afgestemd op jouw persoonlijke diagnose.
+                {t('phase1Desc')}
               </p>
             </FadeIn>
             <FadeIn delay={150}>
-              <p className="eyebrow text-gold-dark mb-2">02. Reactie</p>
-              <h3 className="font-display text-xl text-forest-deep mb-2">Natuurlijke respons</h3>
+              <p className="eyebrow text-gold-dark mb-2">{t('phase2Eyebrow')}</p>
+              <h3 className="font-display text-xl text-forest-deep mb-2">{t('phase2Title')}</h3>
               <p className="font-body text-sm text-text-soft leading-relaxed">
-                Het lichaam reageert op de prikkeling via het zenuwstelsel en lokale doorbloeding om het zelfherstellend vermogen te activeren.
+                {t('phase2Desc')}
               </p>
             </FadeIn>
             <FadeIn delay={300}>
-              <p className="eyebrow text-gold-dark mb-2">03. Ontspanning</p>
-              <h3 className="font-display text-xl text-forest-deep mb-2">Tijd voor herstel</h3>
+              <p className="eyebrow text-gold-dark mb-2">{t('phase3Eyebrow')}</p>
+              <h3 className="font-display text-xl text-forest-deep mb-2">{t('phase3Title')}</h3>
               <p className="font-body text-sm text-text-soft leading-relaxed">
-                Tijdens het rusten op de behandelbank schakelt het zenuwstelsel om van de dagelijkse actiestand naar diepe ontspanning.
+                {t('phase3Desc')}
               </p>
             </FadeIn>
           </div>
@@ -179,42 +192,42 @@ export default function AcupuncturePage() {
             
             <div className="lg:col-span-5">
               <FadeIn delay={0}>
-                <p className="eyebrow text-gold-dark mb-3">Traditionele Filosofie</p>
+                <p className="eyebrow text-gold-dark mb-3">{t('tcmEyebrow')}</p>
                 <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.5rem] text-forest-deep leading-tight mb-6">
-                  De visie van de Traditionele Chinese Geneeskunde.
+                  {t('tcmTitle')}
                 </h2>
                 <blockquote className="font-display italic text-2xl text-forest-soft border-l-2 border-gold-antique pl-6 my-6">
-                  “Het lichaam wordt niet gezien als een verzameling losse onderdelen, maar als een dynamisch geheel.”
+                  {t('tcmQuote')}
                 </blockquote>
               </FadeIn>
             </div>
 
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-10">
               <FadeIn delay={100} className="border-t border-border-light/80 pt-5">
-                <h3 className="font-display text-xl text-forest-deep mb-2">Qi & Doorstroming</h3>
+                <h3 className="font-display text-xl text-forest-deep mb-2">{t('qiTitle')}</h3>
                 <p className="font-body text-sm text-text-soft leading-relaxed">
-                  Binnen TCM is een vrije circulatie van energie en bloed essentieel. Waar stagnatie optreedt, ontstaan spanning en pijnklachten.
+                  {t('qiDesc')}
                 </p>
               </FadeIn>
 
               <FadeIn delay={200} className="border-t border-border-light/80 pt-5">
-                <h3 className="font-display text-xl text-forest-deep mb-2">Balans & Samenhang</h3>
+                <h3 className="font-display text-xl text-forest-deep mb-2">{t('balanceTitle')}</h3>
                 <p className="font-body text-sm text-text-soft leading-relaxed">
-                  Functies in het lichaam zijn continu met elkaar verbonden. Een disbalans in rust of voeding kan zich uiten op een heel ander vlak.
+                  {t('balanceDesc')}
                 </p>
               </FadeIn>
 
               <FadeIn delay={300} className="border-t border-border-light/80 pt-5">
-                <h3 className="font-display text-xl text-forest-deep mb-2">Persoonlijke Differentiatie</h3>
+                <h3 className="font-display text-xl text-forest-deep mb-2">{t('diffTitle')}</h3>
                 <p className="font-body text-sm text-text-soft leading-relaxed">
-                  Twee mensen met dezelfde hoofdpijn kunnen een totaal verschillend behandelplan krijgen, omdat de onderliggende oorzaak verschilt.
+                  {t('diffDesc')}
                 </p>
               </FadeIn>
 
               <FadeIn delay={400} className="border-t border-border-light/80 pt-5">
-                <h3 className="font-display text-xl text-forest-deep mb-2">Leefstijl & Belasting</h3>
+                <h3 className="font-display text-xl text-forest-deep mb-2">{t('lifestyleTitle')}</h3>
                 <p className="font-body text-sm text-text-soft leading-relaxed">
-                  Slaap, stress, voeding en dagelijkse inspanning worden altijd meegenomen om het herstel duurzaam te ondersteunen.
+                  {t('lifestyleDesc')}
                 </p>
               </FadeIn>
             </div>
@@ -224,63 +237,77 @@ export default function AcupuncturePage() {
       </section>
 
       {/* ========================================================
-          5. KLACHTEN — Functioneel overzicht
+          5. KLACHTEN — Functioneel overzicht met link naar rookvrij.nu
           ======================================================== */}
       <section className="bg-surface-cream py-24 px-6 sm:px-10 lg:px-16 border-b border-border-light/40">
         <div className="mx-auto max-w-5xl">
           <FadeIn delay={0}>
             <div className="text-center max-w-2xl mx-auto mb-16">
-              <p className="eyebrow text-gold-dark mb-3">Toepassingsgebieden</p>
+              <p className="eyebrow text-gold-dark mb-3">{t('complaintsEyebrow')}</p>
               <h2 className="font-display text-3xl sm:text-4xl text-forest-deep mb-4">
-                Voor welke klachten?
+                {t('complaintsTitle')}
               </h2>
               <p className="font-body text-base text-text-soft">
-                Acupunctuur is geschikt voor uiteenlopende hulpvragen. De belangrijkste aandachtsgebieden binnen de praktijk:
+                {t('complaintsIntro')}
               </p>
             </div>
           </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10 mb-14">
             <FadeIn delay={50} className="border-t border-border-light/60 pt-6">
-              <h3 className="font-display text-2xl text-forest-deep mb-2">Pijn & Spanning</h3>
+              <h3 className="font-display text-2xl text-forest-deep mb-2">{t('catPainTitle')}</h3>
               <p className="font-body text-sm text-text-soft leading-relaxed">
-                Rug-, nek- en schouderklachten, spanningshoofdpijn, gewrichtspijn en aanhoudende spierspanning.
+                {t('catPainDesc')}
               </p>
             </FadeIn>
 
             <FadeIn delay={150} className="border-t border-border-light/60 pt-6">
-              <h3 className="font-display text-2xl text-forest-deep mb-2">Stress & Slaap</h3>
+              <h3 className="font-display text-2xl text-forest-deep mb-2">{t('catStressTitle')}</h3>
               <p className="font-body text-sm text-text-soft leading-relaxed">
-                Moeite met ontspannen, een vol hoofd, innerlijke onrust en doorslaapproblemen.
+                {t('catStressDesc')}
               </p>
             </FadeIn>
 
             <FadeIn delay={250} className="border-t border-border-light/60 pt-6">
-              <h3 className="font-display text-2xl text-forest-deep mb-2">Energie & Herstel</h3>
+              <h3 className="font-display text-2xl text-forest-deep mb-2">{t('catEnergyTitle')}</h3>
               <p className="font-body text-sm text-text-soft leading-relaxed">
-                Aanhoudende vermoeidheid, weinig veerkracht of moeite met herstellen na inspanning of ziekte.
+                {t('catEnergyDesc')}
               </p>
             </FadeIn>
 
             <FadeIn delay={350} className="border-t border-border-light/60 pt-6">
-              <h3 className="font-display text-2xl text-forest-deep mb-2">Maag & Darmen</h3>
+              <h3 className="font-display text-2xl text-forest-deep mb-2">{t('catDigestionTitle')}</h3>
               <p className="font-body text-sm text-text-soft leading-relaxed">
-                Een opgeblazen gevoel, maagklachten, trage vertering en buikkrampen.
+                {t('catDigestionDesc')}
               </p>
             </FadeIn>
 
             <FadeIn delay={450} className="border-t border-border-light/60 pt-6">
-              <h3 className="font-display text-2xl text-forest-deep mb-2">Vrouw & Hormonale Balans</h3>
+              <h3 className="font-display text-2xl text-forest-deep mb-2">{t('catGenderTitle')}</h3>
               <p className="font-body text-sm text-text-soft leading-relaxed">
-                Cyclusgerelateerde klachten, overgangsverschijnselen en emotionele schommelingen.
+                {t('catGenderDesc')}
               </p>
             </FadeIn>
 
+            {/* Stoppen met roken met externe link */}
             <FadeIn delay={550} className="border-t border-border-light/60 pt-6">
-              <h3 className="font-display text-2xl text-forest-deep mb-2">Stoppen met Roken & Vapen</h3>
-              <p className="font-body text-sm text-text-soft leading-relaxed">
-                Specifieke trajecten met moderne laseracupunctuur en ooracupunctuur om ontwenning te dempen.
+              <h3 className="font-display text-2xl text-forest-deep mb-2">{t('catSmokingTitle')}</h3>
+              <p className="font-body text-sm text-text-soft leading-relaxed mb-3">
+                {t('catSmokingDesc')}
               </p>
+              <a
+                href="https://rookvrij.nu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 font-body text-xs font-semibold uppercase tracking-wider text-gold-dark hover:text-forest-deep transition-colors group"
+              >
+                <span className="border-b border-gold-dark/40 group-hover:border-forest-deep transition-colors">
+                  rookvrij.nu
+                </span>
+                <span className="text-[10px] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true">
+                  ↗
+                </span>
+              </a>
             </FadeIn>
           </div>
 
@@ -290,7 +317,7 @@ export default function AcupuncturePage() {
                 href="/klachten"
                 className="inline-flex items-center gap-2 font-body text-xs font-semibold uppercase tracking-widest text-forest-deep hover:text-gold-antique transition-colors group"
               >
-                <span>Bekijk alle specifieke indicaties op de klachtenpagina</span>
+                <span>{t('ctaComplaints')}</span>
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </Link>
             </div>
@@ -305,9 +332,9 @@ export default function AcupuncturePage() {
         <div className="mx-auto max-w-4xl">
           <FadeIn delay={0}>
             <div className="text-center mb-16">
-              <p className="eyebrow text-gold-dark mb-3">Werkwijze</p>
+              <p className="eyebrow text-gold-dark mb-3">{t('processEyebrow')}</p>
               <h2 className="font-display text-3xl sm:text-4xl text-forest-deep">
-                Eerst kijken, dan behandelen.
+                {t('processTitle')}
               </h2>
             </div>
           </FadeIn>
@@ -316,41 +343,41 @@ export default function AcupuncturePage() {
             
             <FadeIn delay={50} className="relative">
               <span className="absolute -left-[41px] sm:-left-[57px] top-1 flex h-6 w-6 items-center justify-center bg-ivory font-display text-sm font-semibold text-gold-dark border border-gold-antique/40">
-                01
+                {t('step1Num')}
               </span>
-              <h3 className="font-display text-2xl text-forest-deep mb-2">De Intake & Jouw Verhaal</h3>
+              <h3 className="font-display text-2xl text-forest-deep mb-2">{t('step1Title')}</h3>
               <p className="font-body text-base text-text-soft leading-relaxed">
-                We nemen de tijd om te luisteren. Wat is je hulpvraag? Hoe zijn de klachten ontstaan en wat belemmert je in het dagelijks leven?
+                {t('step1Desc')}
               </p>
             </FadeIn>
 
             <FadeIn delay={150} className="relative">
               <span className="absolute -left-[41px] sm:-left-[57px] top-1 flex h-6 w-6 items-center justify-center bg-ivory font-display text-sm font-semibold text-gold-dark border border-gold-antique/40">
-                02
+                {t('step2Num')}
               </span>
-              <h3 className="font-display text-2xl text-forest-deep mb-2">Traditionele Diagnostiek</h3>
+              <h3 className="font-display text-2xl text-forest-deep mb-2">{t('step2Title')}</h3>
               <p className="font-body text-base text-text-soft leading-relaxed">
-                Aan de hand van observatie, tong- en polsdiagnostiek bepalen we waar de doorstroming stagneert en welk onderliggend patroon aanwezig is.
+                {t('step2Desc')}
               </p>
             </FadeIn>
 
             <FadeIn delay={250} className="relative">
               <span className="absolute -left-[41px] sm:-left-[57px] top-1 flex h-6 w-6 items-center justify-center bg-ivory font-display text-sm font-semibold text-gold-dark border border-gold-antique/40">
-                03
+                {t('step3Num')}
               </span>
-              <h3 className="font-display text-2xl text-forest-deep mb-2">De Behandeling</h3>
+              <h3 className="font-display text-2xl text-forest-deep mb-2">{t('step3Title')}</h3>
               <p className="font-body text-base text-text-soft leading-relaxed">
-                Zeer fijne naaldjes worden zorgvuldig geplaatst. Daarna lig je ongeveer 25 tot 30 minuten ontspannen in een rustige, warme behandelkamer.
+                {t('step3Desc')}
               </p>
             </FadeIn>
 
             <FadeIn delay={350} className="relative">
               <span className="absolute -left-[41px] sm:-left-[57px] top-1 flex h-6 w-6 items-center justify-center bg-ivory font-display text-sm font-semibold text-gold-dark border border-gold-antique/40">
-                04
+                {t('step4Num')}
               </span>
-              <h3 className="font-display text-2xl text-forest-deep mb-2">Evaluatie & Vervolg</h3>
+              <h3 className="font-display text-2xl text-forest-deep mb-2">{t('step4Title')}</h3>
               <p className="font-body text-base text-text-soft leading-relaxed">
-                We bespreken wat je hebt ervaren en hoe het lichaam heeft gereageerd. Vervolgbehandelingen worden steeds afgestemd op de actuele reactie.
+                {t('step4Desc')}
               </p>
             </FadeIn>
 
@@ -368,7 +395,7 @@ export default function AcupuncturePage() {
               <div className="relative w-full h-full overflow-hidden">
                 <Image
                   src="/images/9-rust-en-ontspanning.png"
-                  alt="Patiënt in diepe ontspanning tijdens een acupunctuursessie"
+                  alt={t('relaxAlt')}
                   fill
                   sizes="(max-width: 1200px) 100vw, 1000px"
                   className="object-cover object-center"
@@ -380,10 +407,10 @@ export default function AcupuncturePage() {
           <FadeIn delay={150}>
             <div className="max-w-2xl mx-auto text-center space-y-4">
               <h2 className="font-display text-3xl sm:text-4xl text-forest-deep">
-                Rustig liggen. Even niets hoeven.
+                {t('relaxTitle')}
               </h2>
               <p className="font-body text-base sm:text-lg text-text-soft leading-relaxed">
-                Geen scherm. Geen haast. De naalden zijn zo dun dat het plaatsen vaak nauwelijks voelbaar is. Wat overblijft is een zeldzaam moment van stilte waarin je lichaam de ruimte krijgt om te herstellen.
+                {t('relaxDesc')}
               </p>
             </div>
           </FadeIn>
@@ -392,7 +419,6 @@ export default function AcupuncturePage() {
 
       {/* ========================================================
           8. LASERACUPUNCTUUR — Naaldvrij alternatief
-             Hier linkt subitem 3 (Laseracupunctuur) naartoe
           ======================================================== */}
       <section 
         id="laseracupunctuur" 
@@ -400,9 +426,9 @@ export default function AcupuncturePage() {
       >
         <div className="mx-auto max-w-4xl text-center space-y-6">
           <FadeIn delay={0}>
-            <p className="eyebrow text-gold-dark">Naaldvrije Mogelijkheid</p>
+            <p className="eyebrow text-gold-dark">{t('laserEyebrow')}</p>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.5rem] text-forest-deep leading-tight mt-2">
-              Acupunctuur hoeft niet altijd met naalden.
+              {t('laserTitle')}
             </h2>
             <div className="flex items-center justify-center gap-3 my-5">
               <span className="h-px w-10 bg-gold-antique/40" />
@@ -413,14 +439,19 @@ export default function AcupuncturePage() {
 
           <FadeIn delay={150}>
             <div className="space-y-4 font-body text-base sm:text-lg text-text-soft leading-relaxed max-w-2xl mx-auto text-left sm:text-center">
-              <p>
-                Voor wie gevoelig is voor prikkels, een behandeling met traditionele naalden spannend vindt of liever een zachte benadering wenst, biedt <strong>laseracupunctuur</strong> een doeltreffend en volkomen pijnloos alternatief.
-              </p>
-              <p>
-                In plaats van naalden wordt gebruikgemaakt van geconcentreerd, zacht licht (Low-Level Laser Therapy). Dit licht stimuleert dezelfde acupunctuurpunten en energiestromen in het lichaam, zonder de huid te doorboren.
-              </p>
+              <p>{t('laserP1')}</p>
+              <p>{t('laserP2')}</p>
               <p className="text-sm text-text-muted pt-2">
-                Binnen Bai Kang wordt laseracupunctuur ingezet bij spanningsklachten, lokale pijnverlichting en als vast onderdeel van het gerichte traject voor <strong>stoppen met roken & vapen</strong>.
+                {t('laserP3')}{' '}
+                <a
+                  href="https://rookvrij.nu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-gold-dark underline underline-offset-2 hover:text-forest-deep transition-colors inline-flex items-center gap-0.5"
+                >
+                  <span>rookvrij.nu</span>
+                  <span aria-hidden="true" className="text-[10px]">↗</span>
+                </a>.
               </p>
             </div>
           </FadeIn>
@@ -432,9 +463,9 @@ export default function AcupuncturePage() {
           ======================================================== */}
       <section className="py-16 px-6 sm:px-10 max-w-2xl mx-auto text-center border-b border-border-light/40">
         <FadeIn delay={0}>
-          <p className="eyebrow text-gold-dark mb-3">Onderdeel van goede zorg</p>
+          <p className="eyebrow text-gold-dark mb-3">{t('careEyebrow')}</p>
           <p className="font-body text-xs sm:text-sm text-text-muted leading-relaxed">
-            Acupunctuur is een waardevolle, complementaire behandelwijze en geen vervanging voor noodzakelijke reguliere geneeskunde. Bij acute of ernstige klachten adviseren we altijd eerst contact op te nemen met je huisarts. Bij Bai Kang werken we met zorg, aandacht en respect voor reguliere diagnostiek.
+            {t('careDesc')}
           </p>
         </FadeIn>
       </section>
@@ -445,18 +476,18 @@ export default function AcupuncturePage() {
       <section className="bg-forest-deep py-20 px-6 sm:px-12 text-center text-text-light">
         <div className="max-w-3xl mx-auto">
           <FadeIn delay={0}>
-            <p className="eyebrow text-gold-antique mb-4">Persoonlijk kennismaken</p>
+            <p className="eyebrow text-gold-antique mb-4">{t('finalCtaEyebrow')}</p>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-ivory mb-6">
-              Past acupunctuur bij jouw situatie?
+              {t('finalCtaTitle')}
             </h2>
             <p className="font-body text-base sm:text-lg text-text-light-soft/80 max-w-xl mx-auto mb-10 leading-relaxed">
-              Je hoeft vooraf niet precies te weten welke behandelvorm nodig is. Tijdens een eerste intake bespreken we wat er speelt en bekijken we samen wat passend is.
+              {t('finalCtaIntro')}
             </p>
             <Link
               href="/contact"
               className="inline-block rounded-none bg-gold-antique px-9 py-4 font-body text-xs font-semibold uppercase tracking-widest text-forest-deep hover:bg-gold-warm transition-all shadow-md"
             >
-              Afspraak maken
+              {t('finalCtaButton')}
             </Link>
           </FadeIn>
         </div>
