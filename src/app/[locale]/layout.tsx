@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import WhatsAppButton from '@/components/WhatsAppButton';
 import { Cormorant_Garamond, Manrope, Noto_Serif_SC } from 'next/font/google';
 import '../globals.css';
 
@@ -54,11 +55,15 @@ export default async function LocaleLayout({
       className={`${cormorant.variable} ${manrope.variable} ${notoSerifSC.variable}`}
       data-scroll-behavior="smooth"
     >
-      <body className="antialiased min-h-screen flex flex-col bg-ivory text-text">
+      <body
+        suppressHydrationWarning
+        className="antialiased min-h-screen flex flex-col bg-ivory text-text"
+      >
         <NextIntlClientProvider messages={messages}>
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
+          <WhatsAppButton />
         </NextIntlClientProvider>
       </body>
     </html>

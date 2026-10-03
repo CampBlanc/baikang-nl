@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import AtmosphericImage from '@/components/AtmosphericImage';
+import AtmosphericBamboo from '@/components/AtmosphericBamboo';
 import BambooWatermark from '@/components/BambooWatermark';
 
 export default function HomePage() {
@@ -9,12 +10,12 @@ export default function HomePage() {
   return (
     <main className="bg-ivory selection:bg-gold-antique/30">
       
-      {/* 1. HERO — Compact, redactioneel met zacht watermerk rechtsboven */}
+      {/* 1. HERO — Bamboebladeren inkt-wash rechtsboven */}
       <section className="relative overflow-hidden w-full border-b border-border-light/30">
-        <BambooWatermark 
+        <AtmosphericBamboo 
+          variant="leaves" 
           position="top-right" 
-          opacity="opacity-[0.035]" 
-          className="translate-x-16 -translate-y-12"
+          opacity="opacity-20"
         />
 
         <div className="relative z-10 flex flex-col items-center justify-center px-6 pt-16 pb-14 sm:pt-20 sm:pb-16 lg:pt-24 lg:pb-18 max-w-4xl mx-auto text-center">
@@ -44,15 +45,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. WAARMEE KAN IK HELPEN? — Watermerk linksonder voor visuele tegenhanger */}
-      <section className="relative overflow-hidden bg-surface-cream border-t border-border-light/40 px-6 py-24 lg:px-16">
-        <BambooWatermark 
-          position="bottom-left" 
-          opacity="opacity-[0.03]" 
-          className="-translate-x-12 translate-y-16 scale-90"
-        />
-
-        <div className="relative z-10 mx-auto max-w-7xl">
+      {/* 2. WAARMEE KAN IK HELPEN? — Rustige achtergrond (bamboe hier bewust weg) */}
+      <section className="bg-surface-cream border-t border-border-light/40 px-6 py-24 lg:px-16">
+        <div className="mx-auto max-w-7xl">
           <div className="mb-16 max-w-3xl">
             <p className="eyebrow text-gold-dark mb-4">{t('Issues.badge')}</p>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-forest-deep mb-6">
@@ -88,15 +83,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. OVER PATRICK — Watermerk rechtsboven als balans met het portret links */}
+      {/* 3. OVER PATRICK — Echte inkt-bamboe (stick-leaves) links achter het portret */}
       <section className="relative overflow-hidden bg-ivory border-t border-border-light/40 px-6 py-24 lg:px-16">
-        <BambooWatermark 
-          position="top-right" 
-          opacity="opacity-[0.035]" 
-          className="translate-x-16 -translate-y-8"
+        <AtmosphericBamboo 
+          variant="stick-leaves" 
+          position="center-left" 
+          flip={true}
+          opacity="opacity-20"
         />
 
         <div className="relative z-10 mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          
           <div className="order-2 lg:order-1 relative w-full max-w-md mx-auto">
             <AtmosphericImage
               src="/images/patrick-portret.png" 
@@ -131,15 +128,17 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
+
         </div>
       </section>
 
-      {/* 4. EINDBANNER — Watermerk in antiek goud op diepgroen */}
+      {/* 4. EINDBANNER — Diepgroen vlak verrijkt met subtiel gouden bamboemotief */}
       <section className="relative overflow-hidden bg-forest-deep px-6 pt-24 pb-16 lg:pt-32 lg:pb-20 text-center border-t-4 border-gold-antique">
         <BambooWatermark 
+          variant="cluster" 
           position="bottom-right" 
-          opacity="opacity-[0.06]" 
-          className="text-gold-antique translate-x-12 translate-y-12"
+          opacity="opacity-[0.25]" 
+          className="text-gold-antique translate-x-12 translate-y-12 scale-90"
         />
 
         <div className="relative z-10 mx-auto max-w-3xl space-y-6">
