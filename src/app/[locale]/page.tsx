@@ -141,11 +141,12 @@ export default function HomePage() {
           className="text-gold-antique translate-x-12 translate-y-12 scale-90"
         />
 
-        <div className="relative z-10 mx-auto max-w-3xl space-y-6">
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-ivory leading-tight">
+        {/* max-w op desktop verruimd naar 5xl zodat de kop niet geforceerd wordt afgebroken */}
+        <div className="relative z-10 mx-auto max-w-3xl lg:max-w-5xl space-y-6">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.65rem] xl:text-5xl text-ivory leading-tight lg:whitespace-nowrap">
             {t('FinalCTA.title')}
           </h2>
-          <p className="font-body text-lg sm:text-xl text-ivory/80 italic mb-8">
+          <p className="font-body text-lg sm:text-xl text-ivory/80 italic mb-8 max-w-2xl mx-auto">
             &ldquo;{t('FinalCTA.intro')}&rdquo;
           </p>
           <div className="pt-2">

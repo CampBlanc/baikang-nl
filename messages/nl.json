@@ -41,8 +41,8 @@
       "catEnergyDesc": "Vermoeidheid, weinig veerkracht en het gevoel niet goed op te laden.",
       "catDigestion": "Maag & Darmklachten",
       "catDigestionDesc": "Een opgeblazen gevoel, darmkrampen en andere verstoringen in de spijsvertering.",
-      "catGender": "Mannen- & Vrouwenklachten",
-      "catGenderDesc": "Klachten rondom cyclus, overgang, hormonale disbalans en vitaliteit.",
+      "catGender": "Vrouw & man",
+      "catGenderDesc": "Klachten rondom cyclus, overgang, hormonale veranderingen en vitaliteit.",
       "catSmoking": "Stoppen met roken & vapen",
       "catSmokingDesc": "Laseracupunctuur en ooracupunctuur ter ondersteuning bij ontwenning.",
       "cta": "Bekijk alle klachten"
@@ -67,8 +67,8 @@
       "ctaAppointment": "Afspraak maken"
     },
     "FinalCTA": {
-      "title": "Je hoeft niet direct precies te weten wat er is.",
-      "intro": "Een eerste afspraak begint met luisteren.",
+      "title": "Je hoeft niet precies te weten wat er aan de hand is.",
+      "intro": "Een eerste afspraak begint met jouw verhaal.",
       "cta": "Afspraak maken"
     }
   },
