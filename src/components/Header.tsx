@@ -6,7 +6,6 @@ import { useTranslations, useLocale } from 'next-intl';
 import { Link, usePathname, useRouter } from '@/i18n/navigation';
 
 export default function Header() {
-  const tNav = useTranslations('Navigation');
   const tCommon = useTranslations('Common');
   const locale = useLocale();
   const pathname = usePathname();
@@ -19,52 +18,44 @@ export default function Header() {
     router.replace(pathname, { locale: nextLocale });
   };
 
-  // Vangnet: als de vertaalsleutel toch ontbreekt, toont hij een verzorgde fallback
-  const getLabel = (key: string, fallback: string) => {
-    try {
-      const res = tNav(key as any);
-      return res && !res.startsWith('Navigation.') ? res : fallback;
-    } catch {
-      return fallback;
-    }
-  };
+  const isNl = locale === 'nl';
 
   const navItems = [
     {
       id: 'complaints',
-      label: getLabel('complaints', locale === 'nl' ? 'Klachten' : 'Symptoms'),
+      label: isNl ? 'Klachten' : 'Symptoms',
       href: '/klachten',
       children: [
-        { label: getLabel('complaintsMenu.pain', locale === 'nl' ? 'Pijn & spanning' : 'Pain & tension'), href: '/klachten#pijn' },
-        { label: getLabel('complaintsMenu.stress', locale === 'nl' ? 'Stress & slaap' : 'Stress & sleep'), href: '/klachten#stress' },
-        { label: getLabel('complaintsMenu.energy', locale === 'nl' ? 'Energie & herstel' : 'Energy & recovery'), href: '/klachten#energie' },
-        { label: getLabel('complaintsMenu.digestion', locale === 'nl' ? 'Maag & darmen' : 'Stomach & digestion'), href: '/klachten#maag-darmen' },
-        { label: getLabel('complaintsMenu.gender', locale === 'nl' ? 'Vrouw & man' : 'Women & men'), href: '/klachten#vrouw-man' },
-        { label: getLabel('complaintsMenu.smoking', locale === 'nl' ? 'Stoppen met roken & vapen' : 'Quitting smoking & vaping'), href: '/klachten#stoppen-roken' },
+        { label: isNl ? 'Pijn & spanning' : 'Pain & tension', href: '/klachten#pijn' },
+        { label: isNl ? 'Stress & slaap' : 'Stress & sleep', href: '/klachten#stress' },
+        { label: isNl ? 'Energie & herstel' : 'Energy & recovery', href: '/klachten#energie' },
+        { label: isNl ? 'Maag & darmen' : 'Stomach & digestion', href: '/klachten#maag-darmen' },
+        { label: isNl ? 'Vrouw & man' : 'Women & men', href: '/klachten#vrouw-man' },
+        { label: isNl ? 'Stoppen met roken & vapen' : 'Quitting smoking & vaping', href: '/klachten#stoppen-roken' },
       ],
     },
     {
       id: 'acupuncture',
-      label: getLabel('acupuncture', locale === 'nl' ? 'Acupunctuur' : 'Acupuncture'),
+      label: isNl ? 'Acupunctuur' : 'Acupuncture',
       href: '/acupunctuur',
       children: [
-        { label: getLabel('acupunctureMenu.whatIs', locale === 'nl' ? 'Wat is acupunctuur?' : 'What is acupuncture?'), href: '/acupunctuur' },
-        { label: getLabel('acupunctureMenu.tcm', locale === 'nl' ? 'Traditionele Chinese Geneeskunde' : 'Traditional Chinese Medicine'), href: '/acupunctuur#tcm' },
-        { label: getLabel('acupunctureMenu.laser', locale === 'nl' ? 'Laseracupunctuur' : 'Laser acupuncture'), href: '/laseracupunctuur' },
+        { label: isNl ? 'Wat is acupunctuur?' : 'What is acupuncture?', href: '/acupunctuur' },
+        { label: isNl ? 'Traditionele Chinese Geneeskunde' : 'Traditional Chinese Medicine', href: '/acupunctuur#tcm' },
+        { label: isNl ? 'Laseracupunctuur' : 'Laser acupuncture', href: '/laseracupunctuur' },
       ],
     },
     {
       id: 'method',
-      label: getLabel('method', locale === 'nl' ? 'Methode' : 'Method'),
+      label: isNl ? 'Methode' : 'Method',
       href: '/methode',
       children: [
-        { label: getLabel('methodMenu.approach', locale === 'nl' ? 'Mijn werkwijze' : 'My approach'), href: '/methode#werkwijze' },
-        { label: getLabel('methodMenu.additional', locale === 'nl' ? 'Aanvullende behandelvormen' : 'Complementary therapies'), href: '/methode#aanvullend' },
+        { label: isNl ? 'Mijn werkwijze' : 'My approach', href: '/methode#werkwijze' },
+        { label: isNl ? 'Aanvullende behandelvormen' : 'Complementary therapies', href: '/methode#aanvullend' },
       ],
     },
     {
       id: 'about',
-      label: getLabel('about', locale === 'nl' ? 'Over mij' : 'About me'),
+      label: isNl ? 'Over mij' : 'About me',
       href: '/over-patrick',
       children: null,
     },
@@ -74,7 +65,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-border-light bg-ivory/95 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         
-        {/* Logo links */}
+        {/* Logo */}
         <Link 
           href="/" 
           className="group flex items-center gap-3 transition-opacity hover:opacity-95"
@@ -95,7 +86,7 @@ export default function Header() {
           </span>
         </Link>
 
-        {/* Desktop Navigatie met AllFlow Dropdowns */}
+        {/* Desktop Navigatie met Dropdowns */}
         <nav className="hidden items-center gap-8 lg:flex">
           {navItems.map((item) => (
             <div
@@ -136,7 +127,7 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Rechterzijde: Taalschakelaar + CTA Knop */}
+        {/* Rechterzijde: Taal + Knop */}
         <div className="hidden items-center gap-5 lg:flex">
           <div className="flex items-center rounded-full border border-border-light bg-surface-cream/50 p-1 text-xs font-semibold">
             <button

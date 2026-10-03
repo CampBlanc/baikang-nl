@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
@@ -6,10 +8,6 @@ export default function Footer() {
   const t = useTranslations('Footer');
   const tNav = useTranslations('Navigation');
   const locale = useLocale();
-
-  const tradeNameText = locale === 'en' 
-    ? 'Trade name of Witkamp Wellness' 
-    : 'Handelsnaam van Witkamp Wellness';
 
   return (
     <footer className="bg-forest-deep border-t border-gold-antique/20 text-text-light-soft">
@@ -27,14 +25,14 @@ export default function Footer() {
               Bai Kang TCM
             </span>
             <p className="font-body text-xs font-semibold uppercase tracking-widest text-gold-antique">
-              {tradeNameText}
+              Witkamp Wellness
             </p>
             <p className="font-body text-sm text-text-light-soft/80 max-w-sm leading-relaxed">
               {t('tagline')}
             </p>
           </div>
 
-          {/* Kolom 2: Navigatielinks */}
+          {/* Kolom 2: Navigatielinks conform nieuwe sitestructuur */}
           <div className="lg:col-span-2 space-y-3">
             <p className="font-body text-xs font-semibold uppercase tracking-widest text-gold-antique">
               {t('navigationTitle')}
@@ -46,23 +44,28 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/diensten" className="hover:text-gold-antique transition-colors">
-                  {tNav('services')}
+                <Link href="/klachten" className="hover:text-gold-antique transition-colors">
+                  {locale === 'nl' ? 'Klachten' : 'Symptoms'}
                 </Link>
               </li>
               <li>
-                <Link href="/laseracupunctuur" className="hover:text-gold-antique transition-colors">
-                  {tNav('laserAcupuncture')}
+                <Link href="/acupunctuur" className="hover:text-gold-antique transition-colors">
+                  {locale === 'nl' ? 'Acupunctuur' : 'Acupuncture'}
                 </Link>
               </li>
               <li>
-                <Link href="/over-mij" className="hover:text-gold-antique transition-colors">
+                <Link href="/methode" className="hover:text-gold-antique transition-colors">
+                  {locale === 'nl' ? 'Methode' : 'Method'}
+                </Link>
+              </li>
+              <li>
+                <Link href="/over-patrick" className="hover:text-gold-antique transition-colors">
                   {tNav('about')}
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="hover:text-gold-antique transition-colors">
-                  {tNav('contact')}
+                  {locale === 'nl' ? 'Contact' : 'Contact'}
                 </Link>
               </li>
             </ul>
@@ -75,7 +78,7 @@ export default function Footer() {
             </p>
             <div className="font-body text-sm space-y-2 text-text-light-soft/80">
               <p className="font-medium text-ivory leading-snug">
-                Bai Kang TCM
+                Bai Kang TCM | Witkamp Wellness
               </p>
               <p className="text-text-light-soft/90">Patrick Witkamp</p>
               <p>{t('address')}</p>
@@ -107,32 +110,10 @@ export default function Footer() {
               </p>
             </div>
           </div>
-
         </div>
 
-        {/* MIDDEN: SCHILDJES & GAT-WKKGZ KLACHTENREGELING */}
+        {/* MIDDEN: GAT-WKKGZ KLACHTENREGELING */}
         <div className="py-8 border-b border-white/10 flex flex-col md:flex-row items-start md:items-center gap-6 lg:gap-8">
-          <div className="flex items-center gap-4 shrink-0">
-            <div className="relative h-16 w-16 sm:h-20 sm:w-20">
-              <Image
-                src="/images/CATvirtueelschild.png"
-                alt="CAT-therapeut schild"
-                fill
-                sizes="80px"
-                className="object-contain"
-              />
-            </div>
-            <div className="relative h-16 w-16 sm:h-20 sm:w-20">
-              <Image
-                src="/images/GATVirtueelschild.png"
-                alt="GAT Geschilleninstantie schild"
-                fill
-                sizes="80px"
-                className="object-contain"
-              />
-            </div>
-          </div>
-
           <div className="font-body text-xs leading-relaxed text-text-light-soft/75 max-w-4xl">
             <p>
               {t('complaintsText')}{' '}
@@ -150,9 +131,7 @@ export default function Footer() {
 
         {/* ONDERSTE BALK: COPYRIGHT & JURIDISCH */}
         <div className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 font-body text-xs text-text-light-soft/60">
-          <p>
-            © {new Date().getFullYear()} Bai Kang TCM · {tradeNameText}. {t('rights')}
-          </p>
+          <p>© {new Date().getFullYear()} Bai Kang TCM | Witkamp Wellness. {t('rights')}</p>
           <div className="flex gap-6">
             <Link href="/privacy" className="hover:text-gold-antique transition-colors">
               {t('privacy')}
@@ -162,7 +141,6 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-
       </div>
     </footer>
   );
