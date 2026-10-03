@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import AtmosphericImage from '@/components/AtmosphericImage';
 import AtmosphericBamboo from '@/components/AtmosphericBamboo';
+import AtmosphericBlossom from '@/components/AtmosphericBlossom';
 import BambooWatermark from '@/components/BambooWatermark';
 
 export default function HomePage() {
@@ -10,12 +11,11 @@ export default function HomePage() {
   return (
     <main className="bg-ivory selection:bg-gold-antique/30">
       
-      {/* 1. HERO — Bamboebladeren rechtsboven: 10% mobiel, 20% desktop */}
+      {/* 1. HERO — Bloesemtak: 15% mobiel, 20% tablet (incl. iPad Pro 13), 100% desktop */}
       <section className="relative overflow-hidden w-full border-b border-border-light/30">
-        <AtmosphericBamboo 
-          variant="leaves" 
+        <AtmosphericBlossom 
           position="top-right" 
-          opacity="opacity-10 lg:opacity-20"
+          opacity="opacity-15 md:opacity-20 xl:opacity-100"
         />
 
         <div className="relative z-10 flex flex-col items-center justify-center px-6 pt-16 pb-14 sm:pt-20 sm:pb-16 lg:pt-24 lg:pb-18 max-w-4xl mx-auto text-center">
@@ -83,7 +83,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. OVER PATRICK — Bamboemotief: rechts op mobiel (buiten de tekstlijn), links achter portret op desktop */}
+      {/* 3. OVER PATRICK — Bamboemotief: rechts op mobiel, links achter portret op desktop */}
       <section className="relative overflow-hidden bg-ivory border-t border-border-light/40 px-6 py-24 lg:px-16">
         <AtmosphericBamboo 
           variant="stick-leaves" 
