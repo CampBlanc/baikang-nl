@@ -13,16 +13,68 @@ export default function Header() {
   const router = useRouter();
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const switchLocale = (nextLocale: 'nl' | 'en') => {
     router.replace(pathname, { locale: nextLocale });
   };
 
+  // Vangnet: als de vertaalsleutel toch ontbreekt, toont hij een verzorgde fallback
+  const getLabel = (key: string, fallback: string) => {
+    try {
+      const res = tNav(key as any);
+      return res && !res.startsWith('Navigation.') ? res : fallback;
+    } catch {
+      return fallback;
+    }
+  };
+
+  const navItems = [
+    {
+      id: 'complaints',
+      label: getLabel('complaints', locale === 'nl' ? 'Klachten' : 'Symptoms'),
+      href: '/klachten',
+      children: [
+        { label: getLabel('complaintsMenu.pain', locale === 'nl' ? 'Pijn & spanning' : 'Pain & tension'), href: '/klachten#pijn' },
+        { label: getLabel('complaintsMenu.stress', locale === 'nl' ? 'Stress & slaap' : 'Stress & sleep'), href: '/klachten#stress' },
+        { label: getLabel('complaintsMenu.energy', locale === 'nl' ? 'Energie & herstel' : 'Energy & recovery'), href: '/klachten#energie' },
+        { label: getLabel('complaintsMenu.digestion', locale === 'nl' ? 'Maag & darmen' : 'Stomach & digestion'), href: '/klachten#maag-darmen' },
+        { label: getLabel('complaintsMenu.gender', locale === 'nl' ? 'Vrouw & man' : 'Women & men'), href: '/klachten#vrouw-man' },
+        { label: getLabel('complaintsMenu.smoking', locale === 'nl' ? 'Stoppen met roken & vapen' : 'Quitting smoking & vaping'), href: '/klachten#stoppen-roken' },
+      ],
+    },
+    {
+      id: 'acupuncture',
+      label: getLabel('acupuncture', locale === 'nl' ? 'Acupunctuur' : 'Acupuncture'),
+      href: '/acupunctuur',
+      children: [
+        { label: getLabel('acupunctureMenu.whatIs', locale === 'nl' ? 'Wat is acupunctuur?' : 'What is acupuncture?'), href: '/acupunctuur' },
+        { label: getLabel('acupunctureMenu.tcm', locale === 'nl' ? 'Traditionele Chinese Geneeskunde' : 'Traditional Chinese Medicine'), href: '/acupunctuur#tcm' },
+        { label: getLabel('acupunctureMenu.laser', locale === 'nl' ? 'Laseracupunctuur' : 'Laser acupuncture'), href: '/laseracupunctuur' },
+      ],
+    },
+    {
+      id: 'method',
+      label: getLabel('method', locale === 'nl' ? 'Methode' : 'Method'),
+      href: '/methode',
+      children: [
+        { label: getLabel('methodMenu.approach', locale === 'nl' ? 'Mijn werkwijze' : 'My approach'), href: '/methode#werkwijze' },
+        { label: getLabel('methodMenu.additional', locale === 'nl' ? 'Aanvullende behandelvormen' : 'Complementary therapies'), href: '/methode#aanvullend' },
+      ],
+    },
+    {
+      id: 'about',
+      label: getLabel('about', locale === 'nl' ? 'Over mij' : 'About me'),
+      href: '/over-patrick',
+      children: null,
+    },
+  ];
+
   return (
-    <header className="sticky top-0 z-50 border-b border-border-light bg-ivory/90 backdrop-blur-md">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3.5 sm:py-4">
+    <header className="sticky top-0 z-50 border-b border-border-light bg-ivory/95 backdrop-blur-md">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         
-        {/* Logo / Merknaam met Yin-Yang beeldmerk */}
+        {/* Logo links */}
         <Link 
           href="/" 
           className="group flex items-center gap-3 transition-opacity hover:opacity-95"
@@ -31,7 +83,7 @@ export default function Header() {
           <div className="relative h-10 w-10 sm:h-11 sm:w-11 shrink-0 overflow-hidden rounded-full border border-gold-antique/30 shadow-sm transition-transform duration-300 group-hover:scale-105">
             <Image
               src="/images/Bai-Kang-Yin-Yang.png"
-              alt="Bai Kang Yin Yang Logo"
+              alt="Bai Kang Logo"
               fill
               sizes="44px"
               priority
@@ -43,38 +95,56 @@ export default function Header() {
           </span>
         </Link>
 
-        {/* Desktop Navigatie */}
-        <nav className="hidden items-center gap-8 md:flex">
-          <Link href="/" className="text-sm font-medium text-text-soft hover:text-forest transition-colors">
-            {tNav('home')}
-          </Link>
-          <Link href="/diensten" className="text-sm font-medium text-text-soft hover:text-forest transition-colors">
-            {tNav('services')}
-          </Link>
-          <Link href="/laseracupunctuur" className="text-sm font-medium text-text-soft hover:text-forest transition-colors">
-            {tNav('laserAcupuncture')}
-          </Link>
-          <Link href="/prijzen" className="text-sm font-medium text-text-soft hover:text-forest transition-colors">
-            {tNav('pricing')}
-          </Link>
-          <Link href="/over-mij" className="text-sm font-medium text-text-soft hover:text-forest transition-colors">
-            {tNav('about')}
-          </Link>
-          <Link href="/contact" className="text-sm font-medium text-text-soft hover:text-forest transition-colors">
-            {tNav('contact')}
-          </Link>
+        {/* Desktop Navigatie met AllFlow Dropdowns */}
+        <nav className="hidden items-center gap-8 lg:flex">
+          {navItems.map((item) => (
+            <div
+              key={item.id}
+              className="relative"
+              onMouseEnter={() => item.children && setActiveDropdown(item.id)}
+              onMouseLeave={() => setActiveDropdown(null)}
+            >
+              <Link
+                href={item.href}
+                className={`flex items-center gap-1.5 py-2 text-sm font-medium transition-colors hover:text-forest-deep ${
+                  pathname.startsWith(item.href) ? 'text-forest-deep font-semibold' : 'text-text-soft'
+                }`}
+              >
+                <span>{item.label}</span>
+                {item.children && (
+                  <svg className="h-3.5 w-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                )}
+              </Link>
+
+              {/* Dropdown Menu */}
+              {item.children && activeDropdown === item.id && (
+                <div className="absolute left-0 top-full min-w-[240px] border border-border-light bg-ivory py-2 shadow-lg z-50">
+                  {item.children.map((sub) => (
+                    <Link
+                      key={sub.href}
+                      href={sub.href}
+                      className="block px-5 py-2.5 text-xs font-medium text-text-soft hover:bg-surface-cream hover:text-forest-deep transition-colors"
+                    >
+                      {sub.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
         </nav>
 
-        {/* Rechterzijde: Taalschakelaar + CTA */}
-        <div className="hidden items-center gap-5 md:flex">
-          {/* Taalschakelaar */}
+        {/* Rechterzijde: Taalschakelaar + CTA Knop */}
+        <div className="hidden items-center gap-5 lg:flex">
           <div className="flex items-center rounded-full border border-border-light bg-surface-cream/50 p-1 text-xs font-semibold">
             <button
               onClick={() => switchLocale('nl')}
               className={`rounded-full px-2.5 py-1 transition-colors ${
                 locale === 'nl' 
-                  ? 'bg-forest text-text-light shadow-sm' 
-                  : 'text-text-soft hover:text-forest'
+                  ? 'bg-forest-deep text-text-light shadow-sm' 
+                  : 'text-text-soft hover:text-forest-deep'
               }`}
             >
               NL
@@ -83,43 +153,42 @@ export default function Header() {
               onClick={() => switchLocale('en')}
               className={`rounded-full px-2.5 py-1 transition-colors ${
                 locale === 'en' 
-                  ? 'bg-forest text-text-light shadow-sm' 
-                  : 'text-text-soft hover:text-forest'
+                  ? 'bg-forest-deep text-text-light shadow-sm' 
+                  : 'text-text-soft hover:text-forest-deep'
               }`}
             >
               EN
             </button>
           </div>
 
-          {/* Primaire CTA knop */}
           <Link
             href="/contact"
-            className="rounded-full bg-forest px-5 py-2.5 text-xs font-semibold text-text-light shadow-sm hover:bg-forest-dark transition-colors"
+            className="rounded-none bg-forest-deep px-6 py-2.5 font-body text-xs font-semibold uppercase tracking-widest text-text-light shadow-sm hover:bg-forest-dark transition-all"
           >
             {tCommon('bookAppointment')}
           </Link>
         </div>
 
-        {/* Mobiel Menu Toggle */}
-        <div className="flex items-center gap-3 md:hidden">
+        {/* Mobiel menu knoppen */}
+        <div className="flex items-center gap-3 lg:hidden">
           <div className="flex items-center rounded-full border border-border-light bg-surface-cream/50 p-0.5 text-xs font-semibold">
             <button
               onClick={() => switchLocale('nl')}
-              className={`rounded-full px-2 py-0.5 ${locale === 'nl' ? 'bg-forest text-text-light' : 'text-text-soft'}`}
+              className={`rounded-full px-2 py-0.5 ${locale === 'nl' ? 'bg-forest-deep text-text-light' : 'text-text-soft'}`}
             >
               NL
             </button>
             <button
               onClick={() => switchLocale('en')}
-              className={`rounded-full px-2 py-0.5 ${locale === 'en' ? 'bg-forest text-text-light' : 'text-text-soft'}`}
+              className={`rounded-full px-2 py-0.5 ${locale === 'en' ? 'bg-forest-deep text-text-light' : 'text-text-soft'}`}
             >
               EN
             </button>
           </div>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="text-forest focus:outline-none p-1"
-            aria-label="Menu openen"
+            className="text-forest-deep focus:outline-none p-1"
+            aria-label="Menu"
           >
             <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {mobileMenuOpen ? (
@@ -134,30 +203,37 @@ export default function Header() {
 
       {/* Mobiele dropdown */}
       {mobileMenuOpen && (
-        <div className="border-t border-border-light bg-ivory px-6 py-4 md:hidden">
-          <nav className="flex flex-col gap-3">
-            <Link href="/" onClick={() => setMobileMenuOpen(false)} className="text-text-soft hover:text-forest py-1 font-medium">
-              {tNav('home')}
-            </Link>
-            <Link href="/diensten" onClick={() => setMobileMenuOpen(false)} className="text-text-soft hover:text-forest py-1 font-medium">
-              {tNav('services')}
-            </Link>
-            <Link href="/laseracupunctuur" onClick={() => setMobileMenuOpen(false)} className="text-text-soft hover:text-forest py-1 font-medium">
-              {tNav('laserAcupuncture')}
-            </Link>
-            <Link href="/prijzen" onClick={() => setMobileMenuOpen(false)} className="text-text-soft hover:text-forest py-1 font-medium">
-              {tNav('pricing')}
-            </Link>
-            <Link href="/over-mij" onClick={() => setMobileMenuOpen(false)} className="text-text-soft hover:text-forest py-1 font-medium">
-              {tNav('about')}
-            </Link>
-            <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="text-text-soft hover:text-forest py-1 font-medium">
-              {tNav('contact')}
-            </Link>
+        <div className="border-t border-border-light bg-ivory px-6 py-5 lg:hidden max-h-[80vh] overflow-y-auto">
+          <nav className="flex flex-col gap-4">
+            {navItems.map((item) => (
+              <div key={item.id} className="flex flex-col">
+                <Link
+                  href={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="font-medium text-forest-deep py-1"
+                >
+                  {item.label}
+                </Link>
+                {item.children && (
+                  <div className="ml-3 flex flex-col border-l border-border-light pl-3 mt-1 gap-2">
+                    {item.children.map((sub) => (
+                      <Link
+                        key={sub.href}
+                        href={sub.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="text-xs text-text-soft py-1 hover:text-forest-deep"
+                      >
+                        {sub.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
             <Link
               href="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="mt-2 text-center rounded-full bg-forest hover:bg-forest-dark px-4 py-2.5 text-sm font-semibold text-text-light transition-colors"
+              className="mt-4 rounded-none bg-forest-deep py-3 text-center text-xs font-semibold uppercase tracking-widest text-text-light hover:bg-forest-dark transition-colors"
             >
               {tCommon('bookAppointment')}
             </Link>

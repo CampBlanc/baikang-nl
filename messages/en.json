@@ -1,13 +1,31 @@
 {
   "Navigation": {
     "home": "Home",
-    "services": "Services",
-    "laserAcupuncture": "Laser Acupuncture",
+    "complaints": "Symptoms",
+    "complaintsMenu": {
+      "pain": "Pain & tension",
+      "stress": "Stress & sleep",
+      "energy": "Energy & recovery",
+      "digestion": "Stomach & digestion",
+      "gender": "Women & men",
+      "smoking": "Quitting smoking & vaping"
+    },
+    "acupuncture": "Acupuncture",
+    "acupunctureMenu": {
+      "whatIs": "What is acupuncture?",
+      "tcm": "Traditional Chinese Medicine",
+      "laser": "Laser acupuncture"
+    },
+    "method": "Method",
+    "methodMenu": {
+      "approach": "My approach",
+      "additional": "Complementary therapies",
+      "guasha": "Gua Sha",
+      "cupping": "Cupping",
+      "reiki": "Reiki"
+    },
     "about": "About me",
-    "faq": "FAQ",
-    "pricing": "Pricing",
-    "blog": "Blog",
-    "contact": "Contact"
+    "bookAppointment": "Book appointment"
   },
   "Common": {
     "bookAppointment": "Book appointment",
@@ -33,17 +51,17 @@
       "badge": "What your body is asking for",
       "title": "What are you currently struggling with?",
       "intro": "Whether it's pain, tension, fatigue, sleep problems, or another recurring complaint: discover how Bai Kang can support you.",
-      "catPain": "Pain & Tension",
+      "catPain": "Pain & tension",
       "catPainDesc": "Back, neck, and shoulder complaints, muscle and joint pain, headaches, and physical tension.",
-      "catStress": "Stress & Sleep",
+      "catStress": "Stress & sleep",
       "catStressDesc": "Mental restlessness, sensory overload, difficulty relaxing, and sleep issues.",
-      "catEnergy": "Energy & Recovery",
+      "catEnergy": "Energy & recovery",
       "catEnergyDesc": "Fatigue, low resilience, and difficulty recharging your body.",
-      "catDigestion": "Stomach & Digestion",
+      "catDigestion": "Stomach & digestion",
       "catDigestionDesc": "Bloating, abdominal cramps, and other digestive discomforts.",
-      "catGender": "Women & Men",
+      "catGender": "Women & men",
       "catGenderDesc": "Symptoms related to menstruation, menopause, hormonal balance, and vitality.",
-      "catSmoking": "Quitting Smoking & Vaping",
+      "catSmoking": "Quitting smoking & vaping",
       "catSmokingDesc": "Laser acupuncture and auricular acupuncture to support breaking the addiction.",
       "cta": "View all complaints"
     },
@@ -154,15 +172,15 @@
   "Footer": {
     "tagline": "Traditional Chinese Medicine & Acupuncture in Tilburg.",
     "navigationTitle": "Navigation",
-    "contactTitle": "Clinic",
+    "contactTitle": "Bai Kang TCM | Witkamp Wellness",
     "address": "Tilburg, Netherlands",
     "email": "info@baikang.nl",
     "registrationsTitle": "Registrations",
-    "kvkLabel": "KvK (Chamber of Commerce)",
+    "kvkLabel": "Chamber of Commerce",
     "vatLabel": "VAT",
     "agbProviderLabel": "AGB healthcare provider",
     "agbPracticeLabel": "AGB clinic code",
-    "complaintsText": "As a CAT therapist, I fall under GAT-Wkkgz complaint law and GAT disciplinary law at the Geschilleninstantie Alternatieve Therapeuten (GAT). For more information about my complaints procedure, visit:",
+    "complaintsText": "As a CAT therapist, I fall under GAT-Wkkgz complaint law and GAT disciplinary law at the Geschilleninstantie Alternatieve Therapeuten (GAT). For more information about my complaints procedure, visit: gatgeschillen.nl",
     "rights": "All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms & Conditions"
