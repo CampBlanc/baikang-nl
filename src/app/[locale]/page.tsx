@@ -10,12 +10,12 @@ export default function HomePage() {
   return (
     <main className="bg-ivory selection:bg-gold-antique/30">
       
-      {/* 1. HERO — Bamboebladeren inkt-wash rechtsboven */}
+      {/* 1. HERO — Bamboebladeren: 40% op mobiel voor meer body, 20% op desktop */}
       <section className="relative overflow-hidden w-full border-b border-border-light/30">
         <AtmosphericBamboo 
           variant="leaves" 
           position="top-right" 
-          opacity="opacity-20"
+          opacity="opacity-40 lg:opacity-20"
         />
 
         <div className="relative z-10 flex flex-col items-center justify-center px-6 pt-16 pb-14 sm:pt-20 sm:pb-16 lg:pt-24 lg:pb-18 max-w-4xl mx-auto text-center">
@@ -45,7 +45,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. WAARMEE KAN IK HELPEN? — Rustige achtergrond (bamboe hier bewust weg) */}
+      {/* 2. WAARMEE KAN IK HELPEN? — Rustige achtergrond (bamboe hier bewust weggelaten) */}
       <section className="bg-surface-cream border-t border-border-light/40 px-6 py-24 lg:px-16">
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 max-w-3xl">
@@ -83,13 +83,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. OVER PATRICK — Echte inkt-bamboe (stick-leaves) links achter het portret */}
+      {/* 3. OVER PATRICK — Bamboemotief links achter het portret: 40% op mobiel, 20% op desktop */}
       <section className="relative overflow-hidden bg-ivory border-t border-border-light/40 px-6 py-24 lg:px-16">
         <AtmosphericBamboo 
           variant="stick-leaves" 
           position="center-left" 
           flip={true}
-          opacity="opacity-20"
+          opacity="opacity-40 lg:opacity-20"
         />
 
         <div className="relative z-10 mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -132,21 +132,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. EINDBANNER — Diepgroen vlak verrijkt met subtiel gouden bamboemotief */}
+      {/* 4. EINDBANNER — Diepgroen vlak met gouden bamboe-accent rechtsonder */}
       <section className="relative overflow-hidden bg-forest-deep px-6 pt-24 pb-16 lg:pt-32 lg:pb-20 text-center border-t-4 border-gold-antique">
         <BambooWatermark 
           variant="cluster" 
           position="bottom-right" 
-          opacity="opacity-[0.25]" 
+          opacity="opacity-[0.06]" 
           className="text-gold-antique translate-x-12 translate-y-12 scale-90"
         />
 
-        {/* max-w op desktop verruimd naar 5xl zodat de kop niet geforceerd wordt afgebroken */}
-        <div className="relative z-10 mx-auto max-w-3xl lg:max-w-5xl space-y-6">
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.65rem] xl:text-5xl text-ivory leading-tight lg:whitespace-nowrap">
+        <div className="relative z-10 mx-auto max-w-3xl space-y-6">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-ivory leading-tight">
             {t('FinalCTA.title')}
           </h2>
-          <p className="font-body text-lg sm:text-xl text-ivory/80 italic mb-8 max-w-2xl mx-auto">
+          <p className="font-body text-lg sm:text-xl text-ivory/80 italic mb-8">
             &ldquo;{t('FinalCTA.intro')}&rdquo;
           </p>
           <div className="pt-2">
