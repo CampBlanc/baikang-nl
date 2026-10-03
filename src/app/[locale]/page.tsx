@@ -10,7 +10,7 @@ export default function HomePage() {
   return (
     <main className="bg-ivory selection:bg-gold-antique/30">
       
-      {/* 1. HERO — Bamboebladeren: uiterst zacht op mobiel (10%) voor maximale leesbaarheid, 20% op desktop */}
+      {/* 1. HERO — Bamboebladeren rechtsboven: 10% mobiel, 20% desktop */}
       <section className="relative overflow-hidden w-full border-b border-border-light/30">
         <AtmosphericBamboo 
           variant="leaves" 
@@ -45,7 +45,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. WAARMEE KAN IK HELPEN? — Rustige achtergrond zonder storende elementen */}
+      {/* 2. WAARMEE KAN IK HELPEN? — Rustige achtergrond zonder afleiding */}
       <section className="bg-surface-cream border-t border-border-light/40 px-6 py-24 lg:px-16">
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 max-w-3xl">
@@ -83,12 +83,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. OVER PATRICK — Bamboemotief links achter het portret: subtiel 10% op mobiel, 20% op desktop */}
+      {/* 3. OVER PATRICK — Bamboemotief: rechts op mobiel (buiten de tekstlijn), links achter portret op desktop */}
       <section className="relative overflow-hidden bg-ivory border-t border-border-light/40 px-6 py-24 lg:px-16">
         <AtmosphericBamboo 
           variant="stick-leaves" 
-          position="center-left" 
-          flip={true}
+          position="center-right-mobile-left-desktop" 
           opacity="opacity-10 lg:opacity-20"
         />
 

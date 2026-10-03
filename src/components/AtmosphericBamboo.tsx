@@ -2,7 +2,14 @@ import Image from 'next/image';
 
 interface AtmosphericBambooProps {
   variant: 'stalk' | 'leaves' | 'stalk-leaves' | 'stick-leaves';
-  position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left' | 'center-right' | 'center-left';
+  position?: 
+    | 'top-right' 
+    | 'top-left' 
+    | 'bottom-right' 
+    | 'bottom-left' 
+    | 'center-right' 
+    | 'center-left'
+    | 'center-right-mobile-left-desktop';
   className?: string;
   opacity?: string;
   flip?: boolean;
@@ -43,16 +50,18 @@ export default function AtmosphericBamboo({
     'bottom-left': 'bottom-0 left-0 translate-y-6 -translate-x-6 sm:-translate-x-3',
     'center-right': 'top-1/2 -translate-y-1/2 right-0 translate-x-8 sm:translate-x-4',
     'center-left': 'top-1/2 -translate-y-1/2 left-0 -translate-x-8 sm:-translate-x-4',
+    'center-right-mobile-left-desktop':
+      'top-1/2 -translate-y-1/2 right-0 translate-x-6 sm:translate-x-3 lg:right-auto lg:left-0 lg:-translate-x-4 scale-x-100 lg:-scale-x-100',
   }[position];
+
+  const flipClass = position === 'center-right-mobile-left-desktop' ? '' : flip ? '-scale-x-100' : '';
 
   return (
     <div
       aria-hidden="true"
-      className={`pointer-events-none absolute select-none mix-blend-multiply ${positionClasses} ${opacity} ${
-        flip ? '-scale-x-100' : ''
-      } ${className}`}
+      className={`pointer-events-none absolute select-none mix-blend-multiply ${positionClasses} ${opacity} ${flipClass} ${className}`}
     >
-      <div className="relative h-80 w-64 sm:h-[430px] sm:w-[330px] lg:h-[520px] lg:w-[400px]">
+      <div className="relative h-80 w-64 sm:h-[430px] sm:w-[320px] lg:h-[520px] lg:w-[400px]">
         <Image
           src={src}
           alt={alt}
