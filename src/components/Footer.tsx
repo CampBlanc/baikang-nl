@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
@@ -9,11 +7,15 @@ export default function Footer() {
   const tNav = useTranslations('Navigation');
   const locale = useLocale();
 
+  const tradeNameText = locale === 'en' 
+    ? 'Trade name of Witkamp Wellness' 
+    : 'Handelsnaam van Witkamp Wellness';
+
   return (
     <footer className="bg-forest-deep border-t border-gold-antique/20 text-text-light-soft">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-16">
         
-        {/* BOVENSTE GEDEELTE */}
+        {/* BOVENSTE GEDEELTE: 4 KOLOMMEN */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
           
           {/* Kolom 1: Bai Kang TCM & Witkamp Wellness */}
@@ -25,14 +27,14 @@ export default function Footer() {
               Bai Kang TCM
             </span>
             <p className="font-body text-xs font-semibold uppercase tracking-widest text-gold-antique">
-              Witkamp Wellness
+              {tradeNameText}
             </p>
             <p className="font-body text-sm text-text-light-soft/80 max-w-sm leading-relaxed">
               {t('tagline')}
             </p>
           </div>
 
-          {/* Kolom 2: Navigatielinks conform nieuwe sitestructuur */}
+          {/* Kolom 2: Navigatielinks */}
           <div className="lg:col-span-2 space-y-3">
             <p className="font-body text-xs font-semibold uppercase tracking-widest text-gold-antique">
               {t('navigationTitle')}
@@ -110,10 +112,32 @@ export default function Footer() {
               </p>
             </div>
           </div>
+
         </div>
 
-        {/* MIDDEN: GAT-WKKGZ KLACHTENREGELING */}
+        {/* MIDDEN: SCHILDJES & GAT-WKKGZ KLACHTENREGELING */}
         <div className="py-8 border-b border-white/10 flex flex-col md:flex-row items-start md:items-center gap-6 lg:gap-8">
+          <div className="flex items-center gap-4 shrink-0">
+            <div className="relative h-16 w-16 sm:h-20 sm:w-20">
+              <Image
+                src="/images/CATvirtueelschild.png"
+                alt="CAT-therapeut schild"
+                fill
+                sizes="80px"
+                className="object-contain"
+              />
+            </div>
+            <div className="relative h-16 w-16 sm:h-20 sm:w-20">
+              <Image
+                src="/images/GATVirtueelschild.png"
+                alt="GAT Geschilleninstantie schild"
+                fill
+                sizes="80px"
+                className="object-contain"
+              />
+            </div>
+          </div>
+
           <div className="font-body text-xs leading-relaxed text-text-light-soft/75 max-w-4xl">
             <p>
               {t('complaintsText')}{' '}
@@ -131,7 +155,7 @@ export default function Footer() {
 
         {/* ONDERSTE BALK: COPYRIGHT & JURIDISCH */}
         <div className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 font-body text-xs text-text-light-soft/60">
-          <p>© {new Date().getFullYear()} Bai Kang TCM | Witkamp Wellness. {t('rights')}</p>
+          <p>© {new Date().getFullYear()} Bai Kang TCM · {tradeNameText}. {t('rights')}</p>
           <div className="flex gap-6">
             <Link href="/privacy" className="hover:text-gold-antique transition-colors">
               {t('privacy')}
@@ -141,6 +165,7 @@ export default function Footer() {
             </Link>
           </div>
         </div>
+
       </div>
     </footer>
   );

@@ -13,6 +13,7 @@ interface AtmosphericBambooProps {
   className?: string;
   opacity?: string;
   flip?: boolean;
+  priority?: boolean;
 }
 
 export default function AtmosphericBamboo({
@@ -21,6 +22,7 @@ export default function AtmosphericBamboo({
   className = '',
   opacity = 'opacity-20',
   flip = false,
+  priority = true, // Laadt standaard direct in (voorkomt de LCP-waarschuwing)
 }: AtmosphericBambooProps) {
   const images = {
     'stalk': {
@@ -66,6 +68,7 @@ export default function AtmosphericBamboo({
           src={src}
           alt={alt}
           fill
+          priority={priority}
           sizes="(max-width: 768px) 260px, 400px"
           className="object-contain object-center"
         />

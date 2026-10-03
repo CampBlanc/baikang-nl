@@ -1,82 +1,91 @@
 {
   "Navigation": {
     "home": "Home",
-    "services": "Diensten",
+    "complaints": "Klachten",
+    "acupuncture": "Acupunctuur",
+    "method": "Methode",
     "laserAcupuncture": "Laseracupunctuur",
     "about": "Over mij",
+    "contact": "Contact",
+    "services": "Diensten",
     "faq": "Vragen",
     "pricing": "Prijzen",
     "blog": "Blog",
-    "contact": "Contact"
+    "bookAppointment": "Afspraak maken"
   },
   "Common": {
     "bookAppointment": "Afspraak maken",
     "readMore": "Lees meer",
-    "contactUs": "Neem contact op"
+    "contact": "Contact",
+    "backToHome": "Terug naar home",
+    "viewAll": "Bekijk alles"
   },
   "HomePage": {
     "badge": "Traditionele Chinese Geneeskunde",
     "heroTitle": "In balans van binnenuit",
     "heroSubtitle": "Pijn, spanning of een klacht die blijft terugkomen?",
     "quoteText": "Waar pijn is, is de doorstroming verstoord. Waar de doorstroming wordt belemmerd, ontstaat pijn.",
-    "heroText": "Klassieke acupunctuur en moderne lasertherapie voor een natuurlijk en krachtig herstel."
+    "heroText": "Klassieke acupunctuur en moderne lasertherapie voor een natuurlijk en krachtig herstel.",
+    "title": "Bai Kang",
+    "tagline": "Traditionele Chinese Geneeskunde & Acupunctuur"
   },
   "Home": {
     "Hero": {
       "badge": "Traditionele Chinese Geneeskunde",
       "title": "Pijn, spanning, vermoeidheid of slecht slapen?",
-      "intro": "Klachten die je dagelijks bezighouden verdienen aandacht. Bij Bai Kang kijken we naar je specifieke klacht én naar je lichaam en leefstijl als geheel.",
-      "ctaHelp": "Bekijk waarmee ik help",
+      "intro": "Klachten die je dagelijks bezighouden, verdienen aandacht. Bij Bai Kang kijken we naar jouw hulpvraag en naar het geheel van lichaam en leefstijl.",
+      "ctaHelp": "Bekijk waarmee ik kan helpen",
       "ctaAppointment": "Afspraak maken"
     },
     "Issues": {
       "badge": "Waar je lichaam om vraagt",
-      "title": "Waar loop je nu tegenaan?",
-      "intro": "Of het nu gaat om pijn, spanning, vermoeidheid, slaapproblemen of een andere terugkerende klacht: ontdek wat Bai Kang voor je kan betekenen.",
-      "catPain": "Pijn & Spanning",
-      "catPainDesc": "Rug-, nek- en schouderklachten, spier- en gewrichtspijn, hoofdpijn en fysieke spanning.",
-      "catStress": "Stress & Slaap",
-      "catStressDesc": "Onrust in je hoofd, overprikkeling, moeilijk kunnen ontspannen en doorslaapproblemen.",
-      "catEnergy": "Energie & Herstel",
-      "catEnergyDesc": "Vermoeidheid, weinig veerkracht en het gevoel niet goed op te laden.",
-      "catDigestion": "Maag & Darmklachten",
-      "catDigestionDesc": "Een opgeblazen gevoel, darmkrampen en andere verstoringen in de spijsvertering.",
+      "title": "Waar loop je op dit moment tegenaan?",
+      "intro": "Of het nu gaat om pijn, spanning, vermoeidheid, slaapproblemen of een andere terugkerende klacht: ontdek waar Bai Kang je bij kan ondersteunen.",
+      "catPain": "Pijn & spanning",
+      "catPainDesc": "Rug-, nek- en schouderklachten, spier- en gewrichtsklachten, hoofdpijn en lichamelijke spanning.",
+      "catStress": "Stress & slaap",
+      "catStressDesc": "Stress, onrust, moeite met ontspannen en slaapproblemen.",
+      "catEnergy": "Energie & herstel",
+      "catEnergyDesc": "Vermoeidheid, weinig energie en moeite met herstellen.",
+      "catDigestion": "Maag & darmen",
+      "catDigestionDesc": "Een opgeblazen gevoel, buikklachten en andere spijsverteringsklachten.",
       "catGender": "Vrouw & man",
-      "catGenderDesc": "Klachten rondom cyclus, overgang, hormonale veranderingen en vitaliteit.",
+      "catGenderDesc": "Menstruatie, overgang en andere lichamelijke veranderingen.",
       "catSmoking": "Stoppen met roken & vapen",
-      "catSmokingDesc": "Laseracupunctuur en ooracupunctuur ter ondersteuning bij ontwenning.",
+      "catSmokingDesc": "Laseracupunctuur en ooracupunctuur als ondersteuning bij het stoppen.",
       "cta": "Bekijk alle klachten"
     },
     "Positioning": {
-      "title": "Verder kijken dan alleen het symptoom.",
-      "intro": "Geen mens is hetzelfde. Daarom begint goede zorg met luisteren, aandacht en het hele plaatje bekijken.",
-      "cta": "Meer over mijn aanpak"
+      "title": "Verder kijken dan de klacht.",
+      "intro": "Geen mens is hetzelfde. Daarom begint goede zorg met luisteren, aandacht en kijken naar het geheel.",
+      "cta": "Meer over mijn werkwijze"
     },
     "About": {
       "badge": "Achter Bai Kang",
-      "title": "Persoonlijke aandacht begint bij luisteren.",
+      "title": "Persoonlijke aandacht begint met luisteren.",
       "subtitle": "Patrick Witkamp · Acupuncturist",
-      "intro": "Mijn doel is verder te kijken dan alleen het symptoom. Door westerse nuchterheid te combineren met oosterse wijsheid, help ik je lichaam weer in balans te komen.",
+      "intro": "Mijn doel is om verder te kijken dan alleen het symptoom. Door de westerse nuchterheid te combineren met oosterse wijsheid, help ik je lichaam weer in balans te brengen.",
       "cta": "Lees mijn verhaal"
     },
     "Practice": {
       "badge": "De praktijk in Tilburg",
       "title": "Een rustige plek voor persoonlijke aandacht.",
-      "intro": "Bai Kang is gevestigd in Tilburg. Een rustige praktijk waar ruimte is voor jouw verhaal en een behandeling op maat.",
+      "intro": "Bai Kang bevindt zich in Tilburg. Een rustige praktijk waar ruimte is voor jouw verhaal en voor een behandeling die bij jou past.",
       "ctaRoute": "Route naar Bai Kang",
       "ctaAppointment": "Afspraak maken"
     },
     "FinalCTA": {
-      "title": "Je hoeft niet precies te weten wat er aan de hand is.",
-      "intro": "Een eerste afspraak begint met jouw verhaal.",
+      "title": "Je hoeft niet eerst precies te weten wat er aan de hand is.",
+      "intro": "Een eerste afspraak begint met luisteren.",
       "cta": "Afspraak maken"
     }
   },
   "Philosophy": {
     "characters": "痛则不通，不通则痛",
     "pinyin": "TÒNG ZÉ BÙ TŌNG, BÙ TŌNG ZÉ TÒNG",
-    "line1": "Waar pijn is, is de doorstroming verstoord.",
-    "line2": "Waar de doorstroming wordt belemmerd, ontstaat pijn.",
+    "listen": "Beluister de uitspraak",
+    "line1": "Waar pijn is, is geen doorstroming",
+    "line2": "Waar doorstroming is, is geen pijn",
     "explanation": "In de Traditionele Chinese Geneeskunde ontstaat klacht of pijn wanneer Qi (levensenergie) en bloed stagneren. Acupunctuur heft deze blokkades op en herstelt de natuurlijke balans.",
     "button": "Ontdek onze visie"
   },
@@ -87,44 +96,62 @@
     "paragraph2": "Pijn die blijft terugkomen. Een lichaam dat voortdurend gespannen aanvoelt. Slecht slapen, weinig energie of klachten waarvoor je al van alles hebt geprobeerd.",
     "paragraph3": "Binnen de Traditionele Chinese Geneeskunde kijken we niet alleen naar de klacht zelf, maar ook naar het geheel.",
     "paragraph4": "Waar komt de verstoring vandaan? En wat heeft jouw lichaam nodig om weer in balans te komen?",
-    "cta": "Bekijk waarmee ik kan helpen"
+    "cta": "Bekijk waarmee ik kan helpen",
+    "intro1": "Pijn in je nek of rug die steeds weer opspeelt. Vermoeidheid die niet overgaat na een nacht slapen. Of een sluimerende spanning waarvan je voelt dat hij invloed heeft op je humeur, je ademhaling en je nachtrust.",
+    "intro2": "Vaak heb je al van alles geprobeerd, of hoor je dat je er maar mee moet leren leven. Toch voel je zelf meestal heel goed dat er iets uit balans is — en dat verschillende klachten zelden helemaal los van elkaar staan.",
+    "points": {
+      "pain": {
+        "title": "Terugkerende pijn en spanning",
+        "description": "Spieren die vast blijven zitten, hoofdpijn die met regelmaat terugkeert of gewrichten die stijf aanvoelen. De ergste piek zakt soms af, maar het lichaam ontspant nooit echt helemaal."
+      },
+      "energy": {
+        "title": "Aanhoudende vermoeidheid & stress",
+        "description": "Je functioneert op karakter, maar het kost je dagelijks meer moeite dan voorheen. Onrust in je hoofd, een oppervlakkige ademhaling of moeite om echt diep door te slapen."
+      },
+      "unclear": {
+        "title": "Vage klachten zonder duidelijke oorzaak",
+        "description": "Darmklachten, hormonale schommelingen of een lijf dat simpelweg niet vitaal aanvoelt. Regulier onderzoek wijst vaak weinig uit, terwijl jij dagelijks merkt dat het niet klopt."
+      }
+    },
+    "bridgeTitle": "Het lichaam als één samenhangend geheel",
+    "bridgeText": "Binnen de Traditionele Chinese Geneeskunde behandelen we niet alleen de plek waar het zeer doet. We kijken naar het hele patroon achter je klacht. Waar stagneert de doorstroming? Waar vraagt je herstelvermogen om ondersteuning? Zodra we de kern aanpakken, krijgt je lichaam de ruimte om op een natuurlijke manier weer in balans te komen."
   },
   "TreatmentMethod": {
     "eyebrow": "PERSOONLIJKE AANDACHT & WERKWIJZE",
     "title": "Verder kijken dan de klacht.",
-    "paragraph1": "Geen enkel lichaam is gelijk, en dezelfde klacht kan bij twee verschillende personen een heel andere achtergrond hebben. Daarom nemen we tijdens het intakegesprek ruim de tijd voor jouw verhaal.",
-    "paragraph2": "We kijken niet alleen naar de acute plek waar je last van hebt, maar ook naar je energie, nachtrust, emotionele balans en leefstijl. Zo ontstaat een helder beeld van waar de doorstroming stagneert.",
-    "paragraph3": "Vanuit deze diagnose stellen we een persoonlijk behandelplan op, gericht op duurzaam herstel en het terugvinden van je natuurlijke evenwicht.",
-    "cta": "Meer over mijn aanpak"
+    "paragraph1": "Geen twee lichamen zijn hetzelfde, en dezelfde klacht kan bij twee mensen een heel verschillende achtergrond hebben. Daarom nemen we tijdens de eerste afspraak de tijd om je hele verhaal in kaart te brengen.",
+    "paragraph2": "We kijken niet alleen naar het symptoom waar je vandaag last van hebt, maar ook naar je energieniveau, slaappatroon, emotionele balans en leefstijl. Zo ontstaat een compleet beeld van waar de doorstroming stagneert.",
+    "paragraph3": "Vanuit deze diepgaande diagnose stellen we een persoonlijk behandelplan op — gericht op duurzaam herstel en het hervinden van je natuurlijke evenwicht.",
+    "cta": "Meer over de werkwijze"
   },
   "Help": {
     "eyebrow": "WAARMEE KAN IK HELPEN?",
     "title": "Waarvoor kun je bij Bái Kāng terecht?",
-    "intro": "Acupunctuur kan worden ingezet bij uiteenlopende klachten. Elke behandeling wordt afgestemd op de persoon en de situatie.",
+    "intro": "Acupunctuur wordt binnen mijn praktijk ingezet bij uiteenlopende klachten en hulpvragen. Iedere behandeling wordt afgestemd op de persoon en de situatie.",
     "categories": {
       "pain": {
         "title": "Pijn & spanning",
-        "description": "Rug-, nek- en schouderklachten, spier- en gewrichtspijn, hoofdpijn en andere vormen van fysieke spanning."
+        "description": "Rug-, nek- en schouderklachten, spier- en gewrichtspijn, hoofdpijn en andere vormen van lichamelijke spanning."
       },
       "stress": {
         "title": "Stress & slaap",
-        "description": "Een lichaam dat voortdurend 'aan' staat, moeite met ontspannen, onrust of doorslaapproblemen."
+        "description": "Een lichaam dat voortdurend \"aan\" staat, moeite met ontspannen, onrust of problemen met slapen."
       },
       "energy": {
         "title": "Energie & herstel",
-        "description": "Vermoeidheid, weinig veerkracht of het gevoel niet goed op te laden."
+        "description": "Vermoeidheid, weinig energie of het gevoel dat je lichaam moeite heeft om te herstellen."
       },
       "digestion": {
         "title": "Maag & darmen",
-        "description": "Spijsverteringsklachten, zoals een opgeblazen gevoel, darmkrampen of een onrustige buik."
+        "description": "Klachten rondom de spijsvertering, zoals een opgeblazen gevoel, buikklachten of een onrustige spijsvertering."
       },
       "gender": {
         "title": "Vrouw & man",
-        "description": "Klachten rondom cyclus, overgang, hormonale balans en vitaliteit."
+        "description": "Klachten rondom menstruatie, overgang en andere lichamelijke veranderingen."
       },
       "smoking": {
         "title": "Stoppen met roken & vapen",
-        "description": "Gerichte laseracupunctuur en ooracupunctuur ter ondersteuning bij ontwenning en drang."
+        "description": "Gerichte laseracupunctuur en ooracupunctuur als ondersteuning bij het doorbreken van de gewoonte en het omgaan met trek."
       }
     }
   },
@@ -145,16 +172,194 @@
     }
   },
   "LaserAcupuncture": {
-    "eyebrow": "LICHT & BALANS",
-    "title": "Moderne lasertherapie zonder naalden",
-    "paragraph1": "Laseracupunctuur combineert de eeuwenoude kennis van meridianen met geavanceerde low-level lasertechnologie (LLLT). Dit maakt de behandeling volkomen pijnloos en uiterst zacht.",
-    "paragraph2": "Bijzonder effectief bij het doorbreken van nicotineafhankelijkheid, het verzachten van acute spier- en gewrichtspijn en voor iedereen die gevoelig is voor traditionele naalden.",
+    "eyebrow": "MODERNE COMPLEMENTAIRE ZORG",
+    "title": "Laseracupunctuur: gericht en zonder naalden",
+    "paragraph1": "Voor wie gevoelig is of liever geen traditionele naalden wenst, biedt laseracupunctuur een zacht en doeltreffend alternatief. Door middel van geconcentreerd licht met specifieke golflengtes worden acupunctuurpunten nauwkeurig gestimuleerd.",
+    "paragraph2": "Deze technologie ondersteunt het natuurlijke herstel van het lichaam en wordt binnen de praktijk ingezet bij spanningsklachten, pijnverlichting en als ondersteuning bij het stoppen met roken.",
     "cta": "Ontdek laseracupunctuur"
+  },
+  "Acupuncture": {
+    "metaTitle": "Wat is Acupunctuur? | Traditionele Chinese Geneeskunde Tilburg | Bai Kang",
+    "metaDescription": "Ontdek hoe acupunctuur werkt vanuit zowel Traditionele Chinese Geneeskunde als moderne fysiologie. Persoonlijke diagnostiek, rustige behandelingen en laseracupunctuur in Tilburg.",
+    "heroEyebrow": "Acupunctuur & Traditionele Chinese Geneeskunde",
+    "heroTitle": "Waar kan acupunctuur bij helpen?",
+    "heroIntro": "Acupunctuur wordt al duizenden jaren toegepast binnen de Traditionele Chinese Geneeskunde. Bij Bai Kang kijken we niet alleen naar de specifieke klacht, maar naar jouw situatie als één samenhangend geheel.",
+    "btnComplaints": "Bekijk klachten & indicaties",
+    "btnAppointment": "Afspraak maken",
+    "holisticEyebrow": "Aandacht voor het geheel",
+    "holisticTitle": "Acupunctuur is meer dan een naald op een punt.",
+    "holisticP1": "Een klacht ontstaat zelden op zichzelf. Pijn, spanning, vermoeidheid of slaapproblemen beïnvloeden hoe je je dagelijks voelt en reageert. Binnen de Traditionele Chinese Geneeskunde kijken we daarom verder dan alleen de plek waar het ongemak zich toont.",
+    "holisticP2": "Hoe voelt je lichaam? Hoe slaap je? Hoe is je energieniveau door de dag heen? En hoe verhouden verschillende fysieke signalen zich tot elkaar?",
+    "holisticP3": "Tijdens een behandeling gebruik ik deze antwoorden om een persoonlijk behandelbeeld te vormen en de keuze van de acupunctuurpunten exact daarop af te stemmen.",
+    "needleAlt": "Detail van fijne acupunctuurnaalden op een steen",
+    "modernEyebrow": "Twee perspectieven",
+    "modernTitle": "Een behandeling die het lichaam prikkelt.",
+    "modernIntro": "Vanuit de moderne fysiologie onderzoekt men hoe acupunctuur het zenuwstelsel, de pijnverwerking en lokale weefselreacties stimuleert. Binnen TCM verklaren we dit vanuit het herstellen van de vrije stroom van Qi en natuurlijk evenwicht. Beide visies vullen elkaar prachtig aan.",
+    "visualAlt": "Visualisatie van Lichaam, Patronen en Balans binnen Bai Kang TCM",
+    "phase1Eyebrow": "01. Prikkeling",
+    "phase1Title": "Gerichte stimulatie",
+    "phase1Desc": "Zeer dunne, steriele naalden geven een subtiele prikkel op nauwkeurig gekozen punten, afgestemd op jouw persoonlijke diagnose.",
+    "phase2Eyebrow": "02. Reactie",
+    "phase2Title": "Natuurlijke respons",
+    "phase2Desc": "Het lichaam reageert op de prikkeling via het zenuwstelsel en lokale doorbloeding om het zelfherstellend vermogen te activeren.",
+    "phase3Eyebrow": "03. Ontspanning",
+    "phase3Title": "Tijd voor herstel",
+    "phase3Desc": "Tijdens het rusten op de behandelbank schakelt het zenuwstelsel om van de dagelijkse actiestand naar diepe ontspanning.",
+    "tcmEyebrow": "Traditionele Filosofie",
+    "tcmTitle": "De visie van de Traditionele Chinese Geneeskunde.",
+    "tcmQuote": "“Het lichaam wordt niet gezien als een verzameling losse onderdelen, maar als een dynamisch geheel.”",
+    "qiTitle": "Qi & Doorstroming",
+    "qiDesc": "Binnen TCM is een vrije circulatie van energie en bloed essentieel. Waar stagnatie optreedt, ontstaan spanning en pijnklachten.",
+    "balanceTitle": "Balans & Samenhang",
+    "balanceDesc": "Functies in het lichaam zijn continu met elkaar verbonden. Een disbalans in rust of voeding kan zich uiten op een heel ander vlak.",
+    "diffTitle": "Persoonlijke Differentiatie",
+    "diffDesc": "Twee mensen met dezelfde hoofdpijn kunnen een totaal verschillend behandelplan krijgen, omdat de onderliggende oorzaak verschilt.",
+    "lifestyleTitle": "Leefstijl & Belasting",
+    "lifestyleDesc": "Slaap, stress, voeding en dagelijkse inspanning worden altijd meegenomen om het herstel duurzaam te ondersteunen.",
+    "complaintsEyebrow": "Toepassingsgebieden",
+    "complaintsTitle": "Voor welke klachten?",
+    "complaintsIntro": "Acupunctuur is geschikt voor uiteenlopende hulpvragen. De belangrijkste aandachtsgebieden binnen de praktijk:",
+    "catPainTitle": "Pijn & Spanning",
+    "catPainDesc": "Rug-, nek- en schouderklachten, spanningshoofdpijn, gewrichtspijn en aanhoudende spierspanning.",
+    "catStressTitle": "Stress & Slaap",
+    "catStressDesc": "Moeite met ontspannen, een vol hoofd, innerlijke onrust en doorslaapproblemen.",
+    "catEnergyTitle": "Energie & Herstel",
+    "catEnergyDesc": "Aanhoudende vermoeidheid, weinig veerkracht of moeite met herstellen na inspanning of ziekte.",
+    "catDigestionTitle": "Maag & Darmen",
+    "catDigestionDesc": "Een opgeblazen gevoel, maagklachten, trage vertering en buikkrampen.",
+    "catGenderTitle": "Vrouw & Hormonale Balans",
+    "catGenderDesc": "Cyclusgerelateerde klachten, overgangsverschijnselen en emotionele schommelingen.",
+    "catSmokingTitle": "Stoppen met Roken & Vapen",
+    "catSmokingDesc": "Specifieke trajecten met moderne laseracupunctuur en ooracupunctuur om ontwenning te dempen.",
+    "ctaComplaints": "Bekijk alle specifieke indicaties op de klachtenpagina",
+    "processEyebrow": "Werkwijze",
+    "processTitle": "Eerst kijken, dan behandelen.",
+    "step1Num": "01",
+    "step1Title": "De Intake & Jouw Verhaal",
+    "step1Desc": "We nemen de tijd om te luisteren. Wat is je hulpvraag? Hoe zijn de klachten ontstaan en wat belemmert je in het dagelijks leven?",
+    "step2Num": "02",
+    "step2Title": "Traditionele Diagnostiek",
+    "step2Desc": "Aan de hand van observatie, tong- en polsdiagnostiek bepalen we waar de doorstroming stagneert en welk onderliggend patroon aanwezig is.",
+    "step3Num": "03",
+    "step3Title": "De Behandeling",
+    "step3Desc": "Zeer fijne naaldjes worden zorgvuldig geplaatst. Daarna lig je ongeveer 25 tot 30 minuten ontspannen in een rustige, warme behandelkamer.",
+    "step4Num": "04",
+    "step4Title": "Evaluatie & Vervolg",
+    "step4Desc": "We bespreken wat je hebt ervaren en hoe het lichaam heeft gereageerd. Vervolgbehandelingen worden steeds afgestemd op de actuele reactie.",
+    "relaxTitle": "Rustig liggen. Even niets hoeven.",
+    "relaxDesc": "Geen scherm. Geen haast. De naalden zijn zo dun dat het plaatsen vaak nauwelijks voelbaar is. Wat overblijft is een zeldzaam moment van stilte waarin je lichaam de ruimte krijgt om te herstellen.",
+    "relaxAlt": "Patiënt in diepe ontspanning tijdens een acupunctuursessie",
+    "laserEyebrow": "Naaldvrije Mogelijkheid",
+    "laserTitle": "Acupunctuur hoeft niet altijd met naalden.",
+    "laserP1": "Voor wie gevoelig is voor prikkels, een behandeling met traditionele naalden spannend vindt of liever een zachte benadering wenst, biedt laseracupunctuur een doeltreffend en volkomen pijnloos alternatief.",
+    "laserP2": "In plaats van naalden wordt gebruikgemaakt van geconcentreerd, zacht licht (Low-Level Laser Therapy). Dit licht stimuleert dezelfde acupunctuurpunten en energiestromen in het lichaam, zonder de huid te doorboren.",
+    "laserP3": "Binnen Bai Kang wordt laseracupunctuur ingezet bij spanningsklachten, lokale pijnverlichting en als vast onderdeel van het gerichte traject voor stoppen met roken & vapen.",
+    "careEyebrow": "Onderdeel van goede zorg",
+    "careDesc": "Acupunctuur is een waardevolle, complementaire behandelwijze en geen vervanging voor noodzakelijke reguliere geneeskunde. Bij acute of ernstige klachten adviseren we altijd eerst contact op te nemen met je huisarts. Bij Bai Kang werken we met zorg, aandacht en respect voor reguliere diagnostiek.",
+    "finalCtaEyebrow": "Persoonlijk kennismaken",
+    "finalCtaTitle": "Past acupunctuur bij jouw situatie?",
+    "finalCtaIntro": "Je hoeft vooraf niet precies te weten welke behandelvorm nodig is. Tijdens een eerste intake bespreken we wat er speelt en bekijken we samen wat passend is.",
+    "finalCtaButton": "Afspraak maken"
+  },
+  "Method": {
+    "metadata": {
+      "title": "Mijn Werkwijze & Methode | Acupunctuur Tilburg | Bai Kang TCM",
+      "description": "Lees hoe een behandeling bij Bai Kang TCM verloopt. Van digitaal anamneseformulier vooraf en polsdiagnostiek in de praktijk tot acupunctuur en zorgvuldige evaluatie."
+    },
+    "hero": {
+      "eyebrow": "Mijn Werkwijze",
+      "title": "Geen standaardbehandeling, maar aandacht voor jouw situatie.",
+      "intro": "Iedere klacht is anders. Daarom begint een behandeling bij Bai Kang niet met een vaste reeks punten of technieken, maar met jouw verhaal. Vanuit de Traditionele Chinese Geneeskunde kijk ik naar je klachten, je lichaam en de factoren die van invloed zijn op hoe je je voelt.",
+      "ctaAppointment": "Afspraak maken",
+      "ctaAcupuncture": "Hoe werkt acupunctuur? →"
+    },
+    "preparation": {
+      "eyebrow": "Zorgvuldige voorbereiding",
+      "title": "Eerst voorbereiden, dan verdiepen.",
+      "p1": "Een goede behandeling begint al vóór je de praktijk binnenstapt. Na het inplannen van je afspraak ontvang je vooraf een digitaal anamneseformulier waarin je jouw hulpvraag, klachtenverloop en relevante gezondheidshistorie rustig kunt toelichten.",
+      "p2": "Doordat ik me vooraf inlees, hoeven we in de praktijk geen tijd te verliezen aan standaard administratieve vragen. We gebruiken het consult direct om de diepte in te gaan: hoe verhouden energie, slaap, voeding en stress zich tot jouw klacht?",
+      "p3": "Binnen de Traditionele Chinese Geneeskunde koppel ik deze achtergrond aan gerichte pols- en tongdiagnostiek. Pas wanneer het onderliggende patroon scherp is, bepalen we de behandeling.",
+      "quote": "“Niet iedere klacht vraagt om dezelfde aanpak. En niet iedere behandeling hoeft hetzelfde te zijn.”",
+      "imageAlt": "Persoonlijke intake en luisterend oor bij Bai Kang TCM"
+    },
+    "steps": {
+      "eyebrow": "Het Behandeltraject",
+      "title": "Jouw behandeling stap voor stap.",
+      "subtitle": "Van voorbereiding in je eigen tempo tot gerichte zorg en structurele evaluatie.",
+      "phase1": "Voor de eerste afspraak",
+      "step1Title": "Anamneseformulier vooraf",
+      "step1Desc": "Na het boeken van je afspraak ontvang je per e-mail een anamneseformulier. Hierin breng je op je gemak je klachten, medische achtergrond en leefstijl in kaart. Dit stelt mij in staat om jouw situatie vóór het consult al grondig te bestuderen.",
+      "phase2": "In de praktijk",
+      "step2Title": "Intake & TCM-diagnostiek",
+      "step2Desc": "Tijdens het consult nemen we de tijd om je antwoorden te verdiepen. We kijken niet alleen naar de specifieke pijnplek, maar naar het geheel: energie, spanning en slaap. Met traditionele observatie en polsdiagnostiek stellen we vast waar de balans verstoord is.",
+      "step3Title": "Eerste behandeling op maat",
+      "step3Desc": "Aansluitend op de intake volgt direct jouw eerste behandeling. Acupunctuur vormt de basis, eventueel aangevuld met cupping of Guasha indien het weefsel daarom vraagt. De behandeling is rustig, veilig en gericht op het aanzetten van herstel.",
+      "phase3": "Het vervolgtraject",
+      "step4Title": "Evalueren & bijsturen",
+      "step4Desc": "Bij vervolgafspraken bespreken we wat er sinds de vorige sessie is veranderd in pijn, rust of energie. Het behandelplan beweegt mee met de reacties van jouw lichaam; niets ligt onveranderlijk vast."
+    },
+    "acupunctureBasis": {
+      "eyebrow": "De Kern",
+      "title": "Acupunctuur als basis.",
+      "p1": "Klassieke acupunctuur vormt het hart van mijn praktijk in Tilburg. Met zeer dunne, steriele wegwerpnaalden worden specifieke acupunctuurpunten op het lichaam gestimuleerd.",
+      "p2": "Welke punten worden gekozen, vloeit rechtstreeks voort uit het vooraf ingevulde formulier en de polsdiagnostiek in de praktijk. De prikkeling stimuleert de lokale circulatie en brengt het autonome zenuwstelsel van de actiestand naar diepe rust en herstel.",
+      "p3": "Wanneer nodig kan deze basis worden aangevuld met ondersteunende technieken om spanning sneller te ontladen.",
+      "imageAlt": "Detail van zeer fijne steriele acupunctuurnaald"
+    },
+    "additional": {
+      "eyebrow": "Integrale Aanpak",
+      "title": "Aanvullende behandelvormen.",
+      "intro": "Naast acupunctuur kunnen ondersteunende methoden worden ingezet om spierspanning lokaal los te maken of circulatie te verdiepen.",
+      "cuppingTitle": "Cupping",
+      "cuppingDesc": "Bij cupping worden glazen of siliconen cups op de huid geplaatst om een milde zuigkracht te creëren. Binnen TCM wordt deze methode veelvuldig toegepast bij vastzittende spieren, stijfheid in nek of rug en om de lokale microcirculatie krachtig te stimuleren.",
+      "guashaTitle": "Guasha",
+      "guashaDesc": "Bij Guasha wordt met een zacht, glad instrument over de geoliede huid geschraapt. Deze eeuwenoude techniek helpt om diepe stagnaties in bindweefsel en spierlagen los te maken en bevordert de afvoer van opgebouwde spanning.",
+      "laserTitle": "Laseracupunctuur",
+      "laserDesc": "Wanneer naalden niet wenselijk of passend zijn, biedt laseracupunctuur een volkomen pijnloos en naaldvrij alternatief. Binnen Bai Kang wordt laser daarnaast specifiek ingezet binnen het gerichte traject voor stoppen met roken en vapen."
+    },
+    "frequency": {
+      "eyebrow": "Verwachtingen",
+      "title": "Hoe vaak heb je een behandeling nodig?",
+      "p1": "Dat verschilt per persoon, de aard van de klacht en hoe lang het probleem al aanwezig is. Sommige acute klachten reageren snel, terwijl chronische of langdurige disbalans meer tijd en rust vraagt om duurzaam te herstellen.",
+      "p2": "Daarom doe ik vooraf bewust geen loze beloftes over een vast aantal sessies. Tijdens de eerste behandelingen volgen we nauwgezet hoe jouw lichaam reageert en overleggen we steeds open over een passende vervolgstap.",
+      "quote": "Geen standaard aantal sessies, maar een traject afgestemd op jouw eigen proces."
+    },
+    "practical": {
+      "eyebrow": "Praktische Zaken",
+      "title": "Consulten & Vergoeding.",
+      "subtitle": "Helderheid over de tijdsduur, voorbereiding en dekking door zorgverzekeraars.",
+      "firstBadge": "Vooraf & Intake",
+      "firstTitle": "Eerste afspraak",
+      "firstDuration": "75 – 90 minuten",
+      "firstDesc": "Inclusief het vooraf ingevulde digitale anamneseformulier, het persoonlijke intakegesprek, traditionele diagnostiek en direct de eerste acupunctuursessie.",
+      "followBadge": "Voortgang & Behandeling",
+      "followTitle": "Vervolgafspraak",
+      "followDuration": "45 – 60 minuten",
+      "followDesc": "Korte evaluatie van de voortgang sinds de vorige sessie, gevolgd door een gerichte behandeling op maat.",
+      "insuranceBadge": "Aanvullende Verzekering",
+      "insuranceTitle": "Vergoeding",
+      "insuranceDeductible": "Geen eigen risico",
+      "insuranceDesc": "Acupunctuur wordt door veel zorgverzekeraars gedeeltelijk vergoed vanuit de aanvullende verzekering. Als CAT-therapeut val ik onder de geldende kwaliteits- en tuchtnormen (GAT/Wkkgz). Controleer je polis voor actuele voorwaarden."
+    },
+    "contraindications": {
+      "eyebrow": "Zorgvuldigheid & Veiligheid",
+      "title": "Wanneer is acupunctuur niet geschikt?",
+      "p1": "Acupunctuur is een waardevolle behandelmethode, maar niet voor iedere situatie de aangewezen route. Bij acute medische noodsituaties, ernstige koorts of plotselinge, onverklaarbare pijnklachten is het noodzakelijk om eerst een arts of specialist te raadplegen.",
+      "p2": "Wanneer je onder specialistische behandeling bent, kijken we altijd hoe TCM op een veilige en verantwoorde manier kan ondersteunen. Tijdens de eerste afspraak beoordelen we daarom nadrukkelijk of een behandeling medisch passend en verantwoord is."
+    },
+    "finalCta": {
+      "eyebrow": "Persoonlijk Contact",
+      "title": "We kijken samen wat passend is.",
+      "desc": "Je hoeft vooraf niet exact te weten welke techniek of behandelvorm je nodig hebt. Vertel me waar je tegenaan loopt; vanuit daar bepalen we in alle rust de juiste route.",
+      "buttonAppointment": "Maak een afspraak",
+      "buttonComplaints": "Overzicht van klachten →"
+    }
   },
   "Footer": {
     "tagline": "Traditionele Chinese Geneeskunde & Acupunctuur in Tilburg.",
     "navigationTitle": "Navigatie",
     "contactTitle": "Praktijk",
+    "clinicName": "Bai Kang TCM | Witkamp Wellness",
     "address": "Tilburg, Nederland",
     "email": "info@baikang.nl",
     "registrationsTitle": "Registraties",
@@ -163,8 +368,9 @@
     "agbProviderLabel": "AGB zorgverlener",
     "agbPracticeLabel": "AGB praktijk",
     "complaintsText": "Ik val als CAT-therapeut onder GAT-Wkkgz klachtrecht en GAT-tuchtrecht bij de Geschilleninstantie Alternatieve Therapeuten (GAT). Voor meer informatie over mijn klachtenregeling zie:",
+    "complaintsUrl": "gatgeschillen.nl",
     "rights": "Alle rechten voorbehouden.",
-    "privacy": "Privacybeleid",
+    "privacy": "Privacyverklaring",
     "terms": "Algemene voorwaarden"
   }
 }

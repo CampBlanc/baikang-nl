@@ -5,7 +5,7 @@ import FadeIn from '@/components/FadeIn';
 
 export const metadata = {
   title: 'Wat is Acupunctuur? | Traditionele Chinese Geneeskunde Tilburg | Bai Kang',
-  description: 'Ontdek hoe acupunctuur werkt vanuit zowel Traditionele Chinese Geneeskunde als moderne fysiologie. Persoonlijke diagnostiek en rustige behandelingen in Tilburg.',
+  description: 'Ontdek hoe acupunctuur werkt vanuit zowel Traditionele Chinese Geneeskunde als moderne fysiologie. Persoonlijke diagnostiek, rustige behandelingen en laseracupunctuur in Tilburg.',
 };
 
 export default function AcupuncturePage() {
@@ -113,8 +113,12 @@ export default function AcupuncturePage() {
 
       {/* ========================================================
           3. VISUEEL INTERMEZZO — Moderne fysiologie & De Visual
+             Hier linkt subitem 2 (Traditionele Chinese Geneeskunde) naartoe
           ======================================================== */}
-      <section className="bg-surface-cream py-24 lg:py-32 px-6 sm:px-10 lg:px-16 border-b border-border-light/40">
+      <section 
+        id="tcm" 
+        className="scroll-mt-24 lg:scroll-mt-32 bg-surface-cream py-24 lg:py-32 px-6 sm:px-10 lg:px-16 border-b border-border-light/40"
+      >
         <div className="mx-auto max-w-5xl text-center">
           <FadeIn delay={0}>
             <p className="eyebrow text-gold-dark mb-3">Twee perspectieven</p>
@@ -387,7 +391,44 @@ export default function AcupuncturePage() {
       </section>
 
       {/* ========================================================
-          8. ZORGVULDIGHEID — Subtiele redactionele context
+          8. LASERACUPUNCTUUR — Naaldvrij alternatief
+             Hier linkt subitem 3 (Laseracupunctuur) naartoe
+          ======================================================== */}
+      <section 
+        id="laseracupunctuur" 
+        className="scroll-mt-24 lg:scroll-mt-32 bg-surface-cream/70 py-24 lg:py-32 px-6 sm:px-10 lg:px-16 border-b border-border-light/40"
+      >
+        <div className="mx-auto max-w-4xl text-center space-y-6">
+          <FadeIn delay={0}>
+            <p className="eyebrow text-gold-dark">Naaldvrije Mogelijkheid</p>
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.5rem] text-forest-deep leading-tight mt-2">
+              Acupunctuur hoeft niet altijd met naalden.
+            </h2>
+            <div className="flex items-center justify-center gap-3 my-5">
+              <span className="h-px w-10 bg-gold-antique/40" />
+              <span className="font-chinese text-gold-antique text-base" aria-hidden="true">光</span>
+              <span className="h-px w-10 bg-gold-antique/40" />
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={150}>
+            <div className="space-y-4 font-body text-base sm:text-lg text-text-soft leading-relaxed max-w-2xl mx-auto text-left sm:text-center">
+              <p>
+                Voor wie gevoelig is voor prikkels, een behandeling met traditionele naalden spannend vindt of liever een zachte benadering wenst, biedt <strong>laseracupunctuur</strong> een doeltreffend en volkomen pijnloos alternatief.
+              </p>
+              <p>
+                In plaats van naalden wordt gebruikgemaakt van geconcentreerd, zacht licht (Low-Level Laser Therapy). Dit licht stimuleert dezelfde acupunctuurpunten en energiestromen in het lichaam, zonder de huid te doorboren.
+              </p>
+              <p className="text-sm text-text-muted pt-2">
+                Binnen Bai Kang wordt laseracupunctuur ingezet bij spanningsklachten, lokale pijnverlichting en als vast onderdeel van het gerichte traject voor <strong>stoppen met roken & vapen</strong>.
+              </p>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* ========================================================
+          9. ZORGVULDIGHEID — Subtiele redactionele context
           ======================================================== */}
       <section className="py-16 px-6 sm:px-10 max-w-2xl mx-auto text-center border-b border-border-light/40">
         <FadeIn delay={0}>
@@ -399,7 +440,7 @@ export default function AcupuncturePage() {
       </section>
 
       {/* ========================================================
-          9. AFSLUITENDE DONKERE CTA
+          10. AFSLUITENDE DONKERE CTA
           ======================================================== */}
       <section className="bg-forest-deep py-20 px-6 sm:px-12 text-center text-text-light">
         <div className="max-w-3xl mx-auto">
