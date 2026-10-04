@@ -118,16 +118,16 @@ export default function MethodePage() {
               </FadeIn>
             </div>
 
-            {/* Fotografie: Intake en luisteren */}
+            {/* Fotografie: Intake en luisteren in landscape mode */}
             <div className="lg:col-span-5">
               <FadeIn delay={250}>
-                <div className="relative aspect-[4/5] w-full max-w-md mx-auto border border-border-light/60 p-3 bg-surface-cream/40 shadow-sm">
+                <div className="relative aspect-[4/3] sm:aspect-[3/2] w-full max-w-lg mx-auto border border-border-light/60 p-3 bg-surface-cream/40 shadow-sm">
                   <div className="relative w-full h-full overflow-hidden">
                     <Image
                       src="/images/intake-luisteren.png"
                       alt={t('preparation.imageAlt')}
                       fill
-                      sizes="(max-width: 1024px) 100vw, 40vw"
+                      sizes="(max-width: 1024px) 100vw, 45vw"
                       className="object-cover object-center transition-transform duration-700 hover:scale-105"
                     />
                   </div>
