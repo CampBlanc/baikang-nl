@@ -22,6 +22,12 @@ export default function Header() {
 
   const navItems = [
     {
+      id: 'home',
+      label: 'Home',
+      href: '/',
+      children: null,
+    },
+    {
       id: 'complaints',
       label: isNl ? 'Klachten' : 'Symptoms',
       href: '/klachten',
@@ -49,8 +55,9 @@ export default function Header() {
       label: isNl ? 'Methode' : 'Method',
       href: '/methode',
       children: [
-        { label: isNl ? 'Mijn werkwijze' : 'My approach', href: '/methode#werkwijze' },
+        { label: isNl ? 'Mijn werkwijze' : 'My approach', href: '/methode' },
         { label: isNl ? 'Aanvullende behandelvormen' : 'Complementary therapies', href: '/methode#aanvullend' },
+        { label: isNl ? 'Tarieven & vergoedingen' : 'Rates & reimbursements', href: '/tarieven' },
       ],
     },
     {
@@ -147,7 +154,7 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Rechterzijde: Taal + Knop */}
+        {/* Rechterzijde: Taal + Afspraak Knop */}
         <div className="hidden items-center gap-5 lg:flex">
           <div className="flex items-center rounded-full border border-border-light bg-surface-cream/50 p-1 text-xs font-semibold">
             <button
@@ -172,12 +179,14 @@ export default function Header() {
             </button>
           </div>
 
-          <Link
-            href="/contact"
+          <a
+            href="https://witkampwellness.clientomgeving.nl/afspraak-maken"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-none bg-forest-deep px-6 py-2.5 font-body text-xs font-semibold uppercase tracking-widest text-text-light shadow-sm hover:bg-forest-dark transition-all"
           >
             {tCommon('bookAppointment')}
-          </Link>
+          </a>
         </div>
 
         {/* Mobiel menu knoppen */}
@@ -259,13 +268,15 @@ export default function Header() {
                 )}
               </div>
             ))}
-            <Link
-              href="/contact"
+            <a
+              href="https://witkampwellness.clientomgeving.nl/afspraak-maken"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
               className="mt-4 rounded-none bg-forest-deep py-3 text-center text-xs font-semibold uppercase tracking-widest text-text-light hover:bg-forest-dark transition-colors"
             >
               {tCommon('bookAppointment')}
-            </Link>
+            </a>
           </nav>
         </div>
       )}

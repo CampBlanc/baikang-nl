@@ -9,9 +9,28 @@
     "contact": "Contact",
     "services": "Diensten",
     "faq": "Vragen",
-    "pricing": "Prijzen",
+    "pricing": "Tarieven",
     "blog": "Blog",
-    "bookAppointment": "Afspraak maken"
+    "bookAppointment": "Afspraak maken",
+    "complaintsMenu": {
+      "overview": "Overzicht",
+      "pain": "Pijn & spanning",
+      "stress": "Stress & slaap",
+      "energy": "Energie & herstel",
+      "digestion": "Maag & darmen",
+      "gender": "Vrouw & hormonale klachten",
+      "smoking": "Stoppen met roken & vapen"
+    },
+    "acupunctureMenu": {
+      "whatIs": "Wat is acupunctuur?",
+      "tcm": "Traditionele Chinese Geneeskunde",
+      "laser": "Laseracupunctuur"
+    },
+    "methodMenu": {
+      "approach": "Mijn werkwijze",
+      "additional": "Aanvullende behandelvormen",
+      "pricing": "Tarieven & vergoedingen"
+    }
   },
   "Common": {
     "bookAppointment": "Afspraak maken",
@@ -384,7 +403,8 @@
       "badge": "Een herinnerd beeld",
       "quote": "Jarenlang gebeurde er niets mee.",
       "p1": "Als tiener zag ik een scène in een film van Steven Seagal. Nadat hij gewond was geraakt tijdens een gevecht, werd hij door een oude Chinese monnik met acupunctuur behandeld. Daarna ging hij in diepe meditatie.",
-      "p2": "Het was maar een filmscène, maar het beeld bleef hangen. De kleine naaldjes, de rust en het idee dat je op zo'n eenvoudige manier met het lichaam kunt werken. Ik kon toen natuurlijk nog niet weten waar die fascinatie uiteindelijk toe zou leiden."
+      "p2": "Het was maar een filmscène, maar het beeld bleef hangen. De kleine naaldjes, de rust en het idee dat je op zo'n eenvoudige manier met het lichaam kunt werken. Ik kon toen natuurlijk nog niet weten waar die fascinatie uiteindelijk toe zou leiden.",
+      "imageAlt": "Acupunctuurnaalden in verstilde opstelling"
     },
     "Turnaround": {
       "title": "Het moment waarop ik besloot te veranderen",
@@ -442,6 +462,32 @@
       "quote": "Mijn weg naar de acupunctuur was niet gepland. Misschien is juist dat wel waarom ik het belangrijk vind om iedere persoon zonder vast stramien tegemoet te treden.",
       "button": "Afspraak maken"
     }
+  },
+  "RatesPage": {
+    "metaTitle": "Tarieven & Vergoedingen | Bai Kang TCM Tilburg",
+    "metaDescription": "Overzicht van actuele tarieven voor acupunctuur, cupping, guasha, reiki en lasertherapie bij Bai Kang TCM in Tilburg en informatie over vergoedingen.",
+    "eyebrow": "TARIEVEN & VERGOEDINGEN",
+    "heroTitle": "Duidelijkheid over de kosten van je behandeling.",
+    "heroSubtitle": "Hieronder vind je de actuele tarieven van Bai Kang TCM en informatie over mogelijke vergoeding vanuit de aanvullende zorgverzekering.",
+    "sectionRatesEyebrow": "01 · Overzicht",
+    "sectionRatesTitle": "Tarieven & Behandelingen",
+    "sectionRatesSubtitle": "Transparante tarieven voor persoonlijke zorg en gerichte aandacht",
+    "catAcupuncture": "Acupunctuur & Trajecten",
+    "catSmoking": "Stoppen met Roken of Vapen",
+    "catComplementary": "Aanvullende behandelvormen",
+    "perSession": "per sessie",
+    "package": "pakket",
+    "free": "Gratis",
+    "insuranceHeading": "Vergoeding & Registraties",
+    "insuranceText1": "Acupunctuur kan bij veel zorgverzekeraars geheel of gedeeltelijk worden vergoed vanuit de aanvullende zorgverzekering.",
+    "insuranceText2": "Omdat deze vergoeding uit het aanvullende pakket komt, heeft dit geen invloed op je verplichte wettelijke eigen risico. De voorwaarden en hoogte van de vergoeding verschillen per verzekeraar en polis.",
+    "insuranceNotice": "Controleer vooraf altijd bij je eigen zorgverzekeraar of jouw specifieke polis acupunctuur door een CAT-therapeut dekt.",
+    "paymentHeading": "Betaling & Afhandeling",
+    "paymentText": "Je betaalt na de behandeling per pin of contant. De factuur ontvang je digitaal per e-mail en kun je desgewenst zelf indienen bij je zorgverzekeraar.",
+    "faqHeading": "Veelgestelde vragen over tarieven",
+    "ctaTitle": "Wil je weten of acupunctuur bij jouw hulpvraag past?",
+    "ctaSubtitle": "Een eerste afspraak begint altijd met jouw verhaal en een zorgvuldige intake.",
+    "ctaButton": "Afspraak maken"
   },
   "Footer": {
     "tagline": "Traditionele Chinese Geneeskunde & Acupunctuur in Tilburg.",

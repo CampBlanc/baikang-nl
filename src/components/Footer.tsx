@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
@@ -11,11 +13,15 @@ export default function Footer() {
     ? 'Trade name of Witkamp Wellness' 
     : 'Handelsnaam van Witkamp Wellness';
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className="bg-forest-deep border-t border-gold-antique/20 text-text-light-soft">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-16">
         
-        {/* BOVENSTE GEDEELTE: 4 KOLOMMEN */}
+        {/* BOVENSTE GEDEELTE */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
           
           {/* Kolom 1: Bai Kang TCM & Witkamp Wellness */}
@@ -41,32 +47,65 @@ export default function Footer() {
             </p>
             <ul className="space-y-2 font-body text-sm">
               <li>
-                <Link href="/" className="hover:text-gold-antique transition-colors">
+                <Link 
+                  href="/" 
+                  onClick={scrollToTop}
+                  className="hover:text-gold-antique transition-colors"
+                >
                   {tNav('home')}
                 </Link>
               </li>
               <li>
-                <Link href="/klachten" className="hover:text-gold-antique transition-colors">
+                <Link 
+                  href="/klachten" 
+                  onClick={scrollToTop}
+                  className="hover:text-gold-antique transition-colors"
+                >
                   {locale === 'nl' ? 'Klachten' : 'Symptoms'}
                 </Link>
               </li>
               <li>
-                <Link href="/acupunctuur" className="hover:text-gold-antique transition-colors">
+                <Link 
+                  href="/acupunctuur" 
+                  onClick={scrollToTop}
+                  className="hover:text-gold-antique transition-colors"
+                >
                   {locale === 'nl' ? 'Acupunctuur' : 'Acupuncture'}
                 </Link>
               </li>
               <li>
-                <Link href="/methode" className="hover:text-gold-antique transition-colors">
+                <Link 
+                  href="/methode" 
+                  onClick={scrollToTop}
+                  className="hover:text-gold-antique transition-colors"
+                >
                   {locale === 'nl' ? 'Methode' : 'Method'}
                 </Link>
               </li>
               <li>
-                <Link href="/over-patrick" className="hover:text-gold-antique transition-colors">
+                <Link 
+                  href="/tarieven" 
+                  onClick={scrollToTop}
+                  className="hover:text-gold-antique transition-colors"
+                >
+                  {locale === 'nl' ? 'Tarieven & vergoedingen' : 'Rates & fees'}
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/over-patrick" 
+                  onClick={scrollToTop}
+                  className="hover:text-gold-antique transition-colors"
+                >
                   {tNav('about')}
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-gold-antique transition-colors">
+                <Link 
+                  href="/contact" 
+                  onClick={scrollToTop}
+                  className="hover:text-gold-antique transition-colors"
+                >
                   {locale === 'nl' ? 'Contact' : 'Contact'}
                 </Link>
               </li>
@@ -157,10 +196,18 @@ export default function Footer() {
         <div className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 font-body text-xs text-text-light-soft/60">
           <p>© {new Date().getFullYear()} Bai Kang TCM · {tradeNameText}. {t('rights')}</p>
           <div className="flex gap-6">
-            <Link href="/privacy" className="hover:text-gold-antique transition-colors">
+            <Link 
+              href="/privacy" 
+              onClick={scrollToTop}
+              className="hover:text-gold-antique transition-colors"
+            >
               {t('privacy')}
             </Link>
-            <Link href="/voorwaarden" className="hover:text-gold-antique transition-colors">
+            <Link 
+              href="/voorwaarden" 
+              onClick={scrollToTop}
+              className="hover:text-gold-antique transition-colors"
+            >
               {t('terms')}
             </Link>
           </div>

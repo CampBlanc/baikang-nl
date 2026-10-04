@@ -11,7 +11,26 @@
     "faq": "FAQ",
     "pricing": "Pricing",
     "blog": "Blog",
-    "bookAppointment": "Book appointment"
+    "bookAppointment": "Book appointment",
+    "complaintsMenu": {
+      "overview": "Overview",
+      "pain": "Pain & tension",
+      "stress": "Stress & sleep",
+      "energy": "Energy & recovery",
+      "digestion": "Stomach & digestion",
+      "gender": "Women's & hormonal health",
+      "smoking": "Quitting smoking & vaping"
+    },
+    "acupunctureMenu": {
+      "whatIs": "What is acupuncture?",
+      "tcm": "Traditional Chinese Medicine",
+      "laser": "Laser acupuncture"
+    },
+    "methodMenu": {
+      "approach": "My approach",
+      "additional": "Additional therapies",
+      "pricing": "Rates & reimbursements"
+    }
   },
   "Common": {
     "bookAppointment": "Book appointment",
@@ -384,7 +403,8 @@
       "badge": "A lasting impression",
       "quote": "For years, nothing was done with it.",
       "p1": "As a teenager, I watched a Steven Seagal movie scene. Injured after a fight, he was treated with acupuncture by an elderly Chinese monk, after which he entered deep meditation.",
-      "p2": "It was just a film, but the image remained. The small needles, the profound silence, and the notion of addressing the body so simply. I could not have known where that curiosity would lead."
+      "p2": "It was just a film, but the image remained. The small needles, the profound silence, and the notion of addressing the body so simply. I could not have known where that curiosity would lead.",
+      "imageAlt": "Acupuncture needles in peaceful arrangement"
     },
     "Turnaround": {
       "title": "The moment I chose a new path",
@@ -442,6 +462,32 @@
       "quote": "My path to acupuncture was unscripted. Perhaps that is why I meet every individual without rigid assumptions.",
       "button": "Book appointment"
     }
+  },
+  "RatesPage": {
+    "metaTitle": "Rates & Reimbursements | Bai Kang TCM Tilburg",
+    "metaDescription": "Overview of current fees for acupuncture, cupping, guasha, reiki, and laser therapy at Bai Kang TCM in Tilburg, plus insurance reimbursement details.",
+    "eyebrow": "RATES & REIMBURSEMENTS",
+    "heroTitle": "Clear and transparent treatment fees.",
+    "heroSubtitle": "Below you will find the current treatment rates for Bai Kang TCM and information regarding coverage by supplementary healthcare insurance.",
+    "sectionRatesEyebrow": "01 · Overview",
+    "sectionRatesTitle": "Treatments & Fees",
+    "sectionRatesSubtitle": "Transparent pricing for dedicated, personalized healthcare",
+    "catAcupuncture": "Acupuncture & Treatment Plans",
+    "catSmoking": "Quit Smoking or Vaping",
+    "catComplementary": "Complementary Therapies",
+    "perSession": "per session",
+    "package": "package",
+    "free": "Free",
+    "insuranceHeading": "Reimbursements & Registrations",
+    "insuranceText1": "Acupuncture treatments are often partially or fully covered by supplementary health insurance packages.",
+    "insuranceText2": "Because coverage is provided under supplementary insurance, it does not affect your statutory deductible (eigen risico). Terms and amounts vary per insurer and policy.",
+    "insuranceNotice": "Always check in advance with your health insurer whether your policy covers acupuncture provided by a certified CAT therapist.",
+    "paymentHeading": "Payment & Invoicing",
+    "paymentText": "You can pay by card or cash immediately after your treatment. Your invoice will then be sent to you by email. If applicable, you can submit the invoice to your health insurance provider for possible reimbursement through your supplementary insurance.",
+    "faqHeading": "Frequently asked questions",
+    "ctaTitle": "Curious if acupuncture can support your health?",
+    "ctaSubtitle": "An initial session always begins by listening to your personal story.",
+    "ctaButton": "Book an appointment"
   },
   "Footer": {
     "tagline": "Traditional Chinese Medicine & Acupuncture in Tilburg.",

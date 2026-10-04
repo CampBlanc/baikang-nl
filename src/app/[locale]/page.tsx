@@ -119,7 +119,7 @@ export default function HomePage() {
             </p>
             <div className="pt-4">
               <Link
-                href="/over-mij"
+                href="/over-patrick"
                 className="group inline-flex items-center gap-3 font-body text-xs sm:text-sm font-semibold uppercase tracking-widest text-forest-deep hover:text-gold-antique transition-colors"
               >
                 <span className="border-b border-forest-deep/25 pb-1 group-hover:border-gold-antique transition-colors">
