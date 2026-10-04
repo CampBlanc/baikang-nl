@@ -355,6 +355,94 @@
       "buttonComplaints": "Overzicht van klachten →"
     }
   },
+  "AboutMe": {
+    "Metadata": {
+      "title": "Over Mij | Patrick Witkamp | Acupunctuur Tilburg | Bai Kang TCM",
+      "description": "Lees het persoonlijke verhaal van Patrick Witkamp. Van 25+ jaar transport naar Traditionele Chinese Geneeskunde, acupunctuur en lasertherapie in Tilburg."
+    },
+    "Hero": {
+      "badge": "Over Mij",
+      "title": "Van de weg naar de behandelkamer.",
+      "lead": "Ik ben Patrick Witkamp, acupuncturist en eigenaar van Bai Kang TCM in Tilburg. Mijn weg naar de Chinese geneeskunde was allesbehalve rechtlijnig.",
+      "paragraph1": "Ik werd geboren op 25 januari 1974 in Nijmegen, maar mijn wieg stond al snel in Tunesië. Mijn eerste jaren in Noord-Afrika vormden onbewust een belangrijke basis voor wie ik later zou worden. Reizen, verschillende culturen en mij aanpassen aan nieuwe situaties werden al vroeg vanzelfsprekend.",
+      "paragraph2": "Na mijn terugkeer in Nederland groeide ik op in de regio Tilburg. Mijn loopbaan zou vervolgens een heel andere richting opgaan dan de behandelkamer."
+    },
+    "Transition": {
+      "title": "Een leven dat eerst een heel andere richting opging.",
+      "route": "Nijmegen · Tunesië · Tilburg · Australië · Thailand"
+    },
+    "Journey": {
+      "statLabel": "Jaar transport & onderweg",
+      "statSub": "Van regionale distributie tot lange landelijke ritten en het leven in een rijdend kantoor.",
+      "title": "Ruim 25 jaar onderweg",
+      "p1": "Mijn loopbaan begon in de logistiek, een wereld die ik van huis uit kende dankzij mijn vader. Na mijn logistieke opleiding koos ik uiteindelijk voor het leven op de weg, in een rijdend kantoor. Ruim vijfentwintig jaar werkte ik in het transport, van regionale distributie tot lange landelijke ritten. Het was een beroep dat mij vrijheid gaf en mij op veel verschillende plaatsen bracht.",
+      "p2": "Die behoefte aan vrijheid en avontuur bracht mij ook buiten Nederland. Ik woonde en werkte onder andere in Australië en Thailand. In Thailand ontmoette ik mijn partner Sompong. Ik werkte er als ondernemer, in de avionica en gaf Engelse les.",
+      "quote": "Mijn leven speelde zich jarenlang af buiten de behandelkamer. Toch was er ergens op de achtergrond altijd een fascinatie voor iets anders.",
+      "p3": "Het leven op de weg en in het buitenland heeft mij gevormd: praktisch denken, snel schakelen en vooral respect hebben voor ieders unieke achtergrond."
+    },
+    "Fascination": {
+      "badge": "Een herinnerd beeld",
+      "quote": "Jarenlang gebeurde er niets mee.",
+      "p1": "Als tiener zag ik een scène in een film van Steven Seagal. Nadat hij gewond was geraakt tijdens een gevecht, werd hij door een oude Chinese monnik met acupunctuur behandeld. Daarna ging hij in diepe meditatie.",
+      "p2": "Het was maar een filmscène, maar het beeld bleef hangen. De kleine naaldjes, de rust en het idee dat je op zo'n eenvoudige manier met het lichaam kunt werken. Ik kon toen natuurlijk nog niet weten waar die fascinatie uiteindelijk toe zou leiden."
+    },
+    "Turnaround": {
+      "title": "Het moment waarop ik besloot te veranderen",
+      "intro": "Na ruim vijfentwintig jaar in de transportwereld las ik een artikel over een vrouw die na dertig jaar bij een bekende drogisterijketen besloot haar hart te volgen en acupuncturist te worden. Haar verhaal raakte mij.",
+      "beforeLabel": "Voor 2021",
+      "beforeTitle": "Vrijheid op de weg",
+      "beforeText": "Transport, lange ritten, internationale reizen, ondernemerschap en de praktische dynamiek van het dagelijkse verkeer.",
+      "afterLabel": "Vanaf 2021",
+      "afterTitle": "Diepgang in de zorg",
+      "afterText": "Intensieve studie, Traditionele Chinese Geneeskunde, naald- en lasertechniek en de rust van de eigen behandelkamer."
+    },
+    "Timeline": {
+      "badge": "Opleiding & Groei",
+      "title": "Mijn ontwikkeling stap voor stap.",
+      "subtitle": "Mijn weg van transport naar acupunctuur verliep stap voor stap.",
+      "step1Title": "Een nieuwe richting",
+      "step1Desc": "Na ruim vijfentwintig jaar in de transportwereld besluit ik een andere weg in te slaan en mij serieus te verdiepen in acupunctuur en de Traditionele Chinese Geneeskunde.",
+      "step2Title": "Basis Vak Opleiding",
+      "step2Desc": "Mijn opleiding begint bij Qing Bai met de Basis Vak Opleiding.",
+      "step3Title": "Verdieping & Specialisatie",
+      "step3Desc": "Na het behalen van mijn certificaat stap ik over naar Total Health. Daar volg ik het verdiepingsjaar tweemaal en aansluitend het afsluitende specialisatiejaar.",
+      "step4Title": "Westerse Medische Basiskennis",
+      "step4Desc": "Bij Qing Bai volg ik de opleiding Westerse Medische Basiskennis.",
+      "step5Title": "Diploma's behaald",
+      "step5Desc": "In mei 2026 ontvang ik mijn diploma's en rond ik een belangrijke fase van mijn ontwikkeling tot acupuncturist af. Voor mij betekent dit niet het einde van mijn opleiding, maar juist het begin van een nieuw hoofdstuk."
+    },
+    "Craft": {
+      "badge": "Het Vak",
+      "title": "Van interesse naar vak.",
+      "p1": "Tijdens mijn opleiding raakte ik steeds meer geïnteresseerd in de manier waarop binnen de Chinese geneeskunde naar het lichaam wordt gekeken. Niet alleen naar de plek waar iemand klachten ervaart, maar naar het geheel en naar de samenhang tussen verschillende factoren.",
+      "p2": "Dat perspectief spreekt mij nog steeds aan. Niet omdat iedere klacht één simpele verklaring heeft, maar juist omdat ieder mens anders is."
+    },
+    "Vision": {
+      "badge": "Mijn Visie",
+      "title": "Eerst de mens, dan de klacht.",
+      "lead": "Dat is misschien wel de belangrijkste gedachte achter Bai Kang.",
+      "p1": "Wanneer iemand met een klacht komt, wil ik niet meteen naar een standaardbehandeling grijpen. Ik wil eerst begrijpen wat iemand ervaart, hoe de klacht zich heeft ontwikkeld en welke omstandigheden daarbij een rol spelen.",
+      "p2": "De Traditionele Chinese Geneeskunde geeft mij daarbij een eigen manier van kijken en onderzoeken. Vanuit die basis zoek ik naar een behandeling die past bij de persoon die tegenover mij zit. Geen vast stramien omdat iemand een bepaalde klacht heeft. Wel een behandeling die begint bij de persoon."
+    },
+    "Growth": {
+      "badge": "Vakmanschap",
+      "title": "Blijven ontwikkelen.",
+      "intro": "Mijn doel is niet om zoveel mogelijk technieken toe te passen. Mijn doel is om te weten wanneer welke aanpak passend kan zijn.",
+      "cta": "Meer over mijn werkwijze"
+    },
+    "Brand": {
+      "title": "Een rustige plek voor aandacht en behandeling.",
+      "intro": "Bai Kang is meer dan de naam van mijn praktijk. Het is de plek waarin mijn verschillende ervaringen samenkomen.",
+      "baiTitle": "Bái (白) — Wit, zuiver & oprecht",
+      "baiDesc": "De eerste klank verwijst naar Wit, een verbinding met mijn eigen naam. Bái staat voor de nuchtere helderheid en de eerlijke, oprechte blik waarmee ik naar een klacht kijk.",
+      "kangTitle": "Kāng (康) — Gezondheid & welzijn",
+      "kangDesc": "Kāng staat voor vitale gezondheid en welzijn. De naam vormt daarmee een mooie verbinding tussen mijn eigen naam en de richting die ik met mijn praktijk heb gekozen."
+    },
+    "CtaSection": {
+      "quote": "Mijn weg naar de acupunctuur was niet gepland. Misschien is juist dat wel waarom ik het belangrijk vind om iedere persoon zonder vast stramien tegemoet te treden.",
+      "button": "Afspraak maken"
+    }
+  },
   "Footer": {
     "tagline": "Traditionele Chinese Geneeskunde & Acupunctuur in Tilburg.",
     "navigationTitle": "Navigatie",

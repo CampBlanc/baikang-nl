@@ -355,6 +355,94 @@
       "buttonComplaints": "Overview of complaints →"
     }
   },
+  "AboutMe": {
+    "Metadata": {
+      "title": "About Me | Patrick Witkamp | Acupuncture Tilburg | Bai Kang TCM",
+      "description": "Read the personal journey of Patrick Witkamp. From 25+ years in logistics to Traditional Chinese Medicine, acupuncture, and laser therapy in Tilburg."
+    },
+    "Hero": {
+      "badge": "About Me",
+      "title": "From the road to the treatment room.",
+      "lead": "I am Patrick Witkamp, acupuncturist and founder of Bai Kang TCM in Tilburg. My journey toward Chinese medicine was anything but straightforward.",
+      "paragraph1": "I was born on January 25, 1974, in Nijmegen, but spent my early childhood in Tunisia. Growing up in North Africa laid an intuitive foundation for who I would become: adapting to new cultures and diverse perspectives felt natural early on.",
+      "paragraph2": "Upon returning to the Netherlands, I grew up in the Tilburg area. My career, however, initially took a completely different turn from healthcare."
+    },
+    "Transition": {
+      "title": "A life that originally took an entirely different path.",
+      "route": "Nijmegen · Tunisia · Tilburg · Australia · Thailand"
+    },
+    "Journey": {
+      "statLabel": "Years in transport & logistics",
+      "statSub": "From regional distribution to long journeys and life in a rolling office.",
+      "title": "Over 25 years on the road",
+      "p1": "My career started in logistics, an industry familiar through my father. After completing my studies, I chose life behind the wheel. For over twenty-five years I worked in transport, which offered freedom and took me across countless landscapes.",
+      "p2": "That thirst for exploration took me overseas. I lived and worked in Australia and Thailand, where I met my partner Sompong. In Thailand, I operated as an entrepreneur, worked in avionics, and taught English.",
+      "quote": "For years, my life existed entirely outside the clinic. Yet in the background, a fascination lingered.",
+      "p3": "Decades on the road and abroad shaped my approach: practical thinking, swift assessment, and deep respect for every individual's unique story."
+    },
+    "Fascination": {
+      "badge": "A lasting impression",
+      "quote": "For years, nothing was done with it.",
+      "p1": "As a teenager, I watched a Steven Seagal movie scene. Injured after a fight, he was treated with acupuncture by an elderly Chinese monk, after which he entered deep meditation.",
+      "p2": "It was just a film, but the image remained. The small needles, the profound silence, and the notion of addressing the body so simply. I could not have known where that curiosity would lead."
+    },
+    "Turnaround": {
+      "title": "The moment I chose a new path",
+      "intro": "After more than 25 years in logistics, I read an article about a woman who followed her heart after 30 years at a retail chain to become an acupuncturist. Her story resonated deeply.",
+      "beforeLabel": "Before 2021",
+      "beforeTitle": "Freedom on the road",
+      "beforeText": "Transport, long distances, international adventures, entrepreneurship, and practical day-to-day dynamics.",
+      "afterLabel": "From 2021",
+      "afterTitle": "Depth in healthcare",
+      "afterText": "Rigorous academic study, Traditional Chinese Medicine, needle and laser precision, and the tranquility of my own clinic."
+    },
+    "Timeline": {
+      "badge": "Education & Progress",
+      "title": "My journey step by step.",
+      "subtitle": "My journey from transport to acupuncture progressed step by step.",
+      "step1Title": "A new direction",
+      "step1Desc": "After over twenty-five years in the transport sector, I decided to take a different path and immerse myself seriously in acupuncture and Traditional Chinese Medicine.",
+      "step2Title": "Foundation Training",
+      "step2Desc": "My training began at Qing Bai with the Basic Professional Training.",
+      "step3Title": "Deepening & Specialization",
+      "step3Desc": "After obtaining my certificate, I transitioned to Total Health, completing the advanced year twice followed by the graduating specialization year.",
+      "step4Title": "Western Medical Foundations",
+      "step4Desc": "At Qing Bai, I completed the accredited Western Medical Foundations curriculum.",
+      "step5Title": "Diplomas achieved",
+      "step5Desc": "In May 2026, I received my diplomas, completing a pivotal milestone in my development as an acupuncturist. For me, this is not an ending, but the beginning of a new chapter."
+    },
+    "Craft": {
+      "badge": "The Profession",
+      "title": "From interest to craftsmanship.",
+      "p1": "Throughout my education, I grew fascinated by how Chinese medicine views the human body—not just isolating the symptom, but observing the holistic interconnectedness of the individual.",
+      "p2": "That perspective remains my anchor. Not because every complaint has a single answer, but because every person is unique."
+    },
+    "Vision": {
+      "badge": "My Philosophy",
+      "title": "First the person, then the symptom.",
+      "lead": "This is the guiding principle behind Bai Kang.",
+      "p1": "When someone walks in with discomfort, I avoid generic solutions. I seek to understand how the imbalance arose, what circumstances surround it, and what is truly needed.",
+      "p2": "Traditional Chinese Medicine provides a nuanced diagnostic framework. From that ground, I tailor care to the person sitting across from me. Not a rigid blueprint for a specific symptom, but care that begins with the person."
+    },
+    "Growth": {
+      "badge": "Continuous Growth",
+      "title": "Ever evolving.",
+      "intro": "The goal is not to apply as many modalities as possible, but to know precisely which intervention serves you best.",
+      "cta": "Learn more about my approach"
+    },
+    "Brand": {
+      "title": "A serene place for dedicated attention.",
+      "intro": "Bai Kang is more than a name; it is where my diverse life lessons converge into genuine care.",
+      "baiTitle": "Bái (白) — Purity & Integrity",
+      "baiDesc": "The first sound references White, connecting with my family name. Bái reflects clarity, openness, and honest care without pretension.",
+      "kangTitle": "Kāng (康) — Vital Health",
+      "kangDesc": "Kāng stands for vital health and wellness. The name bridges my personal name with the lifelong path I have chosen for my clinic."
+    },
+    "CtaSection": {
+      "quote": "My path to acupuncture was unscripted. Perhaps that is why I meet every individual without rigid assumptions.",
+      "button": "Book appointment"
+    }
+  },
   "Footer": {
     "tagline": "Traditional Chinese Medicine & Acupuncture in Tilburg.",
     "navigationTitle": "Navigation",
