@@ -38,7 +38,7 @@ export default function MethodePage() {
         <AtmosphericBamboo
           variant="leaves"
           position="top-right"
-          opacity="opacity-15"
+          opacity="opacity-[0.15] lg:opacity-20"
           className="animate-fade-in"
         />
 
