@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     <main className="bg-ivory selection:bg-gold-antique/30">
       
-      {/* 1. HERO — Bloesemtak: 15% mobiel, 20% tablet (incl. iPad Pro 13), 100% desktop */}
+      {/* 1. HERO — Bloesemtak: 15% mobiel, 20% tablet, 100% desktop */}
       <section className="relative overflow-hidden w-full border-b border-border-light/30">
         <AtmosphericBlossom 
           position="top-right" 
@@ -31,22 +31,24 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-3.5 items-center justify-center w-full sm:w-auto">
             <Link
               href="/klachten"
-              className="w-full sm:w-auto rounded-none border border-forest-deep px-7 py-3.5 font-body text-xs font-semibold uppercase tracking-widest text-forest-deep transition-all hover:bg-forest-deep/5"
+              className="w-full sm:w-auto rounded-none border border-forest-deep px-7 py-3.5 font-body text-xs font-semibold uppercase tracking-widest text-forest-deep text-center transition-all hover:bg-forest-deep/5"
             >
               {t('Hero.ctaHelp')} →
             </Link>
-            <Link
-              href="/contact"
-              className="w-full sm:w-auto rounded-none bg-forest-deep px-7 py-3.5 font-body text-xs font-semibold uppercase tracking-widest text-text-light shadow-md transition-all hover:bg-forest-dark hover:shadow-lg"
+            <a
+              href="https://witkampwellness.clientomgeving.nl/afspraak-maken"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto rounded-none bg-forest-deep px-7 py-3.5 font-body text-xs font-semibold uppercase tracking-widest text-text-light text-center shadow-md transition-all hover:bg-forest-dark hover:shadow-lg"
             >
               {t('Hero.ctaAppointment')}
-            </Link>
+            </a>
           </div>
         </div>
       </section>
 
       {/* 2. WAARMEE KAN IK HELPEN? — Rustige achtergrond zonder afleiding */}
-      <section className="bg-surface-cream border-t border-border-light/40 px-6 py-24 lg:px-16">
+      <section id="klachten" className="bg-surface-cream border-t border-border-light/40 px-6 py-24 lg:px-16 scroll-mt-16">
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 max-w-3xl">
             <p className="eyebrow text-gold-dark mb-4">{t('Issues.badge')}</p>
@@ -83,7 +85,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. OVER PATRICK — Bamboemotief: rechts op mobiel, links achter portret op desktop */}
+      {/* 3. OVER PATRICK — Bamboemotief en portret */}
       <section className="relative overflow-hidden bg-ivory border-t border-border-light/40 px-6 py-24 lg:px-16">
         <AtmosphericBamboo 
           variant="stick-leaves" 
@@ -117,7 +119,7 @@ export default function HomePage() {
             </p>
             <div className="pt-4">
               <Link
-                href="/over-patrick"
+                href="/over-mij"
                 className="group inline-flex items-center gap-3 font-body text-xs sm:text-sm font-semibold uppercase tracking-widest text-forest-deep hover:text-gold-antique transition-colors"
               >
                 <span className="border-b border-forest-deep/25 pb-1 group-hover:border-gold-antique transition-colors">
@@ -131,7 +133,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. EINDBANNER — Diepgroen vlak met gouden bamboe-accent rechtsonder */}
+      {/* 4. EINDBANNER — Donkergroen vlak met gouden bamboe-accent */}
       <section className="relative overflow-hidden bg-forest-deep px-6 pt-24 pb-16 lg:pt-32 lg:pb-20 text-center border-t-4 border-gold-antique">
         <BambooWatermark 
           variant="cluster" 
@@ -148,12 +150,14 @@ export default function HomePage() {
             &ldquo;{t('FinalCTA.intro')}&rdquo;
           </p>
           <div className="pt-2">
-            <Link
-              href="/contact"
+            <a
+              href="https://witkampwellness.clientomgeving.nl/afspraak-maken"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block rounded-none bg-gold-antique px-10 py-4 font-body text-xs font-semibold uppercase tracking-widest text-forest-deep transition-all hover:bg-ivory hover:shadow-lg"
             >
               {t('FinalCTA.cta')} →
-            </Link>
+            </a>
           </div>
         </div>
       </section>
