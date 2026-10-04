@@ -32,14 +32,13 @@ export default function MethodePage() {
   return (
     <main className="bg-ivory text-text selection:bg-gold-antique/30">
       {/* ========================================================
-          1. HERO — Rustig, royaal en getrapt opkomend
+          1. HERO — Zonder animatie-override op de bamboe
           ======================================================== */}
       <section className="relative overflow-hidden w-full border-b border-border-light/30 pt-20 pb-16 sm:pt-28 sm:pb-24 lg:pt-32 lg:pb-28">
         <AtmosphericBamboo
           variant="leaves"
           position="top-right"
           opacity="opacity-[0.15] lg:opacity-20"
-          className="animate-fade-in"
         />
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
@@ -186,7 +185,7 @@ export default function MethodePage() {
               </div>
             </FadeIn>
 
-            {/* FASE 2: IN DE PRAKTIJK (Intake + Behandeling) */}
+            {/* FASE 2: IN DE PRAKTIJK */}
             <FadeIn delay={200}>
               <div className="relative">
                 <span className="inline-block text-[11px] font-body uppercase tracking-widest text-gold-dark font-semibold bg-surface-cream border border-gold-antique/30 px-3 py-1 mb-4">
@@ -249,7 +248,6 @@ export default function MethodePage() {
                 </p>
               </div>
             </FadeIn>
-
           </div>
         </div>
       </section>
