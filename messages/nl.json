@@ -76,12 +76,12 @@
     },
     "Positioning": {
       "title": "Verder kijken dan de klacht.",
-      "intro": "Geen mens is hetzelfde. Daarom begint goede zorg met luisteren, aandacht en kijken naar het geheel.",
+      "intro": "Geen mens is hetzelfde. Daarom begint goede zorg met naar de cliënt luisteren, aandacht en kijken naar het geheel.",
       "cta": "Meer over mijn werkwijze"
     },
     "About": {
       "badge": "Achter Bai Kang",
-      "title": "Persoonlijke aandacht begint met luisteren.",
+      "title": "Persoonlijke aandacht begint met goed luisteren naar de cliënt.",
       "subtitle": "Patrick Witkamp · Acupuncturist",
       "intro": "Mijn doel is om verder te kijken dan alleen het symptoom. Door de westerse nuchterheid te combineren met oosterse wijsheid, help ik je lichaam weer in balans te brengen.",
       "cta": "Lees mijn verhaal"
@@ -95,7 +95,7 @@
     },
     "FinalCTA": {
       "title": "Je hoeft niet eerst precies te weten wat er aan de hand is.",
-      "intro": "Een eerste afspraak begint met luisteren.",
+      "intro": "Een eerste afspraak begint met naar jouw verhaal luisteren.",
       "cta": "Afspraak maken"
     }
   },
@@ -255,7 +255,7 @@
     "processTitle": "Eerst kijken, dan behandelen.",
     "step1Num": "01",
     "step1Title": "De Intake & Jouw Verhaal",
-    "step1Desc": "We nemen de tijd om te luisteren. Wat is je hulpvraag? Hoe zijn de klachten ontstaan en wat belemmert je in het dagelijks leven?",
+    "step1Desc": "We nemen de tijd om naar jouw verhaal te luisteren. Wat is je hulpvraag? Hoe zijn de klachten ontstaan en wat belemmert je in het dagelijks leven?",
     "step2Num": "02",
     "step2Title": "Traditionele Diagnostiek",
     "step2Desc": "Aan de hand van observatie, tong- en polsdiagnostiek bepalen we waar de doorstroming stagneert en welk onderliggend patroon aanwezig is.",
