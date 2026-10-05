@@ -1,5 +1,9 @@
 import { Metadata } from 'next';
 import { useTranslations, useLocale } from 'next-intl';
+import { Link } from '@/i18n/navigation';
+import AtmosphericBamboo from '@/components/AtmosphericBamboo';
+import FaqAccordion from '@/components/FaqAccordion';
+import { getFaqsByCategory, FaqLocale } from '@/data/faq';
 
 export async function generateMetadata({
   params,
@@ -21,11 +25,15 @@ export async function generateMetadata({
 
 export default function TarievenPage() {
   const t = useTranslations('RatesPage');
+  const tFaq = useTranslations('Faq');
   const locale = useLocale();
   const isNl = locale === 'nl';
 
   const defaultAppointmentUrl =
     'https://witkampwellness.clientomgeving.nl/afspraak-maken';
+
+  // Centrale tarieven-FAQ ophalen uit de data-laag
+  const tarievenFaqs = getFaqsByCategory('tarieven', locale as FaqLocale);
 
   // 1. Acupunctuur behandelingen & trajecten
   const acupunctureRates = isNl
@@ -216,62 +224,36 @@ export default function TarievenPage() {
         },
       ];
 
-  const faqs = isNl
-    ? [
-        {
-          q: 'Heb ik een verwijzing van de huisarts nodig?',
-          a: 'Nee, voor een behandeling bij Bai Kang TCM heb je geen verwijzing van je huisarts nodig. Je kunt direct zelf een afspraak inplannen via de online agenda.',
-        },
-        {
-          q: 'Wordt acupunctuur vergoed door de zorgverzekering?',
-          a: 'Acupunctuur valt vaak onder de dekking van de aanvullende zorgverzekering. Omdat het uit het aanvullende pakket komt, gaat dit niet ten koste van je wettelijk eigen risico. Raadpleeg vooraf je polisvoorwaarden.',
-        },
-        {
-          q: 'Wat gebeurt er als ik verhinderd ben of wil annuleren?',
-          a: 'Mocht je verhinderd zijn, laat dit dan minimaal 24 uur van tevoren weten. Bij annulering binnen 24 uur kan de gereserveerde tijd in rekening worden gebracht.',
-        },
-        {
-          q: 'Hoe verloopt de betaling van het consult?',
-          a: 'Na de behandeling ontvang je digitaal een factuur per e-mail met een betaallink of overboekingsgegevens. Deze factuur kun je desgewenst indienen bij je zorgverzekeraar.',
-        },
-      ]
-    : [
-        {
-          q: 'Do I need a doctor referral?',
-          a: 'No, a referral from a general practitioner is not required for treatments at Bai Kang TCM. You can schedule an appointment directly.',
-        },
-        {
-          q: 'Are treatments covered by Dutch health insurance?',
-          a: 'Acupuncture is widely covered under supplementary health insurance plans. Because it falls under supplementary care, it does not affect your statutory deductible (eigen risico). Check your policy terms.',
-        },
-        {
-          q: 'What is the cancellation policy?',
-          a: 'If you need to reschedule or cancel, please provide at least 24 hours notice. Cancellations made within 24 hours may be invoiced for the reserved appointment.',
-        },
-        {
-          q: 'How does payment work?',
-          a: 'Following your session, you will receive a digital invoice via email with an online payment link. You can submit this invoice directly to your health insurer.',
-        },
-      ];
-
   const bookLabel = isNl ? 'Inplannen' : 'Book';
 
   return (
     <main className="bg-ivory text-forest-deep selection:bg-gold-antique/20">
-      {/* 1. HERO MET SUBTIELE FADE-IN */}
-      <section className="pt-20 pb-14 sm:pt-28 sm:pb-18 px-6 max-w-4xl mx-auto text-center transition-all duration-700 ease-out">
-        <p className="eyebrow text-gold-dark mb-4 tracking-widest uppercase text-xs sm:text-sm animate-fade-in">
-          {t('eyebrow')}
-        </p>
-        <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-forest-deep leading-tight mb-6">
-          {t('heroTitle')}
-        </h1>
-        <p className="font-body text-text-soft text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-          {t('heroSubtitle')}
-        </p>
+      {/* ========================================================
+          1. HERO MET SUBTIELE FADE-IN & BAMBOE ACCENT
+          ======================================================== */}
+      <section className="relative overflow-hidden w-full border-b border-border-light/30 pt-20 pb-14 sm:pt-28 sm:pb-18 px-6 text-center">
+        <AtmosphericBamboo
+          variant="leaves"
+          position="top-right"
+          opacity="opacity-15 lg:opacity-20"
+        />
+
+        <div className="relative z-10 max-w-4xl mx-auto">
+          <p className="eyebrow text-gold-dark mb-4 tracking-widest uppercase text-xs sm:text-sm animate-fade-in">
+            {t('eyebrow')}
+          </p>
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-forest-deep leading-tight mb-6">
+            {t('heroTitle')}
+          </h1>
+          <p className="font-body text-text-soft text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+            {t('heroSubtitle')}
+          </p>
+        </div>
       </section>
 
-      {/* 2. OVERZICHT TARIEVEN */}
+      {/* ========================================================
+          2. OVERZICHT TARIEVEN
+          ======================================================== */}
       <section className="py-10 px-6 max-w-5xl mx-auto">
         <div className="border-t border-border-light/60 pt-10 mb-10">
           <p className="eyebrow text-gold-dark text-xs uppercase tracking-wider mb-2">
@@ -331,7 +313,6 @@ export default function TarievenPage() {
                     </span>
                   </div>
 
-                  {/* Micro-knop met interactieve animatie */}
                   <span className="inline-flex items-center gap-1 text-xs font-semibold text-forest-deep group-hover:text-gold-dark transition-colors font-body uppercase tracking-wider">
                     <span>{bookLabel}</span>
                     <span className="text-sm transition-transform duration-300 ease-out group-hover:translate-x-1 group-hover:-translate-y-0.5">
@@ -448,7 +429,9 @@ export default function TarievenPage() {
         </div>
       </section>
 
-      {/* 3. VERGOEDING & REGISTRATIES */}
+      {/* ========================================================
+          3. VERGOEDING & REGISTRATIES
+          ======================================================== */}
       <section className="py-12 px-6 max-w-5xl mx-auto">
         <div className="border-t border-border-light/60 pt-10 mb-8">
           <p className="eyebrow text-gold-dark text-xs uppercase tracking-wider mb-2">
@@ -502,7 +485,9 @@ export default function TarievenPage() {
         </div>
       </section>
 
-      {/* 4. BETALING */}
+      {/* ========================================================
+          4. BETALING & AFHANDELING
+          ======================================================== */}
       <section className="py-12 px-6 max-w-5xl mx-auto">
         <div className="border-t border-border-light/60 pt-10">
           <p className="eyebrow text-gold-dark text-xs uppercase tracking-wider mb-2">
@@ -517,35 +502,33 @@ export default function TarievenPage() {
         </div>
       </section>
 
-      {/* 5. VEELGESTELDE VRAGEN */}
-      <section className="py-12 px-6 max-w-5xl mx-auto">
-        <div className="border-t border-border-light/60 pt-10 mb-8">
-          <p className="eyebrow text-gold-dark text-xs uppercase tracking-wider mb-2">
-            04 · {isNl ? 'Vragen' : 'Questions'}
-          </p>
-          <h2 className="font-display text-3xl sm:text-4xl text-forest-deep mb-8">
-            {t('faqHeading')}
-          </h2>
-        </div>
+      {/* ========================================================
+          5. VEELGESTELDE VRAGEN OVER TARIEVEN — FaqAccordion
+          ======================================================== */}
+      <section className="py-14 sm:py-20 px-6 max-w-4xl mx-auto border-t border-border-light/60">
+        <FaqAccordion
+          items={tarievenFaqs}
+          eyebrow={`04 · ${tFaq('eyebrow')}`}
+          title={t('faqHeading')}
+          className="py-0"
+        />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {faqs.map((faq, idx) => (
-            <div
-              key={idx}
-              className="bg-surface-cream/40 border border-border-light/50 p-6 space-y-2 rounded-sm transition-colors hover:border-gold-antique/50"
+        <div className="mt-8 text-center font-body text-sm text-text-soft">
+          <p>
+            {tFaq('moreQuestions')}{' '}
+            <Link
+              href="/contact"
+              className="font-semibold text-gold-dark hover:text-forest-deep underline underline-offset-4 transition-colors"
             >
-              <h3 className="font-display text-xl text-forest-deep font-medium">
-                {faq.q}
-              </h3>
-              <p className="font-body text-sm text-text-soft leading-relaxed">
-                {faq.a}
-              </p>
-            </div>
-          ))}
+              {tFaq('contactCta')} →
+            </Link>
+          </p>
         </div>
       </section>
 
-      {/* 6. AFSLUITENDE CTA */}
+      {/* ========================================================
+          6. AFSLUITENDE CTA
+          ======================================================== */}
       <section className="bg-forest-deep text-ivory py-20 px-6 text-center border-t-4 border-gold-antique">
         <div className="max-w-3xl mx-auto space-y-6">
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-ivory leading-tight">

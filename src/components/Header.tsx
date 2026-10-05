@@ -20,6 +20,15 @@ export default function Header() {
 
   const isNl = locale === 'nl';
 
+  // Veilige CTA knoptekst
+  let appointmentLabel = isNl ? 'Afspraak maken' : 'Book appointment';
+  try {
+    const raw = tCommon('bookAppointment');
+    if (raw && !raw.startsWith('Common.')) appointmentLabel = raw;
+  } catch {
+    // Gebruik fallback
+  }
+
   const navItems = [
     {
       id: 'home',
@@ -61,12 +70,23 @@ export default function Header() {
       ],
     },
     {
+      id: 'faq',
+      label: isNl ? 'Vragen' : 'FAQ',
+      href: '/vragen',
+      children: null,
+    },
+    {
       id: 'about',
       label: isNl ? 'Over mij' : 'About me',
       href: '/over-patrick',
       children: null,
     },
   ];
+
+  const isItemActive = (href: string) => {
+    if (href === '/') return pathname === '/';
+    return pathname.startsWith(href);
+  };
 
   return (
     <header className="sticky top-0 z-50 border-b border-border-light bg-ivory/95 backdrop-blur-md">
@@ -94,64 +114,68 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigatie met Dropdowns */}
-        <nav className="hidden items-center gap-8 lg:flex">
-          {navItems.map((item) => (
-            <div
-              key={item.id}
-              className="relative"
-              onMouseEnter={() => item.children && setActiveDropdown(item.id)}
-              onMouseLeave={() => setActiveDropdown(null)}
-            >
-              <Link
-                href={item.href}
-                onClick={() => setActiveDropdown(null)}
-                className={`flex items-center gap-1.5 py-2 text-sm font-medium transition-colors hover:text-forest-deep ${
-                  pathname === item.href ? 'text-forest-deep font-semibold' : 'text-text-soft'
-                }`}
-              >
-                <span>{item.label}</span>
-                {item.children && (
-                  <svg className="h-3.5 w-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                )}
-              </Link>
+        <nav className="hidden items-center gap-6 xl:gap-8 lg:flex">
+          {navItems.map((item) => {
+            const active = isItemActive(item.href);
 
-              {/* Dropdown Menu */}
-              {item.children && activeDropdown === item.id && (
-                <div className="absolute left-0 top-full min-w-[250px] border border-border-light bg-ivory py-2 shadow-lg z-50">
-                  {item.children.map((sub) => {
-                    const isExternal = sub.href.startsWith('http');
-                    if (isExternal) {
+            return (
+              <div
+                key={item.id}
+                className="relative"
+                onMouseEnter={() => item.children && setActiveDropdown(item.id)}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                <Link
+                  href={item.href}
+                  onClick={() => setActiveDropdown(null)}
+                  className={`flex items-center gap-1.5 py-2 text-sm font-medium transition-colors hover:text-forest-deep ${
+                    active ? 'text-forest-deep font-semibold' : 'text-text-soft'
+                  }`}
+                >
+                  <span>{item.label}</span>
+                  {item.children && (
+                    <svg className="h-3.5 w-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  )}
+                </Link>
+
+                {/* Dropdown Menu */}
+                {item.children && activeDropdown === item.id && (
+                  <div className="absolute left-0 top-full min-w-[250px] border border-border-light bg-ivory py-2 shadow-lg z-50">
+                    {item.children.map((sub) => {
+                      const isExternal = sub.href.startsWith('http');
+                      if (isExternal) {
+                        return (
+                          <a
+                            key={sub.href}
+                            href={sub.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={() => setActiveDropdown(null)}
+                            className="flex items-center justify-between px-5 py-2.5 text-xs font-medium text-text-soft hover:bg-surface-cream hover:text-forest-deep transition-colors"
+                          >
+                            <span>{sub.label}</span>
+                            <span className="text-[10px] text-gold-antique" aria-hidden="true">↗</span>
+                          </a>
+                        );
+                      }
                       return (
-                        <a
+                        <Link
                           key={sub.href}
                           href={sub.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
                           onClick={() => setActiveDropdown(null)}
-                          className="flex items-center justify-between px-5 py-2.5 text-xs font-medium text-text-soft hover:bg-surface-cream hover:text-forest-deep transition-colors"
+                          className="block px-5 py-2.5 text-xs font-medium text-text-soft hover:bg-surface-cream hover:text-forest-deep transition-colors"
                         >
-                          <span>{sub.label}</span>
-                          <span className="text-[10px] text-gold-antique" aria-hidden="true">↗</span>
-                        </a>
+                          {sub.label}
+                        </Link>
                       );
-                    }
-                    return (
-                      <Link
-                        key={sub.href}
-                        href={sub.href}
-                        onClick={() => setActiveDropdown(null)}
-                        className="block px-5 py-2.5 text-xs font-medium text-text-soft hover:bg-surface-cream hover:text-forest-deep transition-colors"
-                      >
-                        {sub.label}
-                      </Link>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
-          ))}
+                    })}
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </nav>
 
         {/* Rechterzijde: Taal + Afspraak Knop */}
@@ -185,7 +209,7 @@ export default function Header() {
             rel="noopener noreferrer"
             className="rounded-none bg-forest-deep px-6 py-2.5 font-body text-xs font-semibold uppercase tracking-widest text-text-light shadow-sm hover:bg-forest-dark transition-all"
           >
-            {tCommon('bookAppointment')}
+            {appointmentLabel}
           </a>
         </div>
 
@@ -230,7 +254,9 @@ export default function Header() {
                 <Link
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="font-medium text-forest-deep py-1"
+                  className={`font-medium py-1 ${
+                    isItemActive(item.href) ? 'text-forest-deep font-semibold' : 'text-forest-deep'
+                  }`}
                 >
                   {item.label}
                 </Link>
@@ -275,7 +301,7 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
               className="mt-4 rounded-none bg-forest-deep py-3 text-center text-xs font-semibold uppercase tracking-widest text-text-light hover:bg-forest-dark transition-colors"
             >
-              {tCommon('bookAppointment')}
+              {appointmentLabel}
             </a>
           </nav>
         </div>

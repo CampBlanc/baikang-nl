@@ -1,9 +1,11 @@
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import AtmosphericBamboo from '@/components/AtmosphericBamboo';
 import FadeIn from '@/components/FadeIn';
+import FaqAccordion from '@/components/FaqAccordion';
+import { getFaqsByCategory, FaqLocale } from '@/data/faq';
 
 export async function generateMetadata({
   params,
@@ -28,6 +30,11 @@ export async function generateMetadata({
 
 export default function AcupuncturePage() {
   const t = useTranslations('Acupuncture');
+  const tFaq = useTranslations('Faq');
+  const locale = useLocale() as FaqLocale;
+
+  // Haal de specifieke 'acupunctuur' FAQs op in de actieve taal
+  const acupunctureFaqs = getFaqsByCategory('acupunctuur', locale);
 
   return (
     <main className="bg-ivory text-text selection:bg-gold-antique/30 overflow-x-clip">
@@ -471,7 +478,36 @@ export default function AcupuncturePage() {
       </section>
 
       {/* ========================================================
-          10. AFSLUITENDE DONKERE CTA
+          10. VEELGESTELDE VRAGEN OVER ACUPUNCTUUR — FAQ Accordeon
+          ======================================================== */}
+      <section className="bg-surface-cream/40 py-20 sm:py-28 px-6 sm:px-10 lg:px-16 border-b border-border-light/40">
+        <div className="mx-auto max-w-4xl">
+          <FadeIn delay={100}>
+            <FaqAccordion
+              items={acupunctureFaqs}
+              eyebrow={tFaq('eyebrow')}
+              title={tFaq('title')}
+            />
+          </FadeIn>
+
+          <FadeIn delay={250}>
+            <div className="mt-8 text-center font-body text-sm text-text-soft">
+              <p>
+                {tFaq('moreQuestions')}{' '}
+                <Link
+                  href="/contact"
+                  className="font-semibold text-gold-dark hover:text-forest-deep underline underline-offset-4 transition-colors"
+                >
+                  {tFaq('contactCta')} →
+                </Link>
+              </p>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* ========================================================
+          11. AFSLUITENDE DONKERE CTA
           ======================================================== */}
       <section className="bg-forest-deep py-20 px-6 sm:px-12 text-center text-text-light">
         <div className="max-w-3xl mx-auto">

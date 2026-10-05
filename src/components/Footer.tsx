@@ -9,12 +9,23 @@ export default function Footer() {
   const tNav = useTranslations('Navigation');
   const locale = useLocale();
 
-  const tradeNameText = locale === 'en' 
-    ? 'Trade name of Witkamp Wellness' 
-    : 'Handelsnaam van Witkamp Wellness';
+  const isNl = locale === 'nl';
+  const tradeNameText = isNl
+    ? 'Handelsnaam van Witkamp Wellness'
+    : 'Trade name of Witkamp Wellness';
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Veilige navigatielabels met fallbacks
+  const getNavLabel = (key: string, fallback: string) => {
+    try {
+      const res = tNav(key as any);
+      return res && !res.startsWith('Navigation.') ? res : fallback;
+    } catch {
+      return fallback;
+    }
   };
 
   return (
@@ -40,7 +51,7 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Kolom 2: Navigatielinks */}
+          {/* Kolom 2: Navigatielinks (inclusief /vragen) */}
           <div className="lg:col-span-2 space-y-3">
             <p className="font-body text-xs font-semibold uppercase tracking-widest text-gold-antique">
               {t('navigationTitle')}
@@ -52,7 +63,7 @@ export default function Footer() {
                   onClick={scrollToTop}
                   className="hover:text-gold-antique transition-colors"
                 >
-                  {tNav('home')}
+                  {getNavLabel('home', 'Home')}
                 </Link>
               </li>
               <li>
@@ -61,7 +72,7 @@ export default function Footer() {
                   onClick={scrollToTop}
                   className="hover:text-gold-antique transition-colors"
                 >
-                  {locale === 'nl' ? 'Klachten' : 'Symptoms'}
+                  {isNl ? 'Klachten' : 'Symptoms'}
                 </Link>
               </li>
               <li>
@@ -70,7 +81,7 @@ export default function Footer() {
                   onClick={scrollToTop}
                   className="hover:text-gold-antique transition-colors"
                 >
-                  {locale === 'nl' ? 'Acupunctuur' : 'Acupuncture'}
+                  {isNl ? 'Acupunctuur' : 'Acupuncture'}
                 </Link>
               </li>
               <li>
@@ -79,7 +90,7 @@ export default function Footer() {
                   onClick={scrollToTop}
                   className="hover:text-gold-antique transition-colors"
                 >
-                  {locale === 'nl' ? 'Methode' : 'Method'}
+                  {isNl ? 'Methode' : 'Method'}
                 </Link>
               </li>
               <li>
@@ -88,7 +99,16 @@ export default function Footer() {
                   onClick={scrollToTop}
                   className="hover:text-gold-antique transition-colors"
                 >
-                  {locale === 'nl' ? 'Tarieven & vergoedingen' : 'Rates & fees'}
+                  {isNl ? 'Tarieven & vergoedingen' : 'Rates & fees'}
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/vragen" 
+                  onClick={scrollToTop}
+                  className="hover:text-gold-antique transition-colors"
+                >
+                  {isNl ? 'Veelgestelde vragen' : 'FAQ & Knowledge'}
                 </Link>
               </li>
               <li>
@@ -97,7 +117,7 @@ export default function Footer() {
                   onClick={scrollToTop}
                   className="hover:text-gold-antique transition-colors"
                 >
-                  {tNav('about')}
+                  {getNavLabel('about', isNl ? 'Over mij' : 'About me')}
                 </Link>
               </li>
               <li>
@@ -106,7 +126,7 @@ export default function Footer() {
                   onClick={scrollToTop}
                   className="hover:text-gold-antique transition-colors"
                 >
-                  {locale === 'nl' ? 'Contact' : 'Contact'}
+                  {isNl ? 'Contact' : 'Contact'}
                 </Link>
               </li>
             </ul>

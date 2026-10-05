@@ -150,8 +150,23 @@ export default function MethodePage() {
       {/* ========================================================
           3. JOUW BEHANDELING STAP VOOR STAP — Fasering Tijdlijn
           ======================================================== */}
-      <section className="bg-surface-cream/50 py-20 sm:py-28 lg:py-32 px-6 sm:px-10 lg:px-16 border-b border-border-light/40">
-        <div className="mx-auto max-w-4xl">
+      <section className="relative overflow-hidden bg-surface-cream/50 py-20 sm:py-28 lg:py-32 px-6 sm:px-10 lg:px-16 border-b border-border-light/40">
+        
+        {/* Subtiel verticaal meeloopelement in de zijmarge op desktop */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 z-0 hidden lg:block h-[560px] w-64 select-none opacity-20 mix-blend-multiply"
+        >
+          <Image
+            src="/images/bamboo-stick-leaves.png"
+            alt=""
+            fill
+            sizes="260px"
+            className="object-contain object-right"
+          />
+        </div>
+
+        <div className="relative z-10 mx-auto max-w-4xl">
           <div className="text-center max-w-2xl mx-auto mb-16 sm:mb-20">
             <FadeIn delay={0}>
               <p className="eyebrow text-gold-dark mb-3">{t('steps.eyebrow')}</p>
