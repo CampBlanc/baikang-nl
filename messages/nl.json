@@ -489,6 +489,13 @@
     "ctaSubtitle": "Een eerste afspraak begint altijd met jouw verhaal en een zorgvuldige intake.",
     "ctaButton": "Afspraak maken"
   },
+  "Faq": {
+    "eyebrow": "VEELGESTELDE VRAGEN",
+    "title": "Vragen & Helderheid",
+    "subtitle": "Praktische informatie over de behandelingen, werkwijze en vergoedingen.",
+    "moreQuestions": "Heb je een specifieke vraag die hier niet tussen staat?",
+    "contactCta": "Neem gerust contact op"
+  },
   "Footer": {
     "tagline": "Traditionele Chinese Geneeskunde & Acupunctuur in Tilburg.",
     "navigationTitle": "Navigatie",

@@ -1,9 +1,11 @@
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import AtmosphericBamboo from '@/components/AtmosphericBamboo';
 import FadeIn from '@/components/FadeIn';
+import FaqAccordion from '@/components/FaqAccordion';
+import { getFaqsByCategory, FaqLocale } from '@/data/faq';
 
 export async function generateMetadata({
   params,
@@ -28,6 +30,11 @@ export async function generateMetadata({
 
 export default function MethodePage() {
   const t = useTranslations('Method');
+  const tFaq = useTranslations('Faq');
+  const locale = useLocale() as FaqLocale;
+
+  // Haal de specifieke 'methode' FAQs op in de actieve taal
+  const methodFaqs = getFaqsByCategory('methode', locale);
 
   return (
     <main className="bg-ivory text-text selection:bg-gold-antique/30">
@@ -62,7 +69,6 @@ export default function MethodePage() {
 
           <FadeIn delay={450}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              {/* Standaard <a> tag met target="_blank" zodat een nieuw tabblad opent */}
               <a
                 href="https://witkampwellness.clientomgeving.nl/afspraak-maken"
                 target="_blank"
@@ -164,7 +170,6 @@ export default function MethodePage() {
 
           {/* Verticale Tijdlijn */}
           <div className="relative border-l border-gold-antique/40 ml-4 sm:ml-8 pl-8 sm:pl-12 space-y-16">
-            
             {/* FASE 1: VOORAF */}
             <FadeIn delay={100}>
               <div className="relative">
@@ -503,7 +508,36 @@ export default function MethodePage() {
       </section>
 
       {/* ========================================================
-          9. SLOT & CTA — Diep Donkergroen
+          9. VEELGESTELDE VRAGEN OVER DE METHODE — FAQ Accordeon
+          ======================================================== */}
+      <section className="bg-surface-cream/40 py-20 sm:py-28 px-6 sm:px-10 lg:px-16 border-b border-border-light/40">
+        <div className="mx-auto max-w-4xl">
+          <FadeIn delay={100}>
+            <FaqAccordion
+              items={methodFaqs}
+              eyebrow={tFaq('eyebrow')}
+              title={tFaq('title')}
+            />
+          </FadeIn>
+
+          <FadeIn delay={250}>
+            <div className="mt-8 text-center font-body text-sm text-text-soft">
+              <p>
+                {tFaq('moreQuestions')}{' '}
+                <Link
+                  href="/contact"
+                  className="font-semibold text-gold-dark hover:text-forest-deep underline underline-offset-4 transition-colors"
+                >
+                  {tFaq('contactCta')} →
+                </Link>
+              </p>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* ========================================================
+          10. SLOT & CTA — Diep Donkergroen
           ======================================================== */}
       <section className="bg-forest-deep text-text-light py-20 sm:py-28 px-6 sm:px-10 lg:px-16 relative overflow-hidden">
         <div className="mx-auto max-w-4xl text-center relative z-10">
@@ -525,7 +559,6 @@ export default function MethodePage() {
           </FadeIn>
           <FadeIn delay={450}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              {/* Standaard <a> tag met target="_blank" zodat een nieuw tabblad opent */}
               <a
                 href="https://witkampwellness.clientomgeving.nl/afspraak-maken"
                 target="_blank"

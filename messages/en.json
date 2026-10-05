@@ -489,6 +489,13 @@
     "ctaSubtitle": "An initial session always begins by listening to your personal story.",
     "ctaButton": "Book an appointment"
   },
+  "Faq": {
+    "eyebrow": "FREQUENTLY ASKED QUESTIONS",
+    "title": "Questions & Clarity",
+    "subtitle": "Practical information regarding treatments, approach, and insurance coverage.",
+    "moreQuestions": "Have a specific question not covered here?",
+    "contactCta": "Feel free to contact me"
+  },
   "Footer": {
     "tagline": "Traditional Chinese Medicine & Acupuncture in Tilburg.",
     "navigationTitle": "Navigation",
