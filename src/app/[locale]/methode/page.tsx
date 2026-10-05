@@ -63,7 +63,7 @@ export default function MethodePage() {
           <FadeIn delay={450}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
-                href="/contact"
+                href="https://witkampwellness.clientomgeving.nl/afspraak-maken"
                 className="w-full sm:w-auto rounded-none bg-forest-deep px-8 py-3.5 font-body text-xs font-semibold uppercase tracking-widest text-text-light shadow-sm transition-all hover:bg-forest-dark"
               >
                 {t('hero.ctaAppointment')}
@@ -520,7 +520,7 @@ export default function MethodePage() {
           <FadeIn delay={450}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
-                href="/contact"
+                href="https://witkampwellness.clientomgeving.nl/afspraak-maken"
                 className="w-full sm:w-auto rounded-none bg-gold-antique px-8 py-3.5 font-body text-xs font-semibold uppercase tracking-widest text-white shadow-md transition-all hover:bg-gold hover:shadow-lg"
               >
                 {t('finalCta.buttonAppointment')}
