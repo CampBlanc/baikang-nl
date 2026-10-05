@@ -62,17 +62,18 @@ export default function MethodePage() {
 
           <FadeIn delay={450}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link
+              {/* Standaard <a> tag met target="_blank" zodat een nieuw tabblad opent */}
+              <a
                 href="https://witkampwellness.clientomgeving.nl/afspraak-maken"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto rounded-none bg-forest-deep px-8 py-3.5 font-body text-xs font-semibold uppercase tracking-widest text-text-light shadow-sm transition-all hover:bg-forest-dark"
+                className="w-full sm:w-auto rounded-none bg-forest-deep px-8 py-3.5 font-body text-xs font-semibold uppercase tracking-widest text-text-light shadow-sm transition-all hover:bg-forest-dark text-center"
               >
                 {t('hero.ctaAppointment')}
-              </Link>
+              </a>
               <Link
                 href="/acupunctuur"
-                className="w-full sm:w-auto rounded-none border border-forest-deep/30 px-8 py-3.5 font-body text-xs font-semibold uppercase tracking-widest text-forest-deep transition-all hover:bg-forest-deep/5"
+                className="w-full sm:w-auto rounded-none border border-forest-deep/30 px-8 py-3.5 font-body text-xs font-semibold uppercase tracking-widest text-forest-deep transition-all hover:bg-forest-deep/5 text-center"
               >
                 {t('hero.ctaAcupuncture')}
               </Link>
@@ -303,7 +304,10 @@ export default function MethodePage() {
       {/* ========================================================
           5. AANVULLENDE BEHANDELVORMEN — Typografische Grid
           ======================================================== */}
-      <section className="bg-surface-cream py-20 sm:py-28 lg:py-32 px-6 sm:px-10 lg:px-16 border-b border-border-light/40">
+      <section
+        id="aanvullend"
+        className="scroll-mt-24 lg:scroll-mt-32 bg-surface-cream py-20 sm:py-28 lg:py-32 px-6 sm:px-10 lg:px-16 border-b border-border-light/40"
+      >
         <div className="mx-auto max-w-6xl">
           <div className="max-w-2xl mb-16">
             <FadeIn delay={0}>
@@ -521,17 +525,18 @@ export default function MethodePage() {
           </FadeIn>
           <FadeIn delay={450}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link
+              {/* Standaard <a> tag met target="_blank" zodat een nieuw tabblad opent */}
+              <a
                 href="https://witkampwellness.clientomgeving.nl/afspraak-maken"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto rounded-none bg-gold-antique px-8 py-3.5 font-body text-xs font-semibold uppercase tracking-widest text-white shadow-md transition-all hover:bg-gold hover:shadow-lg"
+                className="w-full sm:w-auto rounded-none bg-gold-antique px-8 py-3.5 font-body text-xs font-semibold uppercase tracking-widest text-white shadow-md transition-all hover:bg-gold hover:shadow-lg text-center"
               >
                 {t('finalCta.buttonAppointment')}
-              </Link>
+              </a>
               <Link
                 href="/klachten"
-                className="w-full sm:w-auto rounded-none border border-text-light/30 px-8 py-3.5 font-body text-xs font-semibold uppercase tracking-widest text-text-light transition-all hover:bg-white/5"
+                className="w-full sm:w-auto rounded-none border border-text-light/30 px-8 py-3.5 font-body text-xs font-semibold uppercase tracking-widest text-text-light transition-all hover:bg-white/5 text-center"
               >
                 {t('finalCta.buttonComplaints')}
               </Link>
