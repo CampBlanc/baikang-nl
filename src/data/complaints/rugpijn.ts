@@ -1,6 +1,6 @@
 export const RUGPIJN_NL = {
   slug: 'rugpijn',
-  h1: 'Acupunctuur bij rugpijn in Tilburg',
+  h1: 'Acupunctuur bij rugpijn',
   metaTitle: 'Acupunctuur bij rugpijn | Behandeling in Tilburg | Bai Kang TCM',
   metaDescription:
     'Aanhoudende lage rugpijn, spit of stijfheid? Lees hoe acupunctuur bij Bai Kang in Tilburg het herstel en diepe spierontspanning ondersteunt.',
@@ -78,7 +78,7 @@ export const RUGPIJN_NL = {
 
 export const RUGPIJN_EN = {
   slug: 'rugpijn',
-  h1: 'Acupuncture for back pain in Tilburg',
+  h1: 'Acupuncture for back pain',
   metaTitle: 'Acupuncture for back pain | Treatment in Tilburg | Bai Kang TCM',
   metaDescription:
     'Persistent lower back pain, stiffness, or acute back sprain? Discover how acupuncture at Bai Kang in Tilburg supports natural recovery and muscular ease.',

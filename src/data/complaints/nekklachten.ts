@@ -1,6 +1,6 @@
 export const NEKKLACHTEN_NL = {
   slug: 'nekklachten',
-  h1: 'Acupunctuur bij nekpijn en stijfheid in Tilburg',
+  h1: 'Acupunctuur bij nekpijn en stijfheid',
   metaTitle: 'Acupunctuur bij nekpijn & stijve nek | Bai Kang Tilburg',
   metaDescription:
     'Last van een stijve nek, spierkrampen of nekpijn door stress of werkhouding? Lees hoe acupunctuur bij Bai Kang in Tilburg ontspanning en bewegingsvrijheid ondersteunt.',
@@ -78,7 +78,7 @@ export const NEKKLACHTEN_NL = {
 
 export const NEKKLACHTEN_EN = {
   slug: 'nekklachten',
-  h1: 'Acupuncture for neck pain and stiffness in Tilburg',
+  h1: 'Acupuncture for neck pain and stiffness',
   metaTitle: 'Acupuncture for neck pain & stiff neck | Bai Kang Tilburg',
   metaDescription:
     'Suffering from a stiff neck, muscle tension, or neck pain from stress or desk work? Discover how acupuncture at Bai Kang in Tilburg restores mobility and ease.',

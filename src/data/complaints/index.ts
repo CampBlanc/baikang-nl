@@ -44,12 +44,20 @@ import { NEKKLACHTEN_NL, NEKKLACHTEN_EN } from './nekklachten';
 import { SCHOUDERKLACHTEN_NL, SCHOUDERKLACHTEN_EN } from './schouderklachten';
 import { HOOFDPIJN_NL, HOOFDPIJN_EN } from './hoofdpijn';
 import { MIGRAINE_NL, MIGRAINE_EN } from './migraine';
+import { SPIER_GEWRICHTSKLACHTEN_NL, SPIER_GEWRICHTSKLACHTEN_EN } from './spier-gewrichtsklachten';
+import { FROZEN_SHOULDER_NL, FROZEN_SHOULDER_EN } from './frozenshoulder';
+import { KNIEKLACHTEN_NL, KNIEKLACHTEN_EN } from './knieklachten';
+import { ARTROSE_NL, ARTROSE_EN } from './artrose';
 
 export * from './rugpijn';
 export * from './nekklachten';
 export * from './schouderklachten';
 export * from './hoofdpijn';
 export * from './migraine';
+export * from './spier-gewrichtsklachten';
+export * from './frozenshoulder';
+export * from './knieklachten';
+export * from './artrose';
 
 export const COMPLAINT_ARTICLES_NL: Record<string, ComplaintArticle> = {
   rugpijn: RUGPIJN_NL,
@@ -58,6 +66,10 @@ export const COMPLAINT_ARTICLES_NL: Record<string, ComplaintArticle> = {
   schouderklachten: SCHOUDERKLACHTEN_NL,
   hoofdpijn: HOOFDPIJN_NL,
   migraine: MIGRAINE_NL,
+  'spier-gewrichtsklachten': SPIER_GEWRICHTSKLACHTEN_NL,
+  'frozen-shoulder': FROZEN_SHOULDER_NL,
+  knieklachten: KNIEKLACHTEN_NL,
+  artrose: ARTROSE_NL,
 };
 
 export const COMPLAINT_ARTICLES_EN: Record<string, ComplaintArticle> = {
@@ -67,6 +79,10 @@ export const COMPLAINT_ARTICLES_EN: Record<string, ComplaintArticle> = {
   schouderklachten: SCHOUDERKLACHTEN_EN,
   hoofdpijn: HOOFDPIJN_EN,
   migraine: MIGRAINE_EN,
+  'spier-gewrichtsklachten': SPIER_GEWRICHTSKLACHTEN_EN,
+  'frozen-shoulder': FROZEN_SHOULDER_EN,
+  knieklachten: KNIEKLACHTEN_EN,
+  artrose: ARTROSE_EN,
 };
 
 export function getComplaintArticle(slug: string, locale: string = 'nl'): ComplaintArticle | undefined {

@@ -80,7 +80,7 @@ export const SCHOUDERKLACHTEN_NL = {
 
 export const SCHOUDERKLACHTEN_EN = {
   slug: 'schouderklachten',
-  h1: 'Acupuncture for shoulder pain & stiffness in Tilburg',
+  h1: 'Acupuncture for shoulder pain & stiffness',
   metaTitle: 'Acupuncture for shoulder pain & frozen shoulder | Bai Kang Tilburg',
   metaDescription:
     'Suffering from a stiff shoulder, restricted mobility, or a frozen shoulder? Discover how acupuncture at Bai Kang in Tilburg helps restore ease and movement.',
