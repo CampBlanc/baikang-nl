@@ -2,18 +2,20 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Link } from '@/i18n/navigation';
-import { getComplaint, getDedicatedSlugs } from '@/data/complaintsData';
-import {
-  getComplaintArticle,
-  type ComplaintArticle,
-  type ComplaintArticlePattern,
-  type ComplaintArticleFaq,
-} from '@/data/complaints';
 import AtmosphericBamboo from '@/components/AtmosphericBamboo';
-import FadeIn from '@/components/FadeIn';
+import {
+  getComplaint,
+  getDedicatedSlugs,
+  getRelatedComplaints,
+} from '@/data/complaintsData';
+import { getComplaintArticle } from '@/data/complaintArticles';
 
-export async function generateStaticParams() {
-  return getDedicatedSlugs().map((slug) => ({ slug }));
+export function generateStaticParams() {
+  const slugs = getDedicatedSlugs();
+  const locales = ['nl', 'en'];
+  return locales.flatMap((locale) =>
+    slugs.map((slug) => ({ locale, slug }))
+  );
 }
 
 export async function generateMetadata({
@@ -23,9 +25,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale, slug } = await params;
   const article = getComplaintArticle(slug, locale);
-  const match = getComplaint(slug, locale);
 
-  if (!article || !match || !match.complaint.hasDedicatedPage) {
+  if (!article) {
     return {};
   }
 
@@ -33,7 +34,7 @@ export async function generateMetadata({
     title: article.metaTitle,
     description: article.metaDescription,
     alternates: {
-      canonical: `https://baikang.nl/${locale === 'en' ? 'en/' : ''}klachten/${slug}`,
+      canonical: `https://baikang.nl/${locale}/klachten/${slug}`,
     },
   };
 }
@@ -44,27 +45,53 @@ export default async function ComplaintDetailPage({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  const isEn = locale === 'en';
-
   const match = getComplaint(slug, locale);
-  const article: ComplaintArticle | undefined = getComplaintArticle(slug, locale);
+  const article = getComplaintArticle(slug, locale);
 
   if (!match || !match.complaint.hasDedicatedPage || !article) {
     notFound();
   }
 
-  const { complaint } = match;
+  const { complaint, category, parent } = match;
+  const relatedComplaints = getRelatedComplaints(slug, locale);
+  const isEn = locale === 'en';
+
+  // Schema.org BreadcrumbList markup
+  const breadcrumbItems = [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: `https://baikang.nl/${locale}`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: isEn ? 'Complaints' : 'Klachten',
+      item: `https://baikang.nl/${locale}/klachten`,
+    },
+  ];
+
+  if (parent) {
+    breadcrumbItems.push({
+      '@type': 'ListItem',
+      position: 3,
+      name: parent.title,
+      item: `https://baikang.nl/${locale}/klachten/${parent.slug}`,
+    });
+  }
+
+  breadcrumbItems.push({
+    '@type': 'ListItem',
+    position: parent ? 4 : 3,
+    name: complaint.title,
+    item: `https://baikang.nl/${locale}/klachten/${complaint.slug}`,
+  });
 
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'MedicalWebPage',
-    name: article.h1,
-    description: article.metaDescription,
-    url: `https://baikang.nl/${isEn ? 'en/' : ''}klachten/${slug}`,
-    aspect: ['Overview', 'Treatment', 'AlternativeTherapy'],
-    medicalAudience: {
-      '@type': 'Patient',
-    },
+    '@type': 'BreadcrumbList',
+    itemListElement: breadcrumbItems,
   };
 
   return (
@@ -75,153 +102,237 @@ export default async function ComplaintDetailPage({
       />
 
       <main className="relative overflow-hidden bg-ivory text-forest-deep selection:bg-gold-antique/30">
-        {/* ==================================================
-            1. HERO & BROODKRUIMELS (Bovenin met AtmosphericBamboo)
-            ================================================== */}
-        <section className="relative overflow-hidden border-b border-border-light/30 pt-16 pb-14 sm:pt-20 sm:pb-18">
+        {/* =======================================================================
+            1. HERO SECTIE MET BROODKRUIMEL & ATMOSPHERIC BAMBOO
+            ======================================================================= */}
+        <section className="relative overflow-hidden border-b border-border-light/30 pt-12 pb-16 sm:pt-20 sm:pb-20 px-6 sm:px-10 lg:px-16">
           <AtmosphericBamboo
             variant="leaves"
             position="top-right"
-            opacity="opacity-10 lg:opacity-20"
-            priority={true}
+            opacity="opacity-15 lg:opacity-25"
           />
 
-          <div className="relative z-10 mx-auto max-w-4xl px-6 sm:px-8">
-            <nav className="mb-6 font-body text-xs uppercase tracking-widest text-text-soft/70">
-              <Link href="/klachten" className="hover:text-gold-antique transition-colors">
+          <div className="relative z-10 mx-auto max-w-4xl">
+            {/* Broodkruimelpad */}
+            <nav
+              aria-label="Breadcrumb"
+              className="mb-6 flex flex-wrap items-center gap-2 font-body text-xs uppercase tracking-widest text-text-muted"
+            >
+              <Link
+                href="/"
+                className="transition-colors hover:text-gold-antique"
+              >
+                Home
+              </Link>
+              <span aria-hidden="true">/</span>
+              <Link
+                href="/klachten"
+                className="transition-colors hover:text-gold-antique"
+              >
                 {isEn ? 'Complaints' : 'Klachten'}
               </Link>
-              <span className="mx-2">/</span>
-              <span className="text-forest-deep font-semibold">{complaint.title}</span>
+              {parent && (
+                <>
+                  <span aria-hidden="true">/</span>
+                  <Link
+                    href={`/klachten/${parent.slug}`}
+                    className="transition-colors hover:text-gold-antique"
+                  >
+                    {parent.title}
+                  </Link>
+                </>
+              )}
+              <span aria-hidden="true">/</span>
+              <span className="text-gold-dark font-semibold">
+                {complaint.title}
+              </span>
             </nav>
 
-            <FadeIn delay={50}>
-              <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.5rem] leading-[1.15] text-forest-deep mb-6">
-                {article.h1}
-              </h1>
-            </FadeIn>
-
-            <FadeIn delay={150}>
-              <p className="font-body text-base sm:text-lg text-text-soft leading-relaxed max-w-3xl">
-                {article.heroIntro}
-              </p>
-            </FadeIn>
+            <p className="eyebrow text-gold-dark mb-4">
+              {parent ? parent.title : category.title}
+            </p>
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-forest-deep leading-[1.15] mb-6">
+              {article.h1}
+            </h1>
+            <p className="font-body text-base sm:text-lg text-text-soft leading-relaxed max-w-2xl">
+              {article.heroIntro}
+            </p>
           </div>
         </section>
 
-        {/* ==================================================
-            2. HERKENNING & OORZAKEN
-            ================================================== */}
-        <section className="relative border-b border-border-light/30 bg-surface-cream/40 py-14 sm:py-20">
-          <div className="mx-auto max-w-3xl px-6 sm:px-8">
-            <FadeIn>
-              <h2 className="font-display text-2xl sm:text-3xl text-forest-deep mb-4">
-                {article.recognition.title}
+        {/* =======================================================================
+            2. OPTIONEEL SUBPAGINA-OVERZICHT (INDIEN TUSSENPAGINA MET CHILDREN)
+            ======================================================================= */}
+        {complaint.children && complaint.children.length > 0 && (
+          <section className="border-b border-border-light/40 bg-surface-cream/30 py-12 sm:py-16 px-6 sm:px-10 lg:px-16">
+            <div className="mx-auto max-w-4xl">
+              <p className="eyebrow text-gold-dark mb-2">
+                {isEn ? 'Specific Indications' : 'Specifieke Indicaties'}
+              </p>
+              <h2 className="font-display text-2xl sm:text-3xl text-forest-deep mb-3">
+                {isEn
+                  ? 'Complaints within this category'
+                  : 'Klachten binnen dit cluster'}
               </h2>
-              <div className="space-y-4">
-                {article.recognition.paragraphs.map((p: string, idx: number) => (
-                  <p key={idx} className="font-body text-base text-text-soft leading-relaxed">
-                    {p}
-                  </p>
-                ))}
-              </div>
-            </FadeIn>
-          </div>
-        </section>
-
-        {/* ==================================================
-            3. TCM-VISIE & PATRONEN
-            ================================================== */}
-        <section className="relative py-16 sm:py-24 border-b border-border-light/30">
-          <div className="mx-auto max-w-4xl px-6 sm:px-8">
-            <FadeIn>
-              <span className="font-body text-xs font-semibold uppercase tracking-widest text-gold-antique mb-2 block">
-                {article.tcmPerspective.eyebrow}
-              </span>
-              <h2 className="font-display text-3xl sm:text-4xl text-forest-deep mb-6">
-                {article.tcmPerspective.title}
-              </h2>
-              <p className="font-body text-base text-text-soft leading-relaxed mb-10">
-                {article.tcmPerspective.intro}
+              <p className="font-body text-sm sm:text-base text-text-soft mb-8 max-w-2xl">
+                {isEn
+                  ? 'Explore specific symptoms and conditions treated in the clinic:'
+                  : 'Bekijk hieronder de specifieke klachten die we in de praktijk behandelen:'}
               </p>
 
-              <div className="space-y-6">
-                {article.tcmPerspective.patterns.map((pattern: ComplaintArticlePattern, idx: number) => (
-                  <div
-                    key={idx}
-                    className="border-l-2 border-gold-antique/60 bg-surface-cream/30 p-6 transition-all hover:bg-surface-cream/50"
-                  >
-                    <div className="flex items-baseline gap-3 mb-2">
-                      <h3 className="font-display text-xl sm:text-2xl text-forest-deep">
-                        {pattern.name}
-                      </h3>
-                      {pattern.chineseName && (
-                        <span className="font-chinese text-sm text-gold-antique/70">
-                          {pattern.chineseName}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {complaint.children.map((child) =>
+                  child.hasDedicatedPage ? (
+                    <Link
+                      key={child.id}
+                      href={`/klachten/${child.slug}`}
+                      className="group border border-border-light/60 bg-ivory p-6 transition-all hover:border-gold-antique hover:shadow-sm"
+                    >
+                      <div className="flex items-start justify-between">
+                        <h3 className="font-display text-xl text-forest-deep group-hover:text-gold-antique transition-colors">
+                          {child.title}
+                        </h3>
+                        <span className="text-gold-antique text-sm transition-transform group-hover:translate-x-1">
+                          →
                         </span>
+                      </div>
+                      {child.shortDesc && (
+                        <p className="mt-2 font-body text-sm text-text-soft leading-relaxed">
+                          {child.shortDesc}
+                        </p>
+                      )}
+                    </Link>
+                  ) : (
+                    <div
+                      key={child.id}
+                      className="border border-border-light/40 bg-ivory/60 p-6"
+                    >
+                      <h3 className="font-display text-xl text-forest-deep">
+                        {child.title}
+                      </h3>
+                      {child.shortDesc && (
+                        <p className="mt-2 font-body text-sm text-text-soft leading-relaxed">
+                          {child.shortDesc}
+                        </p>
                       )}
                     </div>
-                    <p className="font-body text-sm sm:text-base text-text-soft leading-relaxed">
-                      {pattern.description}
-                    </p>
-                  </div>
-                ))}
+                  )
+                )}
               </div>
-            </FadeIn>
+            </div>
+          </section>
+        )}
+
+        {/* =======================================================================
+            3. HERKENNING (SYMPTOMEN & DAGELIJKSE BELEVING)
+            ======================================================================= */}
+        <section className="border-b border-border-light/30 bg-surface-cream/40 py-16 sm:py-20 px-6 sm:px-10 lg:px-16">
+          <div className="mx-auto max-w-4xl space-y-6">
+            <h2 className="font-display text-3xl sm:text-4xl text-forest-deep">
+              {article.recognition.title}
+            </h2>
+            <div className="space-y-4 font-body text-base sm:text-lg text-text-soft leading-relaxed">
+              {article.recognition.paragraphs.map((p, idx) => (
+                <p key={idx}>{p}</p>
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* ==================================================
-            4. DE BEHANDELING BIJ BAI KANG
-            ================================================== */}
-        <section className="relative py-16 sm:py-24 bg-surface-cream/20 border-b border-border-light/30">
-          <div className="mx-auto max-w-4xl px-6 sm:px-8">
-            <FadeIn>
+        {/* =======================================================================
+            4. TCM PERSPECTIEF & PATRONEN
+            ======================================================================= */}
+        <section className="py-16 sm:py-24 px-6 sm:px-10 lg:px-16">
+          <div className="mx-auto max-w-4xl space-y-12">
+            <div>
+              <p className="eyebrow text-gold-dark mb-3">
+                {article.tcmPerspective.eyebrow}
+              </p>
+              <h2 className="font-display text-3xl sm:text-4xl text-forest-deep mb-4">
+                {article.tcmPerspective.title}
+              </h2>
+              <p className="font-body text-base sm:text-lg text-text-soft leading-relaxed max-w-3xl">
+                {article.tcmPerspective.intro}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {article.tcmPerspective.patterns.map((pat, idx) => (
+                <div
+                  key={idx}
+                  className="border border-border-light/60 bg-surface-cream/30 p-7 space-y-3"
+                >
+                  <div className="flex items-baseline justify-between gap-2">
+                    <h3 className="font-display text-xl sm:text-2xl text-forest-deep">
+                      {pat.name}
+                    </h3>
+                    {pat.chineseName && (
+                      <span className="font-chinese text-gold-antique text-lg">
+                        {pat.chineseName}
+                      </span>
+                    )}
+                  </div>
+                  <p className="font-body text-sm text-text-soft leading-relaxed">
+                    {pat.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* =======================================================================
+            5. DE BEHANDELING BIJ BAI KANG
+            ======================================================================= */}
+        <section className="border-t border-border-light/30 bg-surface-cream/40 py-16 sm:py-24 px-6 sm:px-10 lg:px-16">
+          <div className="mx-auto max-w-4xl space-y-8">
+            <div>
               <h2 className="font-display text-3xl sm:text-4xl text-forest-deep mb-4">
                 {article.treatment.title}
               </h2>
-              <p className="font-body text-base text-text-soft leading-relaxed mb-8">
+              <p className="font-body text-base sm:text-lg text-text-soft leading-relaxed max-w-3xl">
                 {article.treatment.intro}
               </p>
+            </div>
 
-              <ol className="space-y-4 mb-10">
-                {article.treatment.steps.map((step: string, idx: number) => (
-                  <li key={idx} className="flex items-start gap-4">
-                    <span className="flex-shrink-0 flex items-center justify-center w-7 h-7 border border-gold-antique/50 font-body text-xs font-semibold text-gold-antique">
-                      0{idx + 1}
-                    </span>
-                    <span className="font-body text-base text-text-soft leading-relaxed pt-0.5">
-                      {step}
-                    </span>
-                  </li>
-                ))}
-              </ol>
+            <ol className="space-y-4">
+              {article.treatment.steps.map((step, idx) => (
+                <li
+                  key={idx}
+                  className="flex items-start gap-4 border-l-2 border-gold-antique bg-ivory p-5 font-body text-sm sm:text-base text-forest-deep"
+                >
+                  <span className="font-mono text-xs font-semibold uppercase tracking-wider text-gold-dark mt-0.5">
+                    0{idx + 1}
+                  </span>
+                  <span>{step}</span>
+                </li>
+              ))}
+            </ol>
 
-              <div className="bg-ivory border border-border-light/60 p-6 text-sm text-text-soft leading-relaxed">
-                <p>
-                  <strong className="text-forest-deep font-semibold">
-                    {isEn ? 'Safety and coordination: ' : 'Veiligheid en afstemming: '}
-                  </strong>
-                  {article.treatment.safetyNote}
-                </p>
-              </div>
-            </FadeIn>
+            <div className="rounded-none border border-gold-antique/30 bg-gold-antique/10 p-5 font-body text-xs sm:text-sm text-forest-deep leading-relaxed">
+              <strong className="font-semibold block mb-1">
+                {isEn
+                  ? 'Safety and medical alignment:'
+                  : 'Veiligheid en afstemming:'}
+              </strong>
+              {article.treatment.safetyNote}
+            </div>
           </div>
         </section>
 
-        {/* ==================================================
-            5. VEELGESTELDE VRAGEN OVER DEZE KLACHT
-            ================================================== */}
-        <section className="relative py-16 sm:py-24 border-b border-border-light/30">
-          <div className="mx-auto max-w-3xl px-6 sm:px-8">
-            <FadeIn>
-              <h2 className="font-display text-3xl sm:text-4xl text-forest-deep mb-8 text-center">
+        {/* =======================================================================
+            6. VEELGESTELDE VRAGEN
+            ======================================================================= */}
+        {article.faqs && article.faqs.length > 0 && (
+          <section className="py-16 sm:py-24 px-6 sm:px-10 lg:px-16 border-t border-border-light/30">
+            <div className="mx-auto max-w-4xl space-y-8">
+              <h2 className="font-display text-3xl sm:text-4xl text-forest-deep">
                 {isEn ? 'Frequently Asked Questions' : 'Veelgestelde vragen'}
               </h2>
               <div className="divide-y divide-border-light/40">
-                {article.faqs.map((faq: ComplaintArticleFaq, idx: number) => (
-                  <div key={idx} className="py-6">
-                    <h3 className="font-display text-xl text-forest-deep mb-2">
+                {article.faqs.map((faq, idx) => (
+                  <div key={idx} className="py-6 first:pt-0 last:pb-0 space-y-2">
+                    <h3 className="font-display text-xl sm:text-2xl text-forest-deep">
                       {faq.question}
                     </h3>
                     <p className="font-body text-sm sm:text-base text-text-soft leading-relaxed">
@@ -230,20 +341,71 @@ export default async function ComplaintDetailPage({
                   </div>
                 ))}
               </div>
-            </FadeIn>
-          </div>
-        </section>
+            </div>
+          </section>
+        )}
 
-        {/* ==================================================
-            6. CTA BANNER ONDERIN
+        {/* =======================================================================
+            7. "ZIE OOK" / VERWANTE KLACHTEN
+            ======================================================================= */}
+        {relatedComplaints.length > 0 && (
+          <section className="border-t border-border-light/40 bg-surface-cream/40 py-16 sm:py-20 px-6 sm:px-10 lg:px-16">
+            <div className="mx-auto max-w-4xl">
+              <p className="eyebrow text-gold-dark mb-2">
+                {isEn ? 'Related' : 'Zie ook'}
+              </p>
+              <h2 className="font-display text-2xl sm:text-3xl text-forest-deep mb-8">
+                {isEn
+                  ? 'Related complaints & patterns'
+                  : 'Verwante klachten & patronen'}
+              </h2>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {relatedComplaints.map((item) => (
+                  <div
+                    key={item.id}
+                    className="flex flex-col justify-between border border-border-light/60 bg-ivory p-6 transition-all hover:border-gold-antique hover:shadow-sm"
+                  >
+                    <div>
+                      <h3 className="font-display text-xl text-forest-deep mb-2">
+                        {item.title}
+                      </h3>
+                      {item.shortDesc && (
+                        <p className="font-body text-xs sm:text-sm text-text-soft leading-relaxed mb-4">
+                          {item.shortDesc}
+                        </p>
+                      )}
+                    </div>
+                    {item.hasDedicatedPage ? (
+                      <Link
+                        href={`/klachten/${item.slug}`}
+                        className="inline-flex items-center gap-1.5 font-body text-xs font-semibold uppercase tracking-wider text-forest-deep hover:text-gold-antique transition-colors mt-auto pt-2"
+                      >
+                        <span>{isEn ? 'Read more' : 'Lees meer'}</span>
+                        <span aria-hidden="true">→</span>
+                      </Link>
+                    ) : (
+                      <span className="font-body text-xs text-text-muted italic pt-2">
+                        {isEn
+                          ? 'In-clinic treatment available'
+                          : 'Behandeling in praktijk mogelijk'}
+                      </span>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* =======================================================================
+            8. CTA SECTIE ONDERIN
             Met bamboo-stick-leaves.png verankerd aan de LINKERKANT
-            ================================================== */}
-        <section className="relative overflow-hidden bg-forest-deep px-6 py-20 sm:py-24 text-center border-t-4 border-gold-antique">
-          
-          {/* Gespiegelde bamboe links op de donkere banner */}
+            ======================================================================= */}
+        <section className="relative overflow-hidden bg-surface-cream/70 py-20 sm:py-28 px-6 sm:px-10 lg:px-16 border-t border-border-light/40">
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute -left-4 sm:-left-8 lg:-left-10 top-1/2 -translate-y-1/2 z-0 h-72 w-52 sm:h-96 sm:w-64 lg:h-[460px] lg:w-[300px] select-none opacity-10 lg:opacity-20 mix-blend-screen -scale-x-100"
+            className="pointer-events-none absolute -left-4 sm:-left-8 lg:-left-10 top-1/2 -translate-y-1/2 z-0 h-72 w-52 sm:h-96 sm:w-64 lg:h-[460px] lg:w-[300px] select-none opacity-[0.06] sm:opacity-15 lg:opacity-25 mix-blend-multiply -scale-x-100"
           >
             <Image
               src="/images/bamboo-stick-leaves.png"
@@ -254,26 +416,26 @@ export default async function ComplaintDetailPage({
             />
           </div>
 
-          <div className="relative z-10 mx-auto max-w-2xl space-y-5">
-            <p className="eyebrow text-gold tracking-widest uppercase text-xs">
+          <div className="relative z-10 mx-auto max-w-3xl text-center space-y-6">
+            <p className="eyebrow text-gold-dark">
               {isEn ? 'Personal Treatment Plan' : 'Persoonlijk Behandelplan'}
             </p>
-            <h2 className="font-display text-3xl sm:text-4xl text-ivory leading-tight">
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-forest-deep leading-tight">
               {article.cta.title}
             </h2>
-            <p className="font-body text-base text-ivory/80 leading-relaxed max-w-xl mx-auto">
+            <p className="font-body text-base sm:text-lg text-text-soft leading-relaxed max-w-xl mx-auto">
               {article.cta.text}
             </p>
-            <div className="pt-3 flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 href="/contact"
-                className="w-full sm:w-auto inline-block bg-gold-antique px-9 py-4 font-body text-xs font-semibold uppercase tracking-widest text-forest-deep transition-all hover:bg-ivory hover:shadow-lg"
+                className="w-full sm:w-auto bg-forest-deep px-9 py-4 font-body text-xs font-semibold uppercase tracking-widest text-text-light shadow-sm transition-all hover:bg-forest-dark hover:shadow-md"
               >
                 {article.cta.buttonText} →
               </Link>
               <Link
                 href="/tarieven"
-                className="w-full sm:w-auto inline-block border border-ivory/40 px-8 py-4 font-body text-xs font-semibold uppercase tracking-widest text-ivory hover:bg-ivory/10 transition-all"
+                className="w-full sm:w-auto border border-forest-deep/40 px-8 py-4 font-body text-xs font-semibold uppercase tracking-widest text-forest-deep hover:bg-forest-deep/5 transition-all"
               >
                 {isEn ? 'View rates & coverage' : 'Bekijk tarieven & vergoeding'}
               </Link>

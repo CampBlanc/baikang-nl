@@ -5,6 +5,14 @@ export interface ComplaintItem {
   hasDedicatedPage: boolean;
   shortDesc?: string;
   externalUrl?: string;
+  /**
+   * Subpagina's onder een tussenpagina (bijv. Spier- en gewrichtsklachten).
+   * Ze verschijnen niet in de categorietegel op het hoofdoverzicht,
+   * maar wel op de tussenpagina zelf en krijgen een eigen route zodra hasDedicatedPage true is.
+   */
+  children?: ComplaintItem[];
+  /** Slugs van verwante klachten voor een "Zie ook"-blok. */
+  relatedSlugs?: string[];
 }
 
 export interface ComplaintCategory {
@@ -38,6 +46,7 @@ export const COMPLAINT_CATEGORIES_NL: ComplaintCategory[] = [
         title: 'Nekklachten',
         slug: 'nekklachten',
         hasDedicatedPage: true,
+        relatedSlugs: ['schouderklachten', 'hoofdpijn'],
         shortDesc: 'Stijve nek, spierkrampen, bewegingsbeperking en klachten door werkhouding of stress.',
       },
       {
@@ -45,6 +54,7 @@ export const COMPLAINT_CATEGORIES_NL: ComplaintCategory[] = [
         title: 'Schouderklachten',
         slug: 'schouderklachten',
         hasDedicatedPage: true,
+        relatedSlugs: ['nekklachten', 'spier-gewrichtsklachten'],
         shortDesc: 'Pijn bij heffen of draaien, vastzittende schouderbladen of overbelaste pezen.',
       },
       {
@@ -52,6 +62,7 @@ export const COMPLAINT_CATEGORIES_NL: ComplaintCategory[] = [
         title: 'Hoofdpijn',
         slug: 'hoofdpijn',
         hasDedicatedPage: true,
+        relatedSlugs: ['migraine', 'nekklachten'],
         shortDesc: 'Spanningshoofdpijn, een drukkende band om het hoofd of hoofdpijn vanuit nek en schouders.',
       },
       {
@@ -59,14 +70,60 @@ export const COMPLAINT_CATEGORIES_NL: ComplaintCategory[] = [
         title: 'Migraine',
         slug: 'migraine',
         hasDedicatedPage: true,
+        relatedSlugs: ['hoofdpijn'],
         shortDesc: 'Aanvallen van bonzende pijn, misselijkheid of gevoeligheid voor licht en geluid.',
       },
       {
         id: 'spier-gewrichtsklachten',
         title: 'Spier- en gewrichtsklachten',
         slug: 'spier-gewrichtsklachten',
-        hasDedicatedPage: false,
+        hasDedicatedPage: true, // NU ACTIEF!
+        relatedSlugs: ['rugpijn', 'nekklachten', 'schouderklachten'],
         shortDesc: 'Overbelasting, peesklachten, stijve gewrichten of belemmeringen in beweging.',
+        children: [
+          {
+            id: 'frozen-shoulder',
+            title: 'Frozen shoulder',
+            slug: 'frozen-shoulder',
+            hasDedicatedPage: false,
+            shortDesc: 'Een stijve, pijnlijke schouder waarbij heffen en draaien steeds moeilijker gaat.',
+          },
+          {
+            id: 'knieklachten',
+            title: 'Knieklachten',
+            slug: 'knieklachten',
+            hasDedicatedPage: false,
+            shortDesc: 'Pijn of stijfheid bij traplopen, hurken of na langdurig zitten.',
+          },
+          {
+            id: 'artrose',
+            title: 'Artrose & gewrichtsklachten',
+            slug: 'artrose',
+            hasDedicatedPage: false,
+            shortDesc: 'Stijve, pijnlijke gewrichten, vooral na rust of bij het opstarten.',
+          },
+          {
+            id: 'tennisarm',
+            title: 'Tennisarm',
+            slug: 'tennisarm',
+            hasDedicatedPage: false,
+            shortDesc: 'Pijn aan de buitenkant van de elleboog bij tillen, grijpen of typen.',
+          },
+          {
+            id: 'rsi',
+            title: 'RSI & carpaletunnelsyndroom',
+            slug: 'rsi',
+            hasDedicatedPage: false,
+            shortDesc: 'Pijn, tintelingen of een slap gevoel in nek, arm, pols of hand door repeterende belasting.',
+          },
+          {
+            id: 'peesklachten',
+            title: 'Peesklachten & sportblessures',
+            slug: 'peesklachten',
+            hasDedicatedPage: false,
+            shortDesc: 'Overbelaste pezen, zoals bij hielspoor of de achillespees, en blessures door sport.',
+          },
+        ],
       },
     ],
   },
@@ -238,6 +295,7 @@ export const COMPLAINT_CATEGORIES_EN: ComplaintCategory[] = [
         title: 'Neck pain',
         slug: 'nekklachten',
         hasDedicatedPage: true,
+        relatedSlugs: ['schouderklachten', 'hoofdpijn'],
         shortDesc: 'Stiff neck, muscle spasms, restricted range of motion, and desk strain.',
       },
       {
@@ -245,6 +303,7 @@ export const COMPLAINT_CATEGORIES_EN: ComplaintCategory[] = [
         title: 'Shoulder complaints',
         slug: 'schouderklachten',
         hasDedicatedPage: true,
+        relatedSlugs: ['nekklachten', 'spier-gewrichtsklachten'],
         shortDesc: 'Discomfort when lifting or rotating, tight shoulder blades, or strained tendons.',
       },
       {
@@ -252,21 +311,68 @@ export const COMPLAINT_CATEGORIES_EN: ComplaintCategory[] = [
         title: 'Headaches',
         slug: 'hoofdpijn',
         hasDedicatedPage: true,
+        relatedSlugs: ['migraine', 'nekklachten'],
         shortDesc: 'Tension headaches, a heavy feeling, or pressure radiating from the neck and shoulders.',
       },
       {
         id: 'migraine',
         title: 'Migraine',
         slug: 'migraine',
-        hasDedicatedPage: false,
+        hasDedicatedPage: true,
+        relatedSlugs: ['hoofdpijn'],
         shortDesc: 'Throbbing attacks, nausea, or sensitivity to light and sound.',
       },
       {
         id: 'spier-gewrichtsklachten',
         title: 'Muscle & joint complaints',
         slug: 'spier-gewrichtsklachten',
-        hasDedicatedPage: false,
+        hasDedicatedPage: true, // NU ACTIEF!
+        relatedSlugs: ['rugpijn', 'nekklachten', 'schouderklachten'],
         shortDesc: 'Overuse, tendon irritation, stiff joints, or restricted mobility.',
+        children: [
+          {
+            id: 'frozen-shoulder',
+            title: 'Frozen shoulder',
+            slug: 'frozen-shoulder',
+            hasDedicatedPage: false,
+            shortDesc: 'A stiff, painful shoulder where lifting and rotating become increasingly difficult.',
+          },
+          {
+            id: 'knieklachten',
+            title: 'Knee complaints',
+            slug: 'knieklachten',
+            hasDedicatedPage: false,
+            shortDesc: 'Pain or stiffness when climbing stairs, squatting, or after sitting for long periods.',
+          },
+          {
+            id: 'artrose',
+            title: 'Osteoarthritis & joint complaints',
+            slug: 'artrose',
+            hasDedicatedPage: false,
+            shortDesc: 'Stiff, achy joints, especially after rest or when getting started.',
+          },
+          {
+            id: 'tennisarm',
+            title: 'Tennis elbow',
+            slug: 'tennisarm',
+            hasDedicatedPage: false,
+            shortDesc: 'Pain on the outside of the elbow when lifting, gripping, or typing.',
+          },
+          {
+            id: 'rsi',
+            title: 'RSI & carpal tunnel syndrome',
+            slug: 'rsi',
+            hasDedicatedPage: false,
+            shortDesc: 'Pain, tingling, or weakness in the neck, arm, wrist, or hand from repetitive strain.',
+          },
+          {
+            id: 'peesklachten',
+            title: 'Tendon complaints & sports injuries',
+            slug: 'peesklachten',
+            hasDedicatedPage: false,
+            shortDesc: 'Overloaded tendons, such as heel spur or the Achilles tendon, and injuries from sport.',
+          },
+        ],
       },
     ],
   },
@@ -365,7 +471,7 @@ export const COMPLAINT_CATEGORIES_EN: ComplaintCategory[] = [
     title: 'Women & hormonal balance',
     subtitle: 'Menstruation, menopause, and balance',
     intro:
-      'Hormonale veranderingen kunnen een duidelijke impact hebben op hoe je je voelt. Acupunctuur kan worden ingezet om het lichaam te begeleiden naar meer harmonie en comfort gedurende verschillende levensfasen.',
+      'Hormonal changes can have a noticeable impact on how you feel. Acupuncture can be used to guide the body toward more harmony and comfort across different stages of life.',
     complaints: [
       {
         id: 'menstruatieklachten',
@@ -422,6 +528,7 @@ export function getComplaintCategories(locale: string = 'nl'): ComplaintCategory
   return locale === 'en' ? COMPLAINT_CATEGORIES_EN : COMPLAINT_CATEGORIES_NL;
 }
 
+/** Alle slugs met een eigen pagina, inclusief subpagina's. Slugs zijn gelijk in NL en EN. */
 export function getDedicatedSlugs(): string[] {
   const slugs: string[] = [];
   for (const cat of COMPLAINT_CATEGORIES_NL) {
@@ -429,17 +536,34 @@ export function getDedicatedSlugs(): string[] {
       if (c.hasDedicatedPage && c.slug) {
         slugs.push(c.slug);
       }
+      for (const child of c.children ?? []) {
+        if (child.hasDedicatedPage && child.slug) {
+          slugs.push(child.slug);
+        }
+      }
     }
   }
   return slugs;
 }
 
-export function getComplaint(slug: string, locale: string = 'nl') {
+export interface ComplaintLookup {
+  complaint: ComplaintItem;
+  category: ComplaintCategory;
+  /** Alleen gevuld bij een subpagina: de tussenpagina erboven (voor broodkruimel en terugkoppeling). */
+  parent?: ComplaintItem;
+}
+
+export function getComplaint(slug: string, locale: string = 'nl'): ComplaintLookup | undefined {
   const categories = getComplaintCategories(locale);
   for (const category of categories) {
-    const complaint = category.complaints.find((c) => c.slug === slug);
-    if (complaint) {
-      return { complaint, category };
+    for (const complaint of category.complaints) {
+      if (complaint.slug === slug) {
+        return { complaint, category };
+      }
+      const child = complaint.children?.find((c) => c.slug === slug);
+      if (child) {
+        return { complaint: child, category, parent: complaint };
+      }
     }
   }
   return undefined;
@@ -447,6 +571,19 @@ export function getComplaint(slug: string, locale: string = 'nl') {
 
 export function getComplaintBySlug(slug: string, locale: string = 'nl'): ComplaintItem | undefined {
   return getComplaint(slug, locale)?.complaint;
+}
+
+/** Subpagina's van een tussenpagina; toon als link alleen die met hasDedicatedPage true. */
+export function getChildComplaints(slug: string, locale: string = 'nl'): ComplaintItem[] {
+  return getComplaintBySlug(slug, locale)?.children ?? [];
+}
+
+/** Verwante klachten voor het "Zie ook"-blok, in de volgorde van relatedSlugs. */
+export function getRelatedComplaints(slug: string, locale: string = 'nl'): ComplaintItem[] {
+  const related = getComplaintBySlug(slug, locale)?.relatedSlugs ?? [];
+  return related
+    .map((s) => getComplaintBySlug(s, locale))
+    .filter((c): c is ComplaintItem => Boolean(c));
 }
 
 export const COMPLAINT_CATEGORIES = COMPLAINT_CATEGORIES_NL;
