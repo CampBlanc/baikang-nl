@@ -5,6 +5,7 @@ import { routing } from '@/i18n/routing';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import ChatWidget from '@/components/ChatWidget';
 import { Cormorant_Garamond, Manrope, Noto_Serif_SC } from 'next/font/google';
 import '../globals.css';
 
@@ -65,6 +66,7 @@ export default async function LocaleLayout({
           <main className="flex-1">{children}</main>
           <Footer />
           <WhatsAppButton />
+          <ChatWidget />
         </NextIntlClientProvider>
       </body>
     </html>
