@@ -9,7 +9,10 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@ai-sdk/google": "^4.0.88",
+    "@ai-sdk/openai": "^4.0.84",
     "@vercel/analytics": "^2.0.1",
+    "ai": "^7.0.128",
     "next": "^16.3.8",
     "next-intl": "^4.14.5",
     "react": "19.2.8",

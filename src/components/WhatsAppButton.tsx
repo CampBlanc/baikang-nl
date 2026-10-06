@@ -1,5 +1,4 @@
 export default function WhatsAppButton() {
-  // Telefoonnummer geformatteerd voor de WhatsApp API (zonder spaties of leestekens)
   const phoneNumber = '31683498042';
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
@@ -9,10 +8,10 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contact opnemen via WhatsApp"
-      className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform duration-300 hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-[#25D366]/40"
+      className="fixed bottom-5 left-5 sm:bottom-7 sm:left-7 z-50 flex h-13 w-13 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-[#25D366]/40"
     >
       <svg
-        className="h-8 w-8 fill-current"
+        className="h-7 w-7 sm:h-8 sm:w-8 fill-current"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
