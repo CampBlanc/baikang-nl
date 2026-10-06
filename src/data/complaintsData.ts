@@ -20,7 +20,7 @@ export const COMPLAINT_CATEGORIES_NL: ComplaintCategory[] = [
     title: 'Pijn & spanning',
     subtitle: 'Lichamelijke pijn, stijfheid en spanning',
     intro:
-      'Lichamelijke pijn, stijfheid en spanning kunnen verschillende oorzaken hebben. Tijdens een behandeling kijken we niet alleen naar de plek waar je klachten ervaart, maar ook naar het patroon eromheen.',
+      'Lichamelijke pijn, stijfheid en spanning kunnen verschillende oorzaken hebben. Tijdens een behandeling kijken we niet alleen naar de plek waar je klachten ervaart, maar ook naar het bredere patroon en de samenhang van verschillende signalen.',
     complaints: [
       {
         id: 'rugpijn',
@@ -57,7 +57,7 @@ export const COMPLAINT_CATEGORIES_NL: ComplaintCategory[] = [
     title: 'Stress & slaap',
     subtitle: 'Stress, spanning en slaapproblemen',
     intro:
-      'Wanneer spanning zich langere tijd opbouwt, kan het lastig zijn om tot rust te komen. Acupunctuur kan worden ingezet om het lichaam te ondersteunen bij het hervinden van ontspanning en rust in het dagelijks ritme.',
+      'Wanneer spanning zich langere tijd opbouwt, kan het lastig zijn om tot rust te komen. Acupunctuur kan binnen de praktijk worden ingezet als ondersteuning bij ontspanning en rust in het dagelijks ritme.',
     complaints: [
       {
         id: 'stress-spanning',
@@ -87,7 +87,7 @@ export const COMPLAINT_CATEGORIES_NL: ComplaintCategory[] = [
     title: 'Energie & herstel',
     subtitle: 'Vitaliteit en veerkracht',
     intro:
-      'Wanneer je structureel te weinig energie ervaart of moeizaam herstelt, kijken we naar jouw algehele balans en leefpatroon. Acupunctuur kan ondersteuning bieden om het herstelproces op een natuurlijke wijze te begeleiden.',
+      'Wanneer je structureel weinig energie ervaart of merkt dat je moeilijk herstelt, kijken we naar jouw algehele situatie, leefpatroon en de signalen die je lichaam geeft. Acupunctuur kan hierbij als aanvullende ondersteuning worden ingezet.',
     complaints: [
       {
         id: 'vermoeidheid',
@@ -108,7 +108,7 @@ export const COMPLAINT_CATEGORIES_NL: ComplaintCategory[] = [
         title: 'Herstel & veerkracht',
         slug: 'herstel-veerkracht',
         hasDedicatedPage: false,
-        shortDesc: 'Ondersteuning van het lichaam na een intensieve periode, overbelasting of ziekte.',
+        shortDesc: 'Ondersteuning bij het omgaan met een intensieve periode, overbelasting of herstel na ziekte.',
       },
     ],
   },
@@ -117,7 +117,7 @@ export const COMPLAINT_CATEGORIES_NL: ComplaintCategory[] = [
     title: 'Maag & darmen',
     subtitle: 'Spijsvertering en buikklachten',
     intro:
-      'Binnen de Traditionele Chinese Geneeskunde wordt het spijsverteringssysteem gezien als een belangrijke basis voor je algehele welbevinden. We onderzoeken welke factoren bijdragen aan de onrust in de buik.',
+      'Binnen de Traditionele Chinese Geneeskunde wordt het spijsverteringssysteem gezien als een belangrijk onderdeel van het algehele functioneren. Tijdens de intake kijken we naar je spijsverteringsklachten en naar factoren die volgens het TCM-behandelpatroon hiermee samen kunnen hangen.',
     complaints: [
       {
         id: 'opgeblazen-gevoel',
@@ -147,7 +147,7 @@ export const COMPLAINT_CATEGORIES_NL: ComplaintCategory[] = [
     title: 'Vrouw & hormonale klachten',
     subtitle: 'Menstruatie, overgang en balans',
     intro:
-      'Hormonale veranderingen kunnen merkbare invloed hebben op hoe je je voelt. Acupunctuur kan worden ingezet om het lichaam te begeleiden naar meer harmonie en comfort gedurende verschillende levensfasen.',
+      'Hormonale veranderingen kunnen merkbare invloed hebben op hoe je je voelt. Acupunctuur kan binnen de praktijk worden ingezet als aanvullende ondersteuning bij klachten die tijdens verschillende levensfasen kunnen optreden.',
     complaints: [
       {
         id: 'menstruatieklachten',
@@ -168,7 +168,7 @@ export const COMPLAINT_CATEGORIES_NL: ComplaintCategory[] = [
         title: 'Hormonale klachten',
         slug: 'hormonale-klachten',
         hasDedicatedPage: false,
-        shortDesc: 'Ondersteuning bij algehele hormonale disbalans en daarmee samenhangend welzijn.',
+        shortDesc: 'Ondersteuning bij klachten die samenhangen met hormonale veranderingen en het bijbehorende welzijn.',
       },
     ],
   },
@@ -177,7 +177,7 @@ export const COMPLAINT_CATEGORIES_NL: ComplaintCategory[] = [
     title: 'Stoppen met roken & vapen',
     subtitle: 'Ondersteuning bij stoppen',
     intro:
-      'Bij Bai Kang wordt laseracupunctuur en oorschelpacupunctuur aangeboden als ondersteuning bij het stoppen met roken of vapen. Het traject richt zich op het bevorderen van rust en het doorbreken van de gewoonte.',
+      'Bij Bai Kang worden laseracupunctuur en oorschelpacupunctuur aangeboden als ondersteuning bij het stoppen met roken of vapen. De behandeling is gericht op ondersteuning bij het omgaan met onrust en het veranderen van het bestaande rook- of vapegewoontepatroon.',
     complaints: [
       {
         id: 'stoppen-roken',
@@ -191,7 +191,7 @@ export const COMPLAINT_CATEGORIES_NL: ComplaintCategory[] = [
         title: 'Stoppen met vapen',
         slug: 'stoppen-met-vapen',
         hasDedicatedPage: false,
-        shortDesc: 'Ondersteunende behandelingen bij het afbouwen en definitief loslaten van de e-sigaret.',
+        shortDesc: 'Ondersteunende behandelingen bij het stoppen met het gebruik van de e-sigaret.',
       },
     ],
   },
@@ -203,35 +203,35 @@ export const COMPLAINT_CATEGORIES_EN: ComplaintCategory[] = [
     title: 'Pain & tension',
     subtitle: 'Physical pain, stiffness, and tension',
     intro:
-      'Physical pain, stiffness, and tension can stem from various causes. During treatment, we look not only at where you feel discomfort, but also at the broader physical pattern surrounding it.',
+      'Physical pain, stiffness, and tension can have various causes. During treatment, we look not only at where you experience discomfort, but also at the broader pattern and the relationship between different signs and symptoms.',
     complaints: [
       {
         id: 'rugpijn',
         title: 'Back pain',
         slug: 'rugpijn',
         hasDedicatedPage: false,
-        shortDesc: 'Lower back discomfort, morning stiffness, or persistent muscular tension.',
+        shortDesc: 'Lower back discomfort, stiffness, or persistent muscular tension.',
       },
       {
         id: 'nek-schouderklachten',
         title: 'Neck & shoulder tension',
         slug: 'nek-schouderklachten',
         hasDedicatedPage: false,
-        shortDesc: 'Tight muscles, stiffness from computer work, or built-up physical stress.',
+        shortDesc: 'Tight muscles, stiffness related to posture or work, or persistent tension.',
       },
       {
         id: 'hoofdpijn',
         title: 'Headaches & migraine',
         slug: 'hoofdpijn',
         hasDedicatedPage: false,
-        shortDesc: 'Tension headaches, a heavy feeling, or recurring migraine attacks.',
+        shortDesc: 'Tension headaches, a heavy or pressing sensation, or recurring migraine.',
       },
       {
         id: 'spier-gewrichtsklachten',
         title: 'Muscle & joint complaints',
         slug: 'spier-gewrichtsklachten',
         hasDedicatedPage: false,
-        shortDesc: 'Overuse, tendon irritation, stiff joints, or restricted mobility.',
+        shortDesc: 'Overuse, tendon complaints, stiff joints, or restricted movement.',
       },
     ],
   },
@@ -240,28 +240,28 @@ export const COMPLAINT_CATEGORIES_EN: ComplaintCategory[] = [
     title: 'Stress & sleep',
     subtitle: 'Stress, tension, and sleep difficulties',
     intro:
-      'When tension builds up over time, settling down can become difficult. Acupuncture can be used to support your body in rediscovering relaxation and establishing a calmer daily rhythm.',
+      'When tension builds up over time, it can become difficult to relax. Acupuncture can be used within the practice as complementary support for relaxation and a calmer daily rhythm.',
     complaints: [
       {
         id: 'stress-spanning',
         title: 'Stress & tension',
         slug: 'stress',
         hasDedicatedPage: false,
-        shortDesc: 'Constantly feeling "on", internal restlessness, and difficulty letting go.',
+        shortDesc: 'Constantly feeling "on", internal tension, and difficulty letting go.',
       },
       {
         id: 'slaapproblemen',
         title: 'Sleep problems',
         slug: 'slaapproblemen',
         hasDedicatedPage: false,
-        shortDesc: 'Trouble falling asleep, waking frequently, tossing and turning, or unrefreshing sleep.',
+        shortDesc: 'Difficulty falling asleep, restless sleep, frequent waking, or waking unrefreshed.',
       },
       {
         id: 'onrust-overprikkeling',
         title: 'Restlessness & sensory overload',
         slug: 'onrust',
         hasDedicatedPage: false,
-        shortDesc: 'Heightened sensitivity to stimuli, a crowded mind, and emotional restlessness.',
+        shortDesc: 'Sensitivity to external stimuli, a crowded mind, and emotional restlessness.',
       },
     ],
   },
@@ -270,111 +270,111 @@ export const COMPLAINT_CATEGORIES_EN: ComplaintCategory[] = [
     title: 'Energy & recovery',
     subtitle: 'Vitality and resilience',
     intro:
-      'When you consistently feel depleted or struggle to bounce back, we look at your overall equilibrium and daily habits. Acupuncture can offer gentle support to guide your natural recovery.',
+      'When you consistently experience low energy or feel that recovery is difficult, we look at your overall situation, daily habits, and the signals your body is giving you. Acupuncture can be used as complementary support.',
     complaints: [
       {
         id: 'vermoeidheid',
         title: 'Fatigue',
         slug: 'vermoeidheid',
         hasDedicatedPage: false,
-        shortDesc: 'Persistent tiredness that does not simply fade away with a single night of rest.',
+        shortDesc: 'Persistent tiredness that does not simply disappear after a night of sleep.',
       },
       {
         id: 'weinig-energie',
         title: 'Low energy',
         slug: 'weinig-energie',
         hasDedicatedPage: false,
-        shortDesc: 'Feeling drained of reserves and struggling to navigate the day with vigor.',
+        shortDesc: 'Feeling depleted and finding it difficult to get through the day with enough energy.',
       },
       {
         id: 'herstel-veerkracht',
         title: 'Recovery & resilience',
         slug: 'herstel-veerkracht',
         hasDedicatedPage: false,
-        shortDesc: 'Supporting physical recovery following an intensive period, prolonged strain, or illness.',
+        shortDesc: 'Support when dealing with an intensive period, prolonged strain, or recovery after illness.',
       },
     ],
   },
   {
     id: 'maag-darmen',
     title: 'Stomach & digestion',
-    subtitle: 'Digestion and abdominal unrest',
+    subtitle: 'Digestion and abdominal complaints',
     intro:
-      'In Traditional Chinese Medicine, the digestive system is seen as a central pillar of your daily vitality. We explore which lifestyle and physical factors contribute to gut discomfort.',
+      'Within Traditional Chinese Medicine, the digestive system is considered an important part of overall functioning. During the consultation, we look at your digestive complaints and at factors that may be related to them within the TCM treatment pattern.',
     complaints: [
       {
         id: 'opgeblazen-gevoel',
-        title: 'Bloated feeling',
+        title: 'Bloating',
         slug: 'opgeblazen-gevoel',
         hasDedicatedPage: false,
-        shortDesc: 'A tight, bloated, or heavy feeling in the abdomen after meals.',
+        shortDesc: 'A tight, full, or heavy feeling in the abdomen after eating.',
       },
       {
         id: 'buikklachten',
         title: 'Abdominal discomfort',
         slug: 'buikklachten',
         hasDedicatedPage: false,
-        shortDesc: 'Dull cramps, a sensitive stomach, or fluctuating reactions to certain foods.',
+        shortDesc: 'Dull cramps, a sensitive abdomen, or changing reactions to food.',
       },
       {
         id: 'spijsverteringsklachten',
-        title: 'Digestive issues',
+        title: 'Digestive complaints',
         slug: 'spijsverteringsklachten',
         hasDedicatedPage: false,
-        shortDesc: 'Sluggish digestion, acid reflux, mild nausea, or recurring gut sensitivity.',
+        shortDesc: 'Sluggish digestion, stomach complaints, or recurring discomfort in the digestive tract.',
       },
     ],
   },
   {
     id: 'vrouw-hormonaal',
-    title: 'Women & hormonal balance',
+    title: 'Women & hormonal complaints',
     subtitle: 'Menstruation, menopause, and balance',
     intro:
-      'Hormonal changes can have a clear impact on how you feel each day. Acupuncture can be utilized to guide your body toward greater ease and comfort through every stage of life.',
+      'Hormonal changes can have a noticeable influence on how you feel. Within the practice, acupuncture can be used as complementary support for complaints that may occur during different stages of life.',
     complaints: [
       {
         id: 'menstruatieklachten',
         title: 'Menstrual complaints',
         slug: 'menstruatieklachten',
         hasDedicatedPage: false,
-        shortDesc: 'Cramping, mood changes, PMS, or an irregular and uncomfortable cycle.',
+        shortDesc: 'Abdominal cramps, mood changes, PMS, or an unsettled menstrual cycle.',
       },
       {
         id: 'overgang',
         title: 'Menopause',
         slug: 'overgang',
         hasDedicatedPage: false,
-        shortDesc: 'Hot flashes, night sweats, inner unrest, and fluctuating sleep during perimenopause.',
+        shortDesc: 'Hot flashes, night sweats, restlessness, and changes in sleep patterns.',
       },
       {
         id: 'hormonale-klachten',
-        title: 'Hormonal balance',
+        title: 'Hormonal complaints',
         slug: 'hormonale-klachten',
         hasDedicatedPage: false,
-        shortDesc: 'Support for overall hormonal equilibrium and general physical well-being.',
+        shortDesc: 'Support for complaints associated with hormonal changes and related well-being.',
       },
     ],
   },
   {
     id: 'stoppen-roken-vapen',
     title: 'Quitting smoking & vaping',
-    subtitle: 'Support with cessation',
+    subtitle: 'Support with quitting',
     intro:
-      'At Bai Kang, laser acupuncture and ear acupuncture are offered to assist you in quitting tobacco or e-cigarettes. The treatment focuses on fostering calm and breaking the habit.',
+      'At Bai Kang, laser acupuncture and auricular acupuncture are offered as support when quitting smoking or vaping. The treatment focuses on supporting you in managing restlessness and changing established smoking or vaping habits.',
     complaints: [
       {
         id: 'stoppen-roken',
         title: 'Quitting smoking',
         slug: 'stoppen-met-roken',
         hasDedicatedPage: false,
-        shortDesc: 'Targeted acupuncture points to help manage restlessness and tobacco cravings.',
+        shortDesc: 'Guidance and targeted acupuncture points as support when quitting tobacco.',
       },
       {
         id: 'stoppen-vapen',
         title: 'Quitting vaping',
         slug: 'stoppen-met-vapen',
         hasDedicatedPage: false,
-        shortDesc: 'Supportive guidance and treatments to taper off and leave vaping behind.',
+        shortDesc: 'Supportive treatments when stopping the use of e-cigarettes.',
       },
     ],
   },

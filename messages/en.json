@@ -43,8 +43,8 @@
     "badge": "Traditional Chinese Medicine",
     "heroTitle": "Balance from within",
     "heroSubtitle": "Pain, tension, or a recurring complaint?",
-    "quoteText": "Where there is pain, the flow is disrupted. Where the flow is blocked, pain arises.",
-    "heroText": "Classical acupuncture and modern laser therapy for natural and powerful recovery.",
+    "quoteText": "Where there is pain, the flow is disrupted. Where the flow is obstructed, pain can arise.",
+    "heroText": "Classical acupuncture and modern laser acupuncture, tailored to your needs and situation.",
     "title": "Bai Kang",
     "tagline": "Traditional Chinese Medicine & Acupuncture"
   },
@@ -52,14 +52,14 @@
     "Hero": {
       "badge": "Traditional Chinese Medicine",
       "title": "Pain, tension, fatigue, or poor sleep?",
-      "intro": "Symptoms that occupy your daily life deserve attention. At Bai Kang, we look at your specific needs as well as your body and lifestyle as a whole.",
+      "intro": "Symptoms that affect your daily life deserve attention. At Bai Kang, we look at your specific needs as well as your body and lifestyle as a whole.",
       "ctaHelp": "See how I can help",
       "ctaAppointment": "Book appointment"
     },
     "Issues": {
       "badge": "What your body is asking for",
       "title": "What are you currently struggling with?",
-      "intro": "Whether it's pain, tension, fatigue, sleep problems, or another recurring complaint: discover how Bai Kang can support you.",
+      "intro": "Whether it is pain, tension, fatigue, sleep problems, or another recurring complaint, discover how Bai Kang can support you.",
       "catPain": "Pain & tension",
       "catPainDesc": "Back, neck, and shoulder complaints, muscle and joint pain, headaches, and physical tension.",
       "catStress": "Stress & sleep",
@@ -67,15 +67,15 @@
       "catEnergy": "Energy & recovery",
       "catEnergyDesc": "Fatigue, low energy, and difficulty recovering.",
       "catDigestion": "Stomach & digestion",
-      "catDigestionDesc": "A bloated feeling, abdominal discomfort, and other digestive issues.",
+      "catDigestionDesc": "Bloating, abdominal discomfort, and other digestive complaints.",
       "catGender": "Women & men",
       "catGenderDesc": "Symptoms related to menstruation, menopause, and other physical changes.",
       "catSmoking": "Quitting smoking & vaping",
-      "catSmokingDesc": "Laser acupuncture and auricular acupuncture to support breaking the habit.",
-      "cta": "View all symptoms"
+      "catSmokingDesc": "Laser acupuncture and auricular acupuncture as support when quitting.",
+      "cta": "View all complaints"
     },
     "Positioning": {
-      "title": "Looking beyond the symptom.",
+      "title": "Looking beyond the complaint.",
       "intro": "No two people are the same. That is why good care begins with listening, attention, and looking at the whole picture.",
       "cta": "More about my approach"
     },
@@ -83,19 +83,19 @@
       "badge": "Behind Bai Kang",
       "title": "Personal attention starts with listening.",
       "subtitle": "Patrick Witkamp · Acupuncturist",
-      "intro": "My goal is to look beyond just the symptom. By combining Western groundedness with Eastern wisdom, I help bring your body back into balance.",
+      "intro": "My goal is to look beyond the symptom alone. Combining Western groundedness with the perspective of Traditional Chinese Medicine, I look for an approach that fits you.",
       "cta": "Read my story"
     },
     "Practice": {
       "badge": "The clinic in Tilburg",
       "title": "A peaceful place for personal attention.",
-      "intro": "Bai Kang is located in Tilburg. A quiet clinic where there is space for your story and a treatment tailored to you.",
+      "intro": "Bai Kang is located in Tilburg. A quiet clinic where there is space for your story and for a treatment tailored to you.",
       "ctaRoute": "Directions to Bai Kang",
       "ctaAppointment": "Book appointment"
     },
     "FinalCTA": {
-      "title": "You don't need to know exactly what is wrong right away.",
-      "intro": "A first appointment begins with listening.",
+      "title": "You do not need to know exactly what is wrong right away.",
+      "intro": "A first appointment begins with listening to your story.",
       "cta": "Book appointment"
     }
   },
@@ -105,48 +105,48 @@
     "listen": "Listen to pronunciation",
     "line1": "Where there is pain, there is no free flow",
     "line2": "Where there is free flow, there is no pain",
-    "explanation": "In Traditional Chinese Medicine, discomfort and illness arise when Qi (vital energy) and blood become stagnant. Acupuncture gently resolves these blockages to restore harmony.",
+    "explanation": "Within Traditional Chinese Medicine, discomfort or pain is among other things explained through disturbances in the free flow of Qi and blood. Acupuncture is traditionally aimed at supporting this flow and the body's natural balance.",
     "button": "Explore our philosophy"
   },
   "Recognition": {
     "eyebrow": "WHAT YOUR BODY IS ASKING FOR",
-    "title": "Symptoms rarely exist in isolation.",
-    "paragraph1": "Sometimes you know exactly what is bothering you. Sometimes you just feel that your body is no longer functioning as it should.",
-    "paragraph2": "Pain that keeps returning. A body that feels perpetually tense. Poor sleep, low energy, or persistent symptoms for which you have already tried everything.",
-    "paragraph3": "In Traditional Chinese Medicine, we do not only look at the symptom itself, but at the whole picture.",
-    "paragraph4": "Where does the imbalance come from? And what does your body need to restore its natural equilibrium?",
+    "title": "Symptoms do not always exist in isolation.",
+    "paragraph1": "Sometimes you know exactly what is bothering you. Sometimes you simply feel that your body is no longer responding as you would expect.",
+    "paragraph2": "Pain that keeps returning. A body that feels constantly tense. Poor sleep, low energy, or persistent complaints for which you have already tried various approaches.",
+    "paragraph3": "In Traditional Chinese Medicine, we do not look only at the complaint itself, but also at the whole picture.",
+    "paragraph4": "What may be contributing to the imbalance according to Traditional Chinese Medicine? And what does your body need to support its natural balance?",
     "cta": "See how I can help",
-    "intro1": "Pain in your neck or back that keeps returning. Fatigue that doesn't clear up after a good night's rest. Or a subtle, persistent tension affecting your mood, breathing, and sleep.",
-    "intro2": "Perhaps you have already tried various approaches, or were told to simply live with it. Yet you intuitively know when something feels unbalanced — and that different symptoms are rarely isolated.",
+    "intro1": "Pain in your neck or back that keeps returning. Fatigue that does not disappear after a night's sleep. Or a lingering tension that you feel affects your mood, breathing, or sleep.",
+    "intro2": "Perhaps you have already tried various approaches, or have been told that you simply have to live with it. Yet you can often sense when something feels out of balance, and different complaints are not always completely separate.",
     "points": {
       "pain": {
         "title": "Recurring pain and tension",
-        "description": "Muscles that stay tight, recurring headaches, or stiff joints. The acute peak might subside, but true physical relaxation remains out of reach."
+        "description": "Muscles that remain tight, recurring headaches, or joints that feel stiff. The worst peak may subside, but the body may never seem to fully relax."
       },
       "energy": {
         "title": "Persistent fatigue & stress",
-        "description": "You keep going on sheer willpower, but daily life drains more energy than it should. Mental restlessness, shallow breathing, or disrupted sleep patterns."
+        "description": "You keep going through sheer determination, but daily life takes more effort than it used to. Mental restlessness, shallow breathing, or difficulty sleeping deeply."
       },
       "unclear": {
         "title": "Persistent, non-specific symptoms",
-        "description": "Digestive unrest, hormonal imbalances, or feeling generally run down. Tests often show nothing unusual, yet you clearly sense your body is out of rhythm."
+        "description": "Digestive complaints, hormonal fluctuations, or simply feeling less vital than usual. Conventional tests may show little, while you continue to notice that something does not feel right."
       }
     },
     "bridgeTitle": "Viewing the body as an interconnected whole",
-    "bridgeText": "In Traditional Chinese Medicine, we do not merely isolate the painful spot. We assess the broader pattern behind your symptoms. Where is circulation restricted? Where is your vitality depleted? Addressing the root balance allows your body the space to restore its natural equilibrium."
+    "bridgeText": "Within Traditional Chinese Medicine, we do not only look at the area where you experience symptoms. We look at the whole picture and at the pattern that may be associated with your complaint according to TCM. We explore where the flow may be disturbed and what kind of support may be appropriate."
   },
   "TreatmentMethod": {
     "eyebrow": "PERSONAL ATTENTION & APPROACH",
     "title": "Looking beyond the complaint.",
-    "paragraph1": "No two bodies are identical, and the exact same symptom can stem from a very different background in different people. That is why during the initial appointment we take ample time to understand your full story.",
-    "paragraph2": "We do not merely look at the acute discomfort you experience today, but also at your energy levels, sleep patterns, emotional balance, and lifestyle. This creates a clear picture of where circulation is obstructed.",
-    "paragraph3": "From this in-depth diagnosis, a tailored treatment plan is created — focused on lasting recovery and rediscovering your natural equilibrium.",
-    "cta": "Learn more about the approach"
+    "paragraph1": "No two bodies are the same, and the same complaint can have a very different background from one person to another. That is why during the first appointment we take the time to understand your full story.",
+    "paragraph2": "We look not only at the symptom you are experiencing today, but also at your energy levels, sleep patterns, experienced tension, and lifestyle. This creates a broader picture of factors that may be connected to your concerns according to Traditional Chinese Medicine.",
+    "paragraph3": "Based on this TCM assessment, I create a personal treatment approach tailored to your needs and to what emerges during the consultation and treatment.",
+    "cta": "Learn more about my approach"
   },
   "Help": {
     "eyebrow": "HOW CAN I HELP?",
     "title": "What can you consult Bái Kāng for?",
-    "intro": "Acupuncture is used in my practice for a wide variety of symptoms and concerns. Every treatment is tailored to the individual and the situation.",
+    "intro": "Acupuncture is used in my practice for a wide variety of complaints and health concerns. Every treatment is tailored to the individual, the situation, and the findings from the consultation.",
     "categories": {
       "pain": {
         "title": "Pain & tension",
@@ -154,222 +154,222 @@
       },
       "stress": {
         "title": "Stress & sleep",
-        "description": "A body that is constantly \"on\", difficulty relaxing, restlessness, or trouble sleeping."
+        "description": "A body that is constantly \"on\", difficulty relaxing, restlessness, or problems sleeping."
       },
       "energy": {
         "title": "Energy & recovery",
-        "description": "Fatigue, low energy, or the feeling that your body struggles to recover."
+        "description": "Fatigue, low energy, or the feeling that your body has difficulty recovering."
       },
       "digestion": {
         "title": "Stomach & digestion",
-        "description": "Digestive issues, such as bloating, abdominal discomfort, or an unsettled digestive system."
+        "description": "Digestive complaints such as bloating, abdominal discomfort, or an unsettled digestive system."
       },
       "gender": {
         "title": "Women & men",
-        "description": "Symptoms related to menstruation, menopause, and other physical changes."
+        "description": "Complaints related to menstruation, menopause, and other physical changes."
       },
       "smoking": {
         "title": "Quitting smoking & vaping",
-        "description": "Targeted laser acupuncture and auricular acupuncture to support breaking the habit and managing cravings."
+        "description": "Targeted laser acupuncture and auricular acupuncture as support when breaking the habit and managing cravings."
       }
     }
   },
   "Story": {
     "acupuncture": {
       "eyebrow": "ACUPUNCTURE",
-      "title": "Balance begins with personalized care",
-      "description": "Every body tells its own story. Grounded in traditional Chinese medicine, we address the root cause of imbalance, not just the symptoms.",
-      "button": "Explore our approach",
-      "alt": "Acupuncture treatment in peaceful clinic room"
+      "title": "Balance begins with personal attention",
+      "description": "Every body tells its own story. Based on the principles of TCM, I look beyond the symptom itself and consider the whole person and the connections between different factors.",
+      "button": "Explore my approach",
+      "alt": "Acupuncture treatment in a peaceful clinic room"
     },
     "laser": {
       "eyebrow": "LASER ACUPUNCTURE",
-      "title": "Modern innovation, ancient wisdom",
-      "description": "Needle-free, precise and gentle. Highly effective for breaking nicotine addiction and restoring energetic flow.",
-      "button": "Learn about laser therapy",
-      "alt": "Modern laser therapy session"
+      "title": "Modern technology, ancient wisdom",
+      "description": "Modern technology based on the principles of acupuncture. Laser acupuncture stimulates acupuncture points without needles and can be used when a needle-free treatment is appropriate.",
+      "button": "Learn more about laser acupuncture",
+      "alt": "Modern laser therapy treatment"
     }
   },
   "LaserAcupuncture": {
     "eyebrow": "MODERN COMPLEMENTARY CARE",
-    "title": "Laser Acupuncture: Targeted and Needle-Free",
-    "paragraph1": "For those who are sensitive or prefer an alternative to traditional needles, laser acupuncture offers a gentle and effective approach. Focused light at specific wavelengths stimulates acupuncture points with precision.",
-    "paragraph2": "This technology supports the body's natural recovery process and is applied within the clinic for tension, pain relief, and smoking cessation support.",
+    "title": "Laser acupuncture: targeted and needle-free",
+    "paragraph1": "For those who are sensitive to needles or prefer not to have traditional needles, laser acupuncture offers a needle-free treatment approach. Concentrated light is used to stimulate acupuncture points in a targeted way.",
+    "paragraph2": "Within the clinic, laser acupuncture is used for, among other things, tension complaints, as support for pain complaints, and as support when quitting smoking.",
     "cta": "Learn more about laser acupuncture"
   },
   "Acupuncture": {
     "metaTitle": "What is Acupuncture? | Traditional Chinese Medicine Tilburg | Bai Kang",
-    "metaDescription": "Discover how acupuncture works through both Traditional Chinese Medicine and modern physiology. Personalized diagnosis, peaceful treatments, and needle-free laser acupuncture in Tilburg.",
+    "metaDescription": "Discover acupuncture from the perspective of Traditional Chinese Medicine and modern physiology. Personal assessment, calm treatments, and laser acupuncture in Tilburg.",
     "heroEyebrow": "Acupuncture & Traditional Chinese Medicine",
     "heroTitle": "What can acupuncture help with?",
-    "heroIntro": "Acupuncture has been applied for thousands of years within Traditional Chinese Medicine. At Bai Kang, we look not only at the specific complaint, but at your entire situation as an interconnected whole.",
-    "btnComplaints": "View symptoms & indications",
+    "heroIntro": "Acupuncture has been used for thousands of years within Traditional Chinese Medicine. At Bai Kang, I look not only at the specific complaint, but at your situation as an interconnected whole.",
+    "btnComplaints": "View complaints & indications",
     "btnAppointment": "Book appointment",
-    "holisticEyebrow": "Caring for the whole",
+    "holisticEyebrow": "Looking at the whole picture",
     "holisticTitle": "Acupuncture is more than a needle on a point.",
-    "holisticP1": "A symptom rarely arises on its own. Pain, tension, fatigue, or sleep disruptions affect how you feel and respond every day. In Traditional Chinese Medicine, we look far beyond just the area of discomfort.",
-    "holisticP2": "How does your body feel? How is your sleep? What is your energy level throughout the day? And how do different physical signals relate to one another?",
-    "holisticP3": "During treatment, I use these answers to formulate an individual pattern diagnosis and calibrate the selection of acupuncture points accordingly.",
-    "needleAlt": "Detail of fine acupuncture needles resting on a smooth stone",
+    "holisticP1": "A complaint rarely exists entirely on its own. Pain, tension, fatigue, or sleep problems can influence how you feel and respond in daily life. Within Traditional Chinese Medicine, we therefore look beyond the area where the discomfort appears.",
+    "holisticP2": "How does your body feel? How do you sleep? What is your energy level throughout the day? And how do different physical signals relate to one another?",
+    "holisticP3": "During treatment, I use these answers to form an individual treatment picture and to tailor the selection of acupuncture points accordingly.",
+    "needleAlt": "Detail of fine acupuncture needles on a stone",
     "modernEyebrow": "Two perspectives",
     "modernTitle": "A treatment that stimulates the body.",
-    "modernIntro": "Modern physiology studies how acupuncture influences the nervous system, pain pathways, and localized tissue responses. Within TCM, we explain this through the restored free flow of Qi and natural balance. Both views enrich each other seamlessly.",
+    "modernIntro": "Modern physiology studies how acupuncture may influence the nervous system, pain processing, and local tissue responses. Within TCM, this is viewed in terms of supporting the free flow of Qi and natural balance. These perspectives can exist alongside one another.",
     "visualAlt": "Visualization of Body, Patterns, and Balance at Bai Kang TCM",
     "phase1Eyebrow": "01. Stimulation",
-    "phase1Title": "Targeted input",
-    "phase1Desc": "Ultra-fine, sterile needles provide a subtle stimulus at carefully chosen points, tailored to your individual diagnosis.",
+    "phase1Title": "Targeted stimulation",
+    "phase1Desc": "Very fine, sterile needles provide a subtle stimulus at carefully selected points, based on your individual TCM assessment.",
     "phase2Eyebrow": "02. Response",
-    "phase2Title": "Natural reaction",
-    "phase2Desc": "The body responds to the stimulus via the nervous system and local circulation to activate its natural restorative mechanisms.",
-    "phase3Eyebrow": "03. Deep Rest",
-    "phase3Title": "Time to restore",
-    "phase3Desc": "While resting on the treatment table, your nervous system gently transitions from the daily active mode into deep relaxation.",
+    "phase2Title": "Natural response",
+    "phase2Desc": "The body responds to the stimulation. From a modern physiological perspective, this includes responses of the nervous system and local tissue processes.",
+    "phase3Eyebrow": "03. Relaxation",
+    "phase3Title": "Time to recover",
+    "phase3Desc": "While resting on the treatment table, your body has time to respond to the treatment. Many people experience a deep sense of relaxation during this time.",
     "tcmEyebrow": "Traditional Philosophy",
-    "tcmTitle": "The vision of Traditional Chinese Medicine.",
+    "tcmTitle": "The perspective of Traditional Chinese Medicine.",
     "tcmQuote": "“The body is not viewed as a collection of separate parts, but as a dynamic whole.”",
-    "qiTitle": "Qi & Free Circulation",
-    "qiDesc": "In TCM, the unobstructed flow of energy and blood is fundamental. Where stagnation occurs, tension and pain arise.",
+    "qiTitle": "Qi & Free Flow",
+    "qiDesc": "Within TCM, the free circulation of Qi and blood is considered important for natural balance. Stagnation is traditionally associated with tension and pain complaints.",
     "balanceTitle": "Balance & Interconnection",
-    "balanceDesc": "Bodily functions are continuously linked. An imbalance in rest or nutrition may manifest in a completely different area.",
+    "balanceDesc": "Within TCM, different bodily functions are considered interconnected. Factors such as sleep, nutrition, and daily demands may be related to how someone feels.",
     "diffTitle": "Individual Differentiation",
-    "diffDesc": "Two people presenting with the same headache may receive completely different treatment plans because their root patterns differ.",
+    "diffDesc": "Two people with the same headache may receive different treatment approaches within TCM because their findings and underlying patterns may differ.",
     "lifestyleTitle": "Lifestyle & Load",
-    "lifestyleDesc": "Sleep, stress, nutrition, and daily demands are always considered to ensure lasting recovery and vitality.",
+    "lifestyleDesc": "Sleep, stress, nutrition, and daily demands are considered as part of the overall picture so that treatment can be tailored as closely as possible to your situation.",
     "complaintsEyebrow": "Areas of Care",
-    "complaintsTitle": "Which complaints can we address?",
-    "complaintsIntro": "Acupuncture can be applied across a wide variety of symptoms and needs. The primary focus areas in the clinic:",
+    "complaintsTitle": "Which complaints?",
+    "complaintsIntro": "Acupuncture is used in the clinic for a wide variety of concerns. The main areas of focus include:",
     "catPainTitle": "Pain & Tension",
-    "catPainDesc": "Back, neck, and shoulder complaints, tension headaches, joint discomfort, and ongoing muscular stiffness.",
+    "catPainDesc": "Back, neck, and shoulder complaints, tension headaches, joint pain, and persistent muscular tension.",
     "catStressTitle": "Stress & Sleep",
-    "catStressDesc": "Difficulty winding down, a restless mind, inner tension, and fragmented sleep.",
+    "catStressDesc": "Difficulty relaxing, a busy mind, inner restlessness, and disrupted sleep.",
     "catEnergyTitle": "Energy & Recovery",
-    "catEnergyDesc": "Persistent exhaustion, low resilience, or difficulty recovering after illness or exertion.",
+    "catEnergyDesc": "Persistent fatigue, low energy, or difficulty recovering after physical exertion.",
     "catDigestionTitle": "Stomach & Digestion",
-    "catDigestionDesc": "Bloating, abdominal discomfort, sluggish digestion, and cramping.",
-    "catGenderTitle": "Women's Health & Hormones",
-    "catGenderDesc": "Cycle-related symptoms, menopausal transitions, and emotional fluctuations.",
+    "catDigestionDesc": "Bloating, stomach complaints, sluggish digestion, and abdominal cramps.",
+    "catGenderTitle": "Women's Health & Hormonal Balance",
+    "catGenderDesc": "Cycle-related complaints, menopausal symptoms, and emotional fluctuations.",
     "catSmokingTitle": "Quitting Smoking & Vaping",
-    "catSmokingDesc": "Specialized protocols using low-level laser acupuncture and auricular therapy to ease cravings and withdrawal.",
-    "ctaComplaints": "Explore all specific indications on our symptoms hub",
-    "processEyebrow": "Our Process",
-    "processTitle": "First listen, then treat.",
+    "catSmokingDesc": "Specific treatment programmes using laser acupuncture and auricular acupuncture as support when quitting smoking and vaping.",
+    "ctaComplaints": "View all specific indications on the complaints page",
+    "processEyebrow": "Approach",
+    "processTitle": "First look, then treat.",
     "step1Num": "01",
-    "step1Title": "Intake & Your Story",
-    "step1Desc": "We take the time to listen to your story thoroughly. What brings you here? How did the issues develop and how do they impact your daily life?",
+    "step1Title": "The Intake & Your Story",
+    "step1Desc": "We take the time to listen to your story. What is your concern? How did the complaints develop, and how do they affect your daily life?",
     "step2Num": "02",
     "step2Title": "Traditional Diagnostics",
-    "step2Desc": "Through careful observation, pulse, and tongue diagnostics, we identify where flow is stagnant and which underlying pattern is present.",
+    "step2Desc": "Through observation, tongue and pulse diagnosis, I form a TCM treatment picture and assess which pattern appears to be most prominent according to this approach.",
     "step3Num": "03",
     "step3Title": "The Treatment",
-    "step3Desc": "Gentle needles are placed with precision. You then rest for approximately 25 to 30 minutes in a quiet, warm treatment room.",
+    "step3Desc": "Very fine needles are carefully placed. You then rest for approximately 25 to 30 minutes in a quiet, warm treatment room.",
     "step4Num": "04",
     "step4Title": "Evaluation & Follow-up",
-    "step4Desc": "We discuss what you experienced and how your body responded. Follow-up sessions are calibrated continuously to your current state.",
-    "relaxTitle": "Lying quietly. Letting go.",
-    "relaxDesc": "No screens. No hurry. The needles are so delicate that insertion is often barely perceptible. What remains is a quiet space where your body can recover.",
-    "relaxAlt": "Patient resting peacefully during an acupuncture session",
+    "step4Desc": "We discuss what you experienced and how your body responded. Follow-up treatments are adjusted according to your current response.",
+    "relaxTitle": "Lie quietly. Take a moment for yourself.",
+    "relaxDesc": "No screens. No hurry. The needles are so fine that insertion is often barely noticeable. What remains is a quiet moment in which your body has time to respond to the treatment.",
+    "relaxAlt": "Patient deeply relaxed during an acupuncture session",
     "laserEyebrow": "Needle-Free Option",
     "laserTitle": "Acupuncture does not always require needles.",
-    "laserP1": "For those sensitive to stimulation, hesitant about needles, or simply preferring an ultra-gentle approach, laser acupuncture offers an effective and completely painless alternative.",
-    "laserP2": "Instead of needles, concentrated, low-level laser light (LLLT) is applied. This light stimulates the exact same acupuncture points and meridians without penetrating the skin.",
-    "laserP3": "At Bai Kang, laser acupuncture is applied for tension relief, localized discomfort, and as the cornerstone of our smoking & vaping cessation program.",
-    "careEyebrow": "An Integral Part of Good Healthcare",
-    "careDesc": "Acupuncture is a valuable complementary modality and does not replace necessary conventional medical care. In acute or severe situations, we always recommend consulting your general practitioner first. At Bai Kang, we practice with care, discernment, and respect for conventional medical diagnoses.",
+    "laserP1": "For those who are sensitive to stimulation, feel apprehensive about traditional needles, or simply prefer a needle-free approach, laser acupuncture offers an alternative without needles.",
+    "laserP2": "Instead of needles, concentrated low-level light is used to stimulate the same acupuncture points without penetrating the skin.",
+    "laserP3": "At Bai Kang, laser acupuncture is used for tension complaints, as support for pain complaints, and as part of the targeted programme for quitting smoking and vaping.",
+    "careEyebrow": "Part of responsible care",
+    "careDesc": "Acupuncture is a complementary treatment approach and does not replace necessary conventional medical care. In acute or severe situations, conventional medical assessment is appropriate. At Bai Kang, I work with care, attention, and respect for conventional medical diagnostics.",
     "finalCtaEyebrow": "Personal Introduction",
-    "finalCtaTitle": "Is acupuncture right for you?",
-    "finalCtaIntro": "You don't need to know exactly which method you need in advance. During an initial consultation, we discuss what is going on and determine what fits best.",
+    "finalCtaTitle": "Could acupuncture be suitable for your situation?",
+    "finalCtaIntro": "You do not need to know in advance which treatment approach you need. During an initial consultation, we discuss what is going on and consider together what may be appropriate.",
     "finalCtaButton": "Book appointment"
   },
   "Method": {
     "metadata": {
       "title": "My Approach & Method | Acupuncture Tilburg | Bai Kang TCM",
-      "description": "Learn how a treatment at Bai Kang TCM proceeds. From digital intake form in advance to acupuncture and thorough evaluation."
+      "description": "Learn how treatment at Bai Kang TCM works, from the digital intake form and pulse diagnosis to acupuncture and careful evaluation."
     },
     "hero": {
       "eyebrow": "My Approach",
-      "title": "No standardized treatments, but care tailored to your situation.",
-      "intro": "Every condition is different. That is why treatment at Bai Kang does not start with a rigid set of points or techniques, but with your story. Through Traditional Chinese Medicine, I look at your symptoms, your body, and the factors influencing how you feel.",
+      "title": "No standard treatment, but attention to your situation.",
+      "intro": "Every complaint is different. That is why treatment at Bai Kang does not begin with a fixed set of points or techniques, but with your story. Through Traditional Chinese Medicine, I look at your complaints, your body, and factors that may influence how you feel.",
       "ctaAppointment": "Book appointment",
       "ctaAcupuncture": "How does acupuncture work? →"
     },
     "preparation": {
       "eyebrow": "Thoughtful preparation",
-      "title": "First prepare, then delve deeper.",
-      "p1": "Effective care begins before you even step into the clinic. Upon booking your appointment, you will receive a digital intake form to clarify your concerns, health history, and symptoms at your own pace.",
-      "p2": "Because I review your answers in advance, we don't have to spend precious clinic time on standard administrative questions. We use the consultation immediately to look deeper: how do energy, sleep, digestion, and stress relate to your condition?",
-      "p3": "Within Traditional Chinese Medicine, I combine this background with targeted pulse and tongue diagnosis. Only once the underlying pattern is clear do we begin treatment.",
+      "title": "Prepare first, then explore further.",
+      "p1": "Good care begins before you enter the clinic. After booking your appointment, you receive a digital intake form in which you can calmly describe your concerns, the course of your complaints, and relevant health history.",
+      "p2": "Because I review your answers beforehand, we can use the consultation to focus directly on your situation. We look at the relationship between energy, sleep, nutrition, stress, and your concerns.",
+      "p3": "Within Traditional Chinese Medicine, I combine this background with targeted pulse and tongue diagnosis. Based on these findings, I determine which treatment approach may be appropriate.",
       "quote": "“Not every complaint requires the same approach. And no two treatments need to be identical.”",
-      "imageAlt": "Personal intake and listening to the patient at Bai Kang TCM"
+      "imageAlt": "Personal intake and attentive listening at Bai Kang TCM"
     },
     "steps": {
-      "eyebrow": "Treatment Journey",
+      "eyebrow": "The Treatment Journey",
       "title": "Your treatment step by step.",
       "subtitle": "From preparation at your own pace to targeted care and regular evaluation.",
       "phase1": "Before the first appointment",
       "step1Title": "Intake form in advance",
-      "step1Desc": "After booking, you will receive an intake form by email. You can map out your complaints, medical history, and lifestyle in peace, allowing me to thoroughly prepare before we meet.",
+      "step1Desc": "After booking your appointment, you receive an intake form by email. You can take your time to describe your complaints, medical background, and lifestyle. This allows me to prepare for your consultation.",
       "phase2": "In the clinic",
-      "step2Title": "Intake & TCM diagnostics",
-      "step2Desc": "During the consultation, we take time to delve into your answers. We look beyond just the site of pain to evaluate energy, stress, and sleep, using pulse and tongue diagnosis to assess balance.",
+      "step2Title": "Intake & TCM assessment",
+      "step2Desc": "During the consultation, we take time to explore your answers. We look beyond the specific area of pain and consider the broader picture, including energy, tension, sleep, and lifestyle. Traditional observation and pulse diagnosis are used to form a TCM treatment picture.",
       "step3Title": "First tailored treatment",
-      "step3Desc": "Following the intake, your first treatment takes place immediately. Acupuncture forms the foundation, complemented if needed by cupping or Guasha. The treatment is gentle, safe, and focused on activating recovery.",
-      "phase3": "Follow-up journey",
-      "step4Title": "Evaluation & adjustment",
-      "step4Desc": "During follow-up visits, we discuss changes in pain, rest, or vitality. The treatment plan adapts dynamically to your body's response; nothing is set in stone."
+      "step3Desc": "Following the intake, your first treatment takes place. Acupuncture forms the basis, optionally complemented by cupping or Guasha when appropriate within the treatment approach. The treatment is calm and tailored to your situation.",
+      "phase3": "The follow-up journey",
+      "step4Title": "Evaluate & adjust",
+      "step4Desc": "During follow-up appointments, we discuss what has changed since the previous session in terms of pain, rest, or energy. The treatment approach adapts to your body's response; nothing is fixed permanently."
     },
     "acupunctureBasis": {
       "eyebrow": "The Foundation",
-      "title": "Acupuncture as the core.",
-      "p1": "Classical acupuncture forms the heart of my practice in Tilburg. Ultra-fine, sterile single-use needles gently stimulate specific acupuncture points on the body.",
-      "p2": "The points selected stem directly from your intake form and hands-on pulse diagnosis. This stimulation enhances circulation and shifts the autonomic nervous system into deep rest and recovery.",
-      "p3": "Where necessary, this foundation can be enriched with supportive modalities to release physical tension more swiftly.",
-      "imageAlt": "Close-up detail of fine sterile acupuncture needle"
+      "title": "Acupuncture as the foundation.",
+      "p1": "Classical acupuncture forms the heart of my practice in Tilburg. Very fine, sterile single-use needles are used to stimulate specific acupuncture points on the body.",
+      "p2": "The points selected are based on your intake form and the findings from the consultation and pulse diagnosis. The stimulation can produce local responses and responses from the nervous system. Many people experience relaxation during or after treatment.",
+      "p3": "When appropriate, this foundation can be complemented by supportive techniques to help release tension.",
+      "imageAlt": "Close-up of a very fine sterile acupuncture needle"
     },
     "additional": {
       "eyebrow": "Integrated Approach",
-      "title": "Complementary modalities.",
-      "intro": "Alongside acupuncture, supportive techniques can be integrated to relieve muscular tension or deepen energetic flow.",
+      "title": "Complementary treatment methods.",
+      "intro": "Alongside acupuncture, supportive methods can be used to help address local muscular tension or support circulation.",
       "cuppingTitle": "Cupping",
-      "cuppingDesc": "Glass or silicone cups are placed on the skin to generate mild suction. In TCM, this is widely used for tight muscles, stiffness in the back or neck, and enhancing microcirculation.",
+      "cuppingDesc": "Glass or silicone cups are placed on the skin to create mild suction. Within TCM, this method is used among other things for tense or stiff muscles and as a complementary treatment approach.",
       "guashaTitle": "Guasha",
-      "guashaDesc": "Guasha involves gentle scraping along oiled skin with a smooth instrument. This ancient method helps release deep stagnation in connective tissue and muscles, easing built-up tension.",
+      "guashaDesc": "Guasha involves gently scraping the oiled skin with a smooth instrument. Within TCM, this traditional technique is used as a complementary treatment for muscular tension and stiffness.",
       "laserTitle": "Laser Acupuncture",
-      "laserDesc": "When needles are not preferred or suitable, laser acupuncture offers a gentle, needle-free alternative. At Bai Kang, it is also applied specifically in our smoking & vaping cessation program."
+      "laserDesc": "When needles are not preferred or appropriate, laser acupuncture offers a needle-free treatment approach. At Bai Kang, laser acupuncture is also specifically used within the targeted programme for quitting smoking and vaping."
     },
     "frequency": {
       "eyebrow": "Expectations",
-      "title": "How many treatments will you need?",
-      "p1": "This varies per individual, the nature of the condition, and how long it has persisted. Acute complaints often respond quickly, whereas chronic imbalances take more time and rest to resolve sustainably.",
-      "p2": "I consciously avoid making arbitrary promises about a fixed number of sessions. During initial treatments, we closely track how your body responds and openly discuss sensible next steps.",
-      "quote": "No standardized formula, but a treatment path aligned with your own healing process."
+      "title": "How often will you need treatment?",
+      "p1": "This varies from person to person, depending on the nature of the complaint and how long it has been present. Some complaints may change relatively quickly, while longer-standing complaints can require more time. Individual responses to treatment also vary.",
+      "p2": "That is why I deliberately do not make promises about a fixed number of sessions. During treatment, we observe how your body and complaints respond and discuss together which next step may be appropriate.",
+      "quote": "No standard number of sessions, but a treatment path tailored to your individual process."
     },
     "practical": {
       "eyebrow": "Practical Details",
       "title": "Consultations & Coverage.",
-      "subtitle": "Clarity on session duration, preparation, and insurance reimbursements.",
+      "subtitle": "Clarity about treatment duration, preparation, and insurance coverage.",
       "firstBadge": "Preparation & Intake",
-      "firstTitle": "Initial consultation",
+      "firstTitle": "Initial appointment",
       "firstDuration": "75 – 90 minutes",
-      "firstDesc": "Includes review of your intake form, personal consultation, traditional diagnostics, and your first acupuncture session.",
-      "followBadge": "Progress & Care",
-      "followTitle": "Follow-up session",
+      "firstDesc": "Includes the completed digital intake form, personal consultation, traditional diagnostics, and the first acupuncture session.",
+      "followBadge": "Progress & Treatment",
+      "followTitle": "Follow-up appointment",
       "followDuration": "45 – 60 minutes",
-      "followDesc": "Brief evaluation of progress since the last session, followed by targeted acupuncture treatment.",
-      "insuranceBadge": "Complementary Insurance",
+      "followDesc": "A brief evaluation of your progress since the previous session, followed by a targeted treatment tailored to your situation.",
+      "insuranceBadge": "Supplementary Insurance",
       "insuranceTitle": "Coverage",
-      "insuranceDeductible": "No deductible applies",
-      "insuranceDesc": "Acupuncture is partially reimbursed by many Dutch insurers under complementary packages. As a CAT therapist, I operate under official quality standards (GAT/Wkkgz). Check your policy terms."
+      "insuranceDeductible": "No statutory deductible",
+      "insuranceDesc": "Acupuncture is partially reimbursed by many Dutch health insurers through supplementary insurance. As a CAT therapist, I operate within the applicable quality and complaints frameworks (GAT/Wkkgz). Check your policy for current conditions."
     },
     "contraindications": {
       "eyebrow": "Care & Safety",
       "title": "When is acupuncture not suitable?",
-      "p1": "While acupuncture is a powerful therapeutic modality, it is not appropriate for every medical situation. Acute emergencies, high fever, or sudden unexplained pain require immediate medical evaluation by a physician.",
-      "p2": "If you are undergoing medical care with a doctor, we ensure TCM supports you safely and responsibly. During the initial visit, we assess whether acupuncture is medically appropriate."
+      "p1": "Acupuncture is a valuable treatment method, but it is not appropriate for every situation. In acute medical emergencies, high fever, or sudden unexplained pain, medical assessment should come first.",
+      "p2": "If you are receiving specialist medical treatment, we consider how TCM can support you in a safe and responsible way. During the first appointment, we therefore assess whether treatment is appropriate for your situation."
     },
     "finalCta": {
       "eyebrow": "Personal Contact",
-      "title": "We find what works best together.",
-      "desc": "You don't need to know which exact technique you need beforehand. Tell me what you're dealing with, and we will calmly determine the right approach.",
+      "title": "Together, we look at what is appropriate.",
+      "desc": "You do not need to know exactly which technique or treatment you need beforehand. Tell me what you are dealing with, and from there we can calmly determine the appropriate approach.",
       "buttonAppointment": "Book an appointment",
       "buttonComplaints": "Overview of complaints →"
     }
@@ -377,124 +377,124 @@
   "AboutMe": {
     "Metadata": {
       "title": "About Me | Patrick Witkamp | Acupuncture Tilburg | Bai Kang TCM",
-      "description": "Read the personal journey of Patrick Witkamp. From 25+ years in logistics to Traditional Chinese Medicine, acupuncture, and laser therapy in Tilburg."
+      "description": "Read the personal story of Patrick Witkamp. From more than 25 years in transport to Traditional Chinese Medicine, acupuncture, and laser therapy in Tilburg."
     },
     "Hero": {
       "badge": "About Me",
       "title": "From the road to the treatment room.",
-      "lead": "I am Patrick Witkamp, acupuncturist and founder of Bai Kang TCM in Tilburg. My journey toward Chinese medicine was anything but straightforward.",
-      "paragraph1": "I was born on January 25, 1974, in Nijmegen, but spent my early childhood in Tunisia. Growing up in North Africa laid an intuitive foundation for who I would become: adapting to new cultures and diverse perspectives felt natural early on.",
-      "paragraph2": "Upon returning to the Netherlands, I grew up in the Tilburg area. My career, however, initially took a completely different turn from healthcare."
+      "lead": "I am Patrick Witkamp, acupuncturist and owner of Bai Kang TCM in Tilburg. My path to Chinese medicine was anything but straightforward.",
+      "paragraph1": "I was born on January 25, 1974, in Nijmegen, but spent my early childhood in Tunisia. My first years in North Africa unknowingly laid an important foundation for who I would later become. Travel, different cultures, and adapting to new situations became natural to me from an early age.",
+      "paragraph2": "After returning to the Netherlands, I grew up in the Tilburg region. My career then took a very different direction from the treatment room."
     },
     "Transition": {
-      "title": "A life that originally took an entirely different path.",
+      "title": "A life that initially took a very different direction.",
       "route": "Nijmegen · Tunisia · Tilburg · Australia · Thailand"
     },
     "Journey": {
-      "statLabel": "Years in transport & logistics",
-      "statSub": "From regional distribution to long journeys and life in a rolling office.",
-      "title": "Over 25 years on the road",
-      "p1": "My career started in logistics, an industry familiar through my father. After completing my studies, I chose life behind the wheel. For over twenty-five years I worked in transport, which offered freedom and took me across countless landscapes.",
-      "p2": "That thirst for exploration took me overseas. I lived and worked in Australia and Thailand, where I met my partner Sompong. In Thailand, I operated as an entrepreneur, worked in avionics, and taught English.",
-      "quote": "For years, my life existed entirely outside the clinic. Yet in the background, a fascination lingered.",
-      "p3": "Decades on the road and abroad shaped my approach: practical thinking, swift assessment, and deep respect for every individual's unique story."
+      "statLabel": "Years in transport & on the road",
+      "statSub": "From regional distribution to long-distance journeys and life in a mobile office.",
+      "title": "More than 25 years on the road",
+      "p1": "My career began in logistics, a world I knew from home through my father. After my logistics education, I eventually chose life on the road, in a mobile office. For more than twenty-five years I worked in transport, from regional distribution to long-distance journeys. It was a profession that gave me freedom and took me to many different places.",
+      "p2": "That need for freedom and adventure also took me beyond the Netherlands. I lived and worked in Australia and Thailand. In Thailand, I met my partner Sompong. I worked there as an entrepreneur, in avionics, and taught English.",
+      "quote": "For many years, my life took place outside the treatment room. Yet somewhere in the background there was always a fascination with something different.",
+      "p3": "Life on the road and abroad shaped me: practical thinking, adapting quickly, and above all respecting every person's unique background."
     },
     "Fascination": {
-      "badge": "A lasting impression",
-      "quote": "For years, nothing was done with it.",
-      "p1": "As a teenager, I watched a Steven Seagal movie scene. Injured after a fight, he was treated with acupuncture by an elderly Chinese monk, after which he entered deep meditation.",
-      "p2": "It was just a film, but the image remained. The small needles, the profound silence, and the notion of addressing the body so simply. I could not have known where that curiosity would lead.",
-      "imageAlt": "Acupuncture needles in peaceful arrangement"
+      "badge": "A lasting image",
+      "quote": "For years, nothing came of it.",
+      "p1": "As a teenager, I saw a scene in a Steven Seagal film. After being injured during a fight, he was treated with acupuncture by an elderly Chinese monk. Afterwards, he entered a deep state of meditation.",
+      "p2": "It was just a film scene, but the image stayed with me. The small needles, the calm, and the idea that you could work with the body in such a simple way. Of course, I could not have known where that fascination would eventually lead.",
+      "imageAlt": "Acupuncture needles in a tranquil arrangement"
     },
     "Turnaround": {
-      "title": "The moment I chose a new path",
-      "intro": "After more than 25 years in logistics, I read an article about a woman who followed her heart after 30 years at a retail chain to become an acupuncturist. Her story resonated deeply.",
+      "title": "The moment I decided to change direction",
+      "intro": "After more than twenty-five years in transport, I read an article about a woman who, after thirty years at a well-known retail chain, decided to follow her heart and become an acupuncturist. Her story affected me deeply.",
       "beforeLabel": "Before 2021",
       "beforeTitle": "Freedom on the road",
-      "beforeText": "Transport, long distances, international adventures, entrepreneurship, and practical day-to-day dynamics.",
+      "beforeText": "Transport, long-distance journeys, international travel, entrepreneurship, and the practical dynamics of everyday life on the road.",
       "afterLabel": "From 2021",
       "afterTitle": "Depth in healthcare",
-      "afterText": "Rigorous academic study, Traditional Chinese Medicine, needle and laser precision, and the tranquility of my own clinic."
+      "afterText": "Intensive study, Traditional Chinese Medicine, needle and laser techniques, and the calm of my own treatment room."
     },
     "Timeline": {
-      "badge": "Education & Progress",
-      "title": "My journey step by step.",
+      "badge": "Education & Growth",
+      "title": "My development step by step.",
       "subtitle": "My journey from transport to acupuncture progressed step by step.",
       "step1Title": "A new direction",
-      "step1Desc": "After over twenty-five years in the transport sector, I decided to take a different path and immerse myself seriously in acupuncture and Traditional Chinese Medicine.",
+      "step1Desc": "After more than twenty-five years in transport, I decided to take a different path and seriously immerse myself in acupuncture and Traditional Chinese Medicine.",
       "step2Title": "Foundation Training",
       "step2Desc": "My training began at Qing Bai with the Basic Professional Training.",
-      "step3Title": "Deepening & Specialization",
-      "step3Desc": "After obtaining my certificate, I transitioned to Total Health, completing the advanced year twice followed by the graduating specialization year.",
+      "step3Title": "Advanced Study & Specialization",
+      "step3Desc": "After obtaining my certificate, I moved to Total Health. There I completed the advanced year twice, followed by the final specialization year.",
       "step4Title": "Western Medical Foundations",
-      "step4Desc": "At Qing Bai, I completed the accredited Western Medical Foundations curriculum.",
+      "step4Desc": "At Qing Bai, I completed the Western Medical Foundations programme.",
       "step5Title": "Diplomas achieved",
-      "step5Desc": "In May 2026, I received my diplomas, completing a pivotal milestone in my development as an acupuncturist. For me, this is not an ending, but the beginning of a new chapter."
+      "step5Desc": "In May 2026, I received my diplomas and completed an important stage in my development as an acupuncturist. For me, this does not mark the end of my education, but the beginning of a new chapter."
     },
     "Craft": {
       "badge": "The Profession",
-      "title": "From interest to craftsmanship.",
-      "p1": "Throughout my education, I grew fascinated by how Chinese medicine views the human body—not just isolating the symptom, but observing the holistic interconnectedness of the individual.",
-      "p2": "That perspective remains my anchor. Not because every complaint has a single answer, but because every person is unique."
+      "title": "From interest to profession.",
+      "p1": "During my training, I became increasingly interested in the way Chinese medicine looks at the body. Not only at the place where someone experiences complaints, but at the whole person and the relationship between different factors.",
+      "p2": "That perspective still appeals to me. Not because every complaint has one simple explanation, but precisely because every person is different."
     },
     "Vision": {
       "badge": "My Philosophy",
-      "title": "First the person, then the symptom.",
-      "lead": "This is the guiding principle behind Bai Kang.",
-      "p1": "When someone walks in with discomfort, I avoid generic solutions. I seek to understand how the imbalance arose, what circumstances surround it, and what is truly needed.",
-      "p2": "Traditional Chinese Medicine provides a nuanced diagnostic framework. From that ground, I tailor care to the person sitting across from me. Not a rigid blueprint for a specific symptom, but care that begins with the person."
+      "title": "First the person, then the complaint.",
+      "lead": "That may be the most important idea behind Bai Kang.",
+      "p1": "When someone comes to me with a complaint, I do not want to immediately reach for a standard treatment. I first want to understand what someone is experiencing, how the complaint developed, and which circumstances may play a role.",
+      "p2": "Traditional Chinese Medicine gives me its own way of looking at and assessing the body. From that perspective, I look for an approach that fits the person sitting in front of me. No fixed formula simply because someone has a particular complaint. A treatment that begins with the person."
     },
     "Growth": {
-      "badge": "Continuous Growth",
-      "title": "Ever evolving.",
-      "intro": "The goal is not to apply as many modalities as possible, but to know precisely which intervention serves you best.",
+      "badge": "Professional Development",
+      "title": "Keep developing.",
+      "intro": "My goal is not to use as many techniques as possible. My goal is to know when a particular approach may be appropriate.",
       "cta": "Learn more about my approach"
     },
     "Brand": {
-      "title": "A serene place for dedicated attention.",
-      "intro": "Bai Kang is more than a name; it is where my diverse life lessons converge into genuine care.",
-      "baiTitle": "Bái (白) — Purity & Integrity",
-      "baiDesc": "The first sound references White, connecting with my family name. Bái reflects clarity, openness, and honest care without pretension.",
-      "kangTitle": "Kāng (康) — Vital Health",
-      "kangDesc": "Kāng stands for vital health and wellness. The name bridges my personal name with the lifelong path I have chosen for my clinic."
+      "title": "A peaceful place for attention and treatment.",
+      "intro": "Bai Kang is more than the name of my practice. It is where my different experiences come together.",
+      "baiTitle": "Bái (白), White, pure & sincere",
+      "baiDesc": "The first sound refers to White, connecting it to my own name. Bái represents the clear, grounded, honest way in which I look at a complaint.",
+      "kangTitle": "Kāng (康), Health & wellbeing",
+      "kangDesc": "Kāng represents health and wellbeing. The name therefore creates a meaningful connection between my own name and the direction I have chosen for my practice."
     },
     "CtaSection": {
-      "quote": "My path to acupuncture was unscripted. Perhaps that is why I meet every individual without rigid assumptions.",
+      "quote": "My path to acupuncture was not planned. Perhaps that is exactly why I find it important to approach every person without a fixed formula.",
       "button": "Book appointment"
     }
   },
   "RatesPage": {
     "metaTitle": "Rates & Reimbursements | Bai Kang TCM Tilburg",
-    "metaDescription": "Overview of current fees for acupuncture, cupping, guasha, reiki, and laser therapy at Bai Kang TCM in Tilburg, plus insurance reimbursement details.",
+    "metaDescription": "Overview of current rates for acupuncture, cupping, guasha, reiki, and laser therapy at Bai Kang TCM in Tilburg, plus information about insurance reimbursement.",
     "eyebrow": "RATES & REIMBURSEMENTS",
-    "heroTitle": "Clear and transparent treatment fees.",
-    "heroSubtitle": "Below you will find the current treatment rates for Bai Kang TCM and information regarding coverage by supplementary healthcare insurance.",
+    "heroTitle": "Clear information about the cost of your treatment.",
+    "heroSubtitle": "Below you will find the current rates at Bai Kang TCM and information about possible reimbursement through supplementary health insurance.",
     "sectionRatesEyebrow": "01 · Overview",
-    "sectionRatesTitle": "Treatments & Fees",
-    "sectionRatesSubtitle": "Transparent pricing for dedicated, personalized healthcare",
+    "sectionRatesTitle": "Rates & Treatments",
+    "sectionRatesSubtitle": "Transparent rates for personal care and focused attention",
     "catAcupuncture": "Acupuncture & Treatment Plans",
-    "catSmoking": "Quit Smoking or Vaping",
-    "catComplementary": "Complementary Therapies",
+    "catSmoking": "Quitting Smoking or Vaping",
+    "catComplementary": "Complementary Treatment Methods",
     "perSession": "per session",
     "package": "package",
     "free": "Free",
-    "insuranceHeading": "Reimbursements & Registrations",
-    "insuranceText1": "Acupuncture treatments are often partially or fully covered by supplementary health insurance packages.",
-    "insuranceText2": "Because coverage is provided under supplementary insurance, it does not affect your statutory deductible (eigen risico). Terms and amounts vary per insurer and policy.",
-    "insuranceNotice": "Always check in advance with your health insurer whether your policy covers acupuncture provided by a certified CAT therapist.",
+    "insuranceHeading": "Reimbursement & Registrations",
+    "insuranceText1": "Acupuncture may be fully or partially reimbursed by many health insurers through supplementary health insurance.",
+    "insuranceText2": "Because this reimbursement comes from supplementary insurance, it does not affect your statutory deductible. The conditions and reimbursement amounts vary by insurer and policy.",
+    "insuranceNotice": "Always check with your own health insurer in advance whether your specific policy covers acupuncture provided by a CAT therapist.",
     "paymentHeading": "Payment & Invoicing",
-    "paymentText": "You can pay by card or cash immediately after your treatment. Your invoice will then be sent to you by email. If applicable, you can submit the invoice to your health insurance provider for possible reimbursement through your supplementary insurance.",
-    "faqHeading": "Frequently asked questions",
-    "ctaTitle": "Curious if acupuncture can support your health?",
-    "ctaSubtitle": "An initial session always begins by listening to your personal story.",
+    "paymentText": "You pay by card or cash after the treatment. Your invoice is sent digitally by email and can, if applicable, be submitted to your health insurer.",
+    "faqHeading": "Frequently asked questions about rates",
+    "ctaTitle": "Would you like to know whether acupuncture may fit your needs?",
+    "ctaSubtitle": "An initial appointment always begins with your story and a careful consultation.",
     "ctaButton": "Book an appointment"
   },
   "Faq": {
     "eyebrow": "FREQUENTLY ASKED QUESTIONS",
     "title": "Questions & Clarity",
-    "subtitle": "Practical information regarding treatments, approach, and insurance coverage.",
-    "moreQuestions": "Have a specific question not covered here?",
-    "contactCta": "Feel free to contact me"
+    "subtitle": "Practical information about treatments, approach, and reimbursement.",
+    "moreQuestions": "Do you have a specific question that is not listed here?",
+    "contactCta": "Feel free to get in touch"
   },
   "Footer": {
     "tagline": "Traditional Chinese Medicine & Acupuncture in Tilburg.",
@@ -504,11 +504,11 @@
     "address": "Tilburg, Netherlands",
     "email": "info@baikang.nl",
     "registrationsTitle": "Registrations",
-    "kvkLabel": "KvK (Chamber of Commerce)",
+    "kvkLabel": "Chamber of Commerce",
     "vatLabel": "VAT",
     "agbProviderLabel": "AGB healthcare provider",
-    "agbPracticeLabel": "AGB clinic code",
-    "complaintsText": "As a CAT therapist, I am subject to GAT-Wkkgz complaints law and GAT disciplinary law at the Alternative Therapists Dispute Committee (GAT). For more information about my complaints procedure, please visit:",
+    "agbPracticeLabel": "AGB practice",
+    "complaintsText": "As a CAT therapist, I am subject to the GAT-Wkkgz complaints procedure and GAT disciplinary framework through the Alternative Therapists Dispute Committee (GAT). For more information about my complaints procedure, please visit:",
     "complaintsUrl": "gatgeschillen.nl",
     "rights": "All rights reserved.",
     "privacy": "Privacy Policy",

@@ -9,8 +9,8 @@ export const ACUPUNCTUUR_FAQS: BilingualFaqEntry[] = [
       en: 'What exactly is acupuncture?',
     },
     answer: {
-      nl: 'Acupunctuur is een behandelmethode die haar oorsprong vindt in de Traditionele Chinese Geneeskunde. Door flinterdunne, steriele naalden op specifieke punten op het lichaam te plaatsen, wordt het zelfregulerend vermogen van het lichaam geactiveerd om de natuurlijke balans te herstellen.',
-      en: "Acupuncture is a therapeutic modality rooted in Traditional Chinese Medicine. By inserting ultra-fine, sterile needles into specific points on the body, it stimulates the body's natural self-regulating capacity to restore harmony.",
+      nl: 'Acupunctuur is een behandelmethode die haar oorsprong vindt in de Traditionele Chinese Geneeskunde. Door flinterdunne, steriele naalden op specifieke punten op het lichaam te plaatsen, wordt het lichaam gericht geprikkeld. Binnen de TCM is het doel om het zelfregulerend vermogen van het lichaam te ondersteunen en de natuurlijke balans te bevorderen.',
+      en: "Acupuncture is a therapeutic modality rooted in Traditional Chinese Medicine. By inserting ultra-fine, sterile needles into specific points on the body, the body is gently and specifically stimulated. Within TCM, the aim is to support the body's natural self-regulating capacity and promote balance.",
     },
   },
   {
@@ -21,8 +21,8 @@ export const ACUPUNCTUUR_FAQS: BilingualFaqEntry[] = [
       en: 'How does acupuncture work?',
     },
     answer: {
-      nl: 'Vanuit de TCM-filosofie heft acupunctuur stagnaties in de doorstroming van Qi (levensenergie) en bloed op. Vanuit een westerse, fysiologische invalshoek stimuleert de naald het zenuwstelsel, de lokale doorbloeding en weefselreacties, waardoor het lichaam van de stress-stand naar ontspanning en herstel schakelt.',
-      en: 'From the perspective of TCM, acupuncture resolves blockages in the flow of Qi (vital energy) and blood. From a Western physiological viewpoint, needle stimulation influences the nervous system, microcirculation, and tissue responses, prompting the body to transition from stress mode into deep rest and recovery.',
+      nl: 'Binnen de TCM wordt acupunctuur traditioneel gezien als een manier om de vrije doorstroming van Qi en bloed te ondersteunen wanneer daarin volgens het TCM-behandelpatroon verstoringen worden gezien. Vanuit een westerse, fysiologische invalshoek kan naaldstimulatie onder meer invloed hebben op het zenuwstelsel, lokale doorbloeding en weefselreacties. Hoe iemand reageert op een behandeling verschilt per persoon.',
+      en: 'Within TCM, acupuncture is traditionally understood as a way of supporting the free flow of Qi and blood when disturbances are identified according to the TCM treatment pattern. From a Western physiological perspective, needle stimulation may influence the nervous system, local circulation, and tissue responses. Individual responses to treatment vary.',
     },
   },
   {
@@ -33,8 +33,8 @@ export const ACUPUNCTUUR_FAQS: BilingualFaqEntry[] = [
       en: 'Is acupuncture treatment safe?',
     },
     answer: {
-      nl: 'Ja. Bij Bai Kang wordt uitsluitend gewerkt met steriele wegwerpnaalden van chirurgisch staal die eenmalig worden gebruikt en direct daarna worden afgevoerd. De behandelingen worden uitgevoerd door een gekwalificeerd en geregistreerd CAT-therapeut conform strenge hygiëne- en veiligheidsnormen.',
-      en: 'Yes. At Bai Kang, we exclusively use single-use sterile disposable needles made of surgical steel, which are disposed of immediately after treatment. Sessions are conducted by a qualified and registered CAT therapist adhering to strict hygiene and safety standards.',
+      nl: 'Acupunctuur wordt over het algemeen als een veilige behandelmethode beschouwd wanneer deze zorgvuldig en hygiënisch wordt uitgevoerd. Bij Bai Kang wordt uitsluitend gewerkt met steriele wegwerpnaalden die eenmalig worden gebruikt en direct daarna worden afgevoerd. De behandelingen worden uitgevoerd volgens geldende hygiëne- en veiligheidsrichtlijnen. Tijdens de intake wordt ook gekeken of acupunctuur in jouw situatie passend is.',
+      en: 'Acupuncture is generally considered a safe treatment method when performed carefully and hygienically. At Bai Kang, only sterile single-use disposable needles are used and disposed of immediately after treatment. Treatments are carried out in accordance with applicable hygiene and safety guidelines. During the intake, we also consider whether acupuncture is appropriate for your situation.',
     },
   },
   {
@@ -45,8 +45,8 @@ export const ACUPUNCTUUR_FAQS: BilingualFaqEntry[] = [
       en: 'What are acupuncture points and meridians?',
     },
     answer: {
-      nl: 'Meridianen zijn kanalen waarlangs energie en circulatie door het lichaam bewegen. Acupunctuurpunten zijn specifieke plekken op deze banen waar weefsel en zenuwvezels gevoeliger zijn voor gerichte prikkeling. De keuze van de punten hangt volledig af van jouw individuele behandelpatroon.',
-      en: 'Meridians are pathways through which vitality and circulation move across the body. Acupuncture points are specific locations along these channels where tissue and nerve endings respond sensitively to stimulation. Point selection is calibrated entirely to your individual pattern diagnosis.',
+      nl: 'Binnen de Traditionele Chinese Geneeskunde worden meridianen beschreven als banen waarlangs Qi en bloed door het lichaam circuleren. Acupunctuurpunten zijn specifieke locaties die binnen deze traditie worden gebruikt om het lichaam gericht te stimuleren. Vanuit een moderne anatomische invalshoek kunnen sommige acupunctuurpunten samenvallen met gebieden waar zenuwen, bindweefsel of andere structuren reageren op prikkeling. De keuze van de punten wordt afgestemd op jouw individuele TCM-behandelpatroon.',
+      en: 'Within Traditional Chinese Medicine, meridians are described as pathways through which Qi and blood circulate throughout the body. Acupuncture points are specific locations used within this tradition to stimulate the body in a targeted way. From a modern anatomical perspective, some acupuncture points may correspond with areas where nerves, connective tissue, or other structures respond to stimulation. Point selection is tailored to your individual TCM treatment pattern.',
     },
   },
   {
@@ -57,8 +57,8 @@ export const ACUPUNCTUUR_FAQS: BilingualFaqEntry[] = [
       en: 'What is the difference between classical and laser acupuncture?',
     },
     answer: {
-      nl: 'Klassieke acupunctuur maakt gebruik van zeer dunne naalden. Laseracupunctuur maakt gebruik van Low-Level Laser Therapy (zacht, geconcentreerd licht) om dezelfde punten te stimuleren zonder de huid te doorboren. Dit is ideaal voor mensen met naaldangst, jonge of gevoelige cliënten en bij rookstopbegeleiding.',
-      en: 'Classical acupuncture utilizes ultra-fine needles. Laser acupuncture uses Low-Level Laser Therapy (gentle, focused light) to stimulate the exact same points without penetrating the skin. This is ideal for those hesitant about needles, sensitive individuals, and as part of smoking cessation.',
+      nl: 'Klassieke acupunctuur maakt gebruik van zeer dunne, steriele naalden. Laseracupunctuur gebruikt geconcentreerd laagenergetisch laserlicht om acupunctuurpunten te stimuleren zonder de huid te doorboren. Laseracupunctuur kan daarom een passende optie zijn voor mensen die liever geen naalden gebruiken of wanneer een naaldvrije behandeling gewenst is. Bij Bai Kang wordt laseracupunctuur daarnaast ingezet binnen rookstopbegeleiding.',
+      en: 'Classical acupuncture uses very fine, sterile needles. Laser acupuncture uses focused low-level laser light to stimulate acupuncture points without penetrating the skin. It can therefore be a suitable option for people who prefer not to use needles or when a needle-free treatment is preferred. At Bai Kang, laser acupuncture is also used as part of smoking cessation support.',
     },
   },
   {
@@ -69,8 +69,8 @@ export const ACUPUNCTUUR_FAQS: BilingualFaqEntry[] = [
       en: 'What is Traditional Chinese Medicine (TCM)?',
     },
     answer: {
-      nl: 'TCM is een holistisch zorgsysteem met een duizenden jaren oude geschiedenis. Het beschouwt lichaam, geest en omgeving als één dynamisch evenwicht. Naast acupunctuur omvat het onder meer moxa, cupping, Guasha en leefstijlfilosofie.',
-      en: 'TCM is a holistic medical system with thousands of years of clinical history. It views body, mind, and environment as a dynamic equilibrium. Alongside acupuncture, it encompasses moxa, cupping, Guasha, and lifestyle philosophy.',
+      nl: 'Traditionele Chinese Geneeskunde (TCM) is een eeuwenoude geneeskunst en een eigen manier van kijken naar gezondheid en klachten. Binnen TCM worden lichaam, geest en omgeving als onderling verbonden beschouwd en wordt gezocht naar patronen die kunnen samenhangen met de klachten van een persoon. Naast acupunctuur omvat TCM onder meer moxa, cupping, Guasha en leefstijlbenaderingen. TCM werkt met een eigen traditioneel beoordelingskader en vervangt geen reguliere medische diagnostiek.',
+      en: "Traditional Chinese Medicine (TCM) is an ancient medical tradition and a distinct framework for understanding health and complaints. Within TCM, body, mind, and environment are considered interconnected, and practitioners look for patterns that may be associated with a person's concerns. Alongside acupuncture, TCM includes approaches such as moxibustion, cupping, Guasha, and lifestyle guidance. TCM uses its own traditional assessment framework and does not replace conventional medical diagnosis.",
     },
   },
 ];

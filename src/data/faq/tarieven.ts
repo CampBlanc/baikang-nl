@@ -9,8 +9,8 @@ export const TARIEVEN_FAQS: BilingualFaqEntry[] = [
       en: 'Is acupuncture covered by health insurance?',
     },
     answer: {
-      nl: 'Acupunctuur wordt door de meeste zorgverzekeraars gedeeltelijk of geheel vergoed vanuit de aanvullende verzekering. Omdat het onder de aanvullende zorg valt, gaat dit niet ten koste van je eigen risico.',
-      en: 'Acupuncture is partially or fully covered by most health insurers under supplementary packages. Because it falls under supplementary care, it does not affect your statutory deductible (eigen risico).',
+      nl: 'Acupunctuur kan vanuit een aanvullende verzekering geheel of gedeeltelijk worden vergoed, afhankelijk van je zorgverzekeraar en polis. Omdat vergoeding vanuit de aanvullende verzekering valt, gaat deze niet ten koste van je wettelijke eigen risico. Controleer altijd vooraf de voorwaarden van je eigen zorgverzekering.',
+      en: 'Acupuncture may be partially or fully reimbursed through supplementary health insurance, depending on your insurer and policy. Because this reimbursement comes from supplementary insurance, it does not affect your statutory deductible. Always check the conditions of your own health insurance policy in advance.',
     },
   },
   {
@@ -33,8 +33,8 @@ export const TARIEVEN_FAQS: BilingualFaqEntry[] = [
       en: 'Which professional association is Bai Kang affiliated with?',
     },
     answer: {
-      nl: 'De praktijk is aangesloten bij de beroepsvereniging CAT en geschilleninstantie GAT, waardoor consulten in aanmerking komen voor vergoeding bij erkende zorgverzekeraars.',
-      en: 'The clinic is registered with professional association CAT and dispute body GAT, ensuring eligible consultations qualify for reimbursement with participating insurers.',
+      nl: 'Bai Kang is aangesloten bij beroepsvereniging CAT en geschilleninstantie GAT. Of een behandeling voor vergoeding in aanmerking komt, hangt vervolgens af van de voorwaarden van je aanvullende zorgverzekering.',
+      en: 'Bai Kang is affiliated with the professional association CAT and the GAT dispute resolution body. Whether a treatment qualifies for reimbursement depends on the conditions of your supplementary health insurance policy.',
     },
   },
   {
@@ -45,8 +45,8 @@ export const TARIEVEN_FAQS: BilingualFaqEntry[] = [
       en: 'How do payment and invoicing work?',
     },
     answer: {
-      nl: 'Na afloop van de behandeling kun je eenvoudig pinnen of contant betalen. De factuur ontvang je direct per e-mail, welke je kunt indienen bij je zorgverzekeraar.',
-      en: 'You can pay by card or cash immediately following your session. You will receive an invoice by email, which you can submit directly to your health insurer.',
+      nl: 'Na afloop van de behandeling kun je eenvoudig per pin of contant betalen. De factuur ontvang je per e-mail. Als je behandeling volgens je polis voor vergoeding in aanmerking komt, kun je de factuur zelf indienen bij je zorgverzekeraar.',
+      en: 'You can pay by card or cash after your treatment. You will receive the invoice by email. If your treatment is eligible for reimbursement under your policy, you can submit the invoice to your health insurer yourself.',
     },
   },
   {
