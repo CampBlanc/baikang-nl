@@ -44,7 +44,7 @@ export const COMPLAINT_CATEGORIES_NL: ComplaintCategory[] = [
         id: 'schouderklachten',
         title: 'Schouderklachten',
         slug: 'schouderklachten',
-        hasDedicatedPage: false, // Rustige tekstvermelding (geen dode link) tot dit artikel geschreven is
+        hasDedicatedPage: true, // Rustige tekstvermelding (geen dode link) tot dit artikel geschreven is
         shortDesc: 'Pijn bij heffen of draaien, vastzittende schouderbladen of overbelaste pezen.',
       },
       {

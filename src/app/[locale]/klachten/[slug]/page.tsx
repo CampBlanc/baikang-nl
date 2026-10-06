@@ -3,7 +3,12 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Link } from '@/i18n/navigation';
 import { getComplaint, getDedicatedSlugs } from '@/data/complaintsData';
-import { getComplaintArticle } from '@/data/complaintArticles';
+import {
+  getComplaintArticle,
+  type ComplaintArticle,
+  type ComplaintArticlePattern,
+  type ComplaintArticleFaq,
+} from '@/data/complaints';
 import AtmosphericBamboo from '@/components/AtmosphericBamboo';
 import FadeIn from '@/components/FadeIn';
 
@@ -42,7 +47,7 @@ export default async function ComplaintDetailPage({
   const isEn = locale === 'en';
 
   const match = getComplaint(slug, locale);
-  const article = getComplaintArticle(slug, locale);
+  const article: ComplaintArticle | undefined = getComplaintArticle(slug, locale);
 
   if (!match || !match.complaint.hasDedicatedPage || !article) {
     notFound();
@@ -114,7 +119,7 @@ export default async function ComplaintDetailPage({
                 {article.recognition.title}
               </h2>
               <div className="space-y-4">
-                {article.recognition.paragraphs.map((p, idx) => (
+                {article.recognition.paragraphs.map((p: string, idx: number) => (
                   <p key={idx} className="font-body text-base text-text-soft leading-relaxed">
                     {p}
                   </p>
@@ -141,7 +146,7 @@ export default async function ComplaintDetailPage({
               </p>
 
               <div className="space-y-6">
-                {article.tcmPerspective.patterns.map((pattern, idx) => (
+                {article.tcmPerspective.patterns.map((pattern: ComplaintArticlePattern, idx: number) => (
                   <div
                     key={idx}
                     className="border-l-2 border-gold-antique/60 bg-surface-cream/30 p-6 transition-all hover:bg-surface-cream/50"
@@ -180,7 +185,7 @@ export default async function ComplaintDetailPage({
               </p>
 
               <ol className="space-y-4 mb-10">
-                {article.treatment.steps.map((step, idx) => (
+                {article.treatment.steps.map((step: string, idx: number) => (
                   <li key={idx} className="flex items-start gap-4">
                     <span className="flex-shrink-0 flex items-center justify-center w-7 h-7 border border-gold-antique/50 font-body text-xs font-semibold text-gold-antique">
                       0{idx + 1}
@@ -214,7 +219,7 @@ export default async function ComplaintDetailPage({
                 {isEn ? 'Frequently Asked Questions' : 'Veelgestelde vragen'}
               </h2>
               <div className="divide-y divide-border-light/40">
-                {article.faqs.map((faq, idx) => (
+                {article.faqs.map((faq: ComplaintArticleFaq, idx: number) => (
                   <div key={idx} className="py-6">
                     <h3 className="font-display text-xl text-forest-deep mb-2">
                       {faq.question}
