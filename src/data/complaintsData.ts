@@ -107,11 +107,11 @@ export const COMPLAINT_CATEGORIES_NL: ComplaintCategory[] = [
           },
           {
             id: 'tennisarm',
-            title: 'Tennisarm',
+            title: 'Tennisarm & golfarm',
             slug: 'tennisarm',
             hasDedicatedPage: true,
             relatedSlugs: ['rsi', 'peesklachten'],
-            shortDesc: 'Pijn aan de buitenkant van de elleboog bij tillen, grijpen of typen.',
+            shortDesc: 'Pijn aan de binnen- of buitenkant van de elleboog bij tillen, grijpen of herhaalde bewegingen.',
           },
           {
             id: 'rsi',
@@ -362,11 +362,11 @@ export const COMPLAINT_CATEGORIES_EN: ComplaintCategory[] = [
           },
           {
             id: 'tennisarm',
-            title: 'Tennis elbow',
+            title: 'Tennis elbow & golfer’s arm',
             slug: 'tennisarm',
             hasDedicatedPage: true,
             relatedSlugs: ['rsi', 'peesklachten'],
-            shortDesc: 'Pain on the outside of the elbow when lifting, gripping, or typing.',
+            shortDesc: 'Pain on the inside or outside of the elbow when lifting, gripping, or performing repetitive movements.',
           },
           {
             id: 'rsi',

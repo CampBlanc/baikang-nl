@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Link } from '@/i18n/navigation';
 import AtmosphericBamboo from '@/components/AtmosphericBamboo';
+import FadeIn from '@/components/FadeIn';
 import {
   getComplaint,
   getDedicatedSlugs,
@@ -114,49 +115,56 @@ export default async function ComplaintDetailPage({
 
           <div className="relative z-10 mx-auto max-w-4xl">
             {/* Broodkruimelpad */}
-            <nav
-              aria-label="Breadcrumb"
-              className="mb-6 flex flex-wrap items-center gap-2 font-body text-xs uppercase tracking-widest text-text-muted"
-            >
-              <Link
-                href="/"
-                className="transition-colors hover:text-gold-antique"
+            <FadeIn delay={0}>
+              <nav
+                aria-label="Breadcrumb"
+                className="mb-6 flex flex-wrap items-center gap-2 font-body text-xs uppercase tracking-widest text-text-muted"
               >
-                Home
-              </Link>
-              <span aria-hidden="true">/</span>
-              <Link
-                href="/klachten"
-                className="transition-colors hover:text-gold-antique"
-              >
-                {isEn ? 'Complaints' : 'Klachten'}
-              </Link>
-              {parent && (
-                <>
-                  <span aria-hidden="true">/</span>
-                  <Link
-                    href={`/klachten/${parent.slug}`}
-                    className="transition-colors hover:text-gold-antique"
-                  >
-                    {parent.title}
-                  </Link>
-                </>
-              )}
-              <span aria-hidden="true">/</span>
-              <span className="text-gold-dark font-semibold">
-                {complaint.title}
-              </span>
-            </nav>
+                <Link
+                  href="/"
+                  className="transition-colors hover:text-gold-antique"
+                >
+                  Home
+                </Link>
+                <span aria-hidden="true">/</span>
+                <Link
+                  href="/klachten"
+                  className="transition-colors hover:text-gold-antique"
+                >
+                  {isEn ? 'Complaints' : 'Klachten'}
+                </Link>
+                {parent && (
+                  <>
+                    <span aria-hidden="true">/</span>
+                    <Link
+                      href={`/klachten/${parent.slug}`}
+                      className="transition-colors hover:text-gold-antique"
+                    >
+                      {parent.title}
+                    </Link>
+                  </>
+                )}
+                <span aria-hidden="true">/</span>
+                <span className="text-gold-dark font-semibold">
+                  {complaint.title}
+                </span>
+              </nav>
+            </FadeIn>
 
-            <p className="eyebrow text-gold-dark mb-4">
-              {parent ? parent.title : category.title}
-            </p>
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-forest-deep leading-[1.15] mb-6">
-              {article.h1}
-            </h1>
-            <p className="font-body text-base sm:text-lg text-text-soft leading-relaxed max-w-2xl">
-              {article.heroIntro}
-            </p>
+            <FadeIn delay={100}>
+              <p className="eyebrow text-gold-dark mb-4">
+                {parent ? parent.title : category.title}
+              </p>
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-forest-deep leading-[1.15] mb-6">
+                {article.h1}
+              </h1>
+            </FadeIn>
+
+            <FadeIn delay={200}>
+              <p className="font-body text-base sm:text-lg text-text-soft leading-relaxed max-w-2xl">
+                {article.heroIntro}
+              </p>
+            </FadeIn>
           </div>
         </section>
 
@@ -166,56 +174,58 @@ export default async function ComplaintDetailPage({
         {complaint.children && complaint.children.length > 0 && (
           <section className="border-b border-border-light/40 bg-surface-cream/30 py-12 sm:py-16 px-6 sm:px-10 lg:px-16">
             <div className="mx-auto max-w-4xl">
-              <p className="eyebrow text-gold-dark mb-2">
-                {isEn ? 'Specific Indications' : 'Specifieke Indicaties'}
-              </p>
-              <h2 className="font-display text-2xl sm:text-3xl text-forest-deep mb-3">
-                {isEn
-                  ? 'Complaints within this category'
-                  : 'Klachten binnen dit cluster'}
-              </h2>
-              <p className="font-body text-sm sm:text-base text-text-soft mb-8 max-w-2xl">
-                {isEn
-                  ? 'Explore specific symptoms and conditions treated in the clinic:'
-                  : 'Bekijk hieronder de specifieke klachten die we in de praktijk behandelen:'}
-              </p>
+              <FadeIn>
+                <p className="eyebrow text-gold-dark mb-2">
+                  {isEn ? 'Specific Indications' : 'Specifieke Indicaties'}
+                </p>
+                <h2 className="font-display text-2xl sm:text-3xl text-forest-deep mb-3">
+                  {isEn
+                    ? 'Complaints within this category'
+                    : 'Klachten binnen dit cluster'}
+                </h2>
+                <p className="font-body text-sm sm:text-base text-text-soft mb-8 max-w-2xl">
+                  {isEn
+                    ? 'Explore specific symptoms and conditions treated in the clinic:'
+                    : 'Bekijk hieronder de specifieke klachten die we in de praktijk behandelen:'}
+                </p>
+              </FadeIn>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {complaint.children.map((child) =>
+                {complaint.children.map((child, idx) =>
                   child.hasDedicatedPage ? (
-                    <Link
-                      key={child.id}
-                      href={`/klachten/${child.slug}`}
-                      className="group border border-border-light/60 bg-ivory p-6 transition-all hover:border-gold-antique hover:shadow-sm"
-                    >
-                      <div className="flex items-start justify-between">
-                        <h3 className="font-display text-xl text-forest-deep group-hover:text-gold-antique transition-colors">
+                    <FadeIn key={child.id} delay={idx * 50}>
+                      <Link
+                        href={`/klachten/${child.slug}`}
+                        className="block group border border-border-light/60 bg-ivory p-6 transition-all hover:border-gold-antique hover:shadow-sm"
+                      >
+                        <div className="flex items-start justify-between">
+                          <h3 className="font-display text-xl text-forest-deep group-hover:text-gold-antique transition-colors">
+                            {child.title}
+                          </h3>
+                          <span className="text-gold-antique text-sm transition-transform group-hover:translate-x-1">
+                            →
+                          </span>
+                        </div>
+                        {child.shortDesc && (
+                          <p className="mt-2 font-body text-sm text-text-soft leading-relaxed">
+                            {child.shortDesc}
+                          </p>
+                        )}
+                      </Link>
+                    </FadeIn>
+                  ) : (
+                    <FadeIn key={child.id} delay={idx * 50}>
+                      <div className="block border border-border-light/40 bg-ivory/60 p-6">
+                        <h3 className="font-display text-xl text-forest-deep">
                           {child.title}
                         </h3>
-                        <span className="text-gold-antique text-sm transition-transform group-hover:translate-x-1">
-                          →
-                        </span>
+                        {child.shortDesc && (
+                          <p className="mt-2 font-body text-sm text-text-soft leading-relaxed">
+                            {child.shortDesc}
+                          </p>
+                        )}
                       </div>
-                      {child.shortDesc && (
-                        <p className="mt-2 font-body text-sm text-text-soft leading-relaxed">
-                          {child.shortDesc}
-                        </p>
-                      )}
-                    </Link>
-                  ) : (
-                    <div
-                      key={child.id}
-                      className="border border-border-light/40 bg-ivory/60 p-6"
-                    >
-                      <h3 className="font-display text-xl text-forest-deep">
-                        {child.title}
-                      </h3>
-                      {child.shortDesc && (
-                        <p className="mt-2 font-body text-sm text-text-soft leading-relaxed">
-                          {child.shortDesc}
-                        </p>
-                      )}
-                    </div>
+                    </FadeIn>
                   )
                 )}
               </div>
@@ -228,12 +238,16 @@ export default async function ComplaintDetailPage({
             ======================================================================= */}
         <section className="border-b border-border-light/30 bg-surface-cream/40 py-16 sm:py-20 px-6 sm:px-10 lg:px-16">
           <div className="mx-auto max-w-4xl space-y-6">
-            <h2 className="font-display text-3xl sm:text-4xl text-forest-deep">
-              {article.recognition.title}
-            </h2>
+            <FadeIn>
+              <h2 className="font-display text-3xl sm:text-4xl text-forest-deep">
+                {article.recognition.title}
+              </h2>
+            </FadeIn>
             <div className="space-y-4 font-body text-base sm:text-lg text-text-soft leading-relaxed">
               {article.recognition.paragraphs.map((p, idx) => (
-                <p key={idx}>{p}</p>
+                <FadeIn key={idx} delay={idx * 50}>
+                  <p>{p}</p>
+                </FadeIn>
               ))}
             </div>
           </div>
@@ -244,38 +258,39 @@ export default async function ComplaintDetailPage({
             ======================================================================= */}
         <section className="py-16 sm:py-24 px-6 sm:px-10 lg:px-16">
           <div className="mx-auto max-w-4xl space-y-12">
-            <div>
-              <p className="eyebrow text-gold-dark mb-3">
-                {article.tcmPerspective.eyebrow}
-              </p>
-              <h2 className="font-display text-3xl sm:text-4xl text-forest-deep mb-4">
-                {article.tcmPerspective.title}
-              </h2>
-              <p className="font-body text-base sm:text-lg text-text-soft leading-relaxed max-w-3xl">
-                {article.tcmPerspective.intro}
-              </p>
-            </div>
+            <FadeIn>
+              <div>
+                <p className="eyebrow text-gold-dark mb-3">
+                  {article.tcmPerspective.eyebrow}
+                </p>
+                <h2 className="font-display text-3xl sm:text-4xl text-forest-deep mb-4">
+                  {article.tcmPerspective.title}
+                </h2>
+                <p className="font-body text-base sm:text-lg text-text-soft leading-relaxed max-w-3xl">
+                  {article.tcmPerspective.intro}
+                </p>
+              </div>
+            </FadeIn>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {article.tcmPerspective.patterns.map((pat, idx) => (
-                <div
-                  key={idx}
-                  className="border border-border-light/60 bg-surface-cream/30 p-7 space-y-3"
-                >
-                  <div className="flex items-baseline justify-between gap-2">
-                    <h3 className="font-display text-xl sm:text-2xl text-forest-deep">
-                      {pat.name}
-                    </h3>
-                    {pat.chineseName && (
-                      <span className="font-chinese text-gold-antique text-lg">
-                        {pat.chineseName}
-                      </span>
-                    )}
+                <FadeIn key={idx} delay={idx * 100}>
+                  <div className="border border-border-light/60 bg-surface-cream/30 p-7 space-y-3 h-full">
+                    <div className="flex items-baseline justify-between gap-2">
+                      <h3 className="font-display text-xl sm:text-2xl text-forest-deep">
+                        {pat.name}
+                      </h3>
+                      {pat.chineseName && (
+                        <span className="font-chinese text-gold-antique text-lg">
+                          {pat.chineseName}
+                        </span>
+                      )}
+                    </div>
+                    <p className="font-body text-sm text-text-soft leading-relaxed">
+                      {pat.description}
+                    </p>
                   </div>
-                  <p className="font-body text-sm text-text-soft leading-relaxed">
-                    {pat.description}
-                  </p>
-                </div>
+                </FadeIn>
               ))}
             </div>
           </div>
@@ -286,37 +301,40 @@ export default async function ComplaintDetailPage({
             ======================================================================= */}
         <section className="border-t border-border-light/30 bg-surface-cream/40 py-16 sm:py-24 px-6 sm:px-10 lg:px-16">
           <div className="mx-auto max-w-4xl space-y-8">
-            <div>
-              <h2 className="font-display text-3xl sm:text-4xl text-forest-deep mb-4">
-                {article.treatment.title}
-              </h2>
-              <p className="font-body text-base sm:text-lg text-text-soft leading-relaxed max-w-3xl">
-                {article.treatment.intro}
-              </p>
-            </div>
+            <FadeIn>
+              <div>
+                <h2 className="font-display text-3xl sm:text-4xl text-forest-deep mb-4">
+                  {article.treatment.title}
+                </h2>
+                <p className="font-body text-base sm:text-lg text-text-soft leading-relaxed max-w-3xl">
+                  {article.treatment.intro}
+                </p>
+              </div>
+            </FadeIn>
 
             <ol className="space-y-4">
               {article.treatment.steps.map((step, idx) => (
-                <li
-                  key={idx}
-                  className="flex items-start gap-4 border-l-2 border-gold-antique bg-ivory p-5 font-body text-sm sm:text-base text-forest-deep"
-                >
-                  <span className="font-mono text-xs font-semibold uppercase tracking-wider text-gold-dark mt-0.5">
-                    0{idx + 1}
-                  </span>
-                  <span>{step}</span>
-                </li>
+                <FadeIn key={idx} delay={idx * 50}>
+                  <li className="flex items-start gap-4 border-l-2 border-gold-antique bg-ivory p-5 font-body text-sm sm:text-base text-forest-deep">
+                    <span className="font-mono text-xs font-semibold uppercase tracking-wider text-gold-dark mt-0.5">
+                      0{idx + 1}
+                    </span>
+                    <span>{step}</span>
+                  </li>
+                </FadeIn>
               ))}
             </ol>
 
-            <div className="rounded-none border border-gold-antique/30 bg-gold-antique/10 p-5 font-body text-xs sm:text-sm text-forest-deep leading-relaxed">
-              <strong className="font-semibold block mb-1">
-                {isEn
-                  ? 'Safety and medical alignment:'
-                  : 'Veiligheid en afstemming:'}
-              </strong>
-              {article.treatment.safetyNote}
-            </div>
+            <FadeIn delay={200}>
+              <div className="rounded-none border border-gold-antique/30 bg-gold-antique/10 p-5 font-body text-xs sm:text-sm text-forest-deep leading-relaxed">
+                <strong className="font-semibold block mb-1">
+                  {isEn
+                    ? 'Safety and medical alignment:'
+                    : 'Veiligheid en afstemming:'}
+                </strong>
+                {article.treatment.safetyNote}
+              </div>
+            </FadeIn>
           </div>
         </section>
 
@@ -325,20 +343,24 @@ export default async function ComplaintDetailPage({
             ======================================================================= */}
         {article.faqs && article.faqs.length > 0 && (
           <section className="py-16 sm:py-24 px-6 sm:px-10 lg:px-16 border-t border-border-light/30">
-            <div className="mx-auto max-w-4xl space-y-8">
-              <h2 className="font-display text-3xl sm:text-4xl text-forest-deep">
-                {isEn ? 'Frequently Asked Questions' : 'Veelgestelde vragen'}
-              </h2>
+            <div className="mx-auto max-w-4xl space-y-10">
+              <FadeIn>
+                <h2 className="font-display text-3xl sm:text-4xl text-forest-deep mb-6">
+                  {isEn ? 'Frequently Asked Questions' : 'Veelgestelde vragen'}
+                </h2>
+              </FadeIn>
               <div className="divide-y divide-border-light/40">
                 {article.faqs.map((faq, idx) => (
-                  <div key={idx} className="py-6 first:pt-0 last:pb-0 space-y-2">
-                    <h3 className="font-display text-xl sm:text-2xl text-forest-deep">
-                      {faq.question}
-                    </h3>
-                    <p className="font-body text-sm sm:text-base text-text-soft leading-relaxed">
-                      {faq.answer}
-                    </p>
-                  </div>
+                  <FadeIn key={idx} delay={idx * 50}>
+                    <div className="py-10 first:pt-0 last:pb-0 space-y-4">
+                      <h3 className="font-display text-xl sm:text-2xl text-forest-deep leading-snug">
+                        {faq.question}
+                      </h3>
+                      <p className="font-body text-sm sm:text-base text-text-soft leading-relaxed pb-4">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  </FadeIn>
                 ))}
               </div>
             </div>
@@ -351,47 +373,48 @@ export default async function ComplaintDetailPage({
         {relatedComplaints.length > 0 && (
           <section className="border-t border-border-light/40 bg-surface-cream/40 py-16 sm:py-20 px-6 sm:px-10 lg:px-16">
             <div className="mx-auto max-w-4xl">
-              <p className="eyebrow text-gold-dark mb-2">
-                {isEn ? 'Related' : 'Zie ook'}
-              </p>
-              <h2 className="font-display text-2xl sm:text-3xl text-forest-deep mb-8">
-                {isEn
-                  ? 'Related complaints & patterns'
-                  : 'Verwante klachten & patronen'}
-              </h2>
+              <FadeIn>
+                <p className="eyebrow text-gold-dark mb-2">
+                  {isEn ? 'Related' : 'Zie ook'}
+                </p>
+                <h2 className="font-display text-2xl sm:text-3xl text-forest-deep mb-8">
+                  {isEn
+                    ? 'Related complaints & patterns'
+                    : 'Verwante klachten & patronen'}
+                </h2>
+              </FadeIn>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {relatedComplaints.map((item) => (
-                  <div
-                    key={item.id}
-                    className="flex flex-col justify-between border border-border-light/60 bg-ivory p-6 transition-all hover:border-gold-antique hover:shadow-sm"
-                  >
-                    <div>
-                      <h3 className="font-display text-xl text-forest-deep mb-2">
-                        {item.title}
-                      </h3>
-                      {item.shortDesc && (
-                        <p className="font-body text-xs sm:text-sm text-text-soft leading-relaxed mb-4">
-                          {item.shortDesc}
-                        </p>
+                {relatedComplaints.map((item, idx) => (
+                  <FadeIn key={item.id} delay={idx * 100}>
+                    <div className="flex flex-col justify-between border border-border-light/60 bg-ivory p-6 transition-all hover:border-gold-antique hover:shadow-sm h-full">
+                      <div>
+                        <h3 className="font-display text-xl text-forest-deep mb-2">
+                          {item.title}
+                        </h3>
+                        {item.shortDesc && (
+                          <p className="font-body text-xs sm:text-sm text-text-soft leading-relaxed mb-4">
+                            {item.shortDesc}
+                          </p>
+                        )}
+                      </div>
+                      {item.hasDedicatedPage ? (
+                        <Link
+                          href={`/klachten/${item.slug}`}
+                          className="inline-flex items-center gap-1.5 font-body text-xs font-semibold uppercase tracking-wider text-forest-deep hover:text-gold-antique transition-colors mt-auto pt-2"
+                        >
+                          <span>{isEn ? 'Read more' : 'Lees meer'}</span>
+                          <span aria-hidden="true">→</span>
+                        </Link>
+                      ) : (
+                        <span className="font-body text-xs text-text-muted italic pt-2 mt-auto">
+                          {isEn
+                            ? 'In-clinic treatment available'
+                            : 'Behandeling in praktijk mogelijk'}
+                        </span>
                       )}
                     </div>
-                    {item.hasDedicatedPage ? (
-                      <Link
-                        href={`/klachten/${item.slug}`}
-                        className="inline-flex items-center gap-1.5 font-body text-xs font-semibold uppercase tracking-wider text-forest-deep hover:text-gold-antique transition-colors mt-auto pt-2"
-                      >
-                        <span>{isEn ? 'Read more' : 'Lees meer'}</span>
-                        <span aria-hidden="true">→</span>
-                      </Link>
-                    ) : (
-                      <span className="font-body text-xs text-text-muted italic pt-2">
-                        {isEn
-                          ? 'In-clinic treatment available'
-                          : 'Behandeling in praktijk mogelijk'}
-                      </span>
-                    )}
-                  </div>
+                  </FadeIn>
                 ))}
               </div>
             </div>
@@ -400,46 +423,53 @@ export default async function ComplaintDetailPage({
 
         {/* =======================================================================
             8. CTA SECTIE ONDERIN
-            Met bamboo-stick-leaves.png verankerd aan de LINKERKANT
             ======================================================================= */}
         <section className="relative overflow-hidden bg-surface-cream/70 py-20 sm:py-28 px-6 sm:px-10 lg:px-16 border-t border-border-light/40">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -left-4 sm:-left-8 lg:-left-10 top-1/2 -translate-y-1/2 z-0 h-72 w-52 sm:h-96 sm:w-64 lg:h-[460px] lg:w-[300px] select-none opacity-[0.06] sm:opacity-15 lg:opacity-25 mix-blend-multiply -scale-x-100"
-          >
-            <Image
-              src="/images/bamboo-stick-leaves.png"
-              alt=""
-              fill
-              sizes="(max-width: 1024px) 220px, 300px"
-              className="object-contain object-right"
-            />
-          </div>
+          <FadeIn delay={0}>
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -left-4 sm:-left-8 lg:-left-10 top-1/2 -translate-y-1/2 z-0 h-72 w-52 sm:h-96 sm:w-64 lg:h-[460px] lg:w-[300px] select-none opacity-[0.06] sm:opacity-15 lg:opacity-25 mix-blend-multiply -scale-x-100"
+            >
+              <Image
+                src="/images/bamboo-stick-leaves.png"
+                alt=""
+                fill
+                sizes="(max-width: 1024px) 220px, 300px"
+                className="object-contain object-right"
+              />
+            </div>
+          </FadeIn>
 
           <div className="relative z-10 mx-auto max-w-3xl text-center space-y-6">
-            <p className="eyebrow text-gold-dark">
-              {isEn ? 'Personal Treatment Plan' : 'Persoonlijk Behandelplan'}
-            </p>
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-forest-deep leading-tight">
-              {article.cta.title}
-            </h2>
-            <p className="font-body text-base sm:text-lg text-text-soft leading-relaxed max-w-xl mx-auto">
-              {article.cta.text}
-            </p>
-            <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link
-                href="/contact"
-                className="w-full sm:w-auto bg-forest-deep px-9 py-4 font-body text-xs font-semibold uppercase tracking-widest text-text-light shadow-sm transition-all hover:bg-forest-dark hover:shadow-md"
-              >
-                {article.cta.buttonText} →
-              </Link>
-              <Link
-                href="/tarieven"
-                className="w-full sm:w-auto border border-forest-deep/40 px-8 py-4 font-body text-xs font-semibold uppercase tracking-widest text-forest-deep hover:bg-forest-deep/5 transition-all"
-              >
-                {isEn ? 'View rates & coverage' : 'Bekijk tarieven & vergoeding'}
-              </Link>
-            </div>
+            <FadeIn delay={100}>
+              <p className="eyebrow text-gold-dark">
+                {isEn ? 'Personal Treatment Plan' : 'Persoonlijk Behandelplan'}
+              </p>
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-forest-deep leading-tight">
+                {article.cta.title}
+              </h2>
+            </FadeIn>
+            <FadeIn delay={150}>
+              <p className="font-body text-base sm:text-lg text-text-soft leading-relaxed max-w-xl mx-auto">
+                {article.cta.text}
+              </p>
+            </FadeIn>
+            <FadeIn delay={250}>
+              <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Link
+                  href="/contact"
+                  className="w-full sm:w-auto bg-forest-deep px-9 py-4 font-body text-xs font-semibold uppercase tracking-widest text-text-light shadow-sm transition-all hover:bg-forest-dark hover:shadow-md"
+                >
+                  {article.cta.buttonText} →
+                </Link>
+                <Link
+                  href="/tarieven"
+                  className="w-full sm:w-auto border border-forest-deep/40 px-8 py-4 font-body text-xs font-semibold uppercase tracking-widest text-forest-deep hover:bg-forest-deep/5 transition-all"
+                >
+                  {isEn ? 'View rates & coverage' : 'Bekijk tarieven & vergoeding'}
+                </Link>
+              </div>
+            </FadeIn>
           </div>
         </section>
       </main>

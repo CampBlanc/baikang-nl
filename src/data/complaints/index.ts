@@ -48,6 +48,7 @@ import { SPIER_GEWRICHTSKLACHTEN_NL, SPIER_GEWRICHTSKLACHTEN_EN } from './spier-
 import { FROZEN_SHOULDER_NL, FROZEN_SHOULDER_EN } from './frozenshoulder';
 import { KNIEKLACHTEN_NL, KNIEKLACHTEN_EN } from './knieklachten';
 import { ARTROSE_NL, ARTROSE_EN } from './artrose';
+import { TENNISARM_NL, TENNISARM_EN } from './tennisarm';
 
 export * from './rugpijn';
 export * from './nekklachten';
@@ -58,6 +59,7 @@ export * from './spier-gewrichtsklachten';
 export * from './frozenshoulder';
 export * from './knieklachten';
 export * from './artrose';
+export * from './tennisarm';
 
 export const COMPLAINT_ARTICLES_NL: Record<string, ComplaintArticle> = {
   rugpijn: RUGPIJN_NL,
@@ -70,6 +72,7 @@ export const COMPLAINT_ARTICLES_NL: Record<string, ComplaintArticle> = {
   'frozen-shoulder': FROZEN_SHOULDER_NL,
   knieklachten: KNIEKLACHTEN_NL,
   artrose: ARTROSE_NL,
+  tennisarm: TENNISARM_NL,
 };
 
 export const COMPLAINT_ARTICLES_EN: Record<string, ComplaintArticle> = {
@@ -83,6 +86,7 @@ export const COMPLAINT_ARTICLES_EN: Record<string, ComplaintArticle> = {
   'frozen-shoulder': FROZEN_SHOULDER_EN,
   knieklachten: KNIEKLACHTEN_EN,
   artrose: ARTROSE_EN,
+  tennisarm: TENNISARM_EN,
 };
 
 export function getComplaintArticle(slug: string, locale: string = 'nl'): ComplaintArticle | undefined {
