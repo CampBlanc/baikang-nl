@@ -30,29 +30,36 @@ export const COMPLAINT_CATEGORIES_NL: ComplaintCategory[] = [
         id: 'rugpijn',
         title: 'Rugpijn',
         slug: 'rugpijn',
-        hasDedicatedPage: true, // Actief: detailpagina /klachten/rugpijn bestaat
+        hasDedicatedPage: true,
         shortDesc: 'Onderrugklachten, stijfheid of aanhoudende spierspanning in de rug.',
       },
       {
         id: 'nekklachten',
         title: 'Nekklachten',
         slug: 'nekklachten',
-        hasDedicatedPage: true, // Actief: detailpagina /klachten/nekklachten bestaat
+        hasDedicatedPage: true,
         shortDesc: 'Stijve nek, spierkrampen, bewegingsbeperking en klachten door werkhouding of stress.',
       },
       {
         id: 'schouderklachten',
         title: 'Schouderklachten',
         slug: 'schouderklachten',
-        hasDedicatedPage: true, // Rustige tekstvermelding (geen dode link) tot dit artikel geschreven is
+        hasDedicatedPage: true,
         shortDesc: 'Pijn bij heffen of draaien, vastzittende schouderbladen of overbelaste pezen.',
       },
       {
         id: 'hoofdpijn',
-        title: 'Hoofdpijn & migraine',
+        title: 'Hoofdpijn',
         slug: 'hoofdpijn',
-        hasDedicatedPage: false,
-        shortDesc: 'Spanningshoofdpijn, een drukkend gevoel of terugkerende migraine.',
+        hasDedicatedPage: true,
+        shortDesc: 'Spanningshoofdpijn, een drukkende band om het hoofd of hoofdpijn vanuit nek en schouders.',
+      },
+      {
+        id: 'migraine',
+        title: 'Migraine',
+        slug: 'migraine',
+        hasDedicatedPage: true,
+        shortDesc: 'Aanvallen van bonzende pijn, misselijkheid of gevoeligheid voor licht en geluid.',
       },
       {
         id: 'spier-gewrichtsklachten',
@@ -237,15 +244,22 @@ export const COMPLAINT_CATEGORIES_EN: ComplaintCategory[] = [
         id: 'schouderklachten',
         title: 'Shoulder complaints',
         slug: 'schouderklachten',
-        hasDedicatedPage: false,
+        hasDedicatedPage: true,
         shortDesc: 'Discomfort when lifting or rotating, tight shoulder blades, or strained tendons.',
       },
       {
         id: 'hoofdpijn',
-        title: 'Headaches & migraine',
+        title: 'Headaches',
         slug: 'hoofdpijn',
+        hasDedicatedPage: true,
+        shortDesc: 'Tension headaches, a heavy feeling, or pressure radiating from the neck and shoulders.',
+      },
+      {
+        id: 'migraine',
+        title: 'Migraine',
+        slug: 'migraine',
         hasDedicatedPage: false,
-        shortDesc: 'Tension headaches, a heavy feeling, or recurring migraine attacks.',
+        shortDesc: 'Throbbing attacks, nausea, or sensitivity to light and sound.',
       },
       {
         id: 'spier-gewrichtsklachten',
@@ -420,7 +434,6 @@ export function getDedicatedSlugs(): string[] {
   return slugs;
 }
 
-// Deze functie geeft nu zowel het klacht-item als de bovenliggende categorie terug:
 export function getComplaint(slug: string, locale: string = 'nl') {
   const categories = getComplaintCategories(locale);
   for (const category of categories) {

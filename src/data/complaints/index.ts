@@ -42,16 +42,22 @@ export interface ComplaintArticle {
 import { RUGPIJN_NL, RUGPIJN_EN } from './rugpijn';
 import { NEKKLACHTEN_NL, NEKKLACHTEN_EN } from './nekklachten';
 import { SCHOUDERKLACHTEN_NL, SCHOUDERKLACHTEN_EN } from './schouderklachten';
+import { HOOFDPIJN_NL, HOOFDPIJN_EN } from './hoofdpijn';
+import { MIGRAINE_NL, MIGRAINE_EN } from './migraine';
 
 export * from './rugpijn';
 export * from './nekklachten';
 export * from './schouderklachten';
+export * from './hoofdpijn';
+export * from './migraine';
 
 export const COMPLAINT_ARTICLES_NL: Record<string, ComplaintArticle> = {
   rugpijn: RUGPIJN_NL,
   nekklachten: NEKKLACHTEN_NL,
   'nek-schouderklachten': NEKKLACHTEN_NL,
   schouderklachten: SCHOUDERKLACHTEN_NL,
+  hoofdpijn: HOOFDPIJN_NL,
+  migraine: MIGRAINE_NL,
 };
 
 export const COMPLAINT_ARTICLES_EN: Record<string, ComplaintArticle> = {
@@ -59,6 +65,8 @@ export const COMPLAINT_ARTICLES_EN: Record<string, ComplaintArticle> = {
   nekklachten: NEKKLACHTEN_EN,
   'nek-schouderklachten': NEKKLACHTEN_EN,
   schouderklachten: SCHOUDERKLACHTEN_EN,
+  hoofdpijn: HOOFDPIJN_EN,
+  migraine: MIGRAINE_EN,
 };
 
 export function getComplaintArticle(slug: string, locale: string = 'nl'): ComplaintArticle | undefined {
