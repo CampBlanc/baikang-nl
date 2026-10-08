@@ -16,6 +16,10 @@ const LEGACY_REDIRECTS: { from: string; to: string }[] = [
   { from: '/diensten/andere-diensten/cupping', to: '/behandelvormen/cupping' },
   { from: '/diensten/andere-diensten/guasha', to: '/behandelvormen/guasha' },
   { from: '/diensten/andere-diensten/reiki', to: '/behandelvormen/reiki' },
+  // Nog geen eigen invulling: tijdelijk naar bestaande inhoud
+  { from: '/laseracupunctuur', to: '/acupunctuur#laseracupunctuur' },
+  { from: '/blog', to: '/klachten' },
+  { from: '/blog/:path*', to: '/klachten' },
 ];
 
 const nextConfig: NextConfig = {
@@ -34,12 +38,13 @@ const nextConfig: NextConfig = {
         {
           source: `/:locale(nl|en)${from}`,
           destination: external ? to : `/:locale${to}`,
-          permanent: true,
+          // Blog is tijdelijk (307), zodat hij later weer kan worden ingezet
+          permanent: !from.startsWith('/blog'),
         },
         {
           source: from,
           destination: external ? to : `/nl${to}`,
-          permanent: true,
+          permanent: !from.startsWith('/blog'),
         },
       ];
     });
