@@ -29,8 +29,26 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-forest-deep border-t border-gold-antique/20 text-text-light-soft">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-16">
+    <footer className="relative overflow-hidden bg-forest-deep border-t border-gold-antique/20 text-text-light-soft">
+      {/* Lichte inktbamboe rechtsonder: sfeer achter de tekst, vervaagt naar links */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute bottom-0 right-0 z-0 h-[340px] w-[340px] translate-x-[12%] translate-y-[8%] select-none opacity-[0.10] sm:h-[460px] sm:w-[460px] lg:h-[600px] lg:w-[600px] lg:opacity-[0.16]"
+        style={{
+          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, #000 50%)',
+          maskImage: 'linear-gradient(to right, transparent 0%, #000 50%)',
+        }}
+      >
+        <Image
+          src="/images/bamboo-sumi-ink-light.webp"
+          alt=""
+          fill
+          sizes="(max-width: 1024px) 460px, 600px"
+          className="object-contain"
+        />
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-7xl px-6 py-16 lg:px-16">
         
         {/* BOVENSTE GEDEELTE */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
