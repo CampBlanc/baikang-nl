@@ -1,5 +1,13 @@
 import { createGoogleGenerativeAI } from '@ai-sdk/google';
-import { streamText } from 'ai';
+import { jsonSchema, stepCountIs, streamText, tool } from 'ai';
+import {
+  buildKnowledgeIndex,
+  buildRatesText,
+  getComplaintKnowledge,
+  getKnowledgeComplaintSlugs,
+  getTreatmentKnowledge,
+  KNOWLEDGE_TREATMENT_SLUGS,
+} from '@/data/chatKnowledge';
 
 export const maxDuration = 60;
 
@@ -9,6 +17,48 @@ const google = createGoogleGenerativeAI({
     process.env.GEMINI_API_KEY ||
     process.env.GOOGLE_API_KEY,
 });
+
+/* Tools: de assistent haalt zelf de volledige klacht- of behandelpagina op */
+function getKnowledgeTools(locale: string) {
+  const complaintSlugs = getKnowledgeComplaintSlugs();
+
+  return {
+    getComplaintPage: tool({
+      description:
+        'Haalt de volledige inhoud op van een klachtpagina van de Bai Kang website (uitleg, TCM-perspectief, behandeling, veiligheid, veelgestelde vragen en de URL). Gebruik dit bij elke vraag over een specifieke klacht uit de kennisbank.',
+      inputSchema: jsonSchema<{ slug: string }>({
+        type: 'object',
+        properties: {
+          slug: {
+            type: 'string',
+            enum: complaintSlugs,
+            description: 'De slug van de klacht uit de kennisbank.',
+          },
+        },
+        required: ['slug'],
+      }),
+      execute: async ({ slug }) =>
+        getComplaintKnowledge(slug, locale) ?? `Geen pagina gevonden voor "${slug}".`,
+    }),
+    getTreatmentPage: tool({
+      description:
+        'Haalt de volledige inhoud op van een behandelvormpagina (cupping, guasha of reiki): uitleg, verloop, veiligheid, prijs, boekingslink en URL.',
+      inputSchema: jsonSchema<{ slug: string }>({
+        type: 'object',
+        properties: {
+          slug: {
+            type: 'string',
+            enum: [...KNOWLEDGE_TREATMENT_SLUGS],
+            description: 'De slug van de behandelvorm.',
+          },
+        },
+        required: ['slug'],
+      }),
+      execute: async ({ slug }) =>
+        getTreatmentKnowledge(slug, locale) ?? `Geen pagina gevonden voor "${slug}".`,
+    }),
+  };
+}
 
 function getBaiKangPrompt(locale: string = 'nl'): string {
   const isEn = locale === 'en';
@@ -35,31 +85,9 @@ PRACTICE DETAILS & REGISTRATIONS:
 - AGB Healthcare Provider: 90122136 | AGB Clinic: 90097044 | KvK: 89643771
 - Acupuncture and other complementary treatments are not covered by standard basic health insurance. Some supplementary insurance policies may reimburse acupuncture or other complementary care. Reimbursement depends on the visitor's insurer and policy. Visitors should verify the conditions with their own health insurer.
 
-CORE SERVICES & FEES:
+CORE SERVICES & FEES (same source as the rates page on the website):
 
-1. Classical Acupuncture:
-   - Initial Intake + Acupuncture (90 min): €85
-     First visit with an intake, traditional Chinese medicine assessment, and acupuncture treatment.
-   - Follow-up Acupuncture (60 min): €65
-     60-minute regular acupuncture treatment.
-   - Intake + 3 Acupuncture Treatments: €260
-     First visit with intake and acupuncture treatment, followed by two additional appointments.
-   - 3 Acupuncture Treatments: €180
-     Three regular acupuncture treatments.
-   - Phone Consultation (10 min): no tariff is listed in the current online appointment overview.
-
-2. Quitting Smoking & Vaping with Needle-Free Laser Acupuncture:
-   - Rookvrij KLAAR: 1 consultation and laser acupuncture treatment (60 min): €180.
-     One consultation and laser acupuncture treatment. One session.
-   - Rookvrij SOLIDE: 3 consultations: €255.
-     One consultation and laser treatment, followed by two consecutive laser treatments.
-
-3. Complementary Therapies:
-   - Cupping treatment (60 min): €60
-   - Guasha treatment (60 min): €60
-   - Reiki treatment (60 min): €60
-
-The names Rookvrij KLAAR and Rookvrij SOLIDE are official treatment names and should not be translated into READY or SOLID.
+${buildRatesText('en')}
 
 ONLINE BOOKING & LINKS:
 When a visitor wants to book an appointment or clearly indicates that they want to make an appointment, provide the appropriate Markdown link.
@@ -75,6 +103,19 @@ When a visitor wants to book an appointment or clearly indicates that they want 
 
 - Contact page:
   [Contact page](/en/contact)
+
+KNOWLEDGE BASE — COMPLAINT AND TREATMENT PAGES:
+The website has a detailed page for each complaint and treatment below (format: slug | title — short description).
+
+${buildKnowledgeIndex('en')}
+
+How to use the knowledge base:
+- When a visitor asks about a specific complaint, symptom or treatment that matches (or closely relates to) an item above, FIRST call the tool getComplaintPage (complaints) or getTreatmentPage (cupping, guasha, reiki) with the matching slug, and base your answer on that page.
+- Match by meaning, not only by exact words. For example: hot flushes -> overgang, cramps during the period -> menstruatieklachten, tennis elbow -> tennisarm, ringing in the ears -> tinnitus. If several pages fit, fetch the most relevant one (at most two).
+- Summarise the relevant part in your own words; do not paste the whole page. Keep the TCM framing and the safety advice from the page.
+- End with a link to the page, using the URL from the tool result, for example: [Read more about menopause symptoms](/en/klachten/overgang).
+- If a complaint is not in the list, say that there is no specific page for it, answer cautiously in general terms, and suggest a personal consultation or the contact page.
+- Never mention tools, slugs or a knowledge base to the visitor.
 
 STRICT MEDICAL, ETHICAL & SAFETY FRAMEWORK:
 
@@ -116,7 +157,6 @@ CONVERSATION GUIDELINES:
 - Distinguish clearly between the traditional TCM perspective and conventional medical diagnosis.
 - If the visitor asks about reimbursement, explain that supplementary insurance conditions vary and that they should check their own policy.
 - If the visitor asks about a treatment price, give the current price exactly as listed above.
-- If the visitor asks about the phone consultation price, do not invent a price. Explain that no tariff is listed in the current online appointment overview.
 - When offering a booking link, place an empty line above it for calm readability.
 - Write naturally and professionally, without exaggerated chatbot enthusiasm.
 `;
@@ -143,31 +183,9 @@ PRAKTIJKGEGEVENS & REGISTRATIES:
 - AGB Zorgverlener: 90122136 | AGB Praktijk: 90097044 | KvK: 89643771
 - Acupunctuur en andere complementaire behandelingen vallen niet onder de wettelijke basisverzekering. Sommige aanvullende verzekeringen vergoeden acupunctuur of andere complementaire zorg. Of en hoeveel er wordt vergoed, hangt af van de polis en zorgverzekeraar. Bezoekers controleren dit zelf bij hun zorgverzekeraar.
 
-BEHANDELAANBOD & ACTUELE TARIEVEN:
+BEHANDELAANBOD & ACTUELE TARIEVEN (zelfde bron als de tarievenpagina op de website):
 
-1. Klassieke Acupunctuur:
-   - Intake + Acupunctuur (90 min): €85
-     Eerste bezoek met intake, TCM-diagnostiek en een reguliere acupunctuurbehandeling.
-   - Acupunctuur (60 min): €65
-     60 minuten reguliere acupunctuurbehandeling.
-   - Intake + 3x acupunctuurbehandeling: €260
-     Eerste bezoek met intake gevolgd door een reguliere acupunctuurbehandeling en twee vervolgafspraken.
-   - Acupunctuur 3 behandelingen: €180
-     Drie reguliere acupunctuurbehandelingen.
-   - Telefonisch consult (10 min): er staat momenteel geen tarief vermeld in het online afsprakenoverzicht.
-
-2. Stoppen met Roken & Vapen met Naaldvrije Laseracupunctuur:
-   - Rookvrij KLAAR: 1 consult en laseracupunctuurbehandeling (60 min): €180.
-     Eén consult en laseracupunctuurbehandeling. Eén sessie.
-   - Rookvrij SOLIDE: 3 consulten: €255.
-     Eén consultgesprek en laserbehandeling, gevolgd door twee opeenvolgende laserbehandelingen.
-
-De namen Rookvrij KLAAR en Rookvrij SOLIDE zijn officiële behandelnamen. Vertaal deze namen niet naar READY of SOLID.
-
-3. Aanvullende Behandelvormen:
-   - Cupping behandeling (60 min): €60
-   - Guasha behandeling (60 min): €60
-   - Reiki behandeling (60 min): €60
+${buildRatesText('nl')}
 
 AFSPRAKEN & LINKS:
 Wanneer een bezoeker een afspraak wil inplannen of duidelijk aangeeft een afspraak te willen maken, bied je de juiste klikbare Markdown-link aan.
@@ -183,6 +201,19 @@ Wanneer een bezoeker een afspraak wil inplannen of duidelijk aangeeft een afspra
 
 - Contactpagina:
   [Contact opnemen](/contact)
+
+KENNISBANK — KLACHT- EN BEHANDELPAGINA'S:
+De website heeft voor elke klacht en behandelvorm hieronder een uitgebreide pagina (formaat: slug | titel — korte omschrijving).
+
+${buildKnowledgeIndex('nl')}
+
+Zo gebruik je de kennisbank:
+- Vraagt een bezoeker naar een klacht, symptoom of behandelvorm die past bij (of sterk lijkt op) een onderwerp hierboven, roep dan EERST de tool getComplaintPage (klachten) of getTreatmentPage (cupping, guasha, reiki) aan met de juiste slug, en baseer je antwoord op die pagina.
+- Koppel op betekenis, niet alleen op letterlijke woorden. Bijvoorbeeld: opvliegers -> overgang, krampen tijdens de menstruatie -> menstruatieklachten, golfarm -> tennisarm, piep in het oor -> tinnitus. Passen er meerdere pagina's, haal dan de meest relevante op (maximaal twee).
+- Vat het relevante deel samen in je eigen woorden; plak niet de hele pagina. Behoud de TCM-invalshoek en het veiligheidsadvies van de pagina.
+- Sluit af met een link naar de pagina, met de URL uit het toolresultaat, bijvoorbeeld: [Lees meer over overgangsklachten](/nl/klachten/overgang).
+- Staat een klacht niet in de lijst, zeg dan dat er geen specifieke pagina over is, antwoord voorzichtig in algemene termen en stel een persoonlijk consult of de contactpagina voor.
+- Noem nooit tools, slugs of een kennisbank tegenover de bezoeker.
 
 STRIKTE ETHISCHE & MEDISCHE KADERS:
 
@@ -224,7 +255,6 @@ GESPREKSRICHTLIJNEN:
 - Maak duidelijk onderscheid tussen de traditionele TCM-invalshoek en reguliere medische diagnostiek.
 - Leg bij vragen over vergoeding uit dat de voorwaarden van aanvullende verzekeringen verschillen en dat de bezoeker de eigen polis moet controleren.
 - Geef bij vragen over een behandelingstarief exact het actuele tarief zoals hierboven vermeld.
-- Als iemand vraagt naar het tarief van het telefonisch consult, verzin dan geen bedrag. Geef aan dat er momenteel geen tarief wordt vermeld in het online afsprakenoverzicht.
 - Sluit je antwoord bij een vraag of uitnodiging tot boeken af met een duidelijke witregel boven de boekingslink.
 - Geen overdreven chatbot-enthousiasme; behoud de serene en warme toon van Bai Kang.
 `;
@@ -244,12 +274,16 @@ export async function POST(req: Request) {
       );
     }
 
-    const systemPrompt = getBaiKangPrompt(locale);
+    const safeLocale = locale === 'en' ? 'en' : 'nl';
+    const systemPrompt = getBaiKangPrompt(safeLocale);
 
     const result = streamText({
-      model: google(process.env.GEMINI_MODEL ?? 'gemini-1.5-flash'),
+      model: google(process.env.GEMINI_MODEL ?? 'gemini-2.5-flash'),
       system: systemPrompt,
       messages,
+      tools: getKnowledgeTools(safeLocale),
+      // Ruimte voor: pagina('s) ophalen -> antwoord schrijven
+      stopWhen: stepCountIs(4),
       maxOutputTokens: 2048,
     });
 
