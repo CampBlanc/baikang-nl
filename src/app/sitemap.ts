@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { getDedicatedSlugs } from '@/data/complaintsData';
+import { TREATMENT_SLUGS } from '@/data/treatments';
 
 const BASE_URL = 'https://baikang.nl';
 
@@ -20,11 +21,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Haalt dynamisch alle actieve klacht-slugs op (inclusief eventuele actieve subklachten)
   const complaintSlugs = getDedicatedSlugs();
+  const treatmentPages = TREATMENT_SLUGS.map((slug) => `/behandelvormen/${slug}`);
 
   const routes: MetadataRoute.Sitemap = [];
 
   // 1. Statische pagina's toevoegen voor beide talen
-  for (const page of staticPages) {
+  for (const page of [...staticPages, ...treatmentPages]) {
     for (const locale of locales) {
       routes.push({
         url: `${BASE_URL}/${locale}${page}`,

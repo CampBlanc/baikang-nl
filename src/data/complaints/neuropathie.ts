@@ -22,7 +22,7 @@ export const NEUROPATHIE_NL: ComplaintArticle = {
     paragraphs: [
       'Bij neuropathie werken de zenuwen in armen en benen niet meer goed: de "bedrading" is beschadigd, vaak vooral aan de uiteinden. Daardoor worden signalen minder goed doorgegeven of ontstaan er juist spontane pijnprikkels. Wanneer zenuwen op meerdere plaatsen in het lichaam zijn aangedaan, spreken we van polyneuropathie.',
 
-      'De klachten hangen af van welke zenuwen betrokken zijn. Bij de gevoelszenuwen gaat het om een doof gevoel, het gevoel op "kussens" te lopen, tintelingen, prikkelingen, brandende pijn en evenwichtsproblemen. Soms doet een gewone prikkel al pijn, zoals een laken op de voeten of warm douchewater. Bij de bewegingszenuwen kunnen kramp, spierzwakte en dunner wordende spieren optreden.',
+      'De klachten hangen af van welke zenuwen betrokken zijn. Bij de gevoelszenuwen gaat het om een doof gevoel, het gevoel op watten of "kussens" te lopen, tintelingen, prikkelingen, brandende pijn en evenwichtsproblemen. Voeten kunnen koud aanvoelen terwijl ze warm zijn. Soms doet een gewone prikkel al pijn, zoals een laken op de voeten of warm douchewater. Bij de bewegingszenuwen kunnen kramp, spierzwakte en dunner wordende spieren optreden.',
 
       'Neuropathie kan veel oorzaken hebben, zoals diabetes, overmatig alcoholgebruik, een vitaminetekort, bepaalde medicijnen, infecties zoals de ziekte van Lyme of gordelroos, auto-immuunziekten en erfelijke aanleg. Bij een deel van de mensen wordt geen duidelijke oorzaak gevonden.',
     ],
@@ -84,6 +84,16 @@ export const NEUROPATHIE_NL: ComplaintArticle = {
         'Acupunctuur kan worden ingezet ter ondersteuning bij klachten van neuropathie, zoals pijn, tintelingen en een doof gevoel. De behandeling wordt afgestemd op de locatie van de klachten en de factoren die ze beïnvloeden. De mate waarin mensen verandering ervaren, verschilt per persoon.',
     },
     {
+      question: 'Is er onderzoek gedaan naar acupunctuur bij neuropathie?',
+      answer:
+        'Ja, er is enig onderzoek gedaan, vooral bij zenuwklachten die ontstonden als bijwerking van medicatie, zoals na chemotherapie. In verschillende studies ervoeren mensen na een reeks behandelingen minder pijn, tintelingen en gevoelloosheid, en soms een betere fijne motoriek, evenwicht en slaap. Tegelijk blijven bij een deel van de mensen de klachten gelijk of keren ze later terug. De resultaten verschillen dus per persoon.',
+    },
+    {
+      question: 'Wat merken mensen van de behandelingen?',
+      answer:
+        'Mensen beschrijven onder meer dat de scherpste randjes van de klachten afgaan, dat ze zich meer ontspannen voelen en beter slapen. Ook het behandelmoment zelf wordt vaak als rustgevend ervaren: even stil liggen, zonder te hoeven vechten tegen het gevoel in handen of voeten.',
+    },
+    {
       question: 'Waarom wordt gevraagd of warmte of kou de klachten beïnvloedt?',
       answer:
         'Binnen de Chinese geneeskunde geeft de reactie op warmte, kou, rust en beweging aanwijzingen over de aard van de verstoring. Doet warmte goed, dan wordt anders behandeld dan wanneer warmte de klachten juist verergert.',
@@ -136,7 +146,7 @@ export const NEUROPATHIE_EN: ComplaintArticle = {
     paragraphs: [
       'With neuropathy, the nerves in the arms and legs no longer work properly: the "wiring" is damaged, often mainly at the ends. As a result, signals are passed on less well or spontaneous pain signals arise. When nerves are affected in several places in the body, this is called polyneuropathy.',
 
-      'The symptoms depend on which nerves are involved. With sensory nerves, this includes numbness, the feeling of walking on "cushions", tingling, pins and needles, burning pain and balance problems. Sometimes an ordinary stimulus already hurts, such as a sheet on the feet or warm shower water. With motor nerves, cramps, muscle weakness and thinning muscles may occur.',
+      'The symptoms depend on which nerves are involved. With sensory nerves, this includes numbness, the feeling of walking on cotton wool or "cushions", tingling, pins and needles, burning pain and balance problems. Feet may feel cold while they are actually warm. Sometimes an ordinary stimulus already hurts, such as a sheet on the feet or warm shower water. With motor nerves, cramps, muscle weakness and thinning muscles may occur.',
 
       'Neuropathy can have many causes, such as diabetes, excessive alcohol use, vitamin deficiency, certain medications, infections such as Lyme disease or shingles, autoimmune diseases and hereditary factors. In some people, no clear cause is found.',
     ],
@@ -196,6 +206,16 @@ export const NEUROPATHIE_EN: ComplaintArticle = {
       question: 'Can acupuncture help with neuropathy?',
       answer:
         'Acupuncture can be used as support for symptoms of neuropathy, such as pain, tingling and numbness. Treatment is tailored to the location of the symptoms and the factors that influence them. The degree of change people experience varies per person.',
+    },
+    {
+      question: 'Has acupuncture for neuropathy been researched?',
+      answer:
+        'Yes, some research has been done, mainly on nerve symptoms that developed as a side effect of medication, such as after chemotherapy. In several studies, people experienced less pain, tingling and numbness after a series of treatments, and sometimes better fine motor skills, balance and sleep. At the same time, symptoms remain unchanged or return later in some people. Results therefore vary per person.',
+    },
+    {
+      question: 'What do people notice from the treatments?',
+      answer:
+        'People describe, among other things, that the sharpest edges are taken off their symptoms, and that they feel more relaxed and sleep better. The treatment itself is also often experienced as calming: lying still for a while, without having to fight the sensations in the hands or feet.',
     },
     {
       question: 'Why am I asked whether warmth or cold affects my symptoms?',

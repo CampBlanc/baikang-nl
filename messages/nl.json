@@ -18,7 +18,7 @@
       "stress": "Stress & slaap",
       "energy": "Energie & herstel",
       "digestion": "Maag & darmen",
-      "gender": "Vrouw & hormonale klachten",
+      "gender": "Vrouw, man & hormonen",
       "smoking": "Stoppen met roken & vapen"
     },
     "acupunctureMenu": {
@@ -69,7 +69,7 @@
       "catDigestion": "Maag & darmen",
       "catDigestionDesc": "Een opgeblazen gevoel, buikklachten en andere spijsverteringsklachten.",
       "catGender": "Vrouw & man",
-      "catGenderDesc": "Menstruatie, overgang en andere lichamelijke veranderingen.",
+      "catGenderDesc": "Cyclus, overgang, vruchtbaarheid en mannenklachten.",
       "catSmoking": "Stoppen met roken & vapen",
       "catSmokingDesc": "Laseracupunctuur en ooracupunctuur als ondersteuning bij het stoppen.",
       "cta": "Bekijk alle klachten"
@@ -80,7 +80,7 @@
       "cta": "Meer over mijn werkwijze"
     },
     "About": {
-      "badge": "Achter Bai Kang",
+      "badge": "Achter Bái Kāng",
       "title": "Persoonlijke aandacht begint met goed luisteren naar de cliënt.",
       "subtitle": "Patrick Witkamp · Acupuncturist",
       "intro": "Mijn doel is om verder te kijken dan alleen het symptoom. Met de nuchterheid van het westen en de inzichten van de Traditionele Chinese Geneeskunde zoek ik naar een behandeling die past bij jou.",
@@ -166,7 +166,7 @@
       },
       "gender": {
         "title": "Vrouw & man",
-        "description": "Klachten rondom menstruatie, overgang en andere lichamelijke veranderingen."
+        "description": "Klachten rondom menstruatie, overgang, vruchtbaarheid, erectie, prostaat en blaas."
       },
       "smoking": {
         "title": "Stoppen met roken & vapen",
@@ -246,8 +246,8 @@
     "catEnergyDesc": "Aanhoudende vermoeidheid, weinig energie of het gevoel dat je lichaam moeite heeft met herstellen na inspanning.",
     "catDigestionTitle": "Maag & Darmen",
     "catDigestionDesc": "Een opgeblazen gevoel, maagklachten, trage vertering en buikkrampen.",
-    "catGenderTitle": "Vrouw & Hormonale Balans",
-    "catGenderDesc": "Cyclusgerelateerde klachten, overgangsverschijnselen en emotionele schommelingen.",
+    "catGenderTitle": "Vrouw, Man & Hormonen",
+    "catGenderDesc": "Cyclusklachten, overgang, vruchtbaarheid, erectie- en prostaatklachten en blaasklachten.",
     "catSmokingTitle": "Stoppen met Roken & Vapen",
     "catSmokingDesc": "Specifieke trajecten met laseracupunctuur en ooracupunctuur ter ondersteuning bij het stoppen met roken en vapen.",
     "ctaComplaints": "Bekijk alle specifieke indicaties op de klachtenpagina",
@@ -328,11 +328,13 @@
     "additional": {
       "eyebrow": "Integrale Aanpak",
       "title": "Aanvullende behandelvormen.",
-      "intro": "Naast acupunctuur kunnen ondersteunende methoden worden ingezet om spierspanning lokaal los te maken of circulatie te verdiepen.",
+      "intro": "Naast acupunctuur kunnen ondersteunende methoden worden ingezet om spierspanning lokaal los te maken, de circulatie te verdiepen of diepe ontspanning te ondersteunen.",
       "cuppingTitle": "Cupping",
       "cuppingDesc": "Bij cupping worden glazen of siliconen cups op de huid geplaatst om een milde zuigkracht te creëren. Binnen TCM wordt deze methode onder meer toegepast bij gespannen of stijve spieren en als aanvullende behandelvorm.",
       "guashaTitle": "Guasha",
       "guashaDesc": "Bij Guasha wordt met een zacht, glad instrument over de geoliede huid geschraapt. Binnen TCM wordt deze techniek onder meer gebruikt als aanvullende behandeling bij spierspanning en stijfheid.",
+      "reikiTitle": "Reiki",
+      "reikiDesc": "Bij reiki worden de handen licht op of net boven het lichaam gelegd, terwijl je gekleed op de behandeltafel ligt. Een zachte, Japanse methode die wordt ingezet voor diepe ontspanning en rust, los of als afsluiting van een acupunctuurbehandeling.",
       "laserTitle": "Laseracupunctuur",
       "laserDesc": "Wanneer naalden niet wenselijk of passend zijn, biedt laseracupunctuur een naaldvrije behandelvorm. Binnen Bai Kang wordt laser daarnaast specifiek ingezet binnen het gerichte traject voor stoppen met roken en vapen."
     },
@@ -457,6 +459,7 @@
       }
     },
     "Brand": {
+      "eyebrow": "Waarom Bái Kāng?",
       "title": "Een rustige plek voor aandacht en behandeling.",
       "intro": "Bai Kang is meer dan de naam van mijn praktijk. Het is de plek waarin mijn verschillende ervaringen samenkomen.",
       "baiTitle": "Bái (白), Wit, zuiver & oprecht",

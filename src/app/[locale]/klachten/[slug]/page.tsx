@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Link } from '@/i18n/navigation';
 import AtmosphericBamboo from '@/components/AtmosphericBamboo';
+import InlineLinks from '@/components/InlineLinks';
 import {
   getComplaint,
   getDedicatedSlugs,
@@ -348,7 +349,7 @@ export default async function ComplaintDetailPage({
                       {faq.question}
                     </h3>
                     <p className="font-body text-sm sm:text-base text-text-soft leading-relaxed">
-                      {faq.answer}
+                      <InlineLinks text={faq.answer} />
                     </p>
                   </div>
                 ))}

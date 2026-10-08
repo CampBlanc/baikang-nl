@@ -90,6 +90,40 @@ import {
 } from './chronische-verkoudheid';
 import { GORDELROOS_NL, GORDELROOS_EN } from './gordelroos';
 import { NEUROPATHIE_NL, NEUROPATHIE_EN } from './neuropathie';
+import {
+  AANGEZICHTSPIJN_NL,
+  AANGEZICHTSPIJN_EN,
+} from './aangezichtspijn';
+import {
+  AANGEZICHTSVERLAMMING_NL,
+  AANGEZICHTSVERLAMMING_EN,
+} from './aangezichtsverlamming';
+import { DUIZELIGHEID_NL, DUIZELIGHEID_EN } from './duizeligheid';
+import { TINNITUS_NL, TINNITUS_EN } from './tinnitus';
+import {
+  PRIKKELBARE_DARM_NL,
+  PRIKKELBARE_DARM_EN,
+} from './prikkelbare-darm';
+import {
+  MAAGKLACHTEN_REFLUX_NL,
+  MAAGKLACHTEN_REFLUX_EN,
+} from './maagklachten-reflux';
+import { DARMKLACHTEN_NL, DARMKLACHTEN_EN } from './darmklachten';
+import {
+  OPGEBLAZEN_GEVOEL_NL,
+  OPGEBLAZEN_GEVOEL_EN,
+} from './opgeblazen-gevoel';
+import { MISSELIJKHEID_NL, MISSELIJKHEID_EN } from './misselijkheid';
+import {
+  SPIJSVERTERINGSKLACHTEN_NL,
+  SPIJSVERTERINGSKLACHTEN_EN,
+} from './spijsverteringsklachten';
+import { MENSTRUATIEKLACHTEN_NL, MENSTRUATIEKLACHTEN_EN } from './menstruatieklachten';
+import { ENDOMETRIOSE_NL, ENDOMETRIOSE_EN } from './endometriose';
+import { OVERGANG_NL, OVERGANG_EN } from './overgang';
+import { VRUCHTBAARHEID_NL, VRUCHTBAARHEID_EN } from './vruchtbaarheid';
+import { MANNENKLACHTEN_NL, MANNENKLACHTEN_EN } from './mannenklachten';
+import { BLAASKLACHTEN_NL, BLAASKLACHTEN_EN } from './blaasklachten';
 
 
 /* =======================================================================
@@ -122,6 +156,22 @@ export * from './somberheid';
 export * from './chronische-verkoudheid';
 export * from './gordelroos';
 export * from './neuropathie';
+export * from './aangezichtspijn';
+export * from './aangezichtsverlamming';
+export * from './duizeligheid';
+export * from './tinnitus';
+export * from './prikkelbare-darm';
+export * from './maagklachten-reflux';
+export * from './darmklachten';
+export * from './opgeblazen-gevoel';
+export * from './misselijkheid';
+export * from './spijsverteringsklachten';
+export * from './menstruatieklachten';
+export * from './endometriose';
+export * from './overgang';
+export * from './vruchtbaarheid';
+export * from './mannenklachten';
+export * from './blaasklachten';
 
 
 /* =======================================================================
@@ -182,6 +232,38 @@ export const COMPLAINT_ARTICLES_NL: Record<string, ComplaintArticle> = {
   gordelroos: GORDELROOS_NL,
 
   neuropathie: NEUROPATHIE_NL,
+
+  aangezichtspijn: AANGEZICHTSPIJN_NL,
+
+  aangezichtsverlamming: AANGEZICHTSVERLAMMING_NL,
+
+  duizeligheid: DUIZELIGHEID_NL,
+
+  tinnitus: TINNITUS_NL,
+
+  'prikkelbare-darm': PRIKKELBARE_DARM_NL,
+
+  'maagklachten-reflux': MAAGKLACHTEN_REFLUX_NL,
+
+  darmklachten: DARMKLACHTEN_NL,
+
+  'opgeblazen-gevoel': OPGEBLAZEN_GEVOEL_NL,
+
+  misselijkheid: MISSELIJKHEID_NL,
+
+  spijsverteringsklachten: SPIJSVERTERINGSKLACHTEN_NL,
+
+  menstruatieklachten: MENSTRUATIEKLACHTEN_NL,
+
+  endometriose: ENDOMETRIOSE_NL,
+
+  overgang: OVERGANG_NL,
+
+  vruchtbaarheid: VRUCHTBAARHEID_NL,
+
+  mannenklachten: MANNENKLACHTEN_NL,
+
+  blaasklachten: BLAASKLACHTEN_NL,
 };
 
 
@@ -243,6 +325,38 @@ export const COMPLAINT_ARTICLES_EN: Record<string, ComplaintArticle> = {
   gordelroos: GORDELROOS_EN,
 
   neuropathie: NEUROPATHIE_EN,
+
+  aangezichtspijn: AANGEZICHTSPIJN_EN,
+
+  aangezichtsverlamming: AANGEZICHTSVERLAMMING_EN,
+
+  duizeligheid: DUIZELIGHEID_EN,
+
+  tinnitus: TINNITUS_EN,
+
+  'prikkelbare-darm': PRIKKELBARE_DARM_EN,
+
+  'maagklachten-reflux': MAAGKLACHTEN_REFLUX_EN,
+
+  darmklachten: DARMKLACHTEN_EN,
+
+  'opgeblazen-gevoel': OPGEBLAZEN_GEVOEL_EN,
+
+  misselijkheid: MISSELIJKHEID_EN,
+
+  spijsverteringsklachten: SPIJSVERTERINGSKLACHTEN_EN,
+
+  menstruatieklachten: MENSTRUATIEKLACHTEN_EN,
+
+  endometriose: ENDOMETRIOSE_EN,
+
+  overgang: OVERGANG_EN,
+
+  vruchtbaarheid: VRUCHTBAARHEID_EN,
+
+  mannenklachten: MANNENKLACHTEN_EN,
+
+  blaasklachten: BLAASKLACHTEN_EN,
 };
 
 

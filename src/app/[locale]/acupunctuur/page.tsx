@@ -509,7 +509,7 @@ export default function AcupuncturePage() {
       {/* ========================================================
           11. AFSLUITENDE DONKERE CTA
           ======================================================== */}
-      <section className="bg-forest-deep py-20 px-6 sm:px-12 text-center text-text-light">
+      <section className="bg-forest-mid py-20 px-6 sm:px-12 text-center text-text-light">
         <div className="max-w-3xl mx-auto">
           <FadeIn delay={0}>
             <p className="eyebrow text-gold-antique mb-4">{t('finalCtaEyebrow')}</p>

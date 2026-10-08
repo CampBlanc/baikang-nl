@@ -134,7 +134,7 @@ export default function HomePage() {
       </section>
 
       {/* 4. EINDBANNER — Donkergroen vlak met gouden bamboe-accent */}
-      <section className="relative overflow-hidden bg-forest-deep px-6 pt-24 pb-16 lg:pt-32 lg:pb-20 text-center border-t-4 border-gold-antique">
+      <section className="relative overflow-hidden bg-forest-mid px-6 pt-24 pb-16 lg:pt-32 lg:pb-20 text-center border-t-4 border-gold-antique">
         <BambooWatermark 
           variant="cluster" 
           position="bottom-right" 

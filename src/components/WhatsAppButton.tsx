@@ -1,6 +1,12 @@
+'use client';
+
+import { useShowAfterScroll } from '@/components/useShowAfterScroll';
+
 export default function WhatsAppButton() {
   const phoneNumber = '31683498042';
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
+  // Op mobiel pas tonen na de hero, zodat de hero-knoppen vrij blijven
+  const visible = useShowAfterScroll();
 
   return (
     <a
@@ -8,10 +14,12 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contact opnemen via WhatsApp"
-      className="fixed bottom-5 left-5 sm:bottom-7 sm:left-7 z-50 flex h-13 w-13 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-[#25D366]/40"
+      className={`fixed bottom-[5.25rem] right-5 sm:bottom-7 sm:left-7 sm:right-auto z-40 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-[#25D366]/40 print:hidden ${
+        visible ? 'opacity-100' : 'max-sm:pointer-events-none max-sm:translate-y-4 max-sm:opacity-0'
+      }`}
     >
       <svg
-        className="h-7 w-7 sm:h-8 sm:w-8 fill-current"
+        className="h-6 w-6 sm:h-8 sm:w-8 fill-current"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"

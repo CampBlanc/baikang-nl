@@ -345,7 +345,7 @@ export default function MethodePage() {
             </FadeIn>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
             {/* Cupping */}
             <FadeIn delay={100}>
               <div className="border-t border-border-light/80 pt-6">
@@ -358,6 +358,13 @@ export default function MethodePage() {
                 <p className="font-body text-sm text-text-soft leading-relaxed">
                   {t('additional.cuppingDesc')}
                 </p>
+                <Link
+                  href="/behandelvormen/cupping"
+                  className="inline-flex items-center gap-1.5 mt-4 font-body text-xs font-semibold uppercase tracking-wider text-forest-deep hover:text-gold-antique transition-colors"
+                >
+                  <span>{locale === 'en' ? 'Read more' : 'Lees meer'}</span>
+                  <span aria-hidden="true">→</span>
+                </Link>
               </div>
             </FadeIn>
 
@@ -373,11 +380,40 @@ export default function MethodePage() {
                 <p className="font-body text-sm text-text-soft leading-relaxed">
                   {t('additional.guashaDesc')}
                 </p>
+                <Link
+                  href="/behandelvormen/guasha"
+                  className="inline-flex items-center gap-1.5 mt-4 font-body text-xs font-semibold uppercase tracking-wider text-forest-deep hover:text-gold-antique transition-colors"
+                >
+                  <span>{locale === 'en' ? 'Read more' : 'Lees meer'}</span>
+                  <span aria-hidden="true">→</span>
+                </Link>
+              </div>
+            </FadeIn>
+
+            {/* Reiki */}
+            <FadeIn delay={300}>
+              <div className="border-t border-border-light/80 pt-6">
+                <span className="font-chinese text-gold text-sm block mb-2" aria-hidden="true">
+                  霊気
+                </span>
+                <h3 className="font-display text-2xl text-forest-deep mb-3">
+                  {t('additional.reikiTitle')}
+                </h3>
+                <p className="font-body text-sm text-text-soft leading-relaxed">
+                  {t('additional.reikiDesc')}
+                </p>
+                <Link
+                  href="/behandelvormen/reiki"
+                  className="inline-flex items-center gap-1.5 mt-4 font-body text-xs font-semibold uppercase tracking-wider text-forest-deep hover:text-gold-antique transition-colors"
+                >
+                  <span>{locale === 'en' ? 'Read more' : 'Lees meer'}</span>
+                  <span aria-hidden="true">→</span>
+                </Link>
               </div>
             </FadeIn>
 
             {/* Laseracupunctuur */}
-            <FadeIn delay={300}>
+            <FadeIn delay={400}>
               <div className="border-t border-border-light/80 pt-6">
                 <span className="font-chinese text-gold text-sm block mb-2" aria-hidden="true">
                   激光
@@ -388,6 +424,13 @@ export default function MethodePage() {
                 <p className="font-body text-sm text-text-soft leading-relaxed">
                   {t('additional.laserDesc')}
                 </p>
+                <Link
+                  href="/acupunctuur#laseracupunctuur"
+                  className="inline-flex items-center gap-1.5 mt-4 font-body text-xs font-semibold uppercase tracking-wider text-forest-deep hover:text-gold-antique transition-colors"
+                >
+                  <span>{locale === 'en' ? 'Read more' : 'Lees meer'}</span>
+                  <span aria-hidden="true">→</span>
+                </Link>
               </div>
             </FadeIn>
           </div>
@@ -554,7 +597,7 @@ export default function MethodePage() {
       {/* ========================================================
           10. SLOT & CTA — Diep Donkergroen
           ======================================================== */}
-      <section className="bg-forest-deep text-text-light py-20 sm:py-28 px-6 sm:px-10 lg:px-16 relative overflow-hidden">
+      <section className="bg-forest-mid text-text-light py-20 sm:py-28 px-6 sm:px-10 lg:px-16 relative overflow-hidden">
         <div className="mx-auto max-w-4xl text-center relative z-10">
           <FadeIn delay={0}>
             <span className="font-chinese text-gold text-2xl block mb-3" aria-hidden="true">

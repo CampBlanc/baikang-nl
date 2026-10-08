@@ -529,7 +529,7 @@ export default function TarievenPage() {
       {/* ========================================================
           6. AFSLUITENDE CTA
           ======================================================== */}
-      <section className="bg-forest-deep text-ivory py-20 px-6 text-center border-t-4 border-gold-antique">
+      <section className="bg-forest-mid text-ivory py-20 px-6 text-center border-t-4 border-gold-antique">
         <div className="max-w-3xl mx-auto space-y-6">
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-ivory leading-tight">
             {t('ctaTitle')}

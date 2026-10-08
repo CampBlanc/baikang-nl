@@ -510,7 +510,7 @@ export default function OverMijPage() {
               <span className="font-chinese text-gold text-4xl sm:text-5xl block mb-4" aria-hidden="true">
                 白康
               </span>
-              <p className="eyebrow text-gold-light mb-2">Waarom Bai Kang?</p>
+              <p className="eyebrow text-gold-light mb-2">{t('Brand.eyebrow')}</p>
               <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-ivory mb-4">
                 {t('Brand.title')}
               </h2>
@@ -570,7 +570,7 @@ export default function OverMijPage() {
               Patrick Witkamp
             </p>
             <p className="font-body text-xs sm:text-sm uppercase tracking-widest text-text-muted mt-1">
-              Acupuncturist · Bai Kang TCM
+              Acupuncturist · Bái Kāng TCM
             </p>
           </FadeIn>
 

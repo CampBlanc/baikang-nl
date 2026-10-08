@@ -66,6 +66,9 @@ export default function Header() {
       children: [
         { label: isNl ? 'Mijn werkwijze' : 'My approach', href: '/methode' },
         { label: isNl ? 'Aanvullende behandelvormen' : 'Complementary therapies', href: '/methode#aanvullend' },
+        { label: 'Cupping', href: '/behandelvormen/cupping' },
+        { label: 'Guasha', href: '/behandelvormen/guasha' },
+        { label: 'Reiki', href: '/behandelvormen/reiki' },
         { label: isNl ? 'Tarieven & vergoedingen' : 'Rates & reimbursements', href: '/tarieven' },
       ],
     },
@@ -85,6 +88,8 @@ export default function Header() {
 
   const isItemActive = (href: string) => {
     if (href === '/') return pathname === '/';
+    // Behandelvorm-pagina's horen bij het menu-item Methode
+    if (href === '/methode' && pathname.includes('/behandelvormen/')) return true;
     return pathname.startsWith(href);
   };
 
@@ -109,7 +114,7 @@ export default function Header() {
             />
           </div>
           <span className="font-display text-2xl font-bold tracking-tight text-forest-deep transition-colors group-hover:text-forest">
-            Bai Kang
+            Bái Kāng
           </span>
         </Link>
 

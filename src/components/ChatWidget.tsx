@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { useLocale } from 'next-intl';
+import { useShowAfterScroll } from '@/components/useShowAfterScroll';
 
 interface Message {
   id: string;
@@ -14,6 +15,8 @@ export default function ChatWidget() {
   const isEn = locale === 'en';
 
   const [isOpen, setIsOpen] = useState(false);
+  // Op mobiel pas tonen na de hero, zodat de hero-knoppen vrij blijven
+  const showLauncher = useShowAfterScroll();
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -247,14 +250,18 @@ export default function ChatWidget() {
         <button
           onClick={() => setIsOpen(true)}
           aria-label={isEn ? 'Ask a question about acupuncture' : 'Vragen over acupunctuur & intake'}
-          className={`group bg-forest-deep text-ivory hover:bg-forest-dark border border-gold-antique/50 shadow-xl rounded-full px-4 py-3 sm:px-5 sm:py-3.5 flex items-center gap-3 transition-all duration-300 active:scale-95 ${
-            isScrolling ? 'opacity-40 hover:opacity-100' : 'opacity-100'
+          className={`group bg-forest-deep text-ivory hover:bg-forest-dark border border-gold-antique/50 shadow-xl rounded-full h-12 w-12 justify-center sm:h-auto sm:w-auto sm:px-5 sm:py-3.5 flex items-center gap-3 transition-all duration-300 active:scale-95 ${
+            !showLauncher
+              ? 'max-sm:pointer-events-none max-sm:translate-y-4 max-sm:opacity-0'
+              : isScrolling
+                ? 'opacity-40 hover:opacity-100'
+                : 'opacity-100'
           }`}
         >
-          <span className="font-serif text-lg text-gold-antique group-hover:scale-110 transition-transform">
+          <span className="font-serif text-xl sm:text-lg text-gold-antique group-hover:scale-110 transition-transform">
             問
           </span>
-          <span className="text-xs sm:text-sm font-medium tracking-wide">
+          <span className="hidden sm:inline text-sm font-medium tracking-wide">
             {isEn ? 'Questions & Intake' : 'Vragen & Anamnese'}
           </span>
         </button>
@@ -269,7 +276,7 @@ export default function ChatWidget() {
               <span className="font-serif text-xl text-gold-antique">問</span>
               <div>
                 <p className="font-serif text-base tracking-wide text-ivory font-medium">
-                  {isEn ? 'Bai Kang Guide' : 'Bai Kang TCM Gids'}
+                  {isEn ? 'Bái Kāng Guide' : 'Bái Kāng TCM Gids'}
                 </p>
                 <p className="text-[11px] text-stone-300">
                   {isEn ? 'Acupuncture & Clinic assistance' : 'Rustige toelichting & behandeladvies'}

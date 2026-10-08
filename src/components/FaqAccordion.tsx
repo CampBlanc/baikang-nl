@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import InlineLinks from '@/components/InlineLinks';
 
 export interface FaqItem {
   id?: string;
@@ -57,7 +58,9 @@ export default function FaqAccordion({
               </button>
               {isOpen && (
                 <div className="mt-3 pr-6 font-body text-sm sm:text-base leading-relaxed text-text-soft">
-                  <p>{item.answer}</p>
+                  <p>
+                    <InlineLinks text={item.answer} />
+                  </p>
                 </div>
               )}
             </div>

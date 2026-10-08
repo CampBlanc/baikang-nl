@@ -18,7 +18,7 @@
       "stress": "Stress & sleep",
       "energy": "Energy & recovery",
       "digestion": "Stomach & digestion",
-      "gender": "Women's & hormonal health",
+      "gender": "Women, men & hormones",
       "smoking": "Quitting smoking & vaping"
     },
     "acupunctureMenu": {
@@ -69,7 +69,7 @@
       "catDigestion": "Stomach & digestion",
       "catDigestionDesc": "Bloating, abdominal discomfort, and other digestive complaints.",
       "catGender": "Women & men",
-      "catGenderDesc": "Symptoms related to menstruation, menopause, and other physical changes.",
+      "catGenderDesc": "Cycle, menopause, fertility and men's health.",
       "catSmoking": "Quitting smoking & vaping",
       "catSmokingDesc": "Laser acupuncture and auricular acupuncture as support when quitting.",
       "cta": "View all complaints"
@@ -80,7 +80,7 @@
       "cta": "More about my approach"
     },
     "About": {
-      "badge": "Behind Bai Kang",
+      "badge": "Behind Bái Kāng",
       "title": "Personal attention starts with listening.",
       "subtitle": "Patrick Witkamp · Acupuncturist",
       "intro": "My goal is to look beyond the symptom alone. Combining Western groundedness with the perspective of Traditional Chinese Medicine, I look for an approach that fits you.",
@@ -166,7 +166,7 @@
       },
       "gender": {
         "title": "Women & men",
-        "description": "Complaints related to menstruation, menopause, and other physical changes."
+        "description": "Complaints related to menstruation, menopause, fertility, erection, prostate and bladder."
       },
       "smoking": {
         "title": "Quitting smoking & vaping",
@@ -246,8 +246,8 @@
     "catEnergyDesc": "Persistent fatigue, low energy, or difficulty recovering after physical exertion.",
     "catDigestionTitle": "Stomach & Digestion",
     "catDigestionDesc": "Bloating, stomach complaints, sluggish digestion, and abdominal cramps.",
-    "catGenderTitle": "Women's Health & Hormonal Balance",
-    "catGenderDesc": "Cycle-related complaints, menopausal symptoms, and emotional fluctuations.",
+    "catGenderTitle": "Women, Men & Hormones",
+    "catGenderDesc": "Cycle complaints, menopause, fertility, erectile and prostate complaints, and bladder complaints.",
     "catSmokingTitle": "Quitting Smoking & Vaping",
     "catSmokingDesc": "Specific treatment programmes using laser acupuncture and auricular acupuncture as support when quitting smoking and vaping.",
     "ctaComplaints": "View all specific indications on the complaints page",
@@ -328,11 +328,13 @@
     "additional": {
       "eyebrow": "Integrated Approach",
       "title": "Complementary treatment methods.",
-      "intro": "Alongside acupuncture, supportive methods can be used to help address local muscular tension or support circulation.",
+      "intro": "Alongside acupuncture, supportive methods can be used to help address local muscular tension, support circulation or encourage deep relaxation.",
       "cuppingTitle": "Cupping",
       "cuppingDesc": "Glass or silicone cups are placed on the skin to create mild suction. Within TCM, this method is used among other things for tense or stiff muscles and as a complementary treatment approach.",
       "guashaTitle": "Guasha",
       "guashaDesc": "Guasha involves gently scraping the oiled skin with a smooth instrument. Within TCM, this traditional technique is used as a complementary treatment for muscular tension and stiffness.",
+      "reikiTitle": "Reiki",
+      "reikiDesc": "In reiki, the hands are placed lightly on or just above the body while you lie clothed on the treatment table. A gentle Japanese method used for deep relaxation and calm, on its own or as a close to an acupuncture treatment.",
       "laserTitle": "Laser Acupuncture",
       "laserDesc": "When needles are not preferred or appropriate, laser acupuncture offers a needle-free treatment approach. At Bai Kang, laser acupuncture is also specifically used within the targeted programme for quitting smoking and vaping."
     },
@@ -457,6 +459,7 @@
       }
     },
     "Brand": {
+      "eyebrow": "Why Bái Kāng?",
       "title": "A peaceful place for attention and treatment.",
       "intro": "Bai Kang is more than the name of my practice. It is where my different experiences come together.",
       "baiTitle": "Bái (白), White, pure & sincere",

@@ -29,7 +29,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative overflow-hidden bg-gradient-to-b from-[#2E4031] via-[#1E2D21] via-[45%] to-[#141E16] border-t border-gold-antique/20 text-text-light-soft">
+    <footer className="relative overflow-hidden bg-gradient-to-b from-forest-mid via-forest-deep via-[45%] to-[#141E16] border-t border-gold-antique/20 text-text-light-soft">
       {/* Lichte inktbamboe rechtsonder: sfeer achter de tekst, vervaagt naar links */}
       <div
         aria-hidden="true"
@@ -59,7 +59,7 @@ export default function Footer() {
               白康
             </span>
             <span className="font-display text-2xl tracking-wide text-ivory block">
-              Bai Kang TCM
+              Bái Kāng TCM
             </span>
             <p className="font-body text-xs font-semibold uppercase tracking-widest text-gold-antique">
               {tradeNameText}

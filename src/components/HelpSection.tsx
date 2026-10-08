@@ -5,14 +5,14 @@ export default function HelpSection() {
   const tHelp = useTranslations('Help');
   const tCommon = useTranslations('Common');
 
-  // URL's verwijzen naar de logische SEO-structuur die we al hadden[cite: 2]
+  // Links naar de categorieën op de klachtenpagina (zelfde ankers als in de Header)
   const categories = [
-    { id: 'pain', symbol: '痛', href: '/diensten/acupunctuur/pijnverlichting' },
-    { id: 'stress', symbol: '安', href: '/diensten/acupunctuur/stress-burn-out-en-angst' },
-    { id: 'energy', symbol: '气', href: '/diensten/acupunctuur/slaapproblemen-en-vermoeidheid' },
-    { id: 'digestion', symbol: '化', href: '/diensten/acupunctuur/maag-en-darmklachten' },
-    { id: 'gender', symbol: '和', href: '/diensten/acupunctuur/mannen-en-vrouwenklachten' },
-    { id: 'smoking', symbol: '清', href: '/diensten/acupunctuur/stoppen-met-roken' },
+    { id: 'pain', symbol: '痛', href: '/klachten#pijn' },
+    { id: 'stress', symbol: '安', href: '/klachten#stress' },
+    { id: 'energy', symbol: '气', href: '/klachten#energie' },
+    { id: 'digestion', symbol: '化', href: '/klachten#maag-darmen' },
+    { id: 'gender', symbol: '和', href: '/klachten#vrouw-man' },
+    { id: 'smoking', symbol: '清', href: 'https://rookvrij.nu' },
   ];
 
   return (

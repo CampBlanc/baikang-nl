@@ -11,14 +11,14 @@ import '../globals.css';
 
 const cormorant = Cormorant_Garamond({
   variable: '--font-cormorant',
-  subsets: ['latin'],
+  subsets: ['latin', 'latin-ext'],
   display: 'swap',
   weight: ['400', '500', '600', '700'],
 });
 
 const manrope = Manrope({
   variable: '--font-manrope',
-  subsets: ['latin'],
+  subsets: ['latin', 'latin-ext'],
   display: 'swap',
   weight: ['400', '500', '600', '700'],
 });
