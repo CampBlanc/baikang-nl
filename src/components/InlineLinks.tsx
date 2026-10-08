@@ -9,7 +9,8 @@ const linkClass =
 /**
  * Zet links in de vorm [tekst](url) om naar klikbare links.
  * Externe links (http/https) openen in een nieuw tabblad,
- * interne links (beginnend met /) gaan via de i18n-Link.
+ * interne links (beginnend met /) gaan via de i18n-Link,
+ * tel: en mailto: openen in hetzelfde venster.
  * Tekst zonder links wordt ongewijzigd weergegeven.
  */
 export default function InlineLinks({ text }: { text: string }) {
@@ -29,6 +30,12 @@ export default function InlineLinks({ text }: { text: string }) {
         <Link key={start} href={href} className={linkClass}>
           {label}
         </Link>
+      );
+    } else if (href.startsWith('tel:') || href.startsWith('mailto:')) {
+      parts.push(
+        <a key={start} href={href} className={linkClass}>
+          {label}
+        </a>
       );
     } else {
       parts.push(

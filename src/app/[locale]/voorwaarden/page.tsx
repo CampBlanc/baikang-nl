@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Link } from '@/i18n/navigation';
+import InlineLinks from '@/components/InlineLinks';
 
 /* =========================================================================
    ALGEMENE VOORWAARDEN — overgenomen van de WordPress-site (versie 1.0)
@@ -15,6 +16,11 @@ interface Article {
 }
 
 const VERSION = '1.1';
+
+const PHONE_DISPLAY = '06 83 49 80 42';
+const PHONE_TEL = 'tel:+31683498042';
+const WHATSAPP_URL = 'https://wa.me/31683498042';
+const EMAIL = 'info@baikang.nl';
 const EFFECTIVE_DATE = '8 oktober 2026';
 
 const ARTICLES: Article[] = [
@@ -107,7 +113,7 @@ const ARTICLES: Article[] = [
   {
     title: 'Annulering en verplaatsing van afspraken',
     clauses: [
-      'Annuleren of verplaatsen van een afspraak dient minimaal 24 uur van tevoren te gebeuren, telefonisch, via WhatsApp of per e-mail.',
+      `Annuleren of verplaatsen van een afspraak dient minimaal 24 uur van tevoren te gebeuren, [telefonisch](${PHONE_TEL}), via [WhatsApp](${WHATSAPP_URL}) of per [e-mail](mailto:${EMAIL}).`,
       'Bij annulering binnen 24 uur voor de afspraak wordt 50% van het tarief van de betreffende behandeling in rekening gebracht.',
       'Bij niet verschijnen zonder annulering (no-show) wordt het volledige tarief in rekening gebracht.',
       'Indien de cliënt een behandeltraject of pakket heeft afgenomen, wordt een niet-tijdig geannuleerde afspraak beschouwd als een gebruikte behandeling binnen het pakket. Deze behandeling komt te vervallen en wordt niet opnieuw ingepland of gecrediteerd.',
@@ -214,9 +220,20 @@ export default async function TermsPage({
           <p>Eenmanszaak van Patrick Witkamp, handelend onder de naam Bai Kang TCM</p>
           <p>Weteringlaan 150, 5032 XV Tilburg</p>
           <p>KvK 89643771 · AGB zorgverlener 90122136 · AGB praktijk 90097044</p>
+          <p className="pt-2">
+            Telefoon:{' '}
+            <a href={PHONE_TEL} className="underline underline-offset-2 hover:text-gold-dark">
+              {PHONE_DISPLAY}
+            </a>
+            {' · '}
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-gold-dark">
+              WhatsApp
+            </a>
+          </p>
           <p>
-            <a href="mailto:info@baikang.nl" className="underline underline-offset-2 hover:text-gold-dark">
-              info@baikang.nl
+            E-mail:{' '}
+            <a href={`mailto:${EMAIL}`} className="underline underline-offset-2 hover:text-gold-dark">
+              {EMAIL}
             </a>
           </p>
         </div>
@@ -253,7 +270,9 @@ export default async function TermsPage({
                         {n}.{j + 1}
                       </span>
                       {typeof c === 'string' ? (
-                        <span>{c}</span>
+                        <span>
+                          <InlineLinks text={c} />
+                        </span>
                       ) : (
                         <div>
                           <span>{c.text}</span>

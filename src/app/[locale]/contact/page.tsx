@@ -9,6 +9,8 @@ import AtmosphericBamboo from '@/components/AtmosphericBamboo';
 const BOOKING_URL = 'https://witkampwellness.clientomgeving.nl/afspraak-maken';
 const WHATSAPP_URL = 'https://wa.me/31683498042';
 const EMAIL = 'info@baikang.nl';
+const PHONE_DISPLAY = '06 83 49 80 42';
+const PHONE_TEL = 'tel:+31683498042';
 const ADDRESS_LINE_1 = 'Weteringlaan 150';
 const ADDRESS_LINE_2 = '5032 XV Tilburg';
 const MAPS_URL =
@@ -47,6 +49,7 @@ export default async function ContactPage({
     alternateName: 'Bái Kāng 白康',
     url: 'https://baikang.nl',
     email: EMAIL,
+    telephone: '+31683498042',
     address: {
       '@type': 'PostalAddress',
       streetAddress: ADDRESS_LINE_1,
@@ -78,6 +81,17 @@ export default async function ContactPage({
         : 'Eerst een vraag, of geen passend moment online? Stuur een bericht, dan zoeken we samen een moment.',
       cta: isEn ? 'Send a WhatsApp' : 'Stuur een WhatsApp',
       href: WHATSAPP_URL,
+      primary: false,
+    },
+    {
+      key: 'phone',
+      glyph: '话',
+      title: isEn ? 'Call' : 'Bellen',
+      text: isEn
+        ? 'Prefer to talk in person, or need to cancel? Feel free to call. If I am with a client, send a WhatsApp and I will get back to you.'
+        : 'Liever even persoonlijk overleggen, of wil je een afspraak afzeggen? Bel gerust. Ben ik in behandeling, stuur dan een WhatsApp, dan kom ik bij je terug.',
+      cta: PHONE_DISPLAY,
+      href: PHONE_TEL,
       primary: false,
     },
     {
@@ -119,7 +133,7 @@ export default async function ContactPage({
 
         {/* 2. CONTACTKANALEN */}
         <section className="py-16 sm:py-20 px-6 sm:px-10 lg:px-16">
-          <div className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {channels.map((c) => {
               const external = c.href.startsWith('http');
               return (
@@ -149,7 +163,7 @@ export default async function ContactPage({
                     className={`mt-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 font-body text-xs font-semibold transition-all ${
                       c.primary
                         ? 'uppercase tracking-widest bg-ivory text-forest-deep hover:bg-gold-antique'
-                        : c.key === 'email'
+                        : c.key === 'email' || c.key === 'phone'
                           ? 'tracking-wide border border-forest-deep/40 text-forest-deep hover:bg-forest-deep/5'
                           : 'uppercase tracking-widest border border-forest-deep/40 text-forest-deep hover:bg-forest-deep/5'
                     }`}
