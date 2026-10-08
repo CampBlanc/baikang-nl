@@ -84,6 +84,12 @@ import { FIBROMYALGIE_NL, FIBROMYALGIE_EN } from './fibromyalgie';
 import { ISCHIAS_NL, ISCHIAS_EN } from './ischias';
 import { HOOIKOORTS_NL, HOOIKOORTS_EN } from './hooikoorts';
 import { SOMBERHEID_NL, SOMBERHEID_EN } from './somberheid';
+import {
+  CHRONISCHE_VERKOUDHEID_NL,
+  CHRONISCHE_VERKOUDHEID_EN,
+} from './chronische-verkoudheid';
+import { GORDELROOS_NL, GORDELROOS_EN } from './gordelroos';
+import { NEUROPATHIE_NL, NEUROPATHIE_EN } from './neuropathie';
 
 
 /* =======================================================================
@@ -113,6 +119,9 @@ export * from './fibromyalgie';
 export * from './ischias';
 export * from './hooikoorts';
 export * from './somberheid';
+export * from './chronische-verkoudheid';
+export * from './gordelroos';
+export * from './neuropathie';
 
 
 /* =======================================================================
@@ -167,6 +176,12 @@ export const COMPLAINT_ARTICLES_NL: Record<string, ComplaintArticle> = {
   hooikoorts: HOOIKOORTS_NL,
 
   somberheid: SOMBERHEID_NL,
+
+  'chronische-verkoudheid': CHRONISCHE_VERKOUDHEID_NL,
+
+  gordelroos: GORDELROOS_NL,
+
+  neuropathie: NEUROPATHIE_NL,
 };
 
 
@@ -222,6 +237,12 @@ export const COMPLAINT_ARTICLES_EN: Record<string, ComplaintArticle> = {
   hooikoorts: HOOIKOORTS_EN,
 
   somberheid: SOMBERHEID_EN,
+
+  'chronische-verkoudheid': CHRONISCHE_VERKOUDHEID_EN,
+
+  gordelroos: GORDELROOS_EN,
+
+  neuropathie: NEUROPATHIE_EN,
 };
 
 
