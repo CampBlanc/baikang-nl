@@ -62,7 +62,7 @@ export const PEES_SPORT_NL: ComplaintArticle = {
     steps: [
       'Gerichte acupunctuur: met zeer dunne naalden worden specifieke acupunctuurpunten behandeld. Dit kunnen lokale punten rond de pijnlijke regio zijn, maar ook punten op andere plaatsen op het lichaam.',
 
-      'Laseracupunctuur: geselecteerde acupunctuurpunten kunnen worden behandeld met therapeutisch laserlicht. Laseracupunctuur is volledig naaldvrij en kan daarom een prettig alternatief zijn voor mensen die liever geen naalden gebruiken.',
+      'Laseracupunctuur: geselecteerde acupunctuurpunten kunnen worden behandeld met therapeutisch laserlicht. Laseracupunctuur is volledig naaldvrij en kan daarom een prettig alternatief zijn voor mensen die liever geen naalden willen.',
 
       'Lokale laserbehandeling: bij klachten door overbelasting kan het aangedane gebied gericht worden meegenomen. Afhankelijk van de klacht kan bijvoorbeeld de achillespees, kuit, knie, elleboog, schouder of voet worden behandeld.',
 

@@ -51,6 +51,7 @@ export const HOOFDPIJN_NL: ComplaintArticle = {
       'Aandacht voor spanning in nek, schouders en de schedelrand om lokale verkrampingen en trekspanning los te laten.',
       'Inzet van distale punten op de armen en benen om opgebouwde spanning en druk uit het hoofd omlaag te geleiden.',
       'Optionele ondersteuning met zachte cupping of warmte wanneer spieren in de bovenrug chronisch vastzitten.',
+      'Acupressuur op punten in nek, schouders en handen als aanvulling op de behandeling. Je krijgt ook punten mee die je zelf kunt masseren wanneer je voelt dat hoofdpijn opkomt.',
       'Praktische adviezen rondom slaap, herstel, ademhaling en werkhouding om herhaling te voorkomen.',
     ],
     safetyNote:
@@ -131,6 +132,7 @@ export const HOOFDPIJN_EN: ComplaintArticle = {
       'Focused attention on the neck, shoulders, and base of the skull to ease localized muscular contraction.',
       'Utilization of distal points on the arms and legs to draw excess energy and pressure downward from the head.',
       'Optional supportive therapies like gentle cupping or warmth when upper back muscles are chronically tight.',
+      'Acupressure on points in the neck, shoulders and hands to complement the treatment. You will also be shown points you can massage yourself when you feel a headache coming on.',
       'Actionable advice regarding rest, hydration, breathing, and posture to prevent recurring episodes.',
     ],
     safetyNote:

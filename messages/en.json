@@ -448,7 +448,13 @@
       "badge": "Professional Development",
       "title": "Keep developing.",
       "intro": "My goal is not to use as many techniques as possible. My goal is to know when a particular approach may be appropriate.",
-      "cta": "Learn more about my approach"
+      "cta": "Learn more about my approach",
+      "skills": {
+        "acupuncture": "Acupuncture",
+        "diagnostics": "Diagnostics",
+        "ear": "Ear acupuncture",
+        "laser": "Laser acupuncture"
+      }
     },
     "Brand": {
       "title": "A peaceful place for attention and treatment.",

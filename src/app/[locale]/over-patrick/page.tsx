@@ -469,16 +469,16 @@ export default function OverMijPage() {
           <FadeIn delay={150}>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center border-t border-b border-gold-antique/30 py-6 mb-10">
               <div className="font-body text-xs sm:text-sm font-semibold uppercase tracking-wider text-forest-deep">
-                Acupunctuur
+                {t('Growth.skills.acupuncture')}
               </div>
               <div className="font-body text-xs sm:text-sm font-semibold uppercase tracking-wider text-forest-deep">
-                Diagnostiek
+                {t('Growth.skills.diagnostics')}
               </div>
               <div className="font-body text-xs sm:text-sm font-semibold uppercase tracking-wider text-forest-deep">
-                Auriculotherapie
+                {t('Growth.skills.ear')}
               </div>
               <div className="font-body text-xs sm:text-sm font-semibold uppercase tracking-wider text-forest-deep">
-                Laseracupunctuur
+                {t('Growth.skills.laser')}
               </div>
             </div>
           </FadeIn>

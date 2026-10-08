@@ -448,7 +448,13 @@
       "badge": "Vakmanschap",
       "title": "Blijven ontwikkelen.",
       "intro": "Mijn doel is niet om zoveel mogelijk technieken toe te passen. Mijn doel is om te weten wanneer welke aanpak passend kan zijn.",
-      "cta": "Meer over mijn werkwijze"
+      "cta": "Meer over mijn werkwijze",
+      "skills": {
+        "acupuncture": "Acupunctuur",
+        "diagnostics": "Diagnostiek",
+        "ear": "Ooracupunctuur",
+        "laser": "Laseracupunctuur"
+      }
     },
     "Brand": {
       "title": "Een rustige plek voor aandacht en behandeling.",

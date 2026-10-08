@@ -70,6 +70,20 @@ import { ARTROSE_NL, ARTROSE_EN } from './artrose';
 import { TENNISARM_NL, TENNISARM_EN } from './tennisarm';
 import { RSI_CARPAL_NL, RSI_CARPAL_EN } from './rsi-carpaletunnelsyndroom';
 import { PEES_SPORT_NL, PEES_SPORT_EN } from './peesklachten-sportblessures';
+import { STRESS_NL, STRESS_EN } from './stress';
+import {
+  SLAAPPROBLEMEN_NL,
+  SLAAPPROBLEMEN_EN,
+} from './slaapproblemen';
+import { BURNOUT_NL, BURNOUT_EN } from './burnout';
+import { ONRUST_NL, ONRUST_EN } from './onrust';
+import { ANGST_NL, ANGST_EN } from './angst';
+import { VERMOEIDHEID_NL, VERMOEIDHEID_EN } from './vermoeidheid';
+import { LONG_COVID_NL, LONG_COVID_EN } from './long-covid';
+import { FIBROMYALGIE_NL, FIBROMYALGIE_EN } from './fibromyalgie';
+import { ISCHIAS_NL, ISCHIAS_EN } from './ischias';
+import { HOOIKOORTS_NL, HOOIKOORTS_EN } from './hooikoorts';
+import { SOMBERHEID_NL, SOMBERHEID_EN } from './somberheid';
 
 
 /* =======================================================================
@@ -88,6 +102,17 @@ export * from './artrose';
 export * from './tennisarm';
 export * from './rsi-carpaletunnelsyndroom';
 export * from './peesklachten-sportblessures';
+export * from './stress';
+export * from './slaapproblemen';
+export * from './burnout';
+export * from './onrust';
+export * from './angst';
+export * from './vermoeidheid';
+export * from './long-covid';
+export * from './fibromyalgie';
+export * from './ischias';
+export * from './hooikoorts';
+export * from './somberheid';
 
 
 /* =======================================================================
@@ -120,6 +145,28 @@ export const COMPLAINT_ARTICLES_NL: Record<string, ComplaintArticle> = {
   'rsi': RSI_CARPAL_NL,
 
   'peesklachten': PEES_SPORT_NL,
+
+  stress: STRESS_NL,
+
+  slaapproblemen: SLAAPPROBLEMEN_NL,
+
+  'burn-out': BURNOUT_NL,
+
+  onrust: ONRUST_NL,
+
+  angst: ANGST_NL,
+
+  vermoeidheid: VERMOEIDHEID_NL,
+
+  'long-covid': LONG_COVID_NL,
+
+  fibromyalgie: FIBROMYALGIE_NL,
+
+  ischias: ISCHIAS_NL,
+
+  hooikoorts: HOOIKOORTS_NL,
+
+  somberheid: SOMBERHEID_NL,
 };
 
 
@@ -153,6 +200,28 @@ export const COMPLAINT_ARTICLES_EN: Record<string, ComplaintArticle> = {
   'rsi': RSI_CARPAL_EN,
 
   'peesklachten': PEES_SPORT_EN,
+
+  stress: STRESS_EN,
+
+  slaapproblemen: SLAAPPROBLEMEN_EN,
+
+  'burn-out': BURNOUT_EN,
+
+  onrust: ONRUST_EN,
+
+  angst: ANGST_EN,
+
+  vermoeidheid: VERMOEIDHEID_EN,
+
+  'long-covid': LONG_COVID_EN,
+
+  fibromyalgie: FIBROMYALGIE_EN,
+
+  ischias: ISCHIAS_EN,
+
+  hooikoorts: HOOIKOORTS_EN,
+
+  somberheid: SOMBERHEID_EN,
 };
 
 

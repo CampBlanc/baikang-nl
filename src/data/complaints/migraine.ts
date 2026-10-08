@@ -51,6 +51,7 @@ export const MIGRAINE_NL: ComplaintArticle = {
       'Plaatsing van zeer dunne, steriele naalden op zorgvuldig gekozen acupunctuurpunten op het lichaam. Hierbij gebruiken we veel distale punten op de armen en benen om spanning uit het hoofd omlaag te geleiden.',
       'Naaldvrije laseracupunctuur als zacht, pijnloos alternatief wanneer het zenuwstelsel erg gevoelig is of snel overprikkeld raakt.',
       'Aandacht voor ondersteunende factoren die met migraine samenhangen, zoals het verbeteren van de slaapkwaliteit, energieniveau en ontspanning.',
+      'Acupressuur als aanvulling op de behandeling, met punten die je zelf kunt masseren bij de eerste signalen van een aanval of om misselijkheid te verlichten.',
       'Praktische adviezen rondom leefstijl, voeding en rustmomenten om triggers in het dagelijks leven beter op te vangen.',
     ],
     safetyNote:
@@ -131,6 +132,7 @@ export const MIGRAINE_EN: ComplaintArticle = {
       'Application of ultra-fine, sterile needles on carefully chosen points, including distal points on the hands and feet to draw excess pressure down from the head.',
       'Gentle laser acupuncture as a needle-free alternative if your system is easily overwhelmed or sensitive to manual stimulation.',
       'Support addressing interrelated health factors such as sleep quality, nervous system regulation, and energy recovery.',
+      'Acupressure to complement the treatment, with points you can massage yourself at the first signs of an attack or to ease nausea.',
       'Practical guidance regarding rest, lifestyle, and recovery strategies after an episode.',
     ],
     safetyNote:
