@@ -249,7 +249,7 @@ export default function ChatWidget() {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          aria-label={isEn ? 'Ask a question about acupuncture' : 'Vragen over acupunctuur & intake'}
+          aria-label={isEn ? 'Ask a question about acupuncture and complaints' : 'Stel je vraag over acupunctuur en klachten'}
           className={`group bg-forest-deep text-ivory hover:bg-forest-dark border border-gold-antique/50 shadow-xl rounded-full h-12 w-12 justify-center sm:h-auto sm:w-auto sm:px-5 sm:py-3.5 flex items-center gap-3 transition-all duration-300 active:scale-95 ${
             !showLauncher
               ? 'max-sm:pointer-events-none max-sm:translate-y-4 max-sm:opacity-0'
@@ -262,7 +262,7 @@ export default function ChatWidget() {
             問
           </span>
           <span className="hidden sm:inline text-sm font-medium tracking-wide">
-            {isEn ? 'Questions & Intake' : 'Vragen & Anamnese'}
+            {isEn ? 'Ask a question' : 'Stel je vraag'}
           </span>
         </button>
       )}
@@ -276,10 +276,10 @@ export default function ChatWidget() {
               <span className="font-serif text-xl text-gold-antique">問</span>
               <div>
                 <p className="font-serif text-base tracking-wide text-ivory font-medium">
-                  {isEn ? 'Bái Kāng Guide' : 'Bái Kāng TCM Gids'}
+                  {isEn ? 'Bái Kāng Guide' : 'Bái Kāng Gids'}
                 </p>
                 <p className="text-[11px] text-stone-300">
-                  {isEn ? 'Acupuncture & Clinic assistance' : 'Rustige toelichting & behandeladvies'}
+                  {isEn ? 'Answers about acupuncture and complaints' : 'Antwoord op je vragen over acupunctuur en klachten'}
                 </p>
               </div>
             </div>
@@ -313,11 +313,11 @@ export default function ChatWidget() {
                 <div className="bg-white border border-stone-200/90 p-3.5 rounded-xl shadow-xs text-stone-700 leading-relaxed text-xs sm:text-sm">
                   {isEn ? (
                     <p>
-                      Welcome to Bai Kang TCM. I can help explore your symptoms, explain how Traditional Chinese Medicine views your complaint, or provide clarity on treatment fees and appointments.
+                      Welcome to Bai Kang TCM. I am happy to help with questions about complaints, Traditional Chinese Medicine (TCM), treatments or practical information. Please do not share personal medical details here; those are discussed during your consultation.
                     </p>
                   ) : (
                     <p>
-                      Welkom bij Bai Kang TCM. Ik help je graag met vragen over je klachten, de Traditionele Chinese Geneeskunde (TCM), behandelvormen of praktische praktijkinformatie.
+                      Welkom bij Bai Kang TCM. Ik help je graag met vragen over klachten, de Traditionele Chinese Geneeskunde (TCM), behandelvormen of praktische informatie. Deel hier liever geen persoonlijke medische gegevens; die bespreken we tijdens je consult.
                     </p>
                   )}
                 </div>
