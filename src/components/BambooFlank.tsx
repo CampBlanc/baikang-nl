@@ -38,13 +38,16 @@ export default function BambooFlank({
           maskImage: `linear-gradient(to ${isLeft ? 'right' : 'left'}, #000 0%, #000 45%, transparent 88%)`,
         }}
       >
-        <Image
-          src="/images/bamboo-sumi-ink.webp"
-          alt=""
-          fill
-          sizes="640px"
-          className={`object-contain ${isLeft ? '-scale-x-100' : ''}`}
-        />
+        {/* next/image met fill vraagt een parent met position relative (de sticky parent telt niet) */}
+        <div className="relative h-full w-full">
+          <Image
+            src="/images/bamboo-sumi-ink.webp"
+            alt=""
+            fill
+            sizes="640px"
+            className={`object-contain ${isLeft ? '-scale-x-100' : ''}`}
+          />
+        </div>
       </div>
     </div>
   );

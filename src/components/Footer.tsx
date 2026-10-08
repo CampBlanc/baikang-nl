@@ -29,7 +29,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative overflow-hidden bg-forest-deep border-t border-gold-antique/20 text-text-light-soft">
+    <footer className="relative overflow-hidden bg-gradient-to-b from-[#2E4031] via-[#1E2D21] via-[45%] to-[#141E16] border-t border-gold-antique/20 text-text-light-soft">
       {/* Lichte inktbamboe rechtsonder: sfeer achter de tekst, vervaagt naar links */}
       <div
         aria-hidden="true"
