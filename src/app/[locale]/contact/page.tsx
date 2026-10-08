@@ -248,8 +248,11 @@ export default async function ContactPage({
                 </h3>
                 <p className="font-body text-sm text-text-soft leading-relaxed">
                   {isEn
-                    ? 'Appointments can be cancelled up to 24 hours in advance, via WhatsApp or email. That way the time can be offered to someone else.'
-                    : 'Afzeggen kan tot 24 uur voor je afspraak, via WhatsApp of e-mail. Zo kan het moment aan iemand anders worden gegeven.'}
+                    ? 'Appointments can be cancelled or rescheduled free of charge up to 24 hours in advance, by phone, WhatsApp or email. Later cancellations are charged at 50% of the rate, and missed appointments in full.'
+                    : 'Afzeggen of verzetten kan kosteloos tot 24 uur voor je afspraak, telefonisch, via WhatsApp of per e-mail. Bij later afzeggen wordt 50% van het tarief in rekening gebracht, bij niet verschijnen het volledige tarief.'}{' '}
+                  <Link href="/voorwaarden" className="font-medium text-gold-dark underline underline-offset-2 hover:text-forest-deep">
+                    {isEn ? 'Terms and conditions' : 'Algemene voorwaarden'}
+                  </Link>
                 </p>
               </div>
               <div className="border-l-2 border-gold-antique bg-surface-cream/40 p-6 space-y-2">

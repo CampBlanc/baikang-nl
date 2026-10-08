@@ -107,7 +107,7 @@ const ARTICLES: Article[] = [
   {
     title: 'Annulering en verplaatsing van afspraken',
     clauses: [
-      'Annuleren of verplaatsen van een afspraak dient minimaal 24 uur van tevoren schriftelijk via e-mail te gebeuren.',
+      'Annuleren of verplaatsen van een afspraak dient minimaal 24 uur van tevoren te gebeuren, telefonisch, via WhatsApp of per e-mail.',
       'Bij annulering binnen 24 uur voor de afspraak wordt 50% van het tarief van de betreffende behandeling in rekening gebracht.',
       'Bij niet verschijnen zonder annulering (no-show) wordt het volledige tarief in rekening gebracht.',
       'Indien de cliënt een behandeltraject of pakket heeft afgenomen, wordt een niet-tijdig geannuleerde afspraak beschouwd als een gebruikte behandeling binnen het pakket. Deze behandeling komt te vervallen en wordt niet opnieuw ingepland of gecrediteerd.',
