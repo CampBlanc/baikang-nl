@@ -20,7 +20,36 @@ const LEGACY_REDIRECTS: { from: string; to: string }[] = [
   { from: '/laseracupunctuur', to: '/acupunctuur#laseracupunctuur' },
   { from: '/blog', to: '/klachten' },
   { from: '/blog/:path*', to: '/klachten' },
+  { from: '/tarieven/verzekering', to: '/tarieven' },
+
+  // Oude WordPress-URL's (baikang.nl voor de overstap naar Next.js)
+  { from: '/reiki', to: '/behandelvormen/reiki' },
+  { from: '/guasha', to: '/behandelvormen/guasha' },
+  { from: '/cupping', to: '/behandelvormen/cupping' },
+  { from: '/massage', to: '/methode' },
+  { from: '/stoppen-met-roken', to: 'https://rookvrij.nu' },
+  { from: '/pijn-verlichting', to: '/klachten#pijn' },
+  { from: '/slaapproblemen-vermoeidheid', to: '/klachten#stress' },
+  { from: '/maag-en-darmklachten', to: '/klachten#maag-darmen' },
+  { from: '/vrouwen-en-mannenklachten', to: '/klachten#vrouw-man' },
+  { from: '/stress-burnout-angst', to: '/klachten#stress' },
+  { from: '/laser-acupunctuur', to: '/acupunctuur#laseracupunctuur' },
+  { from: '/over-mij', to: '/over-patrick' },
+  { from: '/prijzen', to: '/tarieven' },
+  { from: '/verzekering', to: '/tarieven' },
+  { from: '/plan-afspraak', to: '/contact' },
+  { from: '/privacy-policy', to: '/privacy' },
+  { from: '/news', to: '/klachten' },
+  { from: '/news/:path*', to: '/klachten' },
+
+  // Algemene voorwaarden staan (nog) op WordPress — tijdelijk
+  { from: '/voorwaarden', to: 'https://wordpress.baikang.nl/algemene-voorwaarden/' },
+  { from: '/algemene-voorwaarden', to: 'https://wordpress.baikang.nl/algemene-voorwaarden/' },
 ];
+
+// Tijdelijke (307) redirects: deze pagina's komen later (weer) terug
+const isTemporary = (from: string) =>
+  ['/blog', '/news', '/voorwaarden', '/algemene-voorwaarden'].some((p) => from.startsWith(p));
 
 const nextConfig: NextConfig = {
   images: {
@@ -38,13 +67,12 @@ const nextConfig: NextConfig = {
         {
           source: `/:locale(nl|en)${from}`,
           destination: external ? to : `/:locale${to}`,
-          // Blog is tijdelijk (307), zodat hij later weer kan worden ingezet
-          permanent: !from.startsWith('/blog'),
+          permanent: !isTemporary(from),
         },
         {
           source: from,
           destination: external ? to : `/nl${to}`,
-          permanent: !from.startsWith('/blog'),
+          permanent: !isTemporary(from),
         },
       ];
     });
