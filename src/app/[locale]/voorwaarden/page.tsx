@@ -14,15 +14,15 @@ interface Article {
   clauses: Clause[];
 }
 
-const VERSION = '1.0';
-const EFFECTIVE_DATE = '5 juni 2026';
+const VERSION = '1.1';
+const EFFECTIVE_DATE = '8 oktober 2026';
 
 const ARTICLES: Article[] = [
   {
     title: 'Definities',
     intro: 'In deze algemene voorwaarden wordt verstaan onder:',
     clauses: [
-      'De Praktijk: Patrick Witkamp handelend onder de naam Bai Kang gevestigd te Tilburg.',
+      'De Praktijk: Witkamp Wellness, eenmanszaak van Patrick Witkamp, ingeschreven bij de Kamer van Koophandel onder nummer 89643771, gevestigd aan de Weteringlaan 150, 5032 XV Tilburg, handelend onder de handelsnaam Bai Kang (Bai Kang TCM).',
       'Cliënt: De persoon die gebruik maakt van de diensten van de praktijk.',
       'Behandeling: Alle door de praktijk aangeboden diensten op het gebied van acupunctuur en Traditionele Chinese Geneeskunde (TCM).',
       'Overeenkomst: De overeenkomst tussen de praktijk en de cliënt met betrekking tot het leveren van diensten, producten of digitale producten.',
@@ -208,6 +208,19 @@ export default async function TermsPage({
           )}
         </header>
 
+        {/* Gegevens van de praktijk */}
+        <div className="mb-12 border border-border-light/60 bg-surface-cream/70 p-6 space-y-1 font-body text-sm text-forest-deep">
+          <p className="font-semibold text-base mb-2">Witkamp Wellness</p>
+          <p>Eenmanszaak van Patrick Witkamp, handelend onder de naam Bai Kang TCM</p>
+          <p>Weteringlaan 150, 5032 XV Tilburg</p>
+          <p>KvK 89643771 · AGB zorgverlener 90122136 · AGB praktijk 90097044</p>
+          <p>
+            <a href="mailto:info@baikang.nl" className="underline underline-offset-2 hover:text-gold-dark">
+              info@baikang.nl
+            </a>
+          </p>
+        </div>
+
         {/* Inhoudsopgave */}
         <nav aria-label="Inhoudsopgave" className="mb-12">
           <p className="eyebrow text-gold-dark mb-3">Inhoud</p>
@@ -263,7 +276,7 @@ export default async function TermsPage({
         <footer className="mt-14 border-t border-border-light/60 pt-8 font-body text-xs sm:text-sm text-text-soft/80 space-y-1">
           <p>Versie: {VERSION}</p>
           <p>Datum van inwerkingtreding: {EFFECTIVE_DATE}</p>
-          <p>© Bai Kang – Alle rechten voorbehouden</p>
+          <p>© Witkamp Wellness – Bai Kang is een handelsnaam van Witkamp Wellness. Alle rechten voorbehouden.</p>
           <p className="pt-3">
             Zie ook de <Link href="/privacy" className="underline underline-offset-2 hover:text-gold-dark">privacyverklaring</Link>.
           </p>
