@@ -42,14 +42,12 @@ const LEGACY_REDIRECTS: { from: string; to: string }[] = [
   { from: '/news', to: '/klachten' },
   { from: '/news/:path*', to: '/klachten' },
 
-  // Algemene voorwaarden staan (nog) op WordPress — tijdelijk
-  { from: '/voorwaarden', to: 'https://wordpress.baikang.nl/algemene-voorwaarden/' },
-  { from: '/algemene-voorwaarden', to: 'https://wordpress.baikang.nl/algemene-voorwaarden/' },
+  { from: '/algemene-voorwaarden', to: '/voorwaarden' },
 ];
 
 // Tijdelijke (307) redirects: deze pagina's komen later (weer) terug
 const isTemporary = (from: string) =>
-  ['/blog', '/news', '/voorwaarden', '/algemene-voorwaarden'].some((p) => from.startsWith(p));
+  ['/blog', '/news'].some((p) => from.startsWith(p));
 
 const nextConfig: NextConfig = {
   images: {

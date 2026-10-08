@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/vragen',
     '/contact',
     '/privacy',
+    '/voorwaarden',
   ];
 
   // Haalt dynamisch alle actieve klacht-slugs op (inclusief eventuele actieve subklachten)
@@ -33,7 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${BASE_URL}/${locale}${page}`,
         lastModified: new Date(),
         changeFrequency: 'monthly',
-        priority: page === '' ? 1.0 : page === '/klachten' ? 0.9 : page === '/privacy' ? 0.3 : 0.8,
+        priority: page === '' ? 1.0 : page === '/klachten' ? 0.9 : page === '/privacy' || page === '/voorwaarden' ? 0.3 : 0.8,
         alternates: {
           languages: {
             nl: `${BASE_URL}/nl${page}`,
