@@ -14,6 +14,25 @@ export default function ChatWidget() {
   const locale = useLocale();
   const isEn = locale === 'en';
 
+  // Startonderwerpen in het lege chatvenster (sluiten aan op de klacht- en behandelpagina's)
+  const starterTopics = isEn
+    ? [
+        { glyph: '症', label: 'Which complaints can be treated?', question: 'For which complaints can acupuncture be used?' },
+        { glyph: '安', label: 'Stress & sleep', question: 'I sleep poorly and feel a lot of stress. What can acupuncture mean for me?' },
+        { glyph: '和', label: 'Menopause & hormones', question: 'Can acupuncture help with menopause symptoms such as hot flushes?' },
+        { glyph: '光', label: 'Rather no needles?', question: 'I find needles scary. Can treatment be done without needles?' },
+        { glyph: '罐', label: 'Cupping, guasha or reiki', question: 'What is the difference between cupping, guasha and reiki?' },
+        { glyph: '约', label: 'First appointment & rates', question: 'How does a first appointment work and what does it cost?' },
+      ]
+    : [
+        { glyph: '症', label: 'Bij welke klachten?', question: 'Bij welke klachten kan acupunctuur worden ingezet?' },
+        { glyph: '安', label: 'Stress & slaap', question: 'Ik slaap slecht en ervaar veel stress. Wat kan acupunctuur voor mij betekenen?' },
+        { glyph: '和', label: 'Overgang & hormonen', question: 'Kan acupunctuur helpen bij overgangsklachten zoals opvliegers?' },
+        { glyph: '光', label: 'Liever geen naalden?', question: 'Ik vind naalden spannend. Kan een behandeling ook zonder naalden?' },
+        { glyph: '罐', label: 'Cupping, guasha of reiki', question: 'Wat is het verschil tussen cupping, guasha en reiki?' },
+        { glyph: '约', label: 'Eerste afspraak & tarieven', question: 'Hoe verloopt een eerste afspraak en wat kost het?' },
+      ];
+
   const [isOpen, setIsOpen] = useState(false);
   // Op mobiel pas tonen na de hero, zodat de hero-knoppen vrij blijven
   const showLauncher = useShowAfterScroll();
@@ -310,62 +329,39 @@ export default function ChatWidget() {
           <div className="flex-1 p-4 overflow-y-auto space-y-3.5 bg-stone-50/70 text-sm">
             {messages.length === 0 && (
               <div className="space-y-4 pt-1">
-                <div className="bg-white border border-stone-200/90 p-3.5 rounded-xl shadow-xs text-stone-700 leading-relaxed text-xs sm:text-sm">
-                  {isEn ? (
-                    <p>
-                      Welcome to Bai Kang TCM. I am happy to help with questions about complaints, Traditional Chinese Medicine (TCM), treatments or practical information. Please do not share personal medical details here; those are discussed during your consultation.
-                    </p>
-                  ) : (
-                    <p>
-                      Welkom bij Bai Kang TCM. Ik help je graag met vragen over klachten, de Traditionele Chinese Geneeskunde (TCM), behandelvormen of praktische informatie. Deel hier liever geen persoonlijke medische gegevens; die bespreken we tijdens je consult.
-                    </p>
-                  )}
+                <div className="bg-white border border-stone-200/90 p-3.5 rounded-xl shadow-xs text-stone-700 leading-relaxed text-xs sm:text-sm space-y-2">
+                  <p>
+                    {isEn
+                      ? 'Welcome. I am the digital guide of Bái Kāng and know all complaint and treatment pages on this site. Ask me what acupuncture can mean for a complaint, how a treatment works, or what it costs.'
+                      : 'Welkom. Ik ben de digitale gids van Bái Kāng en ken alle klacht- en behandelpagina’s van deze site. Vraag me wat acupunctuur bij een klacht kan betekenen, hoe een behandeling verloopt of wat het kost.'}
+                  </p>
+                  <p className="text-[11px] text-stone-500">
+                    {isEn
+                      ? 'Please do not share personal medical details here; those are discussed during your consultation.'
+                      : 'Deel hier liever geen persoonlijke medische gegevens; die bespreken we tijdens je consult.'}
+                  </p>
                 </div>
 
-                {/* Directe themasuggesties */}
+                {/* Onderwerpen om mee te beginnen */}
                 <div className="space-y-1.5 pt-1">
                   <p className="text-[11px] font-semibold text-stone-500 uppercase tracking-wider px-1">
-                    {isEn ? 'Suggested topics' : 'Direct verkennen'}
+                    {isEn ? 'Start with a topic' : 'Begin met een onderwerp'}
                   </p>
-                  <button
-                    type="button"
-                    onClick={() =>
-                      sendMessage(
-                        isEn
-                          ? 'I have pain and fatigue. How does TCM view this?'
-                          : 'Ik heb last van pijn en vermoeidheid. Hoe kijkt TCM hiernaar?'
-                      )
-                    }
-                    className="w-full text-left text-xs bg-white hover:bg-gold-antique/10 border border-stone-200 hover:border-gold-antique/50 p-2.5 rounded-lg text-stone-800 transition-colors shadow-2xs"
-                  >
-                    🌱 {isEn ? 'Explore symptoms & balance' : 'Mijn klachten & energie verkennen'}
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() =>
-                      sendMessage(
-                        isEn
-                          ? 'How does the first intake and acupuncture treatment work?'
-                          : 'Hoe verloopt een eerste intake en acupunctuurbehandeling?'
-                      )
-                    }
-                    className="w-full text-left text-xs bg-white hover:bg-gold-antique/10 border border-stone-200 hover:border-gold-antique/50 p-2.5 rounded-lg text-stone-800 transition-colors shadow-2xs"
-                  >
-                    📋 {isEn ? 'What to expect at the initial intake?' : 'Wat kan ik verwachten bij de intake?'}
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() =>
-                      sendMessage(
-                        isEn
-                          ? 'What are the treatment fees and insurance reimbursements?'
-                          : 'Wat zijn de tarieven en worden behandelingen vergoed?'
-                      )
-                    }
-                    className="w-full text-left text-xs bg-white hover:bg-gold-antique/10 border border-stone-200 hover:border-gold-antique/50 p-2.5 rounded-lg text-stone-800 transition-colors shadow-2xs"
-                  >
-                    💳 {isEn ? 'Rates & health insurance coverage' : 'Tarieven & vergoedingen'}
-                  </button>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+                    {starterTopics.map((topic) => (
+                      <button
+                        key={topic.label}
+                        type="button"
+                        onClick={() => sendMessage(topic.question)}
+                        className="flex items-center gap-2.5 w-full text-left text-xs bg-white hover:bg-gold-antique/10 border border-stone-200 hover:border-gold-antique/50 p-2.5 rounded-lg text-stone-800 transition-colors shadow-2xs"
+                      >
+                        <span className="font-serif text-sm text-gold-antique shrink-0" aria-hidden="true">
+                          {topic.glyph}
+                        </span>
+                        <span>{topic.label}</span>
+                      </button>
+                    ))}
+                  </div>
                 </div>
               </div>
             )}
