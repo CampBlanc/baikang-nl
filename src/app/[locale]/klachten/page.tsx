@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import AtmosphericBamboo from '@/components/AtmosphericBamboo';
+import BambooFlank from '@/components/BambooFlank';
 import { getComplaintCategories } from '@/data/complaintsData';
 
 export async function generateMetadata({
@@ -110,17 +111,8 @@ export default async function KlachtenPage({
             3. KLACHTENCATEGORIEËN
             ======================================================================= */}
         <section className="relative overflow-hidden py-16 sm:py-24">
-          {/* Subtiel verticaal bamboe-accent langs de linkerflank */}
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-y-0 left-0 z-0 w-24 sm:w-36 lg:w-48 select-none opacity-[0.06] sm:opacity-[0.08] lg:opacity-15 text-forest-deep"
-          >
-            <img
-              src="/images/bamboo-sumi.svg"
-              alt=""
-              className="h-full w-full object-fill"
-            />
-          </div>
+          {/* Grote inktbamboe langs de linkerflank: sticky, transparant, alleen vanaf xl */}
+          <BambooFlank side="left" />
 
           <div className="relative z-10 mx-auto max-w-5xl px-6 sm:px-8">
             <div className="space-y-16 sm:space-y-24">
